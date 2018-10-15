@@ -1,11 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Header from "./components/Header.jsx"
+import Footer from "./components/Footer.jsx"
 
-import Home from "./components/Home"
-import Banner from "./components/Banner"
+import Home from "./components/Home.jsx"
+import Banner from "./components/Banner.jsx"
 
 import registerServiceWorker from "./registerServiceWorker"
 
