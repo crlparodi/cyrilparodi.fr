@@ -1,0 +1,22 @@
+.about-me {
+  padding: 62px 0 !important;
+  color: #4a4a4a;
+  background-color: white; }
+  .about-me .title {
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  .about-me .content {
+    margin-bottom: 48px; }
+    .about-me .content:last-of-type {
+      margin-bottom: 0; }
+    .about-me .content .likes {
+      margin: 0; }
+    .about-me .content ul {
+      list-style: none; }
+      .about-me .content ul li:before {
+        content: "\279C";
+        padding-right: 10px; }
+  .about-me .subtitle {
+    letter-spacing: 2px; }
+
+/*# sourceMappingURL=About.css.map */

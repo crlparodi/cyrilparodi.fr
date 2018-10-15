@@ -1,0 +1,37 @@
+.access-cv {
+    padding: 62px 0 !important;
+    color: #4a4a4a;
+    background-color: white;
+  
+    .title {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  
+    .links {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  
+      .button {
+        width: 45%;
+        border-radius: 0px;
+  
+        span {
+          margin-right: auto;
+        }
+  
+        &:hover {
+          border-color: #4a4a4a;
+        }
+  
+        &:focus {
+          border-color: #4a4a4a;
+          box-shadow: 0 0 0 0.125em rgba(93, 93, 93, 0.25);
+        }
+      }
+    }
+  }
