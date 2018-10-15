@@ -1,13 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import Header from "./components/Header.jsx"
-import Footer from "./components/Footer.jsx"
+import Header from "./components/Header.js"
+import Footer from "./components/Footer.js"
 
-import Home from "./components/Home.jsx"
-import Banner from "./components/Banner.jsx"
+import Home from "./components/Home.js"
+import Banner from "./components/Banner.js"
 
-import registerServiceWorker from "./registerServiceWorker"
+import registerServiceWorker from "./registerServiceWorker.js"
 
 import "./styles/index.css"
 

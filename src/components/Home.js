@@ -1,9 +1,9 @@
 import React from "react"
 
-import Intro from "./Home/Intro.jsx"
-import CVSection from "./Home/CVSection.jsx"
-import About from "./Home/About.jsx"
-import AboutSite from "./Home/AboutSite.jsx"
+import Intro from "./Home/Intro.js"
+import CVSection from "./Home/CVSection.js"
+import About from "./Home/About.js"
+import AboutSite from "./Home/AboutSite.js"
 
 import HomeData from "../prop_types/homepage.json"
 

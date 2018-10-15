@@ -1,6 +1,6 @@
 import React from "react"
 import request from "superagent"
-import PropShapes from "../../prop_types/homepage"
+import PropShapes from "../../prop_types/homepage.js"
 import SelfPic from "../../img/mii.jpg"
 import "../../styles/Intro.css"
 

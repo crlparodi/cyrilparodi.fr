@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import PropShapes from "../../prop_types/homepage"
+import PropShapes from "../../prop_types/homepage.js"
 import MemePic from "../../img/love_is_in_the_air.jpg"
 import "../../styles/AboutSite.css"
 
