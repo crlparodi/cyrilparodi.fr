@@ -1,0 +1,14 @@
+.small_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-image: url(../img/dil-679756-unsplash.jpg);
+  background-size: cover;
+  background-position-y: 50%; }
+  .small_banner .banner_intro {
+    padding: 20px 0 20px 0;
+    text-shadow: 0px 0px 10px black; }
+    .small_banner .banner_intro h1 {
+      letter-spacing: 2px; }
+
+/*# sourceMappingURL=Banner.css.map */

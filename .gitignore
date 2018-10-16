@@ -15,7 +15,6 @@
 
 # css .map files
 /src/styles/*.css.map
-/src/styles/*.css
 
 # images
 /src/img/work_from_passion.png

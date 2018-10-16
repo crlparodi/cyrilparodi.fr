@@ -1,0 +1,12 @@
+.intro {
+  padding: 62px 0 !important; }
+  .intro .image {
+    width: 192px; }
+    .intro .image .mii {
+      border-radius: 50%; }
+  .intro .quote {
+    margin: auto 0; }
+    .intro .quote q {
+      font-weight: 700; }
+
+/*# sourceMappingURL=Intro.css.map */

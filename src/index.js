@@ -9,6 +9,7 @@ import Banner from "./components/Banner"
 
 import registerServiceWorker from "./registerServiceWorker"
 
+import "../node_modules/bulma/css/bulma.min.css"
 import "./styles/index.css"
 
 ReactDOM.render(<Header />, document.getElementById("header"))
