@@ -7,11 +7,13 @@
 	},
 	"cv_link": [
 		{
-			"type": "Format Web",
+			"html": "Format Web",
+			"icon": "fas fa-desktop",
 			"link": "<URL>"
 		},
 		{
-			"type": "Format PDF",
+			"html": "Format PDF",
+			"icon": "fas fa-download",
 			"link": "<URL>"
 		}
 	],
@@ -49,7 +51,7 @@
 	},
 	"about_site": {
 		"text": [
-			"L'idée de développer un site m'est venu en raison de deux principaux soucis : l'absence d'humanisme dans mes CVs papiers ainsi que la tournure qu'a pris LinkedIn qui aujourd'hui ne me convient plus. C'est pour cette raison que j'ai voulu me lancer dans ce projet, l'objectif est de proposer d'autres moyens de communication plus vivants tout en me passant petit à petit de la tradition du CV papier dans lequel nous sommes coincés depuis désormais trop longtemps.",
+			"L'idée de développer un site m'est venu en raison de deux principaux soucis : l'absence d'humanisme dans mes CVs papiers ainsi que la tournure qu'a pris LinkedIn qui aujourd'hui ne me convient plus. C'est pour cette raison que j'ai voulu me lancer dans ce projet, l'objectif est de proposer d'autres moyens de communication plus vivants tout en me passant petit à petit de la tradition du CV papier dans lequel nous sommes coincés depuis désormais trop longtemps.\n",
 			"Ce site est un projet personnel, il n'a aucune visée commerciale et est réalisée uniquement sur mon temps libre. Il a été fait avec amour, du temps et de la passion !",
 			"Étant extrêmement attaché aux valeurs du libre et de l'open-source, le contenu de ce site est sous licence Creative Commons, son code source est aussi disponible sur GitHib."
 		]

@@ -1,7 +1,7 @@
 import React from "react"
 import request from "superagent"
 import PropShapes from "../../prop_types/homepage"
-import SelfPic from "../../img/mii.jpg"
+import SelfPic from "../../img/mii.png"
 import "../../styles/Intro.css"
 
 class Intro extends React.Component {
@@ -11,7 +11,7 @@ class Intro extends React.Component {
 		 * don't forget to declare the new states from the propTypes
 		 */
 		this.state = {
-			intro_data: props.intro_data,
+			data: props.data,
 		}
 	}
 	/* 
@@ -19,7 +19,7 @@ class Intro extends React.Component {
 	 * without refreshing it.
 	 */
 	componentDidMount = () => {
-		return request.get(this.props.intro_data).end(
+		return request.get(this.props.data).end(
 			function(error, response) {
 				return error
 					? error
@@ -42,13 +42,10 @@ class Intro extends React.Component {
 							/>
 						</div>
 						<div className="quote column">
-							<q className="is-size-4">
-								{this.state.intro_data.quote}
-							</q>
+							<q className="is-size-4">{this.state.data.quote}</q>
 							<p className="author">
-								{this.state.intro_data.author},{" "}
-								{this.state.intro_data.book} (
-								{this.state.intro_data.year})
+								{this.state.data.author}, {this.state.data.book}{" "}
+								({this.state.data.year})
 							</p>
 						</div>
 					</div>
@@ -59,11 +56,11 @@ class Intro extends React.Component {
 }
 
 Intro.propTypes = {
-	intro_data: PropShapes.citation,
+	data: PropShapes.citation,
 }
 
 Intro.defaultProps = {
-	intro_data: {
+	data: {
 		quote: "<QUOTE>",
 		author: "<AUTHOR>",
 		book: "<BOOK>",

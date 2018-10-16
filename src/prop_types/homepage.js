@@ -8,32 +8,31 @@ const citation = PropTypes.shape({
 	quote: PropTypes.string,
 	author: PropTypes.string,
 	book: PropTypes.string,
-	year: PropTypes.number
+	year: PropTypes.number,
 })
 
 const cv_link = PropTypes.shape({
-	type: PropTypes.string,
-	link: PropTypes.string
+	html: PropTypes.string,
+	icon: PropTypes.string,
+	link: PropTypes.string,
 })
-const cv_linkSet = PropTypes.arrayOf(cv_link).isRequired
 
 const about_me = PropTypes.shape({
 	tope: PropTypes.string,
 	likes: bulletPoints,
 	dislikes: bulletPoints,
 	job_research: PropTypes.string,
-	qualities: bulletPoints
+	qualities: bulletPoints,
 })
 
 const about_site = PropTypes.shape({
-	topo: PropTypes.string
+	text: PropTypes.string,
 })
 
 export default {
 	bulletPoints,
 	citation,
 	cv_link,
-	cv_linkSet,
 	about_me,
-	about_site
+	about_site,
 }

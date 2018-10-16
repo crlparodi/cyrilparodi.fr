@@ -7,7 +7,7 @@ class AboutSite extends Component {
 	constructor(props) {
 		super()
 		this.state = {
-			content: props.content,
+			data: props.data,
 		}
 	}
 	render() {
@@ -28,7 +28,7 @@ class AboutSite extends Component {
 						<a href="https://sass-lang.com/">
 							<i
 								className="fab fa-sass fa-5x"
-								title="Sass CSS Type Framework"
+								title="Sass CSS Extension"
 							/>
 						</a>
 						<i className="fas fa-plus fa-2x has-text-centered" />
@@ -48,7 +48,9 @@ class AboutSite extends Component {
 						</a>
 					</div>
 					<div className="content has-text-justified">
-						{this.state.content.text}
+						{this.state.data.text.map((text_item, index) => {
+							return <p>{text_item}</p>
+						})}
 					</div>
 				</div>
 			</section>
@@ -57,11 +59,11 @@ class AboutSite extends Component {
 }
 
 AboutSite.propTypes = {
-	content: PropShapes.about_site,
+	data: PropShapes.about_site,
 }
 
 AboutSite.defaultProps = {
-	content: {
+	data: {
 		text: "<HERE_ABOUT_THE_SITE>",
 	},
 }

@@ -5,16 +5,16 @@ import CVSection from "./Home/CVSection"
 import About from "./Home/About"
 import AboutSite from "./Home/AboutSite"
 
-import HomeData from "../prop_types/homepage.json"
+import * as HomeData from "../prop_types/homepage.json"
 
 class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<Intro intro_data={HomeData.citation} />
-				<CVSection />
+				<Intro data={HomeData.citation} />
+				<CVSection data={HomeData.cv_link} />
 				<About />
-				<AboutSite content={HomeData.about_site} />
+				<AboutSite data={HomeData.about_site} />
 			</div>
 		)
 	}
