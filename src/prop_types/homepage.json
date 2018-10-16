@@ -18,7 +18,12 @@
 		}
 	],
 	"about_me": {
-		"topo": "Originaire d'Aix-en-Provence et ayant vécu toute ma jeunesse près de Marseille, j'ai mis beaucoup de temps à savoir ce que je désirais faire le plus. Comme la plupart des gosses à qui leur père leur ont totalement interdit de refaire le même métier qu'eux, j'ai donc décidé d'entreprendre des études afin de me rapprocher de ce qui me passionnait le plus : l'informatique. Je me suis donc lancé dans un parcours totalement exotique composé de hauts et de bas. Après avoir décroché un BAC STi en Génie Électronique et Informatique Industrielle, et m'être vu fermer énormément de portes, j'ai poursuivi avec un BTS dans une spécialité réputée pour sa polyvalence avant de rencontrer des gens qui ont cru en moi et m'ont laissé l'opportunité d'entrer en école d'Ingénieur afin de pouvoir continuer d'apprendre l'Électronique. Arrivé à l'age de 23 ans, avec un dipelôme d'ingénieur et des cernes bien visibles, je me rends compte que malgré le plaisir que je prenais à apprendre l'électronique, je ne me voyais pas en faire un métier. En revanche, je m'extasiais à cracher du code durant les modules de programmation. Après une première expérience peu concluante, je me décide donc de dégainer mes propres armes pour me reconvertir, dans l'optique de faire de cet extase une partie de mon métier. Je m'appelle Cyril, j'ai désormais 24 ans, et suis à la recherche d'une opportunité en développement.",
+		"text": [
+			"Originaire d'Aix-en-Provence et ayant vécu toute ma jeunesse près de Marseille, j'ai mis beaucoup de temps à savoir ce que je désirais faire le plus. Comme la plupart des gosses à qui leur père leur ont totalement interdit de refaire le même métier qu'eux, j'ai donc décidé d'entreprendre des études afin de me rapprocher de ce qui me passionnait le plus : l'informatique.",
+			"Je me suis donc lancé dans un parcours totalement exotique composé de hauts et de bas. Après avoir décroché un BAC STi en Génie Électronique et Informatique Industrielle, et m'être vu fermer énormément de portes, j'ai poursuivi avec un BTS dans une spécialité réputée pour sa polyvalence avant de rencontrer des gens qui ont cru en moi et m'ont laissé l'opportunité d'entrer en école d'Ingénieur afin de pouvoir continuer d'apprendre l'Électronique.",
+			"Arrivé à l'age de 23 ans, avec un dipelôme d'ingénieur et des cernes bien visibles, je me rends compte que malgré le plaisir que je prenais à apprendre l'électronique, je ne me voyais pas en faire un métier. En revanche, je m'extasiais à cracher du code durant les modules de programmation. Après une première expérience peu concluante, je me décide donc de dégainer mes propres armes pour me reconvertir, dans l'optique de faire de cet extase une partie de mon métier.",
+			"Je m'appelle Cyril, j'ai désormais 24 ans, et suis à la recherche d'une opportunité en développement."
+		],
 		"likes": [
 			"Le rétrocomputing",
 			"Le rétrogaming",
@@ -38,7 +43,10 @@
 			"Les clichés",
 			"Les produits Apple"
 		],
-		"job_research": "Je recherche aujourd'hui à me lancer dans des petites structures (de type Startup ou PMEs), en raison de leur taille, entre-autres, mais aussi par rapport à l'ambiance générale qui s'y dégage et la polyvalence qui est offerte à chacun des employés de cette structure. Il s'agit donc ici de privilégier, l'autonomie, l'apprentissage (voir l'auto-formation), et la comunication dans l'optique de contribuer au mieux à un projet et de la manière la plus formatrice possible. Me lancer aujourd'hui dans des SSIIs est chose impossible en raison de la philosophie générale qui y règne, je recherche donc à m'insérer chez un client final. Merci donc aux SSIIs (petites ou grandes soient-elles) de ne pas me contacter.",
+		"job_research": [
+			"Je recherche aujourd'hui à me lancer dans des petites structures (de type Startup ou PMEs), en raison de leur taille, entre-autres, mais aussi par rapport à l'ambiance générale qui s'y dégage et la polyvalence qui est offerte à chacun des employés de cette structure. Il s'agit donc ici de privilégier, l'autonomie, l'apprentissage (voir l'auto-formation), et la comunication dans l'optique de contribuer au mieux à un projet et de la manière la plus formatrice possible.",
+			"Me lancer aujourd'hui dans des SSIIs est chose impossible en raison de la philosophie générale qui y règne, je recherche donc à m'insérer chez un client final. Merci donc aux SSIIs (petites ou grandes soient-elles) de ne pas me contacter."
+		],
 		"qualities": [
 			"... de la passion.",
 			"... une curiosité sans limites.",

@@ -18,7 +18,7 @@ const cv_link = PropTypes.shape({
 })
 
 const about_me = PropTypes.shape({
-	tope: PropTypes.string,
+	text: PropTypes.string,
 	likes: bulletPoints,
 	dislikes: bulletPoints,
 	job_research: PropTypes.string,

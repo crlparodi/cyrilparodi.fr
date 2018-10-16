@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import request from "superagent"
 import PropShapes from "../../prop_types/homepage"
 import MemePic from "../../img/love_is_in_the_air.jpg"
 import "../../styles/AboutSite.css"
@@ -9,6 +10,17 @@ class AboutSite extends Component {
 		this.state = {
 			data: props.data,
 		}
+	}
+	componentDidMount = () => {
+		return request.get(this.props.data).end(
+			function(error, response) {
+				return error
+					? error
+					: this.setState({
+							resume: response.body,
+					  })
+			}.bind(this),
+		)
 	}
 	render() {
 		return (
