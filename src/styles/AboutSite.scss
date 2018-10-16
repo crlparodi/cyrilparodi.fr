@@ -1,0 +1,32 @@
+.about-here {
+	padding: 62px 0 !important;
+	color: #4a4a4a;
+	background-color: white;
+
+	.title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.made-with-love {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		margin-bottom: 1.5rem;
+
+		a {
+			color: inherit;
+		}
+
+		.fa-plus {
+			margin: 0 30px;
+			align-self: center;
+		}
+
+		img {
+			height: 5em;
+			filter: brightness(0.45) grayscale(1);
+		}
+	}
+}
