@@ -30,14 +30,14 @@ class Footer extends React.Component {
 									href="https://www.linkedin.com/in/cyril-parodi"
 									className="bts"
 								>
-									<i class="fab fa-linkedin fa-3x" /> <br />{" "}
-									<br /> <span>LinkedIn</span>
+									<i className="fab fa-linkedin fa-3x" />{" "}
+									<br /> <br /> <span>LinkedIn</span>
 								</a>
 								<a
 									href="mailto:parodicyril@gmail.com"
 									className="bts"
 								>
-									<i class="fas fa-envelope-square fa-3x" />{" "}
+									<i className="fas fa-envelope-square fa-3x" />{" "}
 									<br /> <br /> <span>Envoyer un Mail</span>
 								</a>
 							</div>

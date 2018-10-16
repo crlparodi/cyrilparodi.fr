@@ -12,11 +12,11 @@ class CVSection extends React.Component {
 					<div className="links">
 						<a className="button is-large" href="">
 							<span>Format Web</span>
-							<i class="fas fa-desktop" />
+							<i className="fas fa-desktop" />
 						</a>
 						<a className="button is-large" href="">
 							<span>Format PDF</span>
-							<i class="fas fa-download" />
+							<i className="fas fa-download" />
 						</a>
 					</div>
 				</div>

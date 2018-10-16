@@ -27,7 +27,7 @@ class AboutSite extends Component {
 						<i className="fas fa-plus fa-2x has-text-centered" />
 						<a href="https://sass-lang.com/">
 							<i
-								class="fab fa-sass fa-5x"
+								className="fab fa-sass fa-5x"
 								title="Sass CSS Type Framework"
 							/>
 						</a>

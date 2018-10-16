@@ -57,7 +57,7 @@ class About extends React.Component {
 							<div className="column is-half">
 								<div className="sub columns">
 									<div className="column is-one-fifth has-text-success has-text-centered">
-										<i class="fas fa-plus-circle fa-3x" />
+										<i className="fas fa-plus-circle fa-3x" />
 									</div>
 									<div className="column">
 										<ul className="likes">
@@ -82,7 +82,7 @@ class About extends React.Component {
 							<div className="column is-half">
 								<div className="sub columns">
 									<div className="column is-one-fifth has-text-danger has-text-centered">
-										<i class="fas fa-minus-circle fa-3x" />
+										<i className="fas fa-minus-circle fa-3x" />
 									</div>
 									<div className="column">
 										<ul className="likes">

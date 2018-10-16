@@ -45,7 +45,7 @@ class Intro extends React.Component {
 							<q className="is-size-4">
 								{this.state.intro_data.quote}
 							</q>
-							<p class="author">
+							<p className="author">
 								{this.state.intro_data.author},{" "}
 								{this.state.intro_data.book} (
 								{this.state.intro_data.year})
