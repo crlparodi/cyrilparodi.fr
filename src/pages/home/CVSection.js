@@ -1,6 +1,7 @@
 import React from "react"
 import request from "superagent"
 import PropShapes from "../../prop_types/homepage"
+import Button from "../../components/Button"
 import "../../styles/CVSection.css"
 
 class CVSection extends React.Component {
@@ -11,15 +12,13 @@ class CVSection extends React.Component {
 		}
 	}
 	componentDidMount = () => {
-		return request.get(this.props.data).end(
-			function(error, response) {
-				return error
-					? error
-					: this.setState({
-							resume: response.body,
-					  })
-			}.bind(this),
-		)
+		return request.get(this.state.data).then((error, response) => {
+			return error
+				? error
+				: this.setState({
+						data: this.props.defaultProps,
+				  })
+		})
 	}
 	render() {
 		return (
@@ -30,15 +29,7 @@ class CVSection extends React.Component {
 					</div>
 					<div className="links">
 						{this.state.data.map((cv_path, index) => {
-							return (
-								<a
-									className="button is-large"
-									href={cv_path.link}
-								>
-									<span>{cv_path.html}</span>
-									<i className={cv_path.icon} />
-								</a>
-							)
+							return <Button dark={false} data={cv_path} />
 						})}
 					</div>
 				</div>

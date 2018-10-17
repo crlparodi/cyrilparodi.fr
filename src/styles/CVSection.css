@@ -17,10 +17,7 @@
       border-radius: 0px; }
       .access-cv .links .button span {
         margin-right: auto; }
-      .access-cv .links .button:hover {
-        border-color: #4a4a4a; }
       .access-cv .links .button:focus {
-        border-color: #4a4a4a;
-        box-shadow: 0 0 0 0.125em rgba(93, 93, 93, 0.25); }
+        box-shadow: 0 0 0 0.125em rgba(22, 22, 22, 0.45); }
 
 /*# sourceMappingURL=CVSection.css.map */

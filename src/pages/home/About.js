@@ -11,15 +11,13 @@ class About extends React.Component {
 		}
 	}
 	componentDidMount = () => {
-		return request.get(this.props.data).end(
-			function(error, response) {
-				return error
-					? error
-					: this.setState({
-							resume: response.body,
-					  })
-			}.bind(this),
-		)
+		return request.get(this.state.data).then((error, response) => {
+			return error
+				? error
+				: this.setState({
+						data: this.props.defaultProps,
+				  })
+		})
 	}
 	render() {
 		return (

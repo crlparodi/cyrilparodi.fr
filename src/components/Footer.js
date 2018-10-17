@@ -1,6 +1,26 @@
 import React from "react"
+import Button from "./Button"
 // import wfp from "./img/work_from_passion.png";
 import "..//styles/Footer.css"
+
+const buttons = [
+	{
+		dark: true,
+		data: {
+			html: "LinkedIn",
+			icon: "fab fa-linkedin-in",
+			link: "https://www.linkedin.com/in/cyril-parodi",
+		},
+	},
+	{
+		dark: true,
+		data: {
+			html: "E-Mail",
+			icon: "fas fa-envelope",
+			link: "mailto:parodicyril@gmail.com",
+		},
+	},
+]
 
 class Footer extends React.Component {
 	contact() {
@@ -26,20 +46,14 @@ class Footer extends React.Component {
 								<br />
 							</div>
 							<div className="links column is-fullwidth">
-								<a
-									href="https://www.linkedin.com/in/cyril-parodi"
-									className="bts"
-								>
-									<i className="fab fa-linkedin fa-3x" />{" "}
-									<br /> <br /> <span>LinkedIn</span>
-								</a>
-								<a
-									href="mailto:parodicyril@gmail.com"
-									className="bts"
-								>
-									<i className="fas fa-envelope-square fa-3x" />{" "}
-									<br /> <br /> <span>Envoyer un Mail</span>
-								</a>
+								{buttons.map((button, index) => {
+									return (
+										<Button
+											dark={button.dark}
+											data={button.data}
+										/>
+									)
+								})}
 							</div>
 						</div>
 					</div>
@@ -56,8 +70,6 @@ class Footer extends React.Component {
 						<div className="level-left">
 							<div className="level-item">
 								<p>
-									{/* <img className="wfp" src={wfp} alt="" />
-                  <br /> */}
 									<span className="home"> CYRIL PARODI </span>
 								</p>
 							</div>
