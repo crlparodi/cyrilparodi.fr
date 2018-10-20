@@ -18,12 +18,12 @@ class Intro extends React.Component {
 	 * With the following function, i'm able to update the data on the page
 	 * without refreshing it.
 	 */
-	componentDidMount = () => {
+	componentDidMount() {
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
 				: this.setState({
-						data: this.props.defaultProps,
+					data: this.props.defaultProps,
 				  })
 		})
 	}

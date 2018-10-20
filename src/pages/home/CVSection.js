@@ -11,12 +11,12 @@ class CVSection extends React.Component {
 			data: props.data,
 		}
 	}
-	componentDidMount = () => {
+	componentDidMount() {
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
 				: this.setState({
-						data: this.props.defaultProps,
+					data: this.props.defaultProps,
 				  })
 		})
 	}

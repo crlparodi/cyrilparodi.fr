@@ -10,7 +10,7 @@ class About extends React.Component {
 			data: props.data,
 		}
 	}
-	componentDidMount = () => {
+	componentDidMount() {
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error

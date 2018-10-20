@@ -22,6 +22,9 @@
 # vscode parameters
 /.vscode/
 
+# distant production content
+/dist
+
 # misc
 .DS_Store
 .env.local

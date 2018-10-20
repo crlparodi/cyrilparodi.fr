@@ -1,7 +1,8 @@
 import React from "react"
 import Button from "./Button"
+import * as AbstractQueries from "../containers/AbstractQueries"
 // import wfp from "./img/work_from_passion.png";
-import "..//styles/Footer.css"
+import "../styles/Footer.css"
 
 const buttons = [
 	{
@@ -29,6 +30,7 @@ class Footer extends React.Component {
 				<div className="container">
 					<div className="roof">
 						<div className="title is-medium">
+							<AbstractQueries.MobilePortrait />
 							<h2>Me contacter</h2>
 						</div>
 						<div className="columns has-text-centered">
