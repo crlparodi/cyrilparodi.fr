@@ -1,7 +1,12 @@
 import React from "react"
 import request from "superagent"
+
+import Loader from "react-loader-advanced"
+import Spinner from "../../components/Spinner"
+
 import PropShapes from "../../prop_types/homepage"
 import SelfPic from "../../img/mii.png"
+
 import "../../styles/Intro.css"
 
 class Intro extends React.Component {
@@ -12,6 +17,7 @@ class Intro extends React.Component {
 		 */
 		this.state = {
 			data: props.data,
+			showLoader: true,
 		}
 	}
 	/* 
@@ -19,6 +25,15 @@ class Intro extends React.Component {
 	 * without refreshing it.
 	 */
 	componentDidMount() {
+		const hdImg = new Image()
+		hdImg.src = SelfPic
+
+		hdImg.onload = () => {
+			this.setState({
+				showLoader: false,
+			})
+		}
+
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
@@ -33,11 +48,20 @@ class Intro extends React.Component {
 				<div className="container">
 					<div className="columns has-text-centered">
 						<div className="image column is-one-fifth">
-							<img
-								className="is-rounded"
-								src={SelfPic}
-								alt="Oui, c'est moi !"
-							/>
+							<Loader
+								show={this.state.showLoader}
+								message={<Spinner />}
+								backgroundStyle={{
+									backgroundColor: "rgba(0,0,0,0)",
+								}}
+								hideContentOnLoad={true}
+							>
+								<img
+									className="is-rounded"
+									src={SelfPic}
+									title="Oui, c'est moi !"
+								/>
+							</Loader>
 						</div>
 						<div className="quote column">
 							<q className="is-size-4">{this.state.data.quote}</q>
