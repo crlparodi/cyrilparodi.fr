@@ -10,16 +10,16 @@ const buttons = [
 		data: {
 			html: "LinkedIn",
 			icon: "fab fa-linkedin-in",
-			link: "https://www.linkedin.com/in/cyril-parodi",
 		},
+		href: "https://www.linkedin.com/in/cyril-parodi",
 	},
 	{
 		dark: true,
 		data: {
 			html: "E-Mail",
 			icon: "fas fa-envelope",
-			link: "mailto:parodicyril@gmail.com",
 		},
+		href: "mailto:parodicyril@gmail.com",
 	},
 ]
 
@@ -53,6 +53,7 @@ class Footer extends React.Component {
 										<Button
 											dark={button.dark}
 											data={button.data}
+											href={button.href}
 										/>
 									)
 								})}
