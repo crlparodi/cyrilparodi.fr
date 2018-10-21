@@ -14,7 +14,6 @@ const citation = PropTypes.shape({
 const cv_link = PropTypes.shape({
 	html: PropTypes.string,
 	icon: PropTypes.string,
-	link: PropTypes.string,
 })
 
 const about_me = PropTypes.shape({

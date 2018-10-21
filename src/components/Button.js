@@ -7,6 +7,7 @@ class Button extends React.Component {
 		super()
 		this.state = {
 			data: props.data,
+			href: props.href,
 			backgroundColor: "rgba(0, 0, 0, 0)",
 			color: props.dark ? "#FFFFFF" : "#363636",
 			borderColor: props.dark ? "#FFFFFF" : "#cbcbcb",
@@ -21,7 +22,7 @@ class Button extends React.Component {
 	render() {
 		return (
 			<a
-				href={this.state.data.link}
+				href={this.state.href}
 				className={
 					"button " +
 					"is-large " +
@@ -49,6 +50,7 @@ class Button extends React.Component {
 Button.propTypes = {
 	dark: PropTypes.bool,
 	data: PropShapes.cv_link,
+	href: PropTypes.string,
 }
 
 Button.defaultProps = {
@@ -56,8 +58,8 @@ Button.defaultProps = {
 	data: {
 		html: "<HTML>",
 		icon: "<NONE>",
-		link: "<URL>",
 	},
+	href: "<URL>",
 }
 
 export default Button

@@ -15,7 +15,7 @@ class About extends React.Component {
 			return error
 				? error
 				: this.setState({
-						data: this.props.defaultProps,
+					data: this.props.defaultProps,
 				  })
 		})
 	}
@@ -81,7 +81,7 @@ class About extends React.Component {
 						)}
 					</div>
 					<div className="subtitle">
-						<h3>Ce que j'ai à vendre ...</h3>
+						<h3>Ce que j'ai à proposer ...</h3>
 					</div>
 					<div className="content">
 						<ul>

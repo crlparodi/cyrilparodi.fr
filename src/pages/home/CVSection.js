@@ -4,6 +4,8 @@ import PropShapes from "../../prop_types/homepage"
 import Button from "../../components/Button"
 import "../../styles/CVSection.css"
 
+const hrefs = ["", "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"]
+
 class CVSection extends React.Component {
 	constructor(props) {
 		super()
@@ -29,7 +31,13 @@ class CVSection extends React.Component {
 					</div>
 					<div className="links">
 						{this.state.data.map((cv_path, index) => {
-							return <Button dark={false} data={cv_path} />
+							return (
+								<Button
+									dark={false}
+									data={cv_path}
+									href={hrefs[index]}
+								/>
+							)
 						})}
 					</div>
 				</div>
@@ -46,7 +54,6 @@ CVSection.defaultProps = {
 	data: {
 		html: "<EMPTY>",
 		icon: "<X>",
-		link: "<EMPTY>",
 	},
 }
 

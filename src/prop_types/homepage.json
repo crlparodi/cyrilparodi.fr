@@ -8,20 +8,18 @@
 	"cv_link": [
 		{
 			"html": "Format Web",
-			"icon": "fas fa-desktop",
-			"link": "<URL>"
+			"icon": "fas fa-desktop"
 		},
 		{
 			"html": "Format PDF",
-			"icon": "fas fa-download",
-			"link": "<URL>"
+			"icon": "fas fa-download"
 		}
 	],
 	"about_me": {
 		"text": [
 			"Originaire d'Aix-en-Provence et ayant vécu toute ma jeunesse près de Marseille, j'ai mis beaucoup de temps à savoir ce que je désirais faire le plus. Comme la plupart des gosses à qui leur père leur ont totalement interdit de refaire le même métier qu'eux, j'ai donc décidé d'entreprendre des études afin de me rapprocher de ce qui me passionnait le plus : l'informatique.",
 			"Je me suis donc lancé dans un parcours totalement exotique composé de hauts et de bas. Après avoir décroché un BAC STi en Génie Électronique et Informatique Industrielle, et m'être vu fermer énormément de portes, j'ai poursuivi avec un BTS dans une spécialité réputée pour sa polyvalence avant de rencontrer des gens qui ont cru en moi et m'ont laissé l'opportunité d'entrer en école d'Ingénieur afin de pouvoir continuer d'apprendre l'Électronique.",
-			"Arrivé à l'age de 23 ans, avec un dipelôme d'ingénieur et des cernes bien visibles, je me rends compte que malgré le plaisir que je prenais à apprendre l'électronique, je ne me voyais pas en faire un métier. En revanche, je m'extasiais à cracher du code durant les modules de programmation. Après une première expérience peu concluante, je me décide donc de dégainer mes propres armes pour me reconvertir, dans l'optique de faire de cet extase une partie de mon métier.",
+			"Arrivé à l'age de 23 ans, avec un diplôme d'ingénieur et des cernes bien visibles, je me rends compte que malgré le plaisir que je prenais à apprendre l'électronique, je ne me voyais pas en faire un métier. En revanche, je m'extasiais à cracher du code durant les modules de programmation. Après une première expérience peu concluante, je me décide donc de dégainer mes propres armes pour me réorienter, dans l'optique de faire de cette passion une partie de mon métier.",
 			"Je m'appelle Cyril, j'ai désormais 24 ans, et suis à la recherche d'une opportunité en développement."
 		],
 		"likes": [
@@ -61,7 +59,7 @@
 		"text": [
 			"L'idée de développer un site m'est venu en raison de deux principaux soucis : l'absence d'humanisme dans mes CVs papiers ainsi que la tournure qu'a pris LinkedIn qui aujourd'hui ne me convient plus. C'est pour cette raison que j'ai voulu me lancer dans ce projet, l'objectif est de proposer d'autres moyens de communication plus vivants tout en me passant petit à petit de la tradition du CV papier dans lequel nous sommes coincés depuis désormais trop longtemps.\n",
 			"Ce site est un projet personnel, il n'a aucune visée commerciale et est réalisée uniquement sur mon temps libre. Il a été fait avec amour, du temps et de la passion !",
-			"Étant extrêmement attaché aux valeurs du libre et de l'open-source, le contenu de ce site est sous licence Creative Commons, son code source est aussi disponible sur GitHib."
+			"Le contenu de ce site est sous licence Creative Commons, son code source est aussi disponible sur GitHib."
 		]
 	}
 }
