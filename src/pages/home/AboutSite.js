@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 import request from "superagent"
 import PropShapes from "../../prop_types/homepage"
+
+// import Section from "react-bulma-components/lib/components/section"
+// import Heading from "react-bulma-components/lib/components/heading"
+
 import MemePic from "../../img/love_is_in_the_air.jpg"
+
 import "../../styles/AboutSite.css"
 
 class AboutSite extends Component {

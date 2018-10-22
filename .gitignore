@@ -12,6 +12,7 @@
 # sass-cache
 /src/styles/.sass-cache/
 /src/.sass-cache/
+/.sass-cache/
 
 # css .map files
 /src/styles/*.css.map
