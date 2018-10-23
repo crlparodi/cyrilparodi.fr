@@ -1,11 +1,9 @@
-const path = require("path")
-
-const HtmlWebPackPlugin = require("html-webpack-plugin")
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
 	template: "./public/index.html",
 	filename: "./index.html",
-})
+});
 
 module.exports = {
 	module: {
@@ -19,7 +17,11 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ["style-loader", "css-loader"],
+				loader: "style-loader!css-loader",
+			},
+			{
+				test: /\.scss$/,
+				loader: "style-loader!css-loader!sass-loader",
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
@@ -32,4 +34,4 @@ module.exports = {
 		],
 	},
 	plugins: [htmlPlugin],
-}
+};

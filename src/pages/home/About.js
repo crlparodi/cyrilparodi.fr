@@ -1,23 +1,23 @@
-import React from "react"
-import request from "superagent"
-import PropShapes from "../../prop_types/homepage"
-import "../../styles/About.css"
+import React from "react";
+import request from "superagent";
+import PropShapes from "../../prop_types/homepage";
+import "../../styles/About.scss";
 
 class About extends React.Component {
 	constructor(props) {
-		super()
+		super();
 		this.state = {
 			data: props.data,
-		}
+		};
 	}
 	componentDidMount() {
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
 				: this.setState({
-					data: this.props.defaultProps,
-				  })
-		})
+						data: this.props.defaultProps,
+				  });
+		});
 	}
 	render() {
 		return (
@@ -28,7 +28,7 @@ class About extends React.Component {
 					</div>
 					<div className="content has-text-justified">
 						{this.state.data.text.map((text_item, index) => {
-							return <p>{text_item}</p>
+							return <p>{text_item}</p>;
 						})}
 					</div>
 					<div className="subtitle">
@@ -45,7 +45,7 @@ class About extends React.Component {
 										<ul className="likes">
 											{this.state.data.likes.map(
 												(like, index) => {
-													return <li>{like}</li>
+													return <li>{like}</li>;
 												},
 											)}
 										</ul>
@@ -61,7 +61,7 @@ class About extends React.Component {
 										<ul className="likes">
 											{this.state.data.dislikes.map(
 												(dislike, index) => {
-													return <li>{dislike}</li>
+													return <li>{dislike}</li>;
 												},
 											)}
 										</ul>
@@ -76,7 +76,7 @@ class About extends React.Component {
 					<div className="content has-text-justified">
 						{this.state.data.job_research.map(
 							(text_item, index) => {
-								return <p>{text_item}</p>
+								return <p>{text_item}</p>;
 							},
 						)}
 					</div>
@@ -90,19 +90,19 @@ class About extends React.Component {
 									<li>
 										<b>{quality}</b>
 									</li>
-								)
+								);
 							})}
 						</ul>
 					</div>
 				</div>
 			</section>
-		)
+		);
 	}
 }
 
 About.propTypes = {
 	data: PropShapes.about_me,
-}
+};
 
 About.defaultProps = {
 	data: {
@@ -112,6 +112,6 @@ About.defaultProps = {
 		job_research: "<KIND_OF_JOB>",
 		qualities: "<QUALITY>",
 	},
-}
+};
 
-export default About
+export default About;

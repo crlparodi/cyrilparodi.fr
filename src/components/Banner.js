@@ -1,43 +1,43 @@
-import React from "react"
+import React from "react";
 
-import Loader from "react-loader-advanced"
-import Spinner from "./Spinner"
+import Loader from "react-loader-advanced";
+import Spinner from "./Spinner";
 
-import IMG from "../img/dil-679756-unsplash.jpg"
+import IMG from "../img/dil-679756-unsplash.jpg";
 
-import "../styles/Banner.css"
+import "../styles/Banner.scss";
 
 class Banner extends React.Component {
 	constructor() {
-		super()
+		super();
 		this.state = {
 			height: 1080,
 			showLoader: true,
-		}
+		};
 	}
 
 	updateDimensions() {
 		if (window.innerHeight <= 1080) {
-			let update_height = window.innerHeight - 48
-			this.setState({ height: update_height })
+			let update_height = window.innerHeight - 48;
+			this.setState({ height: update_height });
 		} else {
-			let update_height = 1080 - 48
-			this.setState({ height: update_height })
+			let update_height = 1080 - 48;
+			this.setState({ height: update_height });
 		}
 	}
 
 	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener("resize", this.updateDimensions.bind(this))
+		this.updateDimensions();
+		window.addEventListener("resize", this.updateDimensions.bind(this));
 
-		const hdImg = new Image()
-		hdImg.src = IMG
+		const hdImg = new Image();
+		hdImg.src = IMG;
 
 		hdImg.onload = () => {
 			this.setState({
 				showLoader: false,
-			})
-		}
+			});
+		};
 	}
 
 	banner() {
@@ -66,12 +66,12 @@ class Banner extends React.Component {
 					</div>
 				</div>
 			</Loader>
-		)
+		);
 	}
 
 	render() {
-		return this.banner()
+		return this.banner();
 	}
 }
 
-export default Banner
+export default Banner;

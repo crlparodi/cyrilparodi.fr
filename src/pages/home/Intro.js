@@ -1,46 +1,46 @@
-import React from "react"
-import request from "superagent"
+import React from "react";
+import request from "superagent";
 
-import Loader from "react-loader-advanced"
-import Spinner from "../../components/Spinner"
+import Loader from "react-loader-advanced";
+import Spinner from "../../components/Spinner";
 
-import PropShapes from "../../prop_types/homepage"
-import SelfPic from "../../img/mii.png"
+import PropShapes from "../../prop_types/homepage";
+import SelfPic from "../../img/mii.png";
 
-import "../../styles/Intro.css"
+import "../../styles/Intro.scss";
 
 class Intro extends React.Component {
 	constructor(props) {
-		super()
+		super();
 		/* NOTE TO MYSELF: When i'm adding a stateless propType to a stateful component,
 		 * don't forget to declare the new states from the propTypes
 		 */
 		this.state = {
 			data: props.data,
 			showLoader: true,
-		}
+		};
 	}
 	/* 
 	 * With the following function, i'm able to update the data on the page
 	 * without refreshing it.
 	 */
 	componentDidMount() {
-		const hdImg = new Image()
-		hdImg.src = SelfPic
+		const hdImg = new Image();
+		hdImg.src = SelfPic;
 
 		hdImg.onload = () => {
 			this.setState({
 				showLoader: false,
-			})
-		}
+			});
+		};
 
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
 				: this.setState({
-					data: this.props.defaultProps,
-				  })
-		})
+						data: this.props.defaultProps,
+				  });
+		});
 	}
 	render() {
 		return (
@@ -73,13 +73,13 @@ class Intro extends React.Component {
 					</div>
 				</div>
 			</section>
-		)
+		);
 	}
 }
 
 Intro.propTypes = {
 	data: PropShapes.citation,
-}
+};
 
 Intro.defaultProps = {
 	data: {
@@ -88,6 +88,6 @@ Intro.defaultProps = {
 		book: "<BOOK>",
 		year: "<1770>",
 	},
-}
+};
 
-export default Intro
+export default Intro;

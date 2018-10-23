@@ -1,5 +1,5 @@
-import React from "react"
-import "../styles/Spinner.css"
+import React from "react";
+import "../styles/Spinner.scss";
 
 /* CSS Spinner for Component Loading */
 
@@ -12,8 +12,8 @@ class Spinner extends React.Component {
 				<div />
 				<div />
 			</div>
-		)
+		);
 	}
 }
 
-export default Spinner
+export default Spinner;

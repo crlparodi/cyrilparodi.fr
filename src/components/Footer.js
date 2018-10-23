@@ -1,8 +1,6 @@
-import React from "react"
-import Button from "./Button"
-import * as AbstractQueries from "../containers/AbstractQueries"
-// import wfp from "./img/work_from_passion.png";
-import "../styles/Footer.css"
+import React from "react";
+import Button from "./Button";
+import "../styles/Footer.scss";
 
 const buttons = [
 	{
@@ -21,7 +19,7 @@ const buttons = [
 		},
 		href: "mailto:parodicyril@gmail.com",
 	},
-]
+];
 
 class Footer extends React.Component {
 	contact() {
@@ -30,7 +28,6 @@ class Footer extends React.Component {
 				<div className="container">
 					<div className="roof">
 						<div className="title is-medium">
-							<AbstractQueries.MobilePortrait />
 							<h2>Me contacter</h2>
 						</div>
 						<div className="columns has-text-centered">
@@ -55,14 +52,14 @@ class Footer extends React.Component {
 											data={button.data}
 											href={button.href}
 										/>
-									)
+									);
 								})}
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-		)
+		);
 	}
 
 	misc() {
@@ -98,7 +95,7 @@ class Footer extends React.Component {
 					</div>
 				</div>
 			</section>
-		)
+		);
 	}
 
 	footer() {
@@ -107,12 +104,12 @@ class Footer extends React.Component {
 				<this.contact />
 				<this.misc />
 			</footer>
-		)
+		);
 	}
 
 	render() {
-		return this.footer()
+		return this.footer();
 	}
 }
 
-export default Footer
+export default Footer;

@@ -2,7 +2,11 @@
 	"name": "project-mii",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {},
+	"dependencies": {
+		"autoprefixer-loader": "^3.2.0",
+		"node-sass": "^4.9.4",
+		"sass-loader": "^7.1.0"
+	},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open",
 		"build": "webpack --mode production"
@@ -12,13 +16,16 @@
 		"@babel/preset-env": "^7.1.0",
 		"@babel/preset-react": "^7.0.0",
 		"babel-loader": "^8.0.4",
+		"bloomer": "^0.6.3",
 		"bulma": "^0.7.2",
 		"css-loader": "^1.0.0",
 		"eslint": "^5.7.0",
 		"file-loader": "^2.0.0",
 		"html-webpack-plugin": "^3.2.0",
 		"react": "^16.5.2",
+		"react-dom": "^16.5.2",
 		"react-loader-advanced": "^1.7.1",
+		"react-responsive": "^5.0.0",
 		"style-loader": "^0.23.1",
 		"superagent": "^4.0.0-beta.5",
 		"webpack": "^4.21.0",
