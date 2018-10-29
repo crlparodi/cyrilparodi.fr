@@ -1,18 +1,19 @@
-.intro {
-	padding: 62px 0 !important;
+@import "./variables/fonts.scss";
 
-	.image {
+.mii-intro {
+	background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+	.mii-self-pic {
 		width: 192px;
-
-		.mii {
-			border-radius: 50%;
-		}
 	}
 
-	.quote {
-		margin: auto 0;
+	.mii-quote {
+		margin: auto 0 auto 1.5rem;
+		font-family: "Indie Flower", sans-serif;
+		font-weight: 700;
+		color: rgba(245, 245, 246, 0.6);
+		font-size: 1.5rem !important;
 		q {
-			font-weight: 700;
+			font-size: 2.5rem !important;
 		}
 	}
 }

@@ -1,9 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-
-const htmlPlugin = new HtmlWebPackPlugin({
-	template: "./public/index.html",
-	filename: "./index.html",
-});
+const CssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	module: {
@@ -16,16 +12,17 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.css$/,
-				loader: "style-loader!css-loader",
-			},
-			{
-				test: /\.scss$/,
-				loader: "style-loader!css-loader!sass-loader",
+				test: /\.(css|scss)$/,
+				use: [CssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				use: ["file-loader"],
+				use: {
+					loader: "file-loader",
+					options: {
+						outputPath: "./img",
+					},
+				},
 			},
 			{
 				test: /\.pdf$/,
@@ -33,5 +30,14 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [htmlPlugin],
+	plugins: [
+		new HtmlWebPackPlugin({
+			template: "./public/index.html",
+			filename: "./index.html",
+		}),
+		new CssExtractPlugin({
+			filename: "./stylesheets/index.css",
+			chunkFilename: "./stylesheets/chunk.css",
+		}),
+	],
 };

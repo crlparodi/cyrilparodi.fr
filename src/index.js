@@ -6,6 +6,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import { Grenadine } from "./components/Color";
 
 import registerServiceWorker from "./registerServiceWorker";
 
@@ -17,5 +18,7 @@ ReactDOM.render(<Banner />, document.getElementById("banner"));
 ReactDOM.render(<Footer />, document.getElementById("footer"));
 
 ReactDOM.render(<Home />, document.getElementById("home"));
+
+log(Grenadine.toString());
 
 registerServiceWorker();

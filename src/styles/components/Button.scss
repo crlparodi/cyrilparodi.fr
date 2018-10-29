@@ -1,0 +1,106 @@
+@import "../variables/colors.scss";
+@import "../variables/fonts.scss";
+
+.button {
+	position: relative !important;
+}
+
+.button.light {
+	position: absolute;
+	z-index: 0;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+	color: $biskaya_blue;
+	border-color: $biskaya_blue !important;
+	background: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+	&:before {
+		-webkit-transition: 0.3s all ease;
+		transition: 0.3s all ease;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 1;
+		content: "";
+		background-color: $biskaya_blue;
+		z-index: -2;
+	}
+	&:hover {
+		color: $white_pearl;
+		border-color: $biskaya_blue !important;
+		&:before {
+			-webkit-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		color: $white_pearl;
+		border-color: $biskaya_blue !important;
+		&:before {
+			transition: 0.3s all ease;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
+.button.dark {
+	position: absolute;
+	z-index: 0;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+	color: $teal;
+	border-color: $teal !important;
+	background: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+	&:before {
+		-webkit-transition: 0.3s all ease;
+		transition: 0.3s all ease;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 1;
+		content: "";
+		background-color: $teal;
+		z-index: -2;
+	}
+	&:hover {
+		color: $biskaya_blue;
+		border-color: $teal !important;
+		&:before {
+			-webkit-transition: 0.3s all ease;
+			transition: 0.3s all ease;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		color: $biskaya_blue;
+		border-color: $teal !important;
+		&:before {
+			transition: 0.3s all ease;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}

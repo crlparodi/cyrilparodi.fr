@@ -1,17 +1,28 @@
+@import "./variables/fonts.scss";
+
 .small_banner {
 	position: relative;
 	background-size: cover;
-	background-position-y: 50%;
+	background-position-y: 100%;
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-end;
 
 	.banner_intro {
-		padding: 20px 0 20px 0;
+		padding: 0 0 62px 0;
 		text-shadow: 0px 0px 10px black;
 
+		align-self: right;
+
+		p {
+			font-family: "Oxygen", sans-serif;
+			font-size: 1.5rem !important;
+		}
+
 		h1 {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 900 !important;
 			letter-spacing: 2px;
 		}
 	}

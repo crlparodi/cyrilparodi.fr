@@ -1,11 +1,36 @@
-.about-me {
-	padding: 62px 0 !important;
-	color: #4a4a4a;
+@import "./variables/fonts.scss";
+@import "./variables/colors.scss";
+
+.mii-about {
+	color: $biskaya-blue !important;
 	background-color: white;
 
-	.title {
-		text-transform: uppercase;
-		letter-spacing: 2px;
+	.mii-about-catch {
+		font-family: "Oxygen", sans-serif;
+		font-weight: 300;
+		box-sizing: border-box;
+		position: relative;
+		padding: 0 20px 6rem 110px;
+		font-size: 16px;
+		line-height: 1.5em;
+
+		&:before {
+			position: absolute;
+			font-family: "FontAwesome";
+			content: "\f10d";
+			font-size: 60px;
+			font-style: normal;
+			color: $biskaya-blue;
+			opacity: 0.7;
+			top: 1rem;
+			left: 25px;
+		}
+
+		p {
+			font-size: 1.5rem;
+			line-height: 2rem;
+			margin: 16px 0px;
+		}
 	}
 
 	.content {
@@ -29,9 +54,5 @@
 				}
 			}
 		}
-	}
-
-	.subtitle {
-		letter-spacing: 2px;
 	}
 }

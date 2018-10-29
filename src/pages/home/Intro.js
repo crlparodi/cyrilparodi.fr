@@ -44,10 +44,10 @@ class Intro extends React.Component {
 	}
 	render() {
 		return (
-			<section className="intro is-widescreen">
-				<div className="container">
-					<div className="columns has-text-centered">
-						<div className="image column is-one-fifth">
+			<section className="mii-intro mii-section" id="mii-intro">
+				<div className="bul-tool container">
+					<div className="mii-intro-inner columns has-text-centered">
+						<div className="mii-self-pic image column is-one-fifth">
 							<Loader
 								show={this.state.showLoader}
 								message={<Spinner />}
@@ -63,9 +63,9 @@ class Intro extends React.Component {
 								/>
 							</Loader>
 						</div>
-						<div className="quote column">
+						<div className="mii-quote column has-text-justified">
 							<q className="is-size-4">{this.state.data.quote}</q>
-							<p className="author">
+							<p className="author has-text-right">
 								{this.state.data.author}, {this.state.data.book}{" "}
 								({this.state.data.year})
 							</p>

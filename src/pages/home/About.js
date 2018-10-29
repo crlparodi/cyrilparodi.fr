@@ -2,6 +2,10 @@ import React from "react";
 import request from "superagent";
 import PropShapes from "../../prop_types/homepage";
 import "../../styles/About.scss";
+import CVSection from "./about/CVSection";
+import Likes from "./about/Likes";
+
+import * as HomeData from "../../prop_types/homepage.json";
 
 class About extends React.Component {
 	constructor(props) {
@@ -21,55 +25,19 @@ class About extends React.Component {
 	}
 	render() {
 		return (
-			<section className="about-me is-widescreen" id="about-me">
-				<div className="container">
-					<div className="title is-medium">
-						<h2>À propos de moi</h2>
-					</div>
-					<div className="content has-text-justified">
+			<section className="mii-about" id="mii-about">
+				<div className="mii-min-section container">
+					<div className="mii-about-catch content has-text-justified">
 						{this.state.data.text.map((text_item, index) => {
 							return <p>{text_item}</p>;
 						})}
 					</div>
-					<div className="subtitle">
-						<h3>Quels sont mes goûts ?</h3>
-					</div>
-					<div className="content">
-						<div className="columns">
-							<div className="column is-half">
-								<div className="sub columns">
-									<div className="column is-one-fifth has-text-success has-text-centered">
-										<i className="fas fa-plus-circle fa-3x" />
-									</div>
-									<div className="column">
-										<ul className="likes">
-											{this.state.data.likes.map(
-												(like, index) => {
-													return <li>{like}</li>;
-												},
-											)}
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div className="column is-half">
-								<div className="sub columns">
-									<div className="column is-one-fifth has-text-danger has-text-centered">
-										<i className="fas fa-minus-circle fa-3x" />
-									</div>
-									<div className="column">
-										<ul className="likes">
-											{this.state.data.dislikes.map(
-												(dislike, index) => {
-													return <li>{dislike}</li>;
-												},
-											)}
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<CVSection data={HomeData.cv_link} />
+				</div>
+				<div className="mii-min-section container">
+					<Likes data={this.state.data.likes} />
+				</div>
+				<div className="content">
 					<div className="subtitle">
 						<h3>Ce que je recherche ...</h3>
 					</div>
@@ -81,7 +49,10 @@ class About extends React.Component {
 						)}
 					</div>
 					<div className="subtitle">
-						<h3>Ce que j'ai à proposer ...</h3>
+						<h3>
+							Ce que j'ai à proposer ... (Ingénieur rime avec) +
+							Mobilité
+						</h3>
 					</div>
 					<div className="content">
 						<ul>

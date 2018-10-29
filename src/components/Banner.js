@@ -3,7 +3,7 @@ import React from "react";
 import Loader from "react-loader-advanced";
 import Spinner from "./Spinner";
 
-import IMG from "../img/dil-679756-unsplash.jpg";
+import IMG from "../img/desk.min.jpg";
 
 import "../styles/Banner.scss";
 
@@ -18,10 +18,10 @@ class Banner extends React.Component {
 
 	updateDimensions() {
 		if (window.innerHeight <= 1080) {
-			let update_height = window.innerHeight - 48;
+			let update_height = window.innerHeight /* - 48*/;
 			this.setState({ height: update_height });
 		} else {
-			let update_height = 1080 - 48;
+			let update_height = 1080 /* - 48*/;
 			this.setState({ height: update_height });
 		}
 	}
@@ -60,8 +60,8 @@ class Banner extends React.Component {
 							Faire d'une passion un métier
 						</h1>
 						<p className="subtitle has-text-white">
-							Je suis un ancien diplômé d'électronique à la
-							recherche d'une opportunité en développement.
+							Ingénieur en recherche d'une opportunité en
+							développement.
 						</p>
 					</div>
 				</div>

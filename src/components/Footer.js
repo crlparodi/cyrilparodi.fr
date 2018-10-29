@@ -27,22 +27,12 @@ class Footer extends React.Component {
 			<section className="contact is-widescreen">
 				<div className="container">
 					<div className="roof">
-						<div className="title is-medium">
-							<h2>Me contacter</h2>
-						</div>
 						<div className="columns has-text-centered">
 							<div className="outro column is-half has-text-justified">
 								<p>
-									Une dernière chose, sachez que je suis
-									disponible dans toutes les Bouches-du-Rhône.
-									Si mon profil vous interesse, ou bien si
-									vous désirez en savoir d'avantage sur mon
-									parcours, n'hésitez pas à me contacter sur
-									LinkedIn ou bien par mail.
-									<br />
-									Au plaisir de vous répondre prochainement !
+									Mon profil vous intéresse, vous voulez en
+									savoir d'avantage sur moi ? Contactez-moi !
 								</p>
-								<br />
 							</div>
 							<div className="links column is-fullwidth">
 								{buttons.map((button, index) => {

@@ -1,0 +1,67 @@
+@import "./variables/colors.scss";
+@import "./variables/fonts.scss";
+
+.mii-likes {
+	display: flex;
+	flex-direction: row;
+	justify-content: baseline;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+
+	.mii-box {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: $white_pearl;
+		background-color: $biskaya_blue;
+		width: 360px;
+		height: 190px;
+		overflow: hidden;
+		margin: 10px 10px;
+		text-align: center;
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+		.mii-box-img {
+			position: absolute;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			transition: 0.5s all ease;
+			width: 100%;
+			top: 50%;
+			margin: auto;
+			z-index: 1;
+			-webkit-filter: hue-rotate(270deg); /* Safari 6.0 - 9.0 */
+			filter: hue-rotate(180deg);
+		}
+
+		.mii-box-span {
+			position: absolute;
+			-webkit-transform: translateX(-50%);
+			-webkit-transform: translateY(-50%);
+			transform: translateX(-50%);
+			transform: translateY(-50%);
+			width: inherit;
+			padding: 0 20px 0 20px;
+			top: 50%;
+		}
+
+		&:hover {
+			.mii-box-img {
+				top: 200%;
+			}
+		}
+	}
+
+	.mii-box.start {
+		color: $biskaya_blue;
+		background: none;
+		box-shadow: none;
+	}
+}

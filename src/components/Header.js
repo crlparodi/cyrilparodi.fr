@@ -9,10 +9,10 @@ class Header extends React.Component {
 					<a href=""> Accueil </a>
 				</p>
 				<p className="level-item">
-					<a href="#about-me"> À propos </a>
+					<a href="#mii-about"> À propos </a>
 				</p>
 				<p className="level-item">
-					<a href="parcours.html"> CV </a>
+					<a href=""> CV </a>
 				</p>
 				<p className="level-item">
 					<a className=""> Portfolio </a>
@@ -27,8 +27,8 @@ class Header extends React.Component {
 
 	header_container() {
 		const header = (
-			<section className="container is-widescreen header">
-				<div className="level">
+			<section className="header">
+				<div className="level container">
 					<div className="level-left">
 						<p className="level-item">
 							<a href="index.html" className="home">
