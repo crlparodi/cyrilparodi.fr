@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 /* HALF-COMPONENTS */
-const bulletPoints = PropTypes.arrayOf(PropTypes.string)
+const bulletPoints = PropTypes.arrayOf(PropTypes.string);
 
 /* PROP-SETS */
 const citation = PropTypes.shape({
@@ -9,24 +9,24 @@ const citation = PropTypes.shape({
 	author: PropTypes.string,
 	book: PropTypes.string,
 	year: PropTypes.number,
-})
+});
 
 const cv_link = PropTypes.shape({
 	html: PropTypes.string,
 	icon: PropTypes.string,
-})
+});
 
 const about_me = PropTypes.shape({
 	text: PropTypes.string,
-	likes: bulletPoints,
-	dislikes: bulletPoints,
-	job_research: PropTypes.string,
 	qualities: bulletPoints,
-})
+	likes: bulletPoints,
+});
+
+const job_research = PropTypes.string;
 
 const about_site = PropTypes.shape({
 	text: PropTypes.string,
-})
+});
 
 export default {
 	bulletPoints,
@@ -34,4 +34,4 @@ export default {
 	cv_link,
 	about_me,
 	about_site,
-}
+};

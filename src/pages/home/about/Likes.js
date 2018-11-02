@@ -14,20 +14,19 @@ class Likes extends React.Component {
 
 	render() {
 		return (
-			<ul className="mii-likes">
-				<li className="mii-box start">J'aime aussi ...</li>
-				<br />
-				{this.state.data.map((like, index) => {
-					return (
-						<li>
-							<div className="mii-box">
+			<div className="mii-case">
+				<ul className="mii-likes container">
+					<li className="mii-box start">J'aime aussi ...</li>
+					{this.state.data.map((like, index) => {
+						return (
+							<li className="mii-box">
 								<img className="mii-box-img" src={like.jpg} />
 								<div className="mii-box-span">{like.name}</div>
-							</div>
-						</li>
-					);
-				})}
-			</ul>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
 		);
 	}
 }

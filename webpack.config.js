@@ -1,5 +1,5 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const CssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const CssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
 	module: {
@@ -28,6 +28,14 @@ module.exports = {
 				test: /\.pdf$/,
 				use: ["file-loader"],
 			},
+			{
+				test: /\.(woff|woff2|eot|ttf)$/,
+				use: [
+					{
+						loader: "url-loader?limit=100000",
+					},
+				],
+			},
 		],
 	},
 	plugins: [
@@ -40,4 +48,4 @@ module.exports = {
 			chunkFilename: "./stylesheets/chunk.css",
 		}),
 	],
-};
+}

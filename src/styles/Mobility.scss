@@ -1,0 +1,52 @@
+@import "./variables/fonts.scss";
+@import "./variables/colors.scss";
+
+.mii-mobility {
+	background-color: $biskaya_blue;
+	color: $white_pearl;
+	background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+
+	.mii-svg-block {
+		margin-top: 0px;
+		display: flex;
+		justify-content: center;
+		fill: $teal;
+
+		&:last-child {
+		}
+
+		.overflow {
+			fill: $white_pearl;
+		}
+	}
+	.map-responsive {
+		overflow: hidden;
+		padding-bottom: 56.25%;
+		position: relative;
+		height: 0;
+
+		.iframe {
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
+	}
+
+	.mii-desc {
+		font-family: "Oxygen", sans-serif;
+		font-weight: 300;
+		font-size: 1.4rem;
+		margin: auto 0;
+
+		p {
+			margin-bottom: 2rem;
+
+			&:last-child {
+				font-weight: 700;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

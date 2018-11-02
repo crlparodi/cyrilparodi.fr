@@ -1,7 +1,18 @@
+@import "./variables/colors.scss";
+
 .about-here {
 	padding: 62px 0 !important;
-	color: #4a4a4a;
-	background-color: white;
+	color: $biskaya_blue !important;
+
+	.box {
+		border: 2px solid $dark_teal;
+		border-radius: 0;
+		color: $dark_teal;
+		background-color: $white_pearl;
+		font-family: "Oxygen", sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 
 	.title {
 		text-transform: uppercase;

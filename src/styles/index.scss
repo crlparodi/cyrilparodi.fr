@@ -30,6 +30,9 @@ html {
 .mii-section {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
+
+	padding-left: 0;
+	padding-right: 0;
 }
 
 // The section contains several mini sections
@@ -37,6 +40,16 @@ html {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
+}
+
+.mii-light {
+	background-color: $white_pearl;
+}
+
+.mii-dark {
 }

@@ -5,7 +5,7 @@ import Loader from "react-loader-advanced";
 import Spinner from "../../components/Spinner";
 
 import PropShapes from "../../prop_types/homepage";
-import SelfPic from "../../img/mii.png";
+import SelfPic from "../../img/mii.min.png";
 
 import "../../styles/Intro.scss";
 

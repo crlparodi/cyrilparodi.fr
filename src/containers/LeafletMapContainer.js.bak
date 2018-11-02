@@ -1,0 +1,29 @@
+import React from "react"
+import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import "../styles/containers/LeafletMapContainer.scss"
+
+class LeafletMapContainer extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			lat: 43.4167,
+			lng: 5.2323,
+			zoom: 10,
+		}
+	}
+
+	render() {
+		const position = [this.state.lat, this.state.lng]
+		return (
+			<div className="mii-leaflet-map">
+				<Map
+					center={position}
+					zoom={this.state.zoom}
+					className="leaflet-container"
+				/>
+			</div>
+		)
+	}
+}
+
+export default LeafletMapContainer

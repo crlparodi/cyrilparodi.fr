@@ -1,34 +1,37 @@
-import React, { Component } from "react";
-import request from "superagent";
-import PropShapes from "../../prop_types/homepage";
+import React, { Component } from "react"
+import request from "superagent"
+import PropShapes from "../../prop_types/homepage"
 
 // import Section from "react-bulma-components/lib/components/section"
 // import Heading from "react-bulma-components/lib/components/heading"
 
-import MemePic from "../../img/love_is_in_the_air.jpg";
+import MemePic from "../../img/love_is_in_the_air.jpg"
 
-import "../../styles/AboutSite.scss";
+import "../../styles/AboutSite.scss"
 
 class AboutSite extends Component {
 	constructor(props) {
-		super();
+		super()
 		this.state = {
 			data: props.data,
-		};
+		}
 	}
 	componentDidMount() {
 		return request.get(this.state.data).then((error, response) => {
 			return error
 				? error
 				: this.setState({
-						data: this.props.defaultProps,
-				  });
-		});
+					data: this.props.defaultProps,
+				  })
+		})
 	}
 	render() {
 		return (
-			<section className="about-here">
+			<section className="about-here mii-light">
 				<div className="container">
+					<div className="box">
+						<p>Section du site en construction</p>
+					</div>
 					<div className="title is-medium">
 						<h2>À propos du site</h2>
 					</div>
@@ -64,23 +67,23 @@ class AboutSite extends Component {
 					</div>
 					<div className="content has-text-justified">
 						{this.state.data.text.map((text_item, index) => {
-							return <p>{text_item}</p>;
+							return <p>{text_item}</p>
 						})}
 					</div>
 				</div>
 			</section>
-		);
+		)
 	}
 }
 
 AboutSite.propTypes = {
 	data: PropShapes.about_site,
-};
+}
 
 AboutSite.defaultProps = {
 	data: {
 		text: "<HERE_ABOUT_THE_SITE>",
 	},
-};
+}
 
-export default AboutSite;
+export default AboutSite

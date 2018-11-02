@@ -46,14 +46,9 @@
 				"jpg": "https://bit.ly/2JotUtW"
 			},
 			{
-				"name": "La lecture (dev. perso. - sociologie",
+				"name": "La lecture (dev. perso. - sociologie)",
 				"jpg": "https://bit.ly/2PXllca"
 			}
-		],
-		"dislikes": [],
-		"job_research": [
-			"Vous êtes un client final de taille petite moyenne ? Vous aimez travailler dans une ambiance conviviale et êtes prêt à accompagner un jeune diplômé dans son évolution professionnelle ?",
-			"C'est vous que je recherche !"
 		],
 		"qualities": [
 			"... de la passion.",
@@ -65,6 +60,11 @@
 			"... de la polyvalence."
 		]
 	},
+	"job_research": [
+		"Vous êtes un client final ou un sous-traitant de taille petite ou moyenne ? Vous aimez travailler dans une ambiance conviviale et êtes prêt à accompagner un jeune diplômé dans son évolution professionnelle ?",
+		"Vous êtes dans le périmètre des Bouches-du-Rhône ?",
+		"C'est vous que je recherche !"
+	],
 	"about_site": {
 		"text": [
 			"L'idée de développer un site m'est venu en raison de deux principaux soucis : l'absence d'humanisme dans mes CVs papiers ainsi que la tournure qu'a pris LinkedIn qui aujourd'hui ne me convient plus. C'est pour cette raison que j'ai voulu me lancer dans ce projet, l'objectif est de proposer d'autres moyens de communication plus vivants tout en me passant petit à petit de la tradition du CV papier dans lequel nous sommes coincés depuis désormais trop longtemps.\n",

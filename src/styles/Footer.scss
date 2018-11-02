@@ -1,18 +1,22 @@
 @import "./variables/fonts.scss";
 @import "./variables/colors.scss";
-
-#footer {
-	padding: 62px 0 24px 0 !important;
+.mii-contact {
 	font-family: "Oxygen", sans-serif;
 	color: $teal;
-}
+	padding: 0 0 4rem 0 !important;
 
-.contact {
-	margin-bottom: 48px;
+	.mii-svg-block {
+		margin-top: 0px;
+		display: flex;
+		justify-content: center;
+		fill: $white_pearl;
 
-	.roof {
-		padding-top: 0;
+		.overflow {
+			fill: $teal;
+		}
+	}
 
+	.mii-top {
 		.outro {
 			font-size: 1.5rem;
 			padding-left: 0;
@@ -33,10 +37,9 @@
 			}
 		}
 	}
-}
 
-.misc {
-	.level {
+	.mii-bottom {
+		padding-top: 2rem;
 		height: 62px;
 
 		.level-left {
