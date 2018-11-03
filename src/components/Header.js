@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/Header.scss";
+import React from "react"
+import "../styles/Header.scss"
 
 class Header extends React.Component {
 	navbar() {
@@ -21,8 +21,8 @@ class Header extends React.Component {
 					<a href="#footer"> Contact </a>
 				</p>
 			</nav>
-		);
-		return navbar;
+		)
+		return navbar
 	}
 
 	header_container() {
@@ -40,14 +40,14 @@ class Header extends React.Component {
 					<this.navbar />
 				</div>
 			</section>
-		);
+		)
 
-		return header;
+		return header
 	}
 
 	render() {
-		return this.header_container();
+		return this.header_container()
 	}
 }
 
-export default Header;
+export default Header

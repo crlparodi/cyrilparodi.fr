@@ -4,6 +4,7 @@ import PropShapes from "../../prop_types/homepage"
 import "../../styles/About.scss"
 import CVSection from "./about/CVSection"
 import Likes from "./about/Likes"
+import SoftSkills from "./about/SoftSkills"
 
 import * as HomeData from "../../prop_types/homepage.json"
 
@@ -40,29 +41,7 @@ class About extends React.Component {
 				</div>
 				<span className="mii-separator" />
 				<div className="mii-min-section container">
-					<div className="box">
-						<p>Section du site en construction</p>
-					</div>
-					<div className="content">
-						<div className="subtitle">
-							<h3>
-								Ce que j'ai à proposer ... (Ingénieur rime avec)
-							</h3>
-						</div>
-						<div className="content">
-							<ul>
-								{this.state.data.qualities.map(
-									(quality, index) => {
-										return (
-											<li>
-												<b>{quality}</b>
-											</li>
-										)
-									},
-								)}
-							</ul>
-						</div>
-					</div>
+					<SoftSkills data={this.state.data.soft_skills} />
 				</div>
 			</section>
 		)
@@ -76,7 +55,7 @@ About.propTypes = {
 About.defaultProps = {
 	data: {
 		text: "<TEXT>",
-		qualities: "<QUALITY>",
+		soft_skills: "<QUALITY>",
 		likes: "<LIKE>",
 	},
 }

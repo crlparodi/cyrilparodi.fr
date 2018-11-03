@@ -50,18 +50,17 @@
 				"jpg": "https://bit.ly/2PXllca"
 			}
 		],
-		"qualities": [
-			"... de la passion.",
-			"... une curiosité sans limites.",
-			"... l'envie de contribuer à un projet.",
-			"... un sens de la rigueur.",
-			"... une envie d'apprendre.",
-			"... un esprit critique",
-			"... de la polyvalence."
+		"soft_skills": [
+			"passion",
+			"curiosité",
+			"rigueur",
+			"communication",
+			"apprentissage",
+			"esprit critique",
+			"polyvalence"
 		]
 	},
 	"job_research": [
-		"Vous êtes un client final ou un sous-traitant de taille petite ou moyenne ? Vous aimez travailler dans une ambiance conviviale et êtes prêt à accompagner un jeune diplômé dans son évolution professionnelle ?",
 		"Vous êtes dans le périmètre des Bouches-du-Rhône ?",
 		"C'est vous que je recherche !"
 	],

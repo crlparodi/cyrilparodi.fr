@@ -1,22 +1,17 @@
 import React from "react"
-import Button from "./Button"
-import "../styles/Footer.scss"
+import "../styles/components/Footer.scss"
 
-const buttons = [
+const links = [
 	{
-		dark: true,
-		data: {
-			html: "LinkedIn",
-			icon: "fab fa-linkedin-in",
-		},
+		icon: "fab fa-linkedin-in",
 		href: "https://www.linkedin.com/in/cyril-parodi",
 	},
 	{
-		dark: true,
-		data: {
-			html: "E-Mail",
-			icon: "fas fa-envelope",
-		},
+		icon: "fab fa-twitter",
+		href: "https://twitter.com/crlparodi",
+	},
+	{
+		icon: "fas fa-envelope",
 		href: "mailto:parodicyril@gmail.com",
 	},
 ]
@@ -24,7 +19,7 @@ const buttons = [
 class Footer extends React.Component {
 	render() {
 		return (
-			<div className="mii-contact mii-section">
+			<section className="mii-footer mii-section">
 				<div className="mii-svg-block">
 					<svg
 						className="mii-svg"
@@ -42,56 +37,49 @@ class Footer extends React.Component {
 						/>
 						<path d="M 0 -1 l 0 1 l 50 80 l 50 -80.00 l 0 -1" />
 					</svg>
-				</div>
-				<div className="mii-top has-text-centered container">
-					<div className="bul-tools columns">
-						<div className="outro column is-half has-text-justified">
-							<p>
-								Mon profil vous intéresse, vous voulez en savoir
-								d'avantage sur moi ? Contactez-moi !
-							</p>
-						</div>
-						<div className="links column is-fullwidth">
-							{buttons.map((button, index) => {
-								return (
-									<Button
-										dark={button.dark}
-										data={button.data}
-										href={button.href}
-									/>
-								)
-							})}
-						</div>
+					<div className="mii-up">
+						<a href="#">
+							<i className="fas fa-angle-double-up fa-5x" />
+						</a>
 					</div>
 				</div>
-				<div className="mii-bottom level container">
-					<div className="level-left">
-						<div className="level-item">
+
+				<div className="mii-misc container">
+					<p className="mii-title has-text-centered">
+						Contactez-moi !
+					</p>
+					<div className="bul-tools level">
+						<div className="mii-home level-item has-text-left">
 							<p>
 								<span className="home"> CYRIL PARODI </span>
 							</p>
 						</div>
-					</div>
-					<div className="level-right">
-						<div className="level-item">
-							<div className="license content has-text-right is-small">
-								<p>
-									<img
-										alt="Creative Commons License"
-										src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-									/>
-									<br />
-									Ce site est sous licence{" "}
-									<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-										CC BY-NC-SA 4.0
+						<div className="mii-social level-item has-text-centered">
+							{links.map((link, index) => {
+								return (
+									<a href={link.href}>
+										<i className={link.icon} />
 									</a>
-									.
-								</p>
-							</div>
+								)
+							})}
+						</div>
+						<div className="mii-cc level-item content has-text-right is-small">
+							<p>
+								<img
+									alt="Creative Commons License"
+									src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
+								/>
+								<br />
+								Ce site est sous licence{" "}
+								<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+									CC BY-NC-SA 4.0
+								</a>
+								.
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		)
 	}
 }

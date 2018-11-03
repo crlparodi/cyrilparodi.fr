@@ -1,21 +1,19 @@
-import React from "react";
-import request from "superagent";
-import PropTypes from "prop-types";
-import PropShapes from "../../../prop_types/homepage";
-import "../../../styles/Likes.scss";
+import React from "react"
+import PropShapes from "../../../prop_types/homepage"
+import "../../../styles/Likes.scss"
 
 class Likes extends React.Component {
 	constructor(props) {
-		super();
+		super()
 		this.state = {
 			data: props.data,
-		};
+		}
 	}
 
 	render() {
 		return (
 			<div className="mii-case">
-				<ul className="mii-likes container">
+				<ul className="mii-likes">
 					<li className="mii-box start">J'aime aussi ...</li>
 					{this.state.data.map((like, index) => {
 						return (
@@ -23,20 +21,20 @@ class Likes extends React.Component {
 								<img className="mii-box-img" src={like.jpg} />
 								<div className="mii-box-span">{like.name}</div>
 							</li>
-						);
+						)
 					})}
 				</ul>
 			</div>
-		);
+		)
 	}
 }
 
 Likes.PropTypes = {
 	data: PropShapes.about_me.likes,
-};
+}
 
 Likes.defaultProps = {
 	data: "<NONE>",
-};
+}
 
-export default Likes;
+export default Likes
