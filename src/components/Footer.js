@@ -57,8 +57,8 @@ class Footer extends React.Component {
 						<div className="mii-social level-item has-text-centered">
 							{links.map((link, index) => {
 								return (
-									<a href={link.href}>
-										<i className={link.icon} />
+									<a href={link.href} key={index}>
+										<i className={link.icon} key={index} />
 									</a>
 								)
 							})}

@@ -1,56 +1,53 @@
-import React from "react";
-import PropTypes from "prop-types";
-import PropShapes from "../prop_types/homepage";
-import { BiskayaBlue, Teal, WhitePearl, DarkTeal } from "./Color.js";
-import "../styles/components/Button.scss";
+import React from "react"
+import PropTypes from "prop-types"
+import PropShapes from "../prop_types/homepage"
+import { BiskayaBlue, Teal, WhitePearl, DarkTeal } from "./Color.js"
+import "../styles/components/Button.scss"
 
 class Button extends React.Component {
 	constructor(props) {
-		super();
+		super()
 		this.state = {
-			data: props.data,
-			href: props.href,
-		};
+			inner: props.inner,
+			ico: props.ico,
+			url: props.url,
+		}
 	}
 	render() {
 		return (
 			<a
-				href={this.state.href}
+				href={this.state.url}
 				className={
 					"button " +
 					"is-large " +
 					(this.props.dark ? "dark" : "light")
 				}
 				style={{
-					marginLeft: 20 + "px",
 					border: 2 + "px" + " solid ",
 					borderRadius: 0,
 					textTransform: "uppercase",
 					letterSpacing: 2 + "px",
 				}}
 			>
-				<span style={{ marginRight: "auto" }}>
-					{this.state.data.html}
-				</span>
-				<i className={this.state.data.icon} />
+				<span style={{ marginRight: "auto" }}>{this.state.inner}</span>
+				<i className={this.state.ico} />
 			</a>
-		);
+		)
 	}
 }
 
 Button.propTypes = {
 	dark: PropTypes.bool,
-	data: PropShapes.cv_link,
-	href: PropTypes.string,
-};
+	inner: PropTypes.string,
+	ico: PropTypes.string,
+	url: PropTypes.string,
+}
 
 Button.defaultProps = {
 	dark: true,
-	data: {
-		html: "<HTML>",
-		icon: "<NONE>",
-	},
-	href: "<URL>",
-};
+	html: "<HTML>",
+	icon: "<ICO>",
+	url: "<URL>",
+}
 
-export default Button;
+export default Button

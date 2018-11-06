@@ -1,53 +1,49 @@
-import React from "react";
-import request from "superagent";
-import PropShapes from "../../../prop_types/homepage";
-import Button from "../../../components/Button";
-import "../../../styles/CVSection.scss";
+import React from "react"
 
-const hrefs = ["", "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"];
+import PropShapes from "../../../prop_types/homepage"
+
+import Button from "../../../components/Button"
+
+import "../../../styles/CVSection.scss"
 
 class CVSection extends React.Component {
 	constructor(props) {
-		super();
+		super()
 		this.state = {
 			data: props.data,
-		};
-	}
-	componentDidMount() {
-		return request.get(this.state.data).then((error, response) => {
-			return error
-				? error
-				: this.setState({
-						data: this.props.defaultProps,
-				  });
-		});
+		}
 	}
 	render() {
 		return (
 			<div className="mii-cv-section">
-				{this.state.data.map((cv_path, index) => {
+				{this.state.data.map((e, index) => {
 					return (
 						<Button
 							dark={false}
-							data={cv_path}
-							href={hrefs[index]}
+							inner={e.inner}
+							ico={e.ico}
+							url={e.url}
+							key={index}
 						/>
-					);
+					)
 				})}
 			</div>
-		);
+		)
 	}
 }
 
 CVSection.propTypes = {
-	data: PropShapes.cv_link,
-};
+	data: PropShapes.CVSection,
+}
 
 CVSection.defaultProps = {
-	data: {
-		html: "<EMPTY>",
-		icon: "<X>",
-	},
-};
+	data: [
+		{
+			inner: "<EMPTY>",
+			ico: "<ICO>",
+			url: "<URL>",
+		},
+	],
+}
 
-export default CVSection;
+export default CVSection

@@ -1,11 +1,8 @@
 import React, { Component } from "react"
-import request from "superagent"
+
 import PropShapes from "../../prop_types/homepage"
 
-// import Section from "react-bulma-components/lib/components/section"
-// import Heading from "react-bulma-components/lib/components/heading"
-
-import MemePic from "../../img/love_is_in_the_air.jpg"
+import Button from "../../components/Button"
 
 import "../../styles/AboutSite.scss"
 
@@ -16,60 +13,22 @@ class AboutSite extends Component {
 			data: props.data,
 		}
 	}
-	componentDidMount() {
-		return request.get(this.state.data).then((error, response) => {
-			return error
-				? error
-				: this.setState({
-					data: this.props.defaultProps,
-				  })
-		})
-	}
 	render() {
 		return (
-			<section className="about-here mii-light">
-				<div className="container">
-					<div className="box">
-						<p>Section du site en construction</p>
-					</div>
-					<div className="title is-medium">
-						<h2>À propos du site</h2>
-					</div>
-					<div className="made-with-love">
-						<a href="https://reactjs.org/">
-							<i
-								className="fab fa-react fa-5x"
-								title="React.js Framework"
-							/>
-						</a>
-						<i className="fas fa-plus fa-2x has-text-centered" />
-						<a href="https://sass-lang.com/">
-							<i
-								className="fab fa-sass fa-5x"
-								title="Sass CSS Extension"
-							/>
-						</a>
-						<i className="fas fa-plus fa-2x has-text-centered" />
-						<a href="https://bulma.io/">
-							<img
-								src="https://jgthms.com/web-design-in-4-minutes/bulma.png"
-								alt="Bulma CSS Framework"
-								title="Bulma CSS Design Framework"
-							/>
-						</a>
-						<i className="fas fa-plus fa-2x has-text-centered" />
-						<a href={MemePic}>
-							<i
-								className="fas fa-heart fa-5x has-text-danger"
-								title="... et beaucoup d'amour."
-							/>
-						</a>
-					</div>
+			<section className="about-here mii-section mii-light">
+				<div className="bul-tools container">
+					<h2 className="title">Pourquoi ce site ?</h2>
 					<div className="content has-text-justified">
-						{this.state.data.text.map((text_item, index) => {
-							return <p>{text_item}</p>
+						{this.state.data.map((e, index) => {
+							return <p key={index}>{e}</p>
 						})}
 					</div>
+					<Button
+						dark={false}
+						inner={"Github"}
+						ico={"fab fa-github"}
+						url={"https://github.com/crlparodi/project-mii"}
+					/>
 				</div>
 			</section>
 		)
@@ -77,13 +36,11 @@ class AboutSite extends Component {
 }
 
 AboutSite.propTypes = {
-	data: PropShapes.about_site,
+	data: PropShapes.AboutSite,
 }
 
 AboutSite.defaultProps = {
-	data: {
-		text: "<HERE_ABOUT_THE_SITE>",
-	},
+	data: ["<HERE_ABOUT_THE_SITE>"],
 }
 
 export default AboutSite

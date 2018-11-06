@@ -1,4 +1,5 @@
 import React from "react"
+
 import PropShapes from "../../prop_types/homepage"
 
 import "../../styles/Mobility.scss"
@@ -44,7 +45,7 @@ class Mobility extends React.Component {
 						</div>
 						<div className="mii-desc column">
 							{this.state.data.map((paragraph, index) => {
-								return <p>{paragraph}</p>
+								return <p key={index}>{paragraph}</p>
 							})}
 						</div>
 					</div>
@@ -73,11 +74,11 @@ class Mobility extends React.Component {
 }
 
 Mobility.propTypes = {
-	data: PropShapes.job_research,
+	data: PropShapes.Mobility,
 }
 
 Mobility.defaultProps = {
-	data: "<INPUT>",
+	data: ["<INPUT>"],
 }
 
 export default Mobility

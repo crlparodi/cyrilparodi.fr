@@ -48,4 +48,5 @@ module.exports = {
 			chunkFilename: "./stylesheets/chunk.css",
 		}),
 	],
+	devtool: "inline-source-map",
 }

@@ -1,4 +1,5 @@
 import React from "react"
+
 import PropShapes from "../../../prop_types/homepage"
 
 import "../../../styles/SoftSkills.scss"
@@ -13,26 +14,27 @@ class SoftSkills extends React.Component {
 
 	render() {
 		return (
-			<div className="mii-case">
-				<ul className="mii-soft-skills">
-					<li className="mii-sticker mii-sticker-start">
-						<span>Ingénieur rime avec ...</span>
-					</li>
+			<div className="mii-case content">
+				<h2 className="title">Mes 7 qualités</h2>
+				<ol className="mii-soft-skills columns is-multiline">
 					{this.state.data.map((item, index) => {
 						return (
-							<li className="mii-sticker">
-								<span>{item}</span>
-							</li>
+							<div
+								className="column is-full-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
+								key={index}
+							>
+								<li className="mii-prop">{item}</li>
+							</div>
 						)
 					})}
-				</ul>
+				</ol>
 			</div>
 		)
 	}
 }
 
 SoftSkills.propTypes = {
-	data: PropShapes.about_me.soft_skills,
+	data: PropShapes.SoftSkills,
 }
 
 SoftSkills.defaultProps = {

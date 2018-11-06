@@ -6,16 +6,16 @@ class Header extends React.Component {
 		const navbar = (
 			<nav className="level-right">
 				<p className="level-item">
-					<a href=""> Accueil </a>
+					<a> Accueil </a>
 				</p>
 				<p className="level-item">
 					<a href="#mii-about"> À propos </a>
 				</p>
 				<p className="level-item">
-					<a href=""> CV </a>
+					<a> CV </a>
 				</p>
 				<p className="level-item">
-					<a className=""> Portfolio </a>
+					<a> Portfolio </a>
 				</p>
 				<p className="level-item">
 					<a href="#footer"> Contact </a>

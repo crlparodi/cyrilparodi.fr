@@ -1,47 +1,41 @@
 import React from "react"
-import request from "superagent"
+
 import PropShapes from "../../prop_types/homepage"
-import "../../styles/About.scss"
+
 import CVSection from "./about/CVSection"
 import Likes from "./about/Likes"
 import SoftSkills from "./about/SoftSkills"
 
-import * as HomeData from "../../prop_types/homepage.json"
+import "../../styles/About.scss"
 
 class About extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {
-			data: props.data,
+			About: props.About,
+			CVSection: props.CVSection,
+			Likes: props.Likes,
+			SoftSkills: props.SoftSkills,
 		}
-	}
-	componentDidMount() {
-		return request.get(this.state.data).then((error, response) => {
-			return error
-				? error
-				: this.setState({
-					data: this.props.defaultProps,
-				  })
-		})
 	}
 	render() {
 		return (
 			<section className="mii-about mii-light" id="mii-about">
 				<div className="mii-min-section container">
 					<div className="mii-about-catch content has-text-justified">
-						{this.state.data.text.map((text_item, index) => {
-							return <p>{text_item}</p>
+						{this.state.About.map((text_item, index) => {
+							return <p key={index}>{text_item}</p>
 						})}
 					</div>
-					<CVSection data={HomeData.cv_link} />
+					<CVSection data={this.state.CVSection} />
 				</div>
 				<span className="mii-separator" />
 				<div className="mii-min-section container">
-					<Likes data={this.state.data.likes} />
+					<Likes data={this.state.Likes} />
 				</div>
 				<span className="mii-separator" />
 				<div className="mii-min-section container">
-					<SoftSkills data={this.state.data.soft_skills} />
+					<SoftSkills data={this.state.SoftSkills} />
 				</div>
 			</section>
 		)
@@ -49,15 +43,10 @@ class About extends React.Component {
 }
 
 About.propTypes = {
-	data: PropShapes.about_me,
-}
-
-About.defaultProps = {
-	data: {
-		text: "<TEXT>",
-		soft_skills: "<QUALITY>",
-		likes: "<LIKE>",
-	},
+	About: PropShapes.About,
+	CVSection: PropShapes.CVSection,
+	Likes: PropShapes.Likes,
+	SoftSkills: PropShapes.SoftSkills,
 }
 
 export default About

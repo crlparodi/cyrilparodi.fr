@@ -1,74 +1,71 @@
 {
-	"citation": {
+	"intro": {
 		"quote": "La curiosité naturelle à l'homme lui inspire l'envie d'apprendre.",
 		"author": "Jean-Jacques Rousseau",
 		"book": "Les Confessions",
 		"year": 1770
 	},
-	"cv_link": [
+	"about": [
+		"Jeune diplômé d'ingénieur originaire d'Aix-en-Provence, je souhaite quitter l'électronique pour démarrer ma carrière professionnelle dans le développement...",
+		"...car après-tout, qui n'a jamais rêvé de faire de sa passion un métier ?"
+	],
+	"cvsection": [
 		{
-			"html": "Mon parcours",
-			"icon": "fas fa-desktop"
+			"inner": "Mon parcours",
+			"ico": "fas fa-desktop",
+			"url": ""
 		},
 		{
-			"html": "Mon CV (PDF)",
-			"icon": "fas fa-download"
+			"inner": "Mon CV (PDF)",
+			"ico": "fas fa-download",
+			"url": "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
 		}
 	],
-	"about_me": {
-		"text": [
-			"Jeune diplômé d'ingénieur originaire d'Aix-en-Provence, je souhaite quitter l'électronique pour démarrer ma carrière professionnelle dans le développement...",
-			"...car après-tout, qui n'a jamais rêvé de faire de sa passion un métier ?"
-		],
-		"likes": [
-			{
-				"name": "Le rétrocomputing",
-				"jpg": "https://bit.ly/2COb9yP"
-			},
-			{
-				"name": "Le rétrogaming",
-				"jpg": "https://bit.ly/2COb9ij"
-			},
-			{
-				"name": "Linux",
-				"jpg": "https://bit.ly/2Sug7WS"
-			},
-			{
-				"name": "La récup'",
-				"jpg": "https://bit.ly/2Od00dc"
-			},
-			{
-				"name": "Les séries TV",
-				"jpg": "https://bit.ly/2OcsG5W"
-			},
-			{
-				"name": "Les RPGs",
-				"jpg": "https://bit.ly/2JotUtW"
-			},
-			{
-				"name": "La lecture (dev. perso. - sociologie)",
-				"jpg": "https://bit.ly/2PXllca"
-			}
-		],
-		"soft_skills": [
-			"passion",
-			"curiosité",
-			"rigueur",
-			"communication",
-			"apprentissage",
-			"esprit critique",
-			"polyvalence"
-		]
-	},
-	"job_research": [
+	"likes": [
+		{
+			"name": "Le rétrocomputing",
+			"jpg": "https://bit.ly/2COb9yP"
+		},
+		{
+			"name": "Le rétrogaming",
+			"jpg": "https://bit.ly/2COb9ij"
+		},
+		{
+			"name": "Linux",
+			"jpg": "https://bit.ly/2Sug7WS"
+		},
+		{
+			"name": "La récup'",
+			"jpg": "https://bit.ly/2Od00dc"
+		},
+		{
+			"name": "Les séries TV",
+			"jpg": "https://bit.ly/2OcsG5W"
+		},
+		{
+			"name": "Les RPGs",
+			"jpg": "https://bit.ly/2JotUtW"
+		},
+		{
+			"name": "La lecture (dev. perso. - sociologie)",
+			"jpg": "https://bit.ly/2PXllca"
+		}
+	],
+	"softskills": [
+		"passion",
+		"rigueur",
+		"curiosité",
+		"apprentissage",
+		"communication",
+		"esprit critique",
+		"polyvalence"
+	],
+	"mobility": [
 		"Vous êtes dans le périmètre des Bouches-du-Rhône ?",
 		"C'est vous que je recherche !"
 	],
-	"about_site": {
-		"text": [
-			"L'idée de développer un site m'est venu en raison de deux principaux soucis : l'absence d'humanisme dans mes CVs papiers ainsi que la tournure qu'a pris LinkedIn qui aujourd'hui ne me convient plus. C'est pour cette raison que j'ai voulu me lancer dans ce projet, l'objectif est de proposer d'autres moyens de communication plus vivants tout en me passant petit à petit de la tradition du CV papier dans lequel nous sommes coincés depuis désormais trop longtemps.\n",
-			"Ce site est un projet personnel, il n'a aucune visée commerciale et est réalisée uniquement sur mon temps libre. Il a été fait avec amour, du temps et de la passion !",
-			"Le contenu de ce site est sous licence Creative Commons, son code source est aussi disponible sur GitHib."
-		]
-	}
+	"aboutsite": [
+		"J'avais envie de proposer autre chose qu'un simple CV papier, c'est un projet personnel qui me tenait à coeur et sur lequel j'y mets du temps et de la passion.",
+		"Le site a été dévéloppé avec React.js, les fichiers source du site sont disponible sur GitHub."
+	]
 }

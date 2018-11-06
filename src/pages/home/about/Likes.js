@@ -1,5 +1,7 @@
 import React from "react"
+
 import PropShapes from "../../../prop_types/homepage"
+
 import "../../../styles/Likes.scss"
 
 class Likes extends React.Component {
@@ -17,7 +19,7 @@ class Likes extends React.Component {
 					<li className="mii-box start">J'aime aussi ...</li>
 					{this.state.data.map((like, index) => {
 						return (
-							<li className="mii-box">
+							<li className="mii-box" key={index}>
 								<img className="mii-box-img" src={like.jpg} />
 								<div className="mii-box-span">{like.name}</div>
 							</li>
@@ -29,12 +31,17 @@ class Likes extends React.Component {
 	}
 }
 
-Likes.PropTypes = {
-	data: PropShapes.about_me.likes,
+Likes.propTypes = {
+	data: PropShapes.Likes,
 }
 
 Likes.defaultProps = {
-	data: "<NONE>",
+	data: [
+		{
+			name: "<NONE>",
+			jpg: "<IMG>",
+		},
+	],
 }
 
 export default Likes

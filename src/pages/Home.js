@@ -1,23 +1,28 @@
-import React from "react";
+import React from "react"
 
-import Intro from "./home/Intro";
-import About from "./home/About";
-import Mobility from "./home/Mobility";
-import AboutSite from "./home/AboutSite";
+import Intro from "./home/Intro"
+import About from "./home/About"
+import Mobility from "./home/Mobility"
+import AboutSite from "./home/AboutSite"
 
-import * as HomeData from "../prop_types/homepage.json";
+import * as HomeData from "../prop_types/homepage.json"
 
 class Home extends React.Component {
 	render() {
 		return (
 			<div>
-				<Intro data={HomeData.citation} />
-				<About data={HomeData.about_me} />
-				<Mobility data={HomeData.job_research} />
-				<AboutSite data={HomeData.about_site} />
+				<Intro data={HomeData.intro} />
+				<About
+					About={HomeData.about}
+					CVSection={HomeData.cvsection}
+					Likes={HomeData.likes}
+					SoftSkills={HomeData.softskills}
+				/>
+				<Mobility data={HomeData.mobility} />
+				<AboutSite data={HomeData.aboutsite} />
 			</div>
-		);
+		)
 	}
 }
 
-export default Home;
+export default Home

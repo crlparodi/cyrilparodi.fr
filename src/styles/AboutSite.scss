@@ -1,43 +1,22 @@
+@import "./variables/fonts.scss";
 @import "./variables/colors.scss";
 
 .about-here {
 	padding: 62px 0 !important;
 	color: $biskaya_blue !important;
-
-	.box {
-		border: 2px solid $dark_teal;
-		border-radius: 0;
-		color: $dark_teal;
-		background-color: $white_pearl;
-		font-family: "Oxygen", sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
+	font-family: "Oxygen", sans-serif;
+	font-size: 1.2rem;
 
 	.title {
+		color: $biskaya_blue !important;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 900 !important;
 		text-transform: uppercase;
-		letter-spacing: 2px;
 	}
 
-	.made-with-love {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-
-		margin-bottom: 1.5rem;
-
-		a {
-			color: inherit;
-		}
-
-		.fa-plus {
-			margin: 0 30px;
-			align-self: center;
-		}
-
-		img {
-			height: 5em;
-			filter: brightness(0.45) grayscale(1);
-		}
+	.button {
+		position: relative;
+		width: 30%;
+		margin: 20px 35%;
 	}
 }

@@ -2,9 +2,7 @@
 	"name": "project-mii",
 	"version": "0.1.0",
 	"private": true,
-	"dependencies": {
-		"to-string-loader": "^1.1.5"
-	},
+	"dependencies": {},
 	"scripts": {
 		"start": "webpack-dev-server --mode development --open",
 		"build": "webpack --mode production"
@@ -32,7 +30,6 @@
 		"react-responsive": "^5.0.0",
 		"sass-loader": "^7.1.0",
 		"style-loader": "^0.23.1",
-		"superagent": "^4.0.0-beta.5",
 		"url-loader": "^1.1.2",
 		"webpack": "^4.21.0",
 		"webpack-cli": "^3.1.2",

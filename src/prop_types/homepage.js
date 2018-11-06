@@ -1,37 +1,45 @@
 import PropTypes from "prop-types"
 
-/* HALF-COMPONENTS */
-const bulletPoints = PropTypes.arrayOf(PropTypes.string)
-
-/* PROP-SETS */
-const citation = PropTypes.shape({
+/* INTRO */
+const Intro = PropTypes.shape({
 	quote: PropTypes.string,
 	author: PropTypes.string,
 	book: PropTypes.string,
 	year: PropTypes.number,
 })
 
-const cv_link = PropTypes.shape({
-	html: PropTypes.string,
-	icon: PropTypes.string,
-})
+/* ABOUT */
+const About = PropTypes.arrayOf(PropTypes.string)
 
-const about_me = PropTypes.shape({
-	text: PropTypes.string,
-	soft_skills: bulletPoints,
-	likes: bulletPoints,
-})
+const CVSection = PropTypes.arrayOf(
+	PropTypes.shape({
+		inner: PropTypes.string,
+		ico: PropTypes.string,
+		url: PropTypes.string,
+	}),
+)
 
-const job_research = PropTypes.string
+const Likes = PropTypes.arrayOf(
+	PropTypes.shape({
+		name: PropTypes.string,
+		jpg: PropTypes.string,
+	}),
+)
 
-const about_site = PropTypes.shape({
-	text: PropTypes.string,
-})
+const SoftSkills = PropTypes.arrayOf(PropTypes.string)
+
+/* MOBILITY */
+const Mobility = PropTypes.arrayOf(PropTypes.string)
+
+/* ABOUT SITE* */
+const AboutSite = PropTypes.arrayOf(PropTypes.string)
 
 export default {
-	bulletPoints,
-	citation,
-	cv_link,
-	about_me,
-	about_site,
+	Intro,
+	About,
+	CVSection,
+	Likes,
+	SoftSkills,
+	Mobility,
+	AboutSite,
 }
