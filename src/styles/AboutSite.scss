@@ -1,14 +1,10 @@
-@import "./variables/fonts.scss";
-@import "./variables/colors.scss";
+@import "./variables/design.scss";
 
-.about-here {
-	padding: 62px 0 !important;
-	color: $biskaya_blue !important;
-	font-family: "Oxygen", sans-serif;
+.mii-about-here {
 	font-size: 1.2rem;
 
-	.title {
-		color: $biskaya_blue !important;
+	.mii-title {
+		font-size: 1.75rem;
 		font-family: "Montserrat", sans-serif;
 		font-weight: 900 !important;
 		text-transform: uppercase;

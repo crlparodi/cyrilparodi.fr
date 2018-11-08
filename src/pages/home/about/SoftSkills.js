@@ -14,8 +14,8 @@ class SoftSkills extends React.Component {
 
 	render() {
 		return (
-			<div className="mii-case content">
-				<h2 className="title">Mes 7 qualités</h2>
+			<div className="mii-case">
+				<h2 className="mii-title">Mes 7 qualités</h2>
 				<ol className="mii-soft-skills columns is-multiline">
 					{this.state.data.map((item, index) => {
 						return (

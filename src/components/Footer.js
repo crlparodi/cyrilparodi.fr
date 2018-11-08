@@ -19,7 +19,7 @@ const links = [
 class Footer extends React.Component {
 	render() {
 		return (
-			<section className="mii-footer mii-section">
+			<section className="mii-footer mii-section mii-dark">
 				<div className="mii-svg-block">
 					<svg
 						className="mii-svg"
@@ -43,7 +43,6 @@ class Footer extends React.Component {
 						</a>
 					</div>
 				</div>
-
 				<div className="mii-misc container">
 					<p className="mii-title has-text-centered">
 						Contactez-moi !
@@ -57,7 +56,11 @@ class Footer extends React.Component {
 						<div className="mii-social level-item has-text-centered">
 							{links.map((link, index) => {
 								return (
-									<a href={link.href} key={index}>
+									<a
+										href={link.href}
+										key={index}
+										className="mii-link"
+									>
 										<i className={link.icon} key={index} />
 									</a>
 								)
@@ -71,7 +74,10 @@ class Footer extends React.Component {
 								/>
 								<br />
 								Ce site est sous licence{" "}
-								<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+								<a
+									href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+									className="mii-link"
+								>
 									CC BY-NC-SA 4.0
 								</a>
 								.

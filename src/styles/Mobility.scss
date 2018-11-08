@@ -1,22 +1,19 @@
-@import "./variables/fonts.scss";
-@import "./variables/colors.scss";
+@import "./variables/design.scss";
 
 .mii-mobility {
-	background-color: $biskaya_blue;
-	color: $white_pearl;
 	background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
 
 	.mii-svg-block {
 		margin-top: 0px;
 		display: flex;
 		justify-content: center;
-		fill: $teal;
+		fill: $color;
 
 		&:last-child {
 		}
 
 		.overflow {
-			fill: $white_pearl;
+			fill: $light;
 		}
 	}
 	.map-responsive {
@@ -35,8 +32,6 @@
 	}
 
 	.mii-desc {
-		font-family: "Oxygen", sans-serif;
-		font-weight: 300;
 		font-size: 1.4rem;
 		margin: auto 0;
 

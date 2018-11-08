@@ -1,5 +1,4 @@
-@import "../variables/colors.scss";
-@import "../variables/fonts.scss";
+@import "../variables/design.scss";
 
 .button {
 	position: relative !important;
@@ -9,8 +8,8 @@
 	z-index: 0;
 	-webkit-transition: 0.3s all ease;
 	transition: 0.3s all ease;
-	color: $biskaya_blue;
-	border-color: $biskaya_blue !important;
+	color: $dark;
+	border-color: $dark !important;
 	background: none;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 900;
@@ -24,12 +23,12 @@
 		bottom: 0;
 		opacity: 1;
 		content: "";
-		background-color: $biskaya_blue;
+		background-color: $dark;
 		z-index: -2;
 	}
 	&:hover {
-		color: $white_pearl;
-		border-color: $biskaya_blue !important;
+		color: $light;
+		border-color: $dark !important;
 		&:before {
 			-webkit-transition: 0.3s all ease;
 			transition: 0.3s all ease;
@@ -41,8 +40,8 @@
 		}
 	}
 	&:focus {
-		color: $white_pearl;
-		border-color: $biskaya_blue !important;
+		color: $light;
+		border-color: $dark !important;
 		&:before {
 			transition: 0.3s all ease;
 			left: 0;
@@ -58,8 +57,8 @@
 	z-index: 0;
 	-webkit-transition: 0.3s all ease;
 	transition: 0.3s all ease;
-	color: $teal;
-	border-color: $teal !important;
+	color: $color;
+	border-color: $color !important;
 	background: none;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 900;
@@ -73,12 +72,12 @@
 		bottom: 0;
 		opacity: 1;
 		content: "";
-		background-color: $teal;
+		background-color: $color;
 		z-index: -2;
 	}
 	&:hover {
-		color: $biskaya_blue;
-		border-color: $teal !important;
+		color: $dark;
+		border-color: $color !important;
 		&:before {
 			-webkit-transition: 0.3s all ease;
 			transition: 0.3s all ease;
@@ -90,8 +89,8 @@
 		}
 	}
 	&:focus {
-		color: $biskaya_blue;
-		border-color: $teal !important;
+		color: $dark;
+		border-color: $color !important;
 		&:before {
 			transition: 0.3s all ease;
 			left: 0;

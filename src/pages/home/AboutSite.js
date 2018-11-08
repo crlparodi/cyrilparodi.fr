@@ -15,10 +15,10 @@ class AboutSite extends Component {
 	}
 	render() {
 		return (
-			<section className="about-here mii-section mii-light">
+			<section className="mii-about-here mii-section mii-light">
 				<div className="bul-tools container">
-					<h2 className="title">Pourquoi ce site ?</h2>
-					<div className="content has-text-justified">
+					<h2 className="mii-title">Pourquoi ce site ?</h2>
+					<div className="bul-tools content has-text-justified">
 						{this.state.data.map((e, index) => {
 							return <p key={index}>{e}</p>
 						})}

@@ -1,9 +1,6 @@
-@import "../variables/fonts.scss";
-@import "../variables/colors.scss";
+@import "../variables/design.scss";
 
 .mii-footer {
-	font-family: "Oxygen", sans-serif;
-	color: $teal;
 	padding: 0 0 3rem 0 !important;
 
 	.level-item {
@@ -16,11 +13,11 @@
 		margin-top: 0px;
 		display: flex;
 		justify-content: center;
-		fill: $white_pearl;
+		fill: $light;
 
 		.mii-svg {
 			.overflow {
-				fill: $teal;
+				fill: $color;
 			}
 		}
 
@@ -28,15 +25,15 @@
 			position: absolute;
 
 			a {
-				color: $teal;
+				color: $color;
 				transition: color 0.3s ease;
 
 				&:hover {
-					color: $biskaya_blue;
+					color: $dark;
 				}
 
 				&:focus {
-					color: $biskaya_blue;
+					color: $dark;
 				}
 			}
 		}
@@ -54,8 +51,6 @@
 		a {
 			margin: 0 10px 0 10px;
 			text-decoration: none;
-			color: $teal;
-			transition: color 0.3s ease;
 
 			font-size: 2rem;
 
@@ -86,7 +81,6 @@
 			}
 
 			&:hover {
-				color: $white_pearl;
 				&::before,
 				&::after {
 					display: inline-block;
@@ -98,7 +92,6 @@
 			}
 
 			&:focus {
-				color: $white_pearl;
 				&::before,
 				&::after {
 					display: inline-block;
@@ -128,19 +121,6 @@
 	.mii-cc {
 		p {
 			width: 100%;
-			a {
-				color: $teal;
-				transition: color 0.3s ease;
-
-				&:hover {
-					color: $white_pearl;
-				}
-
-				&:focus,
-				&:active {
-					outline-color: $teal;
-				}
-			}
 		}
 	}
 }

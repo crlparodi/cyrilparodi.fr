@@ -35,7 +35,7 @@ class Intro extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-intro mii-section" id="mii-intro">
+			<section className="mii-intro mii-section mii-dark" id="mii-intro">
 				<div className="bul-tool container">
 					<div className="mii-intro-inner columns has-text-centered">
 						<div className="mii-self-pic image column is-one-fifth">

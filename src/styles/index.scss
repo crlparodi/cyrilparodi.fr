@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-@import "./variables/fonts.scss";
-@import "./variables/colors.scss";
+@import "./variables/design.scss";
 
 body,
 html {
@@ -10,23 +9,30 @@ html {
 	margin: 0;
 	padding: 0;
 
-	color: $white_pearl;
-
-	background-color: $biskaya_blue;
-
 	scroll-behavior: smooth;
+
+	@extend .mii-light;
+
+	font-family: "Oxygen", sans-serif;
 }
 
-.columns {
-	margin: 0 !important;
-	padding: 0 !important;
+/* COLOR CONFIGURATIONS
+ */
 
-	&:last-child {
-		margin: 0 !important;
-	}
+.mii-light {
+	color: $dark;
+	background-color: $light;
 }
 
-// The section is unique
+.mii-dark {
+	color: $light;
+	background-color: $dark;
+}
+
+/* DIV & SECTION PRE-FORMATTING
+ */
+
+/* The section is unique */
 .mii-section {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
@@ -35,7 +41,7 @@ html {
 	padding-right: 0;
 }
 
-// The section contains several mini sections
+/* The section contains several mini sections */
 .mii-min-section {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
@@ -47,9 +53,28 @@ html {
 	margin-bottom: 0 !important;
 }
 
-.mii-light {
-	background-color: $white_pearl;
+/* ELEMENT PRE-CONFIGS
+ */
+
+.mii-link {
+	color: inherit;
+	transition: color 0.3s ease !important;
+
+	&:hover,
+	&:focus {
+		color: $color !important;
+	}
 }
 
-.mii-dark {
+/* BULMA ELEMENTS OVERRIDES
+ * bulma.io
+ */
+
+.columns {
+	margin: 0 !important;
+	padding: 0 !important;
+
+	&:last-child {
+		margin: 0 !important;
+	}
 }

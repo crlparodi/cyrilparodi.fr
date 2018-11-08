@@ -22,9 +22,13 @@ class About extends React.Component {
 		return (
 			<section className="mii-about mii-light" id="mii-about">
 				<div className="mii-min-section container">
-					<div className="mii-about-catch content has-text-justified">
+					<div className="mii-about-prepost content has-text-justified">
 						{this.state.About.map((text_item, index) => {
-							return <p key={index}>{text_item}</p>
+							return (
+								<p className="mii-post" key={index}>
+									{text_item}
+								</p>
+							)
 						})}
 					</div>
 					<CVSection data={this.state.CVSection} />

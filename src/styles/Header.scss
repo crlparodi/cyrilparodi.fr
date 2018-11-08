@@ -1,6 +1,5 @@
-@charset "UTF-8";
-
-@import "./variables/colors.scss";
+@import "./variables/design.scss";
+@import "./variables/effects.scss";
 
 @mixin header-background {
 	background: -moz-linear-gradient(
@@ -21,7 +20,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=0 );
 }
 
-.header {
+.mii-header {
 	position: absolute !important;
 	z-index: 1;
 	width: 100%;
@@ -30,74 +29,27 @@
 	transform: translateX(-50%);
 	height: 48px;
 	line-height: 48px;
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 2px;
+	background-color: unset !important;
 	@include header-background();
-	font-family: "Montserrat", sans-serif;
-	font-weight: 700;
 	.level {
 		margin: 0 auto;
 		a {
 			text-decoration: none;
-			color: $white-pearl;
 			text-shadow: 0px 0px 5px black;
 
-			&::before {
-				margin-right: 5px;
-				font-weight: 900;
-				content: "- ";
-				-webkit-transform: translateX(20px);
-				-moz-transform: translateX(20px);
-				transform: translateX(20px);
-			}
-			&::after {
-				margin-left: 5px;
-				font-weight: 900;
-				content: " -";
-				-webkit-transform: translateX(-20px);
-				-moz-transform: translateX(-20px);
-				transform: translateX(-20px);
-			}
-
-			&::before,
-			&::after {
-				display: inline-block;
-				opacity: 0;
-				-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-				-moz-transition: -moz-transform 0.3s, opacity 0.2s;
-				transition: transform 0.3s, opacity 0.2s;
-			}
-
-			&:hover {
-				&::before,
-				&::after {
-					display: inline-block;
-					opacity: 1;
-					-webkit-transform: translateX(0px);
-					-moz-transform: translateX(0px);
-					transform: translateX(0px);
-				}
-			}
-
-			&:focus {
-				&::before,
-				&::after {
-					display: inline-block;
-					opacity: 1;
-					-webkit-transform: translateX(0px);
-					-moz-transform: translateX(0px);
-					transform: translateX(0px);
-				}
-			}
+			@include hoverDashesEffect();
 		}
 
 		.level-left {
-			font-size: 16px;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 		}
 		.level-right {
 			p {
-				text-transform: uppercase;
+				font-weight: 300;
+				letter-spacing: 1px;
 				margin: 0 0 0 40px;
 			}
 		}

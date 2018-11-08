@@ -1,13 +1,9 @@
-@import "./variables/fonts.scss";
-@import "./variables/colors.scss";
+@import "./variables/design.scss";
 
 .mii-about {
-	color: $biskaya_blue !important;
-
 	.mii-separator {
 		display: block;
 		border: none;
-		color: white;
 		height: 1px;
 		background: -webkit-gradient(
 			radial,
@@ -15,14 +11,12 @@
 			0,
 			50% 50%,
 			350,
-			from($biskaya_blue),
-			to($white_pearl)
+			from($dark),
+			to($light)
 		);
 	}
 
-	.mii-about-catch {
-		font-family: "Oxygen", sans-serif;
-		font-weight: 300;
+	.mii-about-prepost {
 		box-sizing: border-box;
 		position: relative;
 		padding: 0 20px 6rem 110px;
@@ -35,48 +29,15 @@
 			content: "\f10d";
 			font-size: 60px;
 			font-style: normal;
-			color: $dark_teal;
+			color: $color;
 			top: 1rem;
 			left: 25px;
 		}
 
-		p {
+		.mii-post {
 			font-size: 1.5rem;
 			line-height: 2rem;
-			margin: 16px 0px;
-		}
-	}
-
-	.box {
-		border: 2px solid $dark_teal;
-		border-radius: 0;
-		color: $dark_teal;
-		background-color: $white_pearl;
-		font-family: "Oxygen", sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-	}
-
-	.content {
-		margin-bottom: 48px;
-
-		&:last-of-type {
-			margin-bottom: 0;
-		}
-
-		.likes {
-			margin: 0;
-		}
-
-		ul {
-			list-style: none;
-
-			li {
-				&:before {
-					content: "\279C";
-					padding-right: 10px;
-				}
-			}
+			margin: 1.5rem 0 !important;
 		}
 	}
 }
