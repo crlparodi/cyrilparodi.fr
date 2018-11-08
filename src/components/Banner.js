@@ -64,21 +64,17 @@ class Banner extends React.Component {
 				hideContentOnLoad={true}
 			>
 				<div
-					className="small_banner mii-dark"
+					className="mii-banner mii-dark"
 					style={{
 						height: this.state.height + "px",
 						backgroundImage: "url(" + IMG + ")",
 						filter: "background sepia(1)",
 					}}
 				>
-					<div className="banner_intro has-text-centered">
-						<h1 className="mii-title is-1 is-uppercase">
+					<div className="mii-banner-case has-text-centered">
+						<h1 className="mii-banner is-uppercase">
 							Faire d'une passion un métier
 						</h1>
-						<p className="mii-subtitle">
-							Ingénieur en recherche d'une opportunité en
-							développement.
-						</p>
 						<div className="mii-social">
 							{links.map((link, index) => {
 								return (

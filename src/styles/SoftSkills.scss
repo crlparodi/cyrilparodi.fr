@@ -1,14 +1,6 @@
 @import "./variables/design.scss";
 
 .mii-case {
-	.mii-title {
-		font-size: 1.75rem;
-		margin-bottom: 2rem;
-		font-family: "Montserrat", sans-serif;
-		font-weight: 900 !important;
-		text-transform: uppercase;
-	}
-
 	.mii-soft-skills {
 		list-style: none !important;
 		counter-reset: mii-counter;

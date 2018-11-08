@@ -25,7 +25,7 @@ class About extends React.Component {
 					<div className="mii-about-prepost content has-text-justified">
 						{this.state.About.map((text_item, index) => {
 							return (
-								<p className="mii-post" key={index}>
+								<p className="mii-dialog" key={index}>
 									{text_item}
 								</p>
 							)

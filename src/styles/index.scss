@@ -53,8 +53,32 @@ html {
 	margin-bottom: 0 !important;
 }
 
-/* ELEMENT PRE-CONFIGS
+/* COMMON ELEMENT PRE-CONFIGS
  */
+
+.mii-title {
+	font-size: 1.75rem;
+	margin-bottom: 2rem;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+}
+
+.mii-subtitle {
+	font-size: 1.75rem;
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+}
+
+.mii-dialog {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 1.5rem 0 !important;
+}
+
+.mii-text {
+	font-size: 1.2rem;
+}
 
 .mii-link {
 	color: inherit;

@@ -1,7 +1,7 @@
 @import "./variables/design.scss";
 @import "./variables/effects.scss";
 
-.small_banner {
+.mii-banner {
 	position: relative;
 	background-size: cover;
 	background-position-y: 100%;
@@ -10,17 +10,11 @@
 	flex-direction: column;
 	justify-content: flex-end;
 
-	.banner_intro {
+	.mii-banner-case {
 		padding: 0 0 2rem 0;
 		text-shadow: 0px 0px 10px black;
 
-		.mii-subtitle {
-			font-size: 1.5rem;
-			font-size: 1.5rem !important;
-			margin-bottom: 0.5rem;
-		}
-
-		.mii-title {
+		.mii-banner {
 			font-size: 3rem;
 			font-family: "Montserrat", sans-serif;
 			font-weight: 900 !important;

@@ -44,9 +44,7 @@ class Footer extends React.Component {
 					</div>
 				</div>
 				<div className="mii-misc container">
-					<p className="mii-title has-text-centered">
-						Contactez-moi !
-					</p>
+					<p className="mii-msg has-text-centered">Contactez-moi !</p>
 					<div className="bul-tools level">
 						<div className="mii-home level-item has-text-left">
 							<p>

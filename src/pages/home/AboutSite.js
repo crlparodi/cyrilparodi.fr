@@ -18,7 +18,7 @@ class AboutSite extends Component {
 			<section className="mii-about-here mii-section mii-light">
 				<div className="bul-tools container">
 					<h2 className="mii-title">Pourquoi ce site ?</h2>
-					<div className="bul-tools content has-text-justified">
+					<div className="mii-text content has-text-justified">
 						{this.state.data.map((e, index) => {
 							return <p key={index}>{e}</p>
 						})}
