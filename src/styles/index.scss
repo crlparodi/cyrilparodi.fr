@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "bulma";
+@import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
 body,
@@ -11,7 +13,7 @@ html {
 
 	scroll-behavior: smooth;
 
-	@extend .mii-light;
+	@extend .mii-dark;
 
 	font-family: "Oxygen", sans-serif;
 }
@@ -37,8 +39,10 @@ html {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 
-	padding-left: 0;
-	padding-right: 0;
+	@include mobile {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
 }
 
 /* The section contains several mini sections */
@@ -46,11 +50,13 @@ html {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 
-	padding-left: 0 !important;
-	padding-right: 0 !important;
-
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
+
+	@include mobile {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
 }
 
 /* COMMON ELEMENT PRE-CONFIGS
@@ -74,10 +80,19 @@ html {
 	font-size: 1.5rem;
 	line-height: 2rem;
 	margin: 1.5rem 0 !important;
+
+	@include mobile {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
 }
 
 .mii-text {
 	font-size: 1.2rem;
+
+	@include mobile {
+		font-size: 1rem;
+	}
 }
 
 .mii-link {
@@ -100,5 +115,17 @@ html {
 
 	&:last-child {
 		margin: 0 !important;
+	}
+}
+
+.container {
+	@include tablet-only {
+		margin-left: 64px;
+		margin-right: 64px;
+	}
+
+	@include mobile {
+		margin-left: 16px;
+		margin-right: 16px;
 	}
 }

@@ -1,0 +1,37 @@
+@import "root/styles/variables/design.scss";
+@import "root/styles/variables/effects.scss";
+
+.mii-footer-master {
+	padding: 0 0 3rem 0 !important;
+
+	.mii-svg-block {
+		position: relative;
+		margin-top: 0px;
+		display: flex;
+		justify-content: center;
+		fill: $light;
+
+		.mii-svg {
+			.overflow {
+				fill: $color;
+			}
+		}
+
+		.mii-up {
+			position: absolute;
+
+			a {
+				color: $color;
+				transition: color 0.3s ease;
+
+				&:hover {
+					color: $dark;
+				}
+
+				&:focus {
+					color: $dark;
+				}
+			}
+		}
+	}
+}

@@ -1,9 +1,25 @@
+@import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
 .mii-intro {
 	background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+	.mii-svg {
+		margin-top: 0px;
+		display: flex;
+		justify-content: center;
+		fill: $color;
+
+		.overflow {
+			fill: $light;
+		}
+	}
+
 	.mii-self-pic {
 		width: 192px;
+
+		@include mobile {
+			margin: 0 auto;
+		}
 	}
 
 	.mii-quote {
@@ -17,6 +33,18 @@
 		}
 		p {
 			padding-top: 3rem;
+		}
+
+		@include mobile {
+			margin: auto 0;
+
+			q {
+				font-size: 1.8rem !important;
+			}
+			p {
+				font-size: 1.2rem;
+				padding-top: 1.5rem;
+			}
 		}
 	}
 }

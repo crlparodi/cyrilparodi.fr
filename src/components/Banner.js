@@ -71,7 +71,7 @@ class Banner extends React.Component {
 						filter: "background sepia(1)",
 					}}
 				>
-					<div className="mii-banner-case has-text-centered">
+					<div className="mii-banner-case container has-text-centered">
 						<h1 className="mii-banner is-uppercase">
 							Faire d'une passion un métier
 						</h1>

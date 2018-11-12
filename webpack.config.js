@@ -1,15 +1,23 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const CssExtractPlugin = require("mini-css-extract-plugin")
+const path = require("path")
 
 module.exports = {
+	resolve: {
+		alias: {
+			modules: path.resolve(__dirname, "node_modules"),
+			root: path.resolve(__dirname, "src"),
+			// styles ? (Sass components)
+			// prop-types ?
+			// make a better arborescence ... ?
+		},
+	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-				},
+				loader: "babel-loader",
 			},
 			{
 				test: /\.(css|scss)$/,

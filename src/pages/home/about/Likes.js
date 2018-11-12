@@ -16,7 +16,7 @@ class Likes extends React.Component {
 		return (
 			<div className="mii-case">
 				<ul className="mii-likes">
-					<li className="mii-box start">J'aime aussi ...</li>
+					<li className="mii-box start">J'aime...</li>
 					{this.state.data.map((like, index) => {
 						return (
 							<li className="mii-box" key={index}>

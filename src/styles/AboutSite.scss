@@ -1,9 +1,21 @@
+@import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
 .mii-about-here {
-	.button {
-		position: relative;
-		width: 30%;
-		margin: 20px 35%;
+	.mii-btn-case {
+		display: flex;
+
+		.button {
+			width: 30%;
+			margin: 20px auto;
+
+			@include mobile {
+				width: 280px;
+			}
+
+			@include tablet-only {
+				width: 50%;
+			}
+		}
 	}
 }

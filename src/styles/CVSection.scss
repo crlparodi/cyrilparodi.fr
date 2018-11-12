@@ -1,10 +1,28 @@
-.mii-cv-section {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+@import "bulma/sass/utilities/mixins.sass";
 
-	.button {
-		width: 45%;
-		margin-left: 0 !important;
+.mii-cv-section {
+	@include from($desktop) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		.button {
+			width: 45%;
+			margin-left: 0 !important;
+		}
+	}
+
+	@include touch {
+		display: flex;
+		flex-direction: column;
+
+		.button {
+			width: 280px;
+			margin: 0 auto 20px auto;
+
+			@include tablet-only {
+				width: 50%;
+			}
+		}
 	}
 }

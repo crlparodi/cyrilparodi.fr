@@ -23,12 +23,14 @@ class AboutSite extends Component {
 							return <p key={index}>{e}</p>
 						})}
 					</div>
-					<Button
-						dark={false}
-						inner={"Github"}
-						ico={"fab fa-github"}
-						url={"https://github.com/crlparodi/project-mii"}
-					/>
+					<div className="mii-btn-case">
+						<Button
+							dark={false}
+							inner={"Github"}
+							ico={"fab fa-github"}
+							url={"https://github.com/crlparodi/project-mii"}
+						/>
+					</div>
 				</div>
 			</section>
 		)

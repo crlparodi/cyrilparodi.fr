@@ -6,11 +6,9 @@ import Banner from "./components/Banner"
 import Footer from "./components/Footer"
 
 import Home from "./pages/Home"
-import { Grenadine } from "./components/Color"
 
 import registerServiceWorker from "./registerServiceWorker"
 
-import "../node_modules/bulma/css/bulma.min.css"
 import "./styles/index.scss"
 
 ReactDOM.render(<Header />, document.getElementById("header"))

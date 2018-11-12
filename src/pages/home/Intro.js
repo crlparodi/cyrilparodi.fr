@@ -19,7 +19,7 @@ class Intro extends React.Component {
 			showLoader: true,
 		}
 	}
-	/* 
+	/*
 	 * With the following function, i'm able to update the data on the page
 	 * without refreshing it.
 	 */
@@ -35,8 +35,8 @@ class Intro extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-intro mii-section mii-dark" id="mii-intro">
-				<div className="bul-tool container">
+			<section className="mii-intro mii-dark" id="mii-intro">
+				<div className=" mii-section container">
 					<div className="mii-intro-inner columns has-text-centered">
 						<div className="mii-self-pic image column is-one-fifth">
 							<Loader
@@ -63,6 +63,22 @@ class Intro extends React.Component {
 						</div>
 					</div>
 				</div>
+				<svg
+					className="mii-svg"
+					id="bigTriangleColor"
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.1"
+					width="100%"
+					height="100"
+					viewBox="0 0 100 100"
+					preserveAspectRatio="none"
+				>
+					<path d="M 0 100.00 l 0 -100 l 50 100.00 l 50 -100 l 0 100" />
+					<path
+						className="overflow"
+						d="M 0 100.00 l 0 -79 l 50 79.00 l 50 -79 l 0 100"
+					/>
+				</svg>{" "}
 			</section>
 		)
 	}

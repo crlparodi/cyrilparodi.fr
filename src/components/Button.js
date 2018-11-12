@@ -1,7 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import PropShapes from "../prop_types/homepage"
-import { BiskayaBlue, Teal, WhitePearl, DarkTeal } from "./Color.js"
 import "../styles/components/Button.scss"
 
 class Button extends React.Component {
@@ -11,6 +9,19 @@ class Button extends React.Component {
 			inner: props.inner,
 			ico: props.ico,
 			url: props.url,
+			buttonSize: "is-large ",
+		}
+	}
+	componentDidMount() {
+		this.buttonSizeSwitcher()
+		window.addEventListener("resize", this.buttonSizeSwitcher.bind(this))
+	}
+	buttonSizeSwitcher = () => {
+		if (window.innerWidth <= 768) {
+			this.setState({ buttonSize: "is-medium " })
+		}
+		if (window.innerWidth > 768) {
+			this.setState({ buttonSize: "is-large " })
 		}
 	}
 	render() {
@@ -19,7 +30,7 @@ class Button extends React.Component {
 				href={this.state.url}
 				className={
 					"button " +
-					"is-large " +
+					this.state.buttonSize +
 					(this.props.dark ? "dark" : "light")
 				}
 				style={{

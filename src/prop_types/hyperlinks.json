@@ -1,0 +1,28 @@
+{
+	"cvsection": [
+		{
+			"inner": "Mon parcours",
+			"ico": "fas fa-desktop",
+			"url": ""
+		},
+		{
+			"inner": "Mon CV (PDF)",
+			"ico": "fas fa-download",
+			"url": "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
+		}
+	],
+	"footer": [
+		{
+			"icon": "fab fa-linkedin-in",
+			"href": "https://www.linkedin.com/in/cyril-parodi"
+		},
+		{
+			"icon": "fab fa-twitter",
+			"href": "https://twitter.com/crlparodi"
+		},
+		{
+			"icon": "fas fa-envelope",
+			"href": "mailto:parodicyril@gmail.com"
+		}
+	]
+}

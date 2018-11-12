@@ -1,66 +1,50 @@
 import React from "react"
-import "../styles/Header.scss"
-import "../containers/AbstractQueries"
-
-const topics = [
-	{
-		name: "À propos",
-		link: "#mii-about",
-	},
-	{
-		name: "CV",
-		link: "",
-	},
-	{
-		name: "Portfolio",
-		link: "",
-	},
-	{
-		name: "Contact",
-		link: "#footer",
-	},
-]
+import HeaderToggleButton from "./Header/HeaderToggleButton"
+import HeaderNav from "./Header/HeaderNav"
+import HeaderSideBar from "./Header/HeaderSideBar"
+import Backdrop from "./Header/Backdrop"
+import "./Header.scss"
 
 class Header extends React.Component {
-	navbar() {
-		const navbar = (
-			<nav className="level-right">
-				{topics.map((topic, index) => {
-					return (
-						<p className="level-item">
-							<a className="mii-link" href={topic.link}>
-								{topic.name}
-							</a>
-						</p>
-					)
-				})}
-			</nav>
-		)
-		return navbar
+	constructor() {
+		super()
+		this.state = {
+			headerDrawerOpen: false,
+		}
 	}
-
-	header_container() {
-		const header = (
+	headerDrawerStateSwitcher = () => {
+		this.setState(prevState => {
+			return { headerDrawerOpen: !prevState.headerDrawerOpen }
+		})
+	}
+	headerBackdropRetrieve = () => {
+		this.setState({ headerDrawerOpen: false })
+	}
+	render() {
+		return (
 			<section className="mii-header mii-dark">
-				<div className="level container">
-					<div className="level-left">
-						<p className="level-item">
-							<a href="index.html" className="mii-link">
-								{" "}
-								CYRIL PARODI{" "}
-							</a>
-						</p>
+				<div className="mii-header-case container">
+					<HeaderToggleButton
+						drawerClickHandler={this.headerDrawerStateSwitcher}
+					/>
+					<div className="mii-logo">
+						<a href="/" className="mii-link">
+							CYRIL PARODI
+						</a>
 					</div>
-					<this.navbar />
+					<div className="mii-header-spacer" />
+					<HeaderNav />
 				</div>
+				<HeaderSideBar
+					show={this.state.headerDrawerOpen}
+					clickHandler={this.headerDrawerStateSwitcher}
+				/>
+				<Backdrop
+					show={this.state.headerDrawerOpen}
+					clickHandler={this.headerBackdropRetrieve}
+				/>
 			</section>
 		)
-
-		return header
-	}
-
-	render() {
-		return this.header_container()
 	}
 }
 

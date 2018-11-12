@@ -1,3 +1,4 @@
+@import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
 .mii-about {
@@ -23,6 +24,10 @@
 		font-size: 16px;
 		line-height: 1.5em;
 
+		@include mobile {
+			padding: 0 0 1rem 0;
+		}
+
 		&:before {
 			position: absolute;
 			font-family: "FontAwesome";
@@ -32,6 +37,10 @@
 			color: $color;
 			top: 1rem;
 			left: 25px;
+
+			@include mobile {
+				display: none;
+			}
 		}
 	}
 }

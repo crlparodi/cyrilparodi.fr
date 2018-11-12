@@ -1,5 +1,6 @@
-@import "./variables/design.scss";
-@import "./variables/effects.scss";
+@import "bulma/sass/utilities/mixins.sass";
+@import "src/styles/variables/design.scss";
+@import "src/styles/variables/effects.scss";
 
 @mixin header-background {
 	background: -moz-linear-gradient(
@@ -21,36 +22,48 @@
 }
 
 .mii-header {
-	position: absolute !important;
-	z-index: 1;
+	position: fixed !important;
+	z-index: 10;
 	width: 100%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 	height: 48px;
 	line-height: 48px;
 	background-color: unset !important;
 	@include header-background();
-	.level {
-		margin: 0 auto;
-		a {
-			text-decoration: none;
-			text-shadow: 0px 0px 5px black;
 
-			@include hoverDashesEffect();
-		}
+	@include touch {
+		height: 64px;
+		line-height: 64px;
+	}
 
-		.level-left {
+	.mii-header-case {
+		z-index: 20;
+		display: flex;
+		.mii-logo {
 			font-family: "Montserrat", sans-serif;
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: 2px;
+			text-shadow: 0px 0px 5px black;
+
+			@include until($desktop + 1) {
+				margin: 0 20px 0 auto;
+			}
+
+			@include mobile {
+				margin-right: 10px;
+			}
+
+			.mii-link {
+				@include from($desktop) {
+					@include hoverDashesEffect();
+				}
+			}
 		}
-		.level-right {
-			p {
-				font-weight: 300;
-				letter-spacing: 1px;
-				margin: 0 0 0 40px;
+		.mii-header-spacer {
+			flex: 1;
+
+			@include until($desktop + 1) {
+				display: none;
 			}
 		}
 	}

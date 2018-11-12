@@ -1,0 +1,43 @@
+@import "root/styles/variables/effects.scss";
+
+.mii-footer {
+	display: flex;
+	.mii-case-cut {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		width: calc(100% * (1 / 3));
+	}
+
+	.mii-home {
+		p {
+			width: 100%;
+			margin-left: 15px;
+			.home {
+				font-family: "Montserrat", sans-serif;
+				font-weight: 700;
+				letter-spacing: 2px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.mii-social {
+		.mii-msg {
+			padding-top: 0.5rem;
+			padding-bottom: 1rem;
+			font-size: 1.2rem;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+
+		a {
+			margin: 0 10px 0 10px;
+
+			font-size: 2rem;
+
+			@include hoverDashesEffect();
+		}
+	}
+}

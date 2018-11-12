@@ -1,25 +1,30 @@
-import React from "react"
-import "../styles/components/Footer.scss"
-
-const links = [
-	{
-		icon: "fab fa-linkedin-in",
-		href: "https://www.linkedin.com/in/cyril-parodi",
-	},
-	{
-		icon: "fab fa-twitter",
-		href: "https://twitter.com/crlparodi",
-	},
-	{
-		icon: "fas fa-envelope",
-		href: "mailto:parodicyril@gmail.com",
-	},
-]
+import React from "modules/react"
+import FooterDesktop from "root/components/Footer/FooterDesktop"
+import FooterTouch from "root/components/Footer/FooterTouch"
+import "./Footer.scss"
 
 class Footer extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			footerComponent: null,
+		}
+	}
+	componentDidMount() {
+		this.footerScreenAdapter()
+		window.addEventListener("resize", this.footerScreenAdapter.bind(this))
+	}
+	footerScreenAdapter = () => {
+		if (window.innerWidth <= 1023) {
+			this.setState({ footerComponent: <FooterTouch /> })
+		}
+		if (window.innerWidth > 1023) {
+			this.setState({ footerComponent: <FooterDesktop /> })
+		}
+	}
 	render() {
 		return (
-			<section className="mii-footer mii-section mii-dark">
+			<section className="mii-footer-master mii-section mii-dark">
 				<div className="mii-svg-block">
 					<svg
 						className="mii-svg"
@@ -43,46 +48,7 @@ class Footer extends React.Component {
 						</a>
 					</div>
 				</div>
-				<div className="mii-misc container">
-					<p className="mii-msg has-text-centered">Contactez-moi !</p>
-					<div className="bul-tools level">
-						<div className="mii-home level-item has-text-left">
-							<p>
-								<span className="home"> CYRIL PARODI </span>
-							</p>
-						</div>
-						<div className="mii-social level-item has-text-centered">
-							{links.map((link, index) => {
-								return (
-									<a
-										href={link.href}
-										key={index}
-										className="mii-link"
-									>
-										<i className={link.icon} key={index} />
-									</a>
-								)
-							})}
-						</div>
-						<div className="mii-cc level-item content has-text-right is-small">
-							<p>
-								<img
-									alt="Creative Commons License"
-									src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-								/>
-								<br />
-								Ce site est sous licence{" "}
-								<a
-									href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-									className="mii-link"
-								>
-									CC BY-NC-SA 4.0
-								</a>
-								.
-							</p>
-						</div>
-					</div>
-				</div>
+				{this.state.footerComponent}
 			</section>
 		)
 	}
