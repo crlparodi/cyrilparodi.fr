@@ -11,17 +11,23 @@ class Button extends React.Component {
 			url: props.url,
 			buttonSize: "is-large ",
 		}
+		this._isMounted = false
 	}
 	componentDidMount() {
+		this._isMounted = true
+
 		this.buttonSizeSwitcher()
 		window.addEventListener("resize", this.buttonSizeSwitcher.bind(this))
 	}
+	componentWillUnmount() {
+		this._isMounted = false
+	}
 	buttonSizeSwitcher = () => {
 		if (window.innerWidth <= 768) {
-			this.setState({ buttonSize: "is-medium " })
+			if (this._isMounted) this.setState({ buttonSize: "is-medium " })
 		}
 		if (window.innerWidth > 768) {
-			this.setState({ buttonSize: "is-large " })
+			if (this._isMounted) this.setState({ buttonSize: "is-large " })
 		}
 	}
 	render() {

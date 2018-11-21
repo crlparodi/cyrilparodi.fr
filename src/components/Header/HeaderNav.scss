@@ -1,21 +1,23 @@
 @import "bulma/sass/utilities/mixins.sass";
 @import "src/styles/variables/effects.scss";
 
-.mii-header-nav {
-	.mii-link {
-		text-shadow: 0px 0px 5px black;
+.mii-nav-desktop {
+	.mii-nav {
+		.mii-link {
+			text-shadow: 0px 0px 5px black;
 
-		letter-spacing: 1px;
-		margin: 0 20px 0 20px;
+			letter-spacing: 1px;
+			margin: 0 20px 0 20px;
 
-		&:last-child {
-			margin-right: 0;
-		}
+			&:last-child {
+				margin-right: 0;
+			}
 
-		@include hoverDashesEffect();
+			@include hoverDashesEffect();
 
-		@include until($desktop + 1) {
-			display: none;
+			@include until($desktop + 1) {
+				display: none;
+			}
 		}
 	}
 }

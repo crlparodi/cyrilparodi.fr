@@ -1,5 +1,6 @@
 import React from "react"
 
+import Banner from "root/components/Banner"
 import Intro from "./home/Intro"
 import About from "./home/About"
 import Mobility from "./home/Mobility"
@@ -11,6 +12,7 @@ class Home extends React.Component {
 	render() {
 		return (
 			<div>
+				<Banner />
 				<Intro data={HomeData.intro} />
 				<About
 					About={HomeData.about}

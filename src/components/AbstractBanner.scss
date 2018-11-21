@@ -1,0 +1,33 @@
+@import "bulma/sass/utilities/mixins.sass";
+@import "root/styles/variables/design.scss";
+
+.mii-abstract-banner {
+	background-size: cover;
+	text-shadow: 0px 0px 10px black;
+
+	.mii-section {
+		padding-top: calc(6rem + 64px);
+	}
+
+	.mii-banner {
+		font-size: 3rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 900 !important;
+		letter-spacing: 2px;
+
+		@include tablet {
+			font-size: 2.5rem;
+			margin-bottom: auto;
+		}
+
+		@include mobile {
+			font-size: 1.8rem;
+			margin-bottom: auto;
+		}
+	}
+
+	.mii-banner-subtitle {
+		font-size: 1.3rem;
+		margin-bottom: 2rem;
+	}
+}

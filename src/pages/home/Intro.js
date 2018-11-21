@@ -18,20 +18,27 @@ class Intro extends React.Component {
 			data: props.data,
 			showLoader: true,
 		}
+		this._isMounted = false
 	}
 	/*
 	 * With the following function, i'm able to update the data on the page
 	 * without refreshing it.
 	 */
 	componentDidMount() {
+		this._isMounted = true
 		const hdImg = new Image()
 		hdImg.src = SelfPic
 
 		hdImg.onload = () => {
-			this.setState({
-				showLoader: false,
-			})
+			if (this._isMounted) {
+				this.setState({
+					showLoader: false,
+				})
+			}
 		}
+	}
+	componentWillUnmount() {
+		this._isMounted = false
 	}
 	render() {
 		return (

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import HeaderLinks from "./HeaderLinks"
 import "./HeaderSideBar.scss"
 
 class HeaderSideBar extends React.Component {
@@ -22,40 +23,9 @@ class HeaderSideBar extends React.Component {
 		}
 	}
 	render() {
-		const topics = [
-			{
-				name: "À propos",
-				link: "#mii-about",
-			},
-			{
-				name: "CV",
-				link: "",
-			},
-			{
-				name: "Portfolio",
-				link: "",
-			},
-			{
-				name: "Contact",
-				link: "#footer",
-			},
-		]
 		return (
 			<div className={this.state.sideBarClasses}>
-				<div className="mii-nav-mobile">
-					{topics.map((topic, index) => {
-						return (
-							<a
-								className="mii-link"
-								href={topic.link}
-								key={index}
-								onClick={this.props.clickHandler}
-							>
-								{topic.name}
-							</a>
-						)
-					})}
-				</div>
+				<HeaderLinks mobileClickHandler={this.props.clickHandler} />
 			</div>
 		)
 	}

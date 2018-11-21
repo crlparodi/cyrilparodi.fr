@@ -24,7 +24,10 @@ class Footer extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-footer-master mii-section mii-dark">
+			<section
+				className="mii-footer-master mii-section mii-dark"
+				id="footer"
+			>
 				<div className="mii-svg-block">
 					<svg
 						className="mii-svg"
@@ -43,7 +46,11 @@ class Footer extends React.Component {
 						<path d="M 0 -1 l 0 1 l 50 80 l 50 -80.00 l 0 -1" />
 					</svg>
 					<div className="mii-up">
-						<a href="#">
+						<a
+							onClick={() => {
+								window.scrollTo(0, 0)
+							}}
+						>
 							<i className="fas fa-angle-double-up fa-5x" />
 						</a>
 					</div>

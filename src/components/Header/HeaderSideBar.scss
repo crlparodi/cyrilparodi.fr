@@ -16,14 +16,14 @@
 		display: none;
 	}
 
-	.mii-nav-mobile {
-		height: 360px;
-		padding: 64px 64px 0 64px;
+	.mii-nav {
+		height: auto;
+		padding: 64px 64px 32px 64px;
 		display: flex;
 		flex-direction: column;
 
 		@include mobile {
-			padding: 64px 36px 0 36px;
+			padding: 64px 36px 32px 36px;
 		}
 
 		.mii-link {

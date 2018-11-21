@@ -29,30 +29,41 @@ class Banner extends React.Component {
 			height: 1080,
 			showLoader: true,
 		}
+		this._isMounted = false
 	}
 
 	updateDimensions() {
 		if (window.innerHeight <= 1080) {
 			let update_height = window.innerHeight /* - 48*/
-			this.setState({ height: update_height })
+			if (this._isMounted) this.setState({ height: update_height })
 		} else {
 			let update_height = 1080 /* - 48*/
-			this.setState({ height: update_height })
+			if (this._isMounted) this.setState({ height: update_height })
 		}
 	}
 
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener("resize", this.updateDimensions.bind(this))
-
+	imageLoader() {
 		const hdImg = new Image()
 		hdImg.src = IMG
 
 		hdImg.onload = () => {
-			this.setState({
-				showLoader: false,
-			})
+			if (this._isMounted) {
+				this.setState({
+					showLoader: false,
+				})
+			}
 		}
+	}
+
+	componentDidMount() {
+		this._isMounted = true
+		this.updateDimensions()
+		window.addEventListener("resize", this.updateDimensions.bind(this))
+		this.imageLoader()
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false
 	}
 
 	banner() {

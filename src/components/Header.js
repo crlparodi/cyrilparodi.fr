@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import HeaderToggleButton from "./Header/HeaderToggleButton"
 import HeaderNav from "./Header/HeaderNav"
 import HeaderSideBar from "./Header/HeaderSideBar"
@@ -27,10 +28,10 @@ class Header extends React.Component {
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}
 					/>
-					<div className="mii-logo">
-						<a href="/" className="mii-link">
-							CYRIL PARODI
-						</a>
+					<div className="mii-home mii-case-cut has-text-left">
+						<p>
+							<span className="home"> CYRIL PARODI </span>
+						</p>
 					</div>
 					<div className="mii-header-spacer" />
 					<HeaderNav />
