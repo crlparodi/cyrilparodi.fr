@@ -1,5 +1,11 @@
 .mii-footer-touch {
+	// Override
+	&.mii-section {
+		padding: 0 0 2rem 0;
+	}
+
 	.mii-social {
+		padding-top: 1rem;
 		padding-bottom: 3rem;
 		.mii-msg {
 			padding-top: 0.5rem;

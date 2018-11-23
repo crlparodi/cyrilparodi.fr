@@ -3,6 +3,9 @@
 
 .button {
 	position: relative !important;
+	@include touch {
+		box-sizing: unset !important;
+	}
 }
 
 .button.light {
@@ -13,7 +16,7 @@
 	border-color: $dark !important;
 	background: none;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 900;
+	font-weight: 700;
 	&:before {
 		-webkit-transition: 0.3s all ease;
 		transition: 0.3s all ease;
@@ -58,11 +61,11 @@
 	z-index: 0;
 	-webkit-transition: 0.3s all ease;
 	transition: 0.3s all ease;
-	color: $color;
-	border-color: $color !important;
+	color: $light;
+	border-color: $light !important;
 	background: none;
 	font-family: "Montserrat", sans-serif;
-	font-weight: 900;
+	font-weight: 700;
 	&:before {
 		-webkit-transition: 0.3s all ease;
 		transition: 0.3s all ease;
@@ -73,12 +76,12 @@
 		bottom: 0;
 		opacity: 1;
 		content: "";
-		background-color: $color;
+		background-color: $light;
 		z-index: -2;
 	}
 	&:hover {
 		color: $dark;
-		border-color: $color !important;
+		border-color: $light !important;
 		&:before {
 			-webkit-transition: 0.3s all ease;
 			transition: 0.3s all ease;
@@ -91,7 +94,7 @@
 	}
 	&:focus {
 		color: $dark;
-		border-color: $color !important;
+		border-color: $light !important;
 		&:before {
 			transition: 0.3s all ease;
 			left: 0;

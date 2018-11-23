@@ -1,26 +1,24 @@
+@import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
 .mii-mobility {
 	background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
 
-	.mii-svg-block {
-		margin-top: 0px;
-		display: flex;
-		justify-content: center;
+	.mii-svg-separator {
 		fill: $color;
-
-		&:last-child {
-		}
-
 		.overflow {
 			fill: $light;
 		}
 	}
 	.map-responsive {
 		overflow: hidden;
-		padding-bottom: 56.25%;
+		padding: 0 110px 480px 110px;
 		position: relative;
 		height: 0;
+
+		@include touch {
+			padding: 0 0 480px 0;
+		}
 
 		.iframe {
 			left: 0;

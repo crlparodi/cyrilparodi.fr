@@ -71,7 +71,7 @@ class Intro extends React.Component {
 					</div>
 				</div>
 				<svg
-					className="mii-svg"
+					className="mii-svg-separator"
 					id="bigTriangleColor"
 					xmlns="http://www.w3.org/2000/svg"
 					version="1.1"

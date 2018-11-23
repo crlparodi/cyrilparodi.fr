@@ -11,18 +11,18 @@
 			"url": "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
 		}
 	],
-	"footer": [
-		{
-			"icon": "fab fa-linkedin-in",
-			"href": "https://www.linkedin.com/in/cyril-parodi"
-		},
+	"social": [
 		{
 			"icon": "fab fa-twitter",
 			"href": "https://twitter.com/crlparodi"
 		},
 		{
-			"icon": "fas fa-envelope",
-			"href": "mailto:parodicyril@gmail.com"
+			"icon": "fab fa-linkedin-in",
+			"href": "https://www.linkedin.com/in/cyril-parodi"
 		}
-	]
+	],
+	"contact": {
+		"icon": "fas fa-envelope",
+		"href": "mailto:parodicyril@gmail.com"
+	}
 }

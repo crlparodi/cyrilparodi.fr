@@ -2,11 +2,21 @@
 @import "./variables/design.scss";
 
 .mii-about-here {
+	.mii-entry {
+		padding: 0 110px 4rem 110px;
+
+		@include touch {
+			padding: 0 0 1rem 0;
+		}
+	}
+
+	// Btn case specific for only one button
+	// see CVSection Style for 2 and more
 	.mii-btn-case {
 		display: flex;
 
 		.button {
-			width: 30%;
+			width: 45%;
 			margin: 20px auto;
 
 			@include mobile {

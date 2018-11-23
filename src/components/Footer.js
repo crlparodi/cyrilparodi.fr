@@ -24,13 +24,10 @@ class Footer extends React.Component {
 	}
 	render() {
 		return (
-			<section
-				className="mii-footer-master mii-section mii-dark"
-				id="footer"
-			>
-				<div className="mii-svg-block">
+			<section className="mii-footer-master mii-dark">
+				<div className="mii-svg-wrapper">
 					<svg
-						className="mii-svg"
+						className="mii-svg-separator"
 						id="bigTriangleColor"
 						xmlns="http://www.w3.org/2000/svg"
 						version="1.1"

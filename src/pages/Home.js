@@ -11,7 +11,7 @@ import * as HomeData from "../prop_types/homepage.json"
 class Home extends React.Component {
 	render() {
 		return (
-			<div>
+			<section className="mii-homepage">
 				<Banner />
 				<Intro data={HomeData.intro} />
 				<About
@@ -22,7 +22,7 @@ class Home extends React.Component {
 				/>
 				<Mobility data={HomeData.mobility} />
 				<AboutSite data={HomeData.aboutsite} />
-			</div>
+			</section>
 		)
 	}
 }

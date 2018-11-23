@@ -23,14 +23,24 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-header mii-dark">
+			<section className="mii-header">
 				<div className="mii-header-case container">
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}
 					/>
 					<div className="mii-home mii-case-cut has-text-left">
 						<p>
-							<span className="home"> CYRIL PARODI </span>
+							<span className="home">
+								cyril
+								<span
+									style={{
+										color: "#db504a",
+									}}
+								>
+									.
+								</span>
+								parodi
+							</span>
 						</p>
 					</div>
 					<div className="mii-header-spacer" />

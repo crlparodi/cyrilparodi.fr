@@ -1,28 +1,34 @@
 @import "bulma/sass/utilities/mixins.sass";
 
 .mii-cv-section {
-	@include from($desktop) {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 
-		.button {
-			width: 45%;
-			margin-left: 0 !important;
-		}
+	@include from($desktop) {
 	}
 
 	@include touch {
-		display: flex;
 		flex-direction: column;
+	}
+
+	// Btn case specific for 2 to n buttons
+	// see AboutSite style for only one
+	.mii-btn-case {
+		display: flex;
+		width: 45%; // It defines children's button size
+		margin: 10px auto;
+
+		@include mobile {
+			width: 280px;
+		}
+
+		@include tablet-only {
+			width: 50%;
+		}
 
 		.button {
-			width: 280px;
-			margin: 0 auto 20px auto;
-
-			@include tablet-only {
-				width: 50%;
-			}
+			width: 100%; // Full Width from Parent Case
 		}
 	}
 }

@@ -2,16 +2,14 @@
 @import "root/styles/variables/effects.scss";
 
 .mii-footer-master {
-	padding: 0 0 3rem 0 !important;
-
-	.mii-svg-block {
+	.mii-svg-wrapper {
 		position: relative;
 		margin-top: 0px;
 		display: flex;
 		justify-content: center;
-		fill: $light;
 
-		.mii-svg {
+		.mii-svg-separator {
+			fill: $light;
 			.overflow {
 				fill: $color;
 			}

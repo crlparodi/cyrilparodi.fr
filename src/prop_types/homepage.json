@@ -11,52 +11,52 @@
 	],
 	"cvsection": [
 		{
-			"inner": "Mon parcours",
+			"inner": "monparcours.html",
 			"ico": "fas fa-desktop",
-			"url": ""
+			"url": "/#/cv"
 		},
 		{
-			"inner": "Mon CV (PDF)",
+			"inner": "moncv.pdf",
 			"ico": "fas fa-download",
 			"url": "http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
 		}
 	],
 	"likes": [
 		{
-			"name": "Le rétrocomputing",
+			"name": "le rétrocomputing.",
 			"jpg": "https://bit.ly/2COb9yP"
 		},
 		{
-			"name": "Le rétrogaming",
+			"name": "le rétrogaming.",
 			"jpg": "https://bit.ly/2COb9ij"
 		},
 		{
-			"name": "Linux",
+			"name": "linux.",
 			"jpg": "https://bit.ly/2Sug7WS"
 		},
 		{
-			"name": "La récup'",
+			"name": "la récup.",
 			"jpg": "https://bit.ly/2Od00dc"
 		},
 		{
-			"name": "Les séries TV",
+			"name": "les séries tv.",
 			"jpg": "https://bit.ly/2OcsG5W"
 		},
 		{
-			"name": "Les RPGs",
+			"name": "les rpgs.",
 			"jpg": "https://bit.ly/2JotUtW"
 		},
 		{
-			"name": "La lecture (dev. perso. - sociologie)",
+			"name": "la lecture. (dev. perso. - sociologie.)",
 			"jpg": "https://bit.ly/2PXllca"
 		}
 	],
 	"softskills": [
-		"passion",
-		"rigueur",
-		"curiosité",
-		"apprentissage",
-		"polyvalence"
+		"passion.",
+		"rigueur.",
+		"curiosité.",
+		"apprentissage.",
+		"polyvalence."
 	],
 	"mobility": [
 		"Vous êtes dans le périmètre des Bouches-du-Rhône ?",

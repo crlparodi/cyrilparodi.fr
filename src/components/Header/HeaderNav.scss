@@ -4,13 +4,18 @@
 .mii-nav-desktop {
 	.mii-nav {
 		.mii-link {
-			text-shadow: 0px 0px 5px black;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 700;
+			margin: 0 0 0 20px;
 
-			letter-spacing: 1px;
-			margin: 0 20px 0 20px;
+			&:hover,
+			&:focus,
+			&:active {
+				color: unset !important;
+			}
 
-			&:last-child {
-				margin-right: 0;
+			&:first-child {
+				margin-left: 0;
 			}
 
 			@include hoverDashesEffect();

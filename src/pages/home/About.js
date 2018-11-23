@@ -20,9 +20,10 @@ class About extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-about mii-light" id="mii-about">
+			<div className="mii-about mii-light" id="mii-about">
 				<div className="mii-min-section container">
-					<div className="mii-about-prepost content has-text-justified">
+					<h2 className="mii-title has-text-centered">bonjour !</h2>
+					<div className="mii-entry content has-text-centered">
 						{this.state.About.map((text_item, index) => {
 							return (
 								<p className="mii-dialog" key={index}>
@@ -33,15 +34,11 @@ class About extends React.Component {
 					</div>
 					<CVSection data={this.state.CVSection} />
 				</div>
-				<span className="mii-separator" />
-				<div className="mii-min-section container">
-					<Likes data={this.state.Likes} />
-				</div>
-				<span className="mii-separator" />
+				<Likes data={this.state.Likes} />
 				<div className="mii-min-section container">
 					<SoftSkills data={this.state.SoftSkills} />
 				</div>
-			</section>
+			</div>
 		)
 	}
 }

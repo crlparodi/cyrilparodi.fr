@@ -5,18 +5,28 @@ import { NavHashLink as NavLink } from "react-router-hash-link"
 const HeaderLinks = props => (
 	<div className="mii-nav">
 		<NavLink className="mii-link" to="/" onClick={props.mobileClickHandler}>
-			À propos
+			à propos.
 		</NavLink>
 		<NavLink
 			className="mii-link"
 			to="/cv"
 			onClick={props.mobileClickHandler}
 		>
-			CV
+			cv.
 		</NavLink>
 		<NavLink className="mii-link" to="" onClick={props.mobileClickHandler}>
-			Portfolio
+			portfolio.
 		</NavLink>
+		<a
+			className="mii-link"
+			href="javascript:void(0)"
+			onClick={() => {
+				props.mobileClickHandler()
+				window.scrollTo(0, document.body.scrollHeight)
+			}}
+		>
+			contact.
+		</a>
 	</div>
 )
 

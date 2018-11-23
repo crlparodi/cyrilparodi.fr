@@ -2,45 +2,14 @@
 @import "./variables/design.scss";
 
 .mii-about {
-	.mii-separator {
-		display: block;
-		border: none;
-		height: 1px;
-		background: -webkit-gradient(
-			radial,
-			50% 50%,
-			0,
-			50% 50%,
-			350,
-			from($dark),
-			to($light)
-		);
-	}
-
-	.mii-about-prepost {
+	.mii-entry {
 		box-sizing: border-box;
 		position: relative;
-		padding: 0 20px 6rem 110px;
-		font-size: 16px;
+		padding: 0 110px 4rem 110px;
 		line-height: 1.5em;
 
-		@include mobile {
+		@include touch {
 			padding: 0 0 1rem 0;
-		}
-
-		&:before {
-			position: absolute;
-			font-family: "FontAwesome";
-			content: "\f10d";
-			font-size: 60px;
-			font-style: normal;
-			color: $color;
-			top: 1rem;
-			left: 25px;
-
-			@include mobile {
-				display: none;
-			}
 		}
 	}
 }

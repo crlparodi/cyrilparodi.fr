@@ -1,29 +1,37 @@
 @import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
 
+.mii-likes-master {
+	.mii-svg-separator {
+		fill: $color;
+
+		.overflow {
+			fill: $light;
+		}
+	}
+}
+
 @include desktop {
 	.mii-likes {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 		font-family: "Montserrat", sans-serif;
-		font-weight: 900;
-		text-transform: uppercase;
+		font-weight: 700;
 		font-size: 1.5rem;
 
 		.mii-box {
+			border-radius: calc(1 / 2);
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			color: $light;
-			background-color: $dark;
+			background-color: unset;
 			height: 210px;
 			overflow: hidden;
 			text-align: center;
-			-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+			border: 1px solid $light;
 
 			.mii-box-img {
 				position: absolute;
@@ -35,9 +43,7 @@
 				top: 50%;
 				margin: auto;
 				z-index: 1;
-				// -webkit-filter: hue-rotate(180deg); /* Safari 6.0 - 9.0 */
-				// filter: hue-rotate(180deg);
-				filter: sepia(1);
+				filter: grayscale(1);
 			}
 
 			.mii-box-span {
@@ -52,9 +58,15 @@
 		}
 
 		.mii-box.start {
-			color: $dark;
+			color: $light;
 			background: none;
 			box-shadow: none;
+			border: 1px solid $light;
+
+			// Element Specific Override
+			&.mii-title {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -80,8 +92,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
 		font-family: "Montserrat", sans-serif;
-		font-weight: 900;
-		text-transform: uppercase;
+		font-weight: 700;
 		font-size: 1.5rem;
 
 		@include mobile {
@@ -95,9 +106,7 @@
 			background-color: $dark;
 			height: 170px;
 			overflow: hidden;
-			-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+			border: 1px solid $light;
 
 			@media screen and (max-width: 496px) {
 				max-height: 140px;
@@ -124,7 +133,7 @@
 				transform: translateY(-50%);
 				top: 50%;
 				width: 100%;
-				filter: sepia(1);
+				filter: grayscale(1);
 			}
 
 			.mii-box-span {
@@ -146,14 +155,19 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			color: $dark;
+			color: $light;
 			background: none;
 			box-shadow: none;
 			padding: 20px 20px;
-			border: 1px solid $dark;
+			border: 1px solid $light;
 
 			@include mobile {
 				justify-content: center;
+			}
+
+			// Element Specific Override
+			&.mii-title {
+				margin-bottom: 0;
 			}
 		}
 	}

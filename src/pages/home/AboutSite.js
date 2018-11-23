@@ -16,9 +16,11 @@ class AboutSite extends Component {
 	render() {
 		return (
 			<section className="mii-about-here mii-section mii-light">
-				<div className="bul-tools container">
-					<h2 className="mii-title">Pourquoi ce site ?</h2>
-					<div className="mii-text content has-text-justified">
+				<div className="bul-tools container is-widescreen">
+					<h2 className="mii-title has-text-centered">
+						pourquoi ce site ?
+					</h2>
+					<div className="mii-entry mii-text content has-text-centered">
 						{this.state.data.map((e, index) => {
 							return <p key={index}>{e}</p>
 						})}
@@ -26,7 +28,7 @@ class AboutSite extends Component {
 					<div className="mii-btn-case">
 						<Button
 							dark={false}
-							inner={"Github"}
+							inner={"github.io"}
 							ico={"fab fa-github"}
 							url={"https://github.com/crlparodi/project-mii"}
 						/>

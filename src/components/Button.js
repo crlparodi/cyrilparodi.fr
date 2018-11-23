@@ -40,10 +40,8 @@ class Button extends React.Component {
 					(this.props.dark ? "dark" : "light")
 				}
 				style={{
-					border: 2 + "px" + " solid ",
+					border: 1 + "px" + " solid ",
 					borderRadius: 0,
-					textTransform: "uppercase",
-					letterSpacing: 2 + "px",
 				}}
 			>
 				<span style={{ marginRight: "auto" }}>{this.state.inner}</span>

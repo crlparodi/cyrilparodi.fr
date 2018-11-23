@@ -18,13 +18,15 @@ class CVSection extends React.Component {
 			<div className="mii-cv-section">
 				{this.state.data.map((e, index) => {
 					return (
-						<Button
-							dark={false}
-							inner={e.inner}
-							ico={e.ico}
-							url={e.url}
-							key={index}
-						/>
+						<div className="mii-btn-case">
+							<Button
+								dark={false}
+								inner={e.inner}
+								ico={e.ico}
+								url={e.url}
+								key={index}
+							/>
+						</div>
 					)
 				})}
 			</div>

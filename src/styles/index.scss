@@ -15,116 +15,135 @@ html {
 
 	@extend .mii-dark;
 
-	font-family: "Oxygen", sans-serif;
-}
+	font-family: "Hind", sans-serif;
 
-/* COLOR CONFIGURATIONS
- */
+	/* COLOR CONFIGURATIONS
+	 */
 
-.mii-light {
-	color: $dark;
-	background-color: $light;
-}
-
-.mii-dark {
-	color: $light;
-	background-color: $dark;
-}
-
-/* DIV & SECTION PRE-FORMATTING
- */
-
-/* The section is unique */
-.mii-section {
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-
-	@include mobile {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+	.mii-light {
+		color: $dark;
+		background-color: $light;
 	}
-}
 
-/* The section contains several mini sections */
-.mii-min-section {
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-
-	@include mobile {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+	.mii-dark {
+		color: $light;
+		background-color: $dark;
+		background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
+		background-attachment: fixed;
 	}
-}
 
-/* COMMON ELEMENT PRE-CONFIGS
- */
+	/* DIV & SECTION PRE-FORMATTING
+	 */
 
-.mii-title {
-	font-size: 1.75rem;
-	margin-bottom: 2rem;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 900 !important;
-	text-transform: uppercase;
-}
+	/* The section is unique */
+	.mii-section {
+		padding-top: 9rem;
+		padding-bottom: 9rem;
 
-.mii-subtitle {
-	font-size: 1.75rem;
-	margin-bottom: 2rem;
-}
-
-.mii-dialog {
-	font-size: 1.5rem;
-	line-height: 2rem;
-	margin: 1.5rem 0 !important;
-
-	@include mobile {
-		font-size: 1rem;
-		line-height: 1.5rem;
+		@include mobile {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
 	}
-}
 
-.mii-text {
-	font-size: 1.2rem;
+	/* The section contains several mini sections */
+	.mii-min-section {
+		padding-top: 9rem;
+		padding-bottom: 9rem;
 
-	@include mobile {
-		font-size: 1rem;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+
+		@include mobile {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
 	}
-}
 
-.mii-link {
-	color: inherit;
-	transition: color 0.3s ease !important;
+	/* The section contains SVG/CSS shape dividers */
+	/* Don't forget to remove traditionnal mii-sections that could create conflicts */
+	.mii-svg-separator {
+		display: flex; // It removes the extra margin not accessible via the css margin parameter
+		height: 9rem !important;
 
-	&:hover,
-	&:focus {
-		color: $color !important;
+		padding: 0;
+
+		@include mobile {
+			height: 110px !important;
+		}
 	}
-}
 
-/* BULMA ELEMENTS OVERRIDES
- * bulma.io
- */
+	/* COMMON ELEMENT PRE-CONFIGS
+	 */
 
-.columns {
-	margin: 0 !important;
-	padding: 0 !important;
+	.mii-title {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700 !important;
 
-	&:last-child {
+		@include mobile {
+			font-size: 1.75rem;
+		}
+	}
+
+	.mii-subtitle {
+		font-size: 1.75rem;
+		margin-bottom: 2rem;
+	}
+
+	.mii-dialog {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: 1.5rem 0 !important;
+
+		@include mobile {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	.mii-text {
+		font-size: 1.5rem;
+		line-height: 2rem;
+
+		@include mobile {
+			font-size: 1rem;
+		}
+	}
+
+	.mii-link {
+		color: inherit;
+		transition: color 0.3s ease !important;
+
+		&:hover,
+		&:focus {
+			color: $color !important;
+		}
+	}
+
+	/* BULMA ELEMENTS OVERRIDES
+	 * bulma.io
+	 */
+
+	.columns {
 		margin: 0 !important;
-	}
-}
+		padding: 0 !important;
 
-.container {
-	@include tablet-only {
-		margin-left: 64px;
-		margin-right: 64px;
+		&:last-child {
+			margin: 0 !important;
+		}
 	}
 
-	@include mobile {
-		margin-left: 16px;
-		margin-right: 16px;
+	.container {
+		@include tablet-only {
+			margin-left: 64px;
+			margin-right: 64px;
+		}
+
+		@include mobile {
+			margin-left: 16px;
+			margin-right: 16px;
+		}
 	}
 }

@@ -18,7 +18,7 @@ class Root extends React.Component {
 				<Header />
 				<Route
 					render={({ location }) => (
-						<TransitionGroup>
+						<TransitionGroup className="mii-router-transition-wrapper">
 							<CSSTransition
 								key={location.pathname}
 								classNames="fade"
