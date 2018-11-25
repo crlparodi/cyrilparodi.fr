@@ -57,7 +57,7 @@ class Intro extends React.Component {
 								<img
 									className="is-rounded"
 									src={SelfPic}
-									title="Oui, c'est moi !"
+									title="self-picture."
 								/>
 							</Loader>
 						</div>

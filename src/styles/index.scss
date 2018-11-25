@@ -3,6 +3,7 @@
 @import "bulma";
 @import "bulma/sass/utilities/mixins.sass";
 @import "./variables/design.scss";
+@import "./variables/variables.scss";
 
 body,
 html {
@@ -137,13 +138,13 @@ html {
 
 	.container {
 		@include tablet-only {
-			margin-left: 64px;
-			margin-right: 64px;
+			margin: 0 $tablet-gap;
+			width: calc(100% - (2 *#{$tablet-gap}));
 		}
 
 		@include mobile {
-			margin-left: 16px;
-			margin-right: 16px;
+			margin: 0 $mobile-gap;
+			width: calc(100% - (2 *#{$mobile-gap}));
 		}
 	}
 }

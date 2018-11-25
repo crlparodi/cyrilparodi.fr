@@ -21,8 +21,8 @@ const HeaderLinks = props => (
 			className="mii-link"
 			href="javascript:void(0)"
 			onClick={() => {
-				props.mobileClickHandler()
 				window.scrollTo(0, document.body.scrollHeight)
+				props.mobileClickHandler()
 			}}
 		>
 			contact.

@@ -12,7 +12,7 @@
 	transform: translateY(-120%);
 	transition: transform 0.3s ease-out;
 
-	@include from($desktop) {
+	@include desktop {
 		display: none;
 	}
 
