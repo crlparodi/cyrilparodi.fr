@@ -1,5 +1,6 @@
 import React from "react"
 
+/* COMPONENTS */
 import AbstractBanner from "root/components/AbstractBanner"
 import AboutSite from "./home/AboutSite"
 

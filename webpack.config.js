@@ -7,9 +7,9 @@ module.exports = {
 		alias: {
 			modules: path.resolve(__dirname, "node_modules"),
 			root: path.resolve(__dirname, "src"),
-			// styles ? (Sass components)
-			// prop-types ?
-			// make a better arborescence ... ?
+			styles: path.resolve(__dirname, "styles"),
+			img: path.resolve(__dirname, "img"),
+			data: path.resolve(__dirname, "data"),
 		},
 	},
 	module: {
@@ -20,15 +20,22 @@ module.exports = {
 				loader: "babel-loader",
 			},
 			{
-				test: /\.(css|scss)$/,
-				use: [CssExtractPlugin.loader, "css-loader", "sass-loader"],
+				test: /\.(?:sass|scss)$/,
+				use: [
+					"style-loader",
+					{
+						loader: CssExtractPlugin.loader,
+					},
+					"css-loader",
+					"sass-loader",
+				],
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "stylesheets/[name].[ext]",
+						name: "media/[name].[ext]",
 					},
 				},
 			},
@@ -49,11 +56,11 @@ module.exports = {
 	plugins: [
 		new HtmlWebPackPlugin({
 			template: "./public/index.html",
-			filename: "./index.html",
+			filename: "index.html",
 		}),
 		new CssExtractPlugin({
-			filename: "./stylesheets/index.css",
-			chunkFilename: "./stylesheets/chunk.css",
+			filename: "[name].css",
+			chunkFilename: "[id].css",
 		}),
 	],
 	devtool: "inline-source-map",

@@ -2,14 +2,16 @@ import React from "react"
 import { Switch, Route } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
-import ScrollToTop from "root/containers/ScrollToTop"
-
+/* COMPONENTS */
 import Header from "root/components/Header"
-import Home from "./Home"
-import CurriculumVitae from "./CurriculumVitae"
 import Footer from "root/components/Footer"
 
-import "./Root.scss"
+/* CONTAINERS */
+import ScrollToTop from "root/containers/ScrollToTop"
+
+/* PAGES - SECTIONS */
+import Home from "root/pages/Home"
+import CurriculumVitae from "root/pages/CurriculumVitae"
 
 class Root extends React.Component {
 	render() {

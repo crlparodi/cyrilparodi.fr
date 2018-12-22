@@ -1,0 +1,19 @@
+.HeaderDesktop {
+	.Nav {
+		@include breakpoint(medium down) {
+			display: none;
+		}
+		.ob-link {
+			/* Override */
+			font-family: "Montserrat", sans-serif;
+			font-weight: 700;
+			margin: 0 0 0 20px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			@include hoverDashesEffect();
+		}
+	}
+}

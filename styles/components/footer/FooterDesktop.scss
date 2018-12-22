@@ -1,0 +1,39 @@
+.FooterDesktop {
+	padding: 0 0 2rem 0;
+
+	.Contact {
+		display: flex;
+		flex-direction: row;
+
+		.ob-title {
+			/* Override */
+			margin-bottom: 1rem;
+		}
+		.ob-link {
+			/* Override */
+			margin: 0 10px 0 10px;
+			font-size: 3rem;
+			@include hoverDashesEffect();
+		}
+	}
+
+	&-separator {
+		display: block;
+		border: none;
+		height: 1px;
+		background: -webkit-gradient(
+			radial,
+			50% 50%,
+			0,
+			50% 50%,
+			350,
+			from($light),
+			to(rgba(255, 255, 255, 0))
+		);
+		margin: 2rem 0;
+	}
+
+	.Misc {
+		font-size: 0.8rem;
+	}
+}

@@ -1,11 +1,11 @@
 import React from "react"
-
 import Loader from "react-loader-advanced"
-import Spinner from "./Spinner"
 
-import IMG from "../img/desk.min.jpg"
+/* COMPONENTS */
+import Spinner from "root/components/Spinner"
 
-import "../styles/Banner.scss"
+/* MEDIAS */
+import IMG from "img/desk.min.jpg"
 
 class Banner extends React.Component {
 	constructor() {
@@ -60,16 +60,16 @@ class Banner extends React.Component {
 				hideContentOnLoad={true}
 			>
 				<div
-					className="mii-banner mii-dark"
+					className="Banner theme-dark"
 					style={{
 						height: this.state.height + "px",
 						backgroundImage: "url(" + IMG + ")",
 						filter: "background sepia(1)",
 					}}
 				>
-					<div className="mii-banner-case container has-text-centered">
-						<h1 className="mii-banner">
-							faire d'une passion un métier.
+					<div className="Banner-container grid-container grid-y">
+						<h1 className="WelcomeMsg ob-pageTitle text-center">
+							{"faire d'une passion un métier."}
 						</h1>
 					</div>
 				</div>

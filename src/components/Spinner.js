@@ -1,8 +1,6 @@
-import React from "react";
-import "../styles/Spinner.scss";
+import React from "react"
 
 /* CSS Spinner for Component Loading */
-
 class Spinner extends React.Component {
 	render() {
 		return (
@@ -12,8 +10,8 @@ class Spinner extends React.Component {
 				<div />
 				<div />
 			</div>
-		);
+		)
 	}
 }
 
-export default Spinner;
+export default Spinner

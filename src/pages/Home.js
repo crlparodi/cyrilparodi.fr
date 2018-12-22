@@ -1,12 +1,14 @@
 import React from "react"
 
+/* DATA */
+import * as HomeData from "data/pages.home.json"
+
+/* COMPONENTS */
 import Banner from "root/components/Banner"
 import Intro from "./home/Intro"
 import About from "./home/About"
 import Mobility from "./home/Mobility"
 import AboutSite from "./home/AboutSite"
-
-import * as HomeData from "../prop_types/homepage.json"
 
 class Home extends React.Component {
 	render() {

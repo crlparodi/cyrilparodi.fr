@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 
-import PropShapes from "../../prop_types/homepage"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
-import Button from "../../components/Button"
-
-import "../../styles/AboutSite.scss"
+/* COMPONENTS */
+import Button from "root/components/Button"
 
 class AboutSite extends Component {
 	constructor(props) {
@@ -15,21 +15,18 @@ class AboutSite extends Component {
 	}
 	render() {
 		return (
-			<section className="mii-about-here mii-section mii-light">
-				<div className="bul-tools container is-widescreen">
-					<h2 className="mii-title has-text-centered">
-						pourquoi ce site ?
-					</h2>
-					<div className="mii-entry mii-text content has-text-centered">
+			<section className="AboutHere Section theme-light">
+				<div className="grid-container">
+					<h2 className="ob-title text-center">pourquoi ce site ?</h2>
+					<div className="AboutHere-dialog ob-text text-center">
 						{this.state.data.map((e, index) => {
 							return <p key={index}>{e}</p>
 						})}
 					</div>
-					<div className="mii-btn-case">
+					<div className="AboutHere-button grid-container padding-x">
 						<Button
 							dark={false}
 							inner={"github.io"}
-							ico={"fab fa-github"}
 							url={"https://github.com/crlparodi/project-mii"}
 						/>
 					</div>

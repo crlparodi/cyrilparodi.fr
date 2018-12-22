@@ -1,0 +1,30 @@
+.Footer {
+	.Section {
+		position: relative;
+		margin-top: 0px;
+		display: flex;
+		justify-content: center;
+
+		&-svg {
+			fill: $light;
+			.isUnder {
+				fill: $spec;
+			}
+		}
+
+		&-scrollToTop {
+			position: absolute;
+
+			a {
+				color: $spec;
+				transition: color 0.3s ease;
+				&:hover {
+					color: $dark;
+				}
+				&:focus {
+					color: $dark;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.FooterTouch {
+	padding: 0 0 2rem 0;
+
+	&-contact {
+		padding-top: 1rem;
+		padding-bottom: 3rem;
+
+		.ob-link {
+			/* Override */
+			margin: 0 25px;
+			font-size: 3rem;
+		}
+	}
+}

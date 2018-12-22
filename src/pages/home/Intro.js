@@ -1,12 +1,14 @@
 import React from "react"
-
 import Loader from "react-loader-advanced"
-import Spinner from "../../components/Spinner"
 
-import PropShapes from "../../prop_types/homepage"
-import SelfPic from "../../img/mii.min.png"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
-import "../../styles/Intro.scss"
+/* COMPONENTS */
+import Spinner from "root/components/Spinner"
+
+/* MEDIAS */
+import SelfPic from "img/mii.min.png"
 
 class Intro extends React.Component {
 	constructor(props) {
@@ -42,50 +44,49 @@ class Intro extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-intro mii-dark" id="mii-intro">
-				<div className=" mii-section container">
-					<div className="mii-intro-inner columns has-text-centered">
-						<div className="mii-self-pic image column is-one-fifth">
-							<Loader
-								show={this.state.showLoader}
-								message={<Spinner />}
-								backgroundStyle={{
-									backgroundColor: "rgba(0,0,0,0)",
-								}}
-								hideContentOnLoad={true}
-							>
-								<img
-									className="is-rounded"
-									src={SelfPic}
-									title="self-picture."
-								/>
-							</Loader>
-						</div>
-						<div className="mii-quote column has-text-justified">
-							<q className="is-size-4">{this.state.data.quote}</q>
-							<p className="author has-text-right">
-								{this.state.data.author}, {this.state.data.book}{" "}
-								({this.state.data.year})
-							</p>
-						</div>
+			<section className="Intro theme-dark">
+				<div className="Intro-container Section grid-x grid-padding-x grid-padding-y grid-container">
+					<div className="Avatar cell small-auto medium-shrink">
+						<Loader
+							show={this.state.showLoader}
+							message={<Spinner />}
+							backgroundStyle={{
+								backgroundColor: "rgba(0,0,0,0)",
+							}}
+							hideContentOnLoad={true}
+						>
+							<img
+								className="Avatar-picture"
+								src={SelfPic}
+								title="self-picture."
+							/>
+						</Loader>
+					</div>
+					<div className="Quote cell auto small-text-center medium-text-justified">
+						<q>{this.state.data.quote}</q>
+						<p className="text-right">
+							{this.state.data.author}, {this.state.data.book} (
+							{this.state.data.year})
+						</p>
 					</div>
 				</div>
-				<svg
-					className="mii-svg-separator"
-					id="bigTriangleColor"
-					xmlns="http://www.w3.org/2000/svg"
-					version="1.1"
-					width="100%"
-					height="100"
-					viewBox="0 0 100 100"
-					preserveAspectRatio="none"
-				>
-					<path d="M 0 100.00 l 0 -100 l 50 100.00 l 50 -100 l 0 100" />
-					<path
-						className="overflow"
-						d="M 0 100.00 l 0 -79 l 50 79.00 l 50 -79 l 0 100"
-					/>
-				</svg>{" "}
+				<div className="Section isSvg">
+					<svg
+						className="Section-svg"
+						id="bigTriangleColor"
+						xmlns="http://www.w3.org/2000/svg"
+						version="1.1"
+						width="100%"
+						viewBox="0 0 100 100"
+						preserveAspectRatio="none"
+					>
+						<path d="M 0 100.00 l 0 -100 l 50 100.00 l 50 -100 l 0 100" />
+						<path
+							className="overflow"
+							d="M 0 100.00 l 0 -79 l 50 79.00 l 50 -79 l 0 100"
+						/>
+					</svg>{" "}
+				</div>
 			</section>
 		)
 	}

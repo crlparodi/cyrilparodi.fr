@@ -1,12 +1,12 @@
 import React from "react"
 
-import PropShapes from "../../prop_types/homepage"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
+/* COMPONENTS */
 import CVSection from "./about/CVSection"
 import Likes from "./about/Likes"
 import SoftSkills from "./about/SoftSkills"
-
-import "../../styles/About.scss"
 
 class About extends React.Component {
 	constructor(props) {
@@ -20,16 +20,12 @@ class About extends React.Component {
 	}
 	render() {
 		return (
-			<div className="mii-about mii-light" id="mii-about">
-				<div className="mii-min-section container">
-					<h2 className="mii-title has-text-centered">bonjour !</h2>
-					<div className="mii-entry content has-text-centered">
+			<div className="About theme-light">
+				<div className="Section isMin grid-container">
+					<h2 className="ob-title text-center">bonjour !</h2>
+					<div className="ob-dialog text-center">
 						{this.state.About.map((text_item, index) => {
-							return (
-								<p className="mii-dialog" key={index}>
-									{text_item}
-								</p>
-							)
+							return <p key={index}>{text_item}</p>
 						})}
 					</div>
 					<CVSection data={this.state.CVSection} />

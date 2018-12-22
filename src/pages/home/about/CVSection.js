@@ -1,10 +1,10 @@
 import React from "react"
 
-import PropShapes from "../../../prop_types/homepage"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
-import Button from "../../../components/Button"
-
-import "../../../styles/CVSection.scss"
+/* COMPONENTS */
+import Button from "root/components/Button"
 
 class CVSection extends React.Component {
 	constructor(props) {
@@ -15,14 +15,13 @@ class CVSection extends React.Component {
 	}
 	render() {
 		return (
-			<div className="mii-cv-section">
+			<div className="CVSection grid-container grid-x grid-padding-x grid-padding-y">
 				{this.state.data.map((e, index) => {
 					return (
-						<div className="mii-btn-case">
+						<div className="CVSection-button cell medium-auto">
 							<Button
 								dark={false}
 								inner={e.inner}
-								ico={e.ico}
 								url={e.url}
 								key={index}
 							/>

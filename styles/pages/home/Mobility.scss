@@ -1,0 +1,21 @@
+@import "bulma/sass/utilities/mixins.sass";
+.Mobility {
+	background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+
+	.Section-svg {
+		fill: $spec;
+		.overflow {
+			fill: $light;
+		}
+	}
+	.Map-frame {
+		overflow: hidden;
+		padding: 0 110px 480px 110px;
+		position: relative;
+		height: 0;
+
+		@include breakpoint(medium down) {
+			padding: 0 0 480px 0;
+		}
+	}
+}

@@ -1,7 +1,8 @@
 import React from "modules/react"
-import FooterDesktop from "root/components/Footer/FooterDesktop"
-import FooterTouch from "root/components/Footer/FooterTouch"
-import "./Footer.scss"
+
+/* COMPONENTS */
+import FooterDesktop from "./footer/FooterDesktop"
+import FooterTouch from "./footer/FooterTouch"
 
 class Footer extends React.Component {
 	constructor() {
@@ -14,7 +15,7 @@ class Footer extends React.Component {
 		this.footerScreenAdapter()
 		window.addEventListener("resize", this.footerScreenAdapter.bind(this))
 	}
-	footerScreenAdapter = () => {
+	footerScreenAdapter() {
 		if (window.innerWidth <= 1023) {
 			this.setState({ footerComponent: <FooterTouch /> })
 		}
@@ -24,25 +25,24 @@ class Footer extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-footer-master mii-dark">
-				<div className="mii-svg-wrapper">
+			<section className="Footer theme-dark">
+				<div className="Section isSvg">
 					<svg
-						className="mii-svg-separator"
+						className="Section-svg"
 						id="bigTriangleColor"
 						xmlns="http://www.w3.org/2000/svg"
 						version="1.1"
 						width="100%"
-						height="110"
 						viewBox="0 0 100 100"
 						preserveAspectRatio="none"
 					>
 						<path
-							className="overflow"
+							className="isUnder"
 							d="M 0 0 l 0 20 l 50 60 l 50 -60 l 0 -20"
 						/>
 						<path d="M 0 -1 l 0 1 l 50 80 l 50 -80.00 l 0 -1" />
 					</svg>
-					<div className="mii-up">
+					<div className="Section-scrollToTop">
 						<a
 							onClick={() => {
 								window.scrollTo(0, 0)

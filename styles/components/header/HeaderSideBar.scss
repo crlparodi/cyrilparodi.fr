@@ -1,0 +1,43 @@
+.SideBar {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 52, 68, 0.8);
+
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-out;
+
+	@include breakpoint(large) {
+		display: none;
+	}
+
+	&.isOpen {
+		transform: translateY(0);
+	}
+
+	.Nav {
+		height: auto;
+		padding: 64px 64px 32px 64px;
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint(small only) {
+			padding: 64px 36px 32px 36px;
+		}
+
+		.ob-link {
+			/* Override */
+			width: 40%;
+			border-bottom: 1px solid $light;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 700;
+
+			@include breakpoint(small only) {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

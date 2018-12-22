@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import HeaderToggleButton from "./Header/HeaderToggleButton"
-import HeaderNav from "./Header/HeaderNav"
-import HeaderSideBar from "./Header/HeaderSideBar"
-import Backdrop from "./Header/Backdrop"
-import "./Header.scss"
+
+/* COMPONENTS */
+import HeaderToggleButton from "./header/HeaderToggleButton"
+import HeaderNav from "./header/HeaderNav"
+import HeaderSideBar from "./header/HeaderSideBar"
+import Backdrop from "./header/Backdrop"
 
 class Header extends React.Component {
 	constructor() {
@@ -23,27 +23,22 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<section className="mii-header">
-				<div className="mii-header-case container">
+			<section className="Header">
+				<div className="Content grid-container grid-x">
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}
 					/>
-					<div className="mii-home mii-case-cut has-text-left">
-						<p>
-							<span className="home">
-								cyril
-								<span
-									style={{
-										color: "#db504a",
-									}}
-								>
-									.
-								</span>
-								parodi
-							</span>
-						</p>
+					<div className="Content-logo cell auto">
+						{"cyril"}
+						<span
+							style={{
+								color: "#db504a",
+							}}
+						>
+							{"."}
+						</span>
+						{"parodi"}
 					</div>
-					<div className="mii-header-spacer" />
 					<HeaderNav />
 				</div>
 				<HeaderSideBar

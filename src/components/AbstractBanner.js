@@ -1,6 +1,7 @@
 import React from "react"
-import BannerBlaze from "root/img/coding_chalk.min.png"
-import "./AbstractBanner.scss"
+
+/* MEDIAS */
+import BannerBlaze from "img/coding_chalk.min.png"
 
 class AbstractBanner extends React.Component {
 	constructor(props) {
@@ -52,34 +53,35 @@ class AbstractBanner extends React.Component {
 	render() {
 		return (
 			<section
-				className="mii-abstract-banner mii-dark"
+				className="AbstractBanner theme-dark"
 				style={{ height: this.state.height + "px" }}
 			>
 				<div
-					className="container"
+					className="AbstractBanner-container grid-container"
 					style={{ height: this.state.caseHeight + "px" }}
 				>
-					<div className="mii-abstract-banner-case has-text-centered">
-						<div
-							className="mii-media"
-							style={{
-								display: this.state.display,
-								backgroundImage: "url(" + BannerBlaze + ")",
-							}}
-						/>
+					<div
+						className="AbstractBanner-blaze cell"
+						style={{
+							display: this.state.display,
+							backgroundImage: "url(" + BannerBlaze + ")",
+						}}
+					/>
+					<div className="AbstractBanner-title cell grid-y">
 						<h1
-							className="mii-banner-title"
+							className="Title"
 							style={{ display: this.state.display }}
 						>
 							Ingénieur en développement embarqué / logiciel.
 						</h1>
 						<h2
-							className="mii-banner-subtitle"
+							className="Subtitle"
 							style={{ display: this.state.display }}
 						>
 							près d'Aix-en-Provence, Provence-Alpes-Côte d'Azur,
 							FRANCE
 						</h2>
+						<p />
 					</div>
 				</div>
 			</section>

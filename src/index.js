@@ -2,11 +2,15 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { HashRouter } from "react-router-dom"
 
-import Root from "./pages/Root"
-
+/* SERVICES */
 import registerServiceWorker from "./registerServiceWorker"
 
-import "./styles/index.scss"
+/* COMPONENTS */
+import Root from "./pages/Root"
+
+/* STYLES */
+import "styles/index.scss"
+import "foundation-sites/scss/foundation.scss"
 
 ReactDOM.render(
 	<HashRouter>

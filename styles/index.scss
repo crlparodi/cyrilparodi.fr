@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/* The import order has to be respected */
+/* 1. FOUNDATION IMPORT */
+@import "foundation-sites/scss/foundation.scss";
+@include foundation-everything;
+
+/* 2. CUSTOM BUILD CLASS IMPORT */
+@import "./tools/all";
+
+/* 3 COMPONENTS AND PAGES STYLE IMPORT */
+@import "./components/all";
+@import "./pages/all";
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	scroll-behavior: smooth;
+
+	@extend .theme-dark;
+
+	font-family: "Hind", sans-serif;
+
+	/* THEME CONFIGURATIONS
+	 */
+
+	.theme-light {
+		color: $dark;
+		background-color: $light;
+	}
+
+	.theme-dark {
+		color: $light;
+		background-color: $dark;
+		background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
+		background-attachment: fixed;
+	}
+
+	/* CSS CUSTOM DECORATIVE OBJECTS
+	 */
+
+	.ob-pageTitle {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700 !important;
+	}
+
+	.ob-title {
+		/* H2 */
+		margin-bottom: 2rem;
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700 !important;
+
+		@include breakpoint(small only) {
+			font-size: 1.75rem;
+		}
+	}
+
+	.ob-subtitle {
+		/* H3 */
+		margin-bottom: 2rem;
+	}
+
+	.ob-dialog {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin: 1.5rem 0;
+
+		@include breakpoint(small only) {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	.ob-text {
+		font-size: 1.5rem;
+		line-height: 2rem;
+
+		@include breakpoint(small only) {
+			font-size: 1rem;
+		}
+	}
+
+	.ob-link {
+		color: inherit;
+		transition: color 0.3s ease !important;
+
+		&:hover,
+		&:focus {
+			color: $spec !important;
+		}
+	}
+
+	/* FOUNDATION UTILITIES OVERRIDE
+	 */
+
+	/* The section is unique */
+	.Section {
+		padding-top: 9rem;
+		padding-bottom: 9rem;
+
+		@include breakpoint(small only) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+
+	/* The section contains several mini sections */
+	.Section.isMin {
+		padding-top: 9rem;
+		padding-bottom: 9rem;
+
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+
+		@include breakpoint(small only) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+
+	/* The section contains SVG/CSS shape dividers */
+	/* Don't forget to remove traditionnal mii-sections that could create conflicts */
+	.Section.isSvg {
+		display: flex; // It removes the extra margin not accessible via the css margin parameter
+		height: 9rem !important;
+
+		padding: 0;
+
+		@include breakpoint(small only) {
+			height: 110px !important;
+		}
+	}
+
+	.columns {
+		margin: 0 !important;
+		padding: 0 !important;
+
+		&:last-child {
+			margin: 0 !important;
+		}
+	}
+
+	.container {
+		@include breakpoint(medium only) {
+			margin: 0 $tablet-gap;
+			width: calc(100% - (2 *#{$tablet-gap}));
+		}
+
+		@include breakpoint(small only) {
+			margin: 0 $mobile-gap;
+			width: calc(100% - (2 *#{$mobile-gap}));
+		}
+	}
+
+	.mobile {
+		// @include
+	}
+}

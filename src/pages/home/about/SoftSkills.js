@@ -1,8 +1,7 @@
 import React from "react"
 
-import PropShapes from "../../../prop_types/homepage"
-
-import "../../../styles/SoftSkills.scss"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
 class SoftSkills extends React.Component {
 	constructor(props) {
@@ -14,18 +13,16 @@ class SoftSkills extends React.Component {
 
 	render() {
 		return (
-			<div className="mii-case">
-				<h2 className="mii-title has-text-centered">
-					mes points forts.
-				</h2>
-				<ol className="mii-soft-skills columns is-multiline has-text-centered">
+			<div className="SoftSkills Section isMin grid-container">
+				<h2 className="ob-title text-center">mes points forts.</h2>
+				<ol className="SoftSkill grid-container grid-x grid-padding-x">
 					{this.state.data.map((item, index) => {
 						return (
 							<div
-								className="column is-full-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
+								className="cell small-auto medium-6 large-4 xlarge-3"
 								key={index}
 							>
-								<li className="mii-prop">{item}</li>
+								<li className="Prop text-left">{item}</li>
 							</div>
 						)
 					})}

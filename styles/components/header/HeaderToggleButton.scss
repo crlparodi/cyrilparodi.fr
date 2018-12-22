@@ -1,0 +1,25 @@
+.HeaderToggle {
+	margin: 0 20px 0 20px;
+	font-size: 2rem;
+
+	cursor: pointer;
+
+	transition: color 0.3s ease;
+
+	@include breakpoint(small only) {
+		margin: 0 20px 0 10px;
+	}
+
+	@include breakpoint(large) {
+		display: none;
+	}
+
+	.Toggle {
+		text-shadow: 0px 0px 2px black !important;
+	}
+
+	&:hover,
+	&:active {
+		color: $spec;
+	}
+}

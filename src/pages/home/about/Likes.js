@@ -1,8 +1,7 @@
 import React from "react"
 
-import PropShapes from "../../../prop_types/homepage"
-
-import "../../../styles/Likes.scss"
+/* PROP-TYPES */
+import PropShapes from "root/prop_types/pages.home"
 
 class Likes extends React.Component {
 	constructor(props) {
@@ -14,10 +13,10 @@ class Likes extends React.Component {
 
 	render() {
 		return (
-			<section className="mii-likes-master mii-dark">
-				<div className="mii-svg-wrapper">
+			<section className="Likes theme-dark">
+				<div className="Section isSvg">
 					<svg
-						className="mii-svg-separator"
+						className="Section-svg"
 						id="bigTriangleColor"
 						xmlns="http://www.w3.org/2000/svg"
 						version="1.1"
@@ -32,27 +31,22 @@ class Likes extends React.Component {
 						/>
 					</svg>
 				</div>
-				<div className="mii-case container">
-					<ul className="mii-likes">
-						<li className="mii-box start mii-title">j'aime.</li>
+				<div className="grid-container">
+					<ul className="Likes-grid">
+						<li className="Like isStart ob-title">{"j'aime."}</li>
 						{this.state.data.map((like, index) => {
 							return (
-								<li className="mii-box" key={index}>
-									<img
-										className="mii-box-img"
-										src={like.jpg}
-									/>
-									<div className="mii-box-span">
-										{like.name}
-									</div>
+								<li className="Like" key={index}>
+									<img className="Like-img" src={like.jpg} />
+									<div className="Like-span">{like.name}</div>
 								</li>
 							)
 						})}
 					</ul>
 				</div>
-				<div className="mii-svg-wrapper">
+				<div className="Section isSvg">
 					<svg
-						className="mii-svg-separator"
+						className="Section-svg"
 						id="bigTriangleColor"
 						xmlns="http://www.w3.org/2000/svg"
 						version="1.1"
