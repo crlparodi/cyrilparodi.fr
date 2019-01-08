@@ -18,13 +18,11 @@ class CVSection extends React.Component {
 			<div className="CVSection grid-container grid-x grid-padding-x grid-padding-y">
 				{this.state.data.map((e, index) => {
 					return (
-						<div className="CVSection-button cell medium-auto">
-							<Button
-								dark={false}
-								inner={e.inner}
-								url={e.url}
-								key={index}
-							/>
+						<div
+							key={index}
+							className="CVSection-button cell medium-auto"
+						>
+							<Button dark={false} inner={e.inner} url={e.url} />
 						</div>
 					)
 				})}

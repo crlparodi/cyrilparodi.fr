@@ -17,38 +17,43 @@ class AbstractBanner extends React.Component {
 			display: "initial",
 			data: props.data,
 		}
+		this._isMounted = false
 	}
 	updateDimensions() {
 		if (window.innerHeight <= 1080) {
 			let update_height = window.innerHeight
-			this.setState({ height: update_height })
+			if (this._isMounted) this.setState({ height: update_height })
 		} else {
 			let update_height = 1080
-			this.setState({ height: update_height })
+			if (this._isMounted) this.setState({ height: update_height })
 		}
 	}
 	updateCaseDimensions() {
 		if (window.innerHeight <= 1080) {
 			let update_height = window.innerHeight - 64
-			this.setState({ caseHeight: update_height })
+			if (this._isMounted) this.setState({ caseHeight: update_height })
 		} else {
 			let update_height = 1080 - 64
-			this.setState({ caseHeight: update_height })
+			if (this._isMounted) this.setState({ caseHeight: update_height })
 		}
 	}
 	updateBlazeDisplay() {
 		if (window.scrollY > window.innerHeight - 64) {
-			this.setState({ display: "none" })
+			if (this._isMounted) this.setState({ display: "none" })
 		} else {
-			this.setState({ display: "initial" })
+			if (this._isMounted) this.setState({ display: "initial" })
 		}
 	}
 	componentDidMount() {
+		this._isMounted = true
 		this.updateDimensions()
 		this.updateCaseDimensions()
 		window.addEventListener("resize", this.updateDimensions.bind(this))
 		window.addEventListener("resize", this.updateCaseDimensions.bind(this))
 		window.addEventListener("scroll", this.updateBlazeDisplay.bind(this))
+	}
+	componentWillUnmount() {
+		this._isMounted = false
 	}
 	render() {
 		return (

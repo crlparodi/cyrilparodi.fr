@@ -1,21 +1,20 @@
 import React from "react"
 
+/* DATA */
+import * as CVData from "data/pages.curriculumVitae.json"
+
 /* COMPONENTS */
 import AbstractBanner from "root/components/AbstractBanner"
-import AboutSite from "./home/AboutSite"
+import Summary from "./curriculumVitae/Summary"
+import Education from "./curriculumVitae/Education"
 
 class CurriculumVitae extends React.Component {
 	render() {
 		return (
 			<div>
 				<AbstractBanner />
-				<div
-					style={{
-						position: "relative",
-					}}
-				>
-					<AboutSite />
-				</div>
+				<Summary />
+				<Education data={CVData.education} />
 			</div>
 		)
 	}

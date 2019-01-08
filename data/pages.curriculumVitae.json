@@ -1,1 +1,45 @@
-{}
+{
+	"education": [
+		{
+			"grade": "Diplôme d'ingénieur en Microélectronique et Télécommunications",
+			"year": 2017,
+			"school": "POLYTECH Marseille - Aix-Marseille Université",
+			"description": "Description",
+			"keywords": ["#électronique", "#autre"]
+		}
+	],
+	"certifications": [
+		{
+			"name": " ",
+			"institution": " ",
+			"year": " "
+		}
+	],
+	"experience": [
+		{
+			"jobname": " ",
+			"year": {
+				"start": " ",
+				"end": " "
+			},
+			"company": " ",
+			"description": " "
+		}
+	],
+	"technical_skills": [
+		{
+			"category": {
+				"names": []
+			}
+		}
+	],
+	"international_skills": [
+		{
+			"language": {
+				"level": " ",
+				"certification": " ",
+				"score": " "
+			}
+		}
+	]
+}
