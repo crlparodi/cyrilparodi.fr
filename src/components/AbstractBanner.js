@@ -1,7 +1,7 @@
 import React from "react"
 
 /* MEDIAS */
-import BannerBlaze from "img/coding_chalk.min.png"
+import BannerBlaze from "img/dev2_chalk.min.png"
 
 class AbstractBanner extends React.Component {
 	constructor(props) {
@@ -10,9 +10,9 @@ class AbstractBanner extends React.Component {
 		 * don't forget to declare the new states from the propTypes
 		 */
 		this.state = {
-			height: 1080,
+			height: 720,
 			caseHeight: () => {
-				1080 - 64
+				720 - 64
 			},
 			display: "initial",
 			data: props.data,
@@ -20,20 +20,20 @@ class AbstractBanner extends React.Component {
 		this._isMounted = false
 	}
 	updateDimensions() {
-		if (window.innerHeight <= 1080) {
+		if (window.innerHeight <= 720) {
 			let update_height = window.innerHeight
 			if (this._isMounted) this.setState({ height: update_height })
 		} else {
-			let update_height = 1080
+			let update_height = 720
 			if (this._isMounted) this.setState({ height: update_height })
 		}
 	}
 	updateCaseDimensions() {
-		if (window.innerHeight <= 1080) {
+		if (window.innerHeight <= 720) {
 			let update_height = window.innerHeight - 64
 			if (this._isMounted) this.setState({ caseHeight: update_height })
 		} else {
-			let update_height = 1080 - 64
+			let update_height = 720 - 64
 			if (this._isMounted) this.setState({ caseHeight: update_height })
 		}
 	}

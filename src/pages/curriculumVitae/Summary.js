@@ -3,7 +3,7 @@ import React from "react"
 class Summary extends React.Component {
 	render() {
 		return (
-			<section className="Summary Section theme-light">
+			<section className="Summary Section isTopBordered theme-light">
 				<div className="Summary-container grid-container">
 					<div className="Mosaik text-center">
 						<div className="Mosaik-link">
@@ -18,12 +18,12 @@ class Summary extends React.Component {
 								<span>certifications.</span>
 							</div>
 						</div>
-						<div className="Mosaik-link">
+						<a className="Mosaik-link" href="/#/cv/#EducationID">
 							<div className="isDouble">
 								<i className="fas fa-graduation-cap fa-3x" />
 								<span>formations.</span>
 							</div>
-						</div>
+						</a>
 						<div className="Mosaik-link">
 							<div className="isDouble">
 								<i className="fas fa-comments fa-3x" />

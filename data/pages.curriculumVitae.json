@@ -1,9 +1,30 @@
 {
 	"education": [
 		{
+			"grade": "POEI - Développement et Automatisation de Tests Logiciels",
+			"year": 2018,
+			"school": "IB - groupe Cegos, Aix-en-Provence",
+			"description": "Description",
+			"keywords": ["#informatique", "#autre"]
+		},
+		{
 			"grade": "Diplôme d'ingénieur en Microélectronique et Télécommunications",
 			"year": 2017,
 			"school": "POLYTECH Marseille - Aix-Marseille Université",
+			"description": "Description",
+			"keywords": ["#électronique", "#autre"]
+		},
+		{
+			"grade": "BTS en Assistance Technique d'Ingénieur",
+			"year": 2014,
+			"school": "Lycée du Rempart, Marseille 7ème",
+			"description": "Description",
+			"keywords": ["#organisation-industrielle", "#gestion-financière"]
+		},
+		{
+			"grade": "Bac STi - Génie électronique",
+			"year": 2012,
+			"school": "Lycée Pierre MENDÈS-FRANCE, Vitrolles",
 			"description": "Description",
 			"keywords": ["#électronique", "#autre"]
 		}

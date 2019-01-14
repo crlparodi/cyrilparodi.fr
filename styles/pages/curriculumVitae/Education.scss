@@ -1,6 +1,28 @@
 .Education {
 	.Entry {
-		padding: 6rem 0;
-		width: 50%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 2rem 0;
+		height: 100%;
+
+		&:nth-child(2n) {
+			flex-direction: row-reverse;
+		}
+
+		&-ob {
+			width: 60%;
+		}
+
+		&-pic {
+			width: 420px;
+			height: 300px;
+
+			img {
+				display: block;
+				height: inherit;
+				margin: 0 auto;
+			}
+		}
 	}
 }

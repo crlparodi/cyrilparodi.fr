@@ -37,7 +37,8 @@ html {
 		color: $light;
 		background-color: $dark;
 		background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
-		background-attachment: fixed;
+		// background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png");
+		// background-attachment: fixed;
 	}
 
 	/* CSS CUSTOM DECORATIVE OBJECTS
@@ -122,6 +123,20 @@ html {
 			padding-top: 3rem;
 			padding-bottom: 3rem;
 		}
+	}
+
+	/* The section needs a border separator in some cases */
+	/* (mostly after a banner) */
+	.Section.isTopBordered {
+		padding-top: calc(9rem - 20px);
+		padding-bottom: 9rem;
+
+		@include breakpoint(small only) {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
+		border-top: 10px solid $spec;
 	}
 
 	/* The section contains SVG/CSS shape dividers */
