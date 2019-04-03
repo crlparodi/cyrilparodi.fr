@@ -1,10 +1,8 @@
-@import "bulma/sass/utilities/mixins.sass";
 .AboutHere {
-	// position: relative;
 	&-dialog {
-		padding: 0 110px 4rem 110px;
+		padding: 0 0 4rem 0;
 
-		@include touch {
+		@include breakpoint(medium down) {
 			padding: 0 0 1rem 0;
 		}
 	}
@@ -18,11 +16,11 @@
 			width: 45%;
 			margin: 20px auto;
 
-			@include mobile {
+			@include breakpoint(small only) {
 				width: 280px;
 			}
 
-			@include tablet-only {
+			@include breakpoint(medium only) {
 				width: 50%;
 			}
 		}

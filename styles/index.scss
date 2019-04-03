@@ -21,9 +21,9 @@ html {
 
 	scroll-behavior: smooth;
 
-	@extend .theme-dark;
+	@extend .theme-light;
 
-	font-family: "Hind", sans-serif;
+	font-family: "Hind", sans-serif !important;
 
 	/* THEME CONFIGURATIONS
 	 */
@@ -36,7 +36,7 @@ html {
 	.theme-dark {
 		color: $light;
 		background-color: $dark;
-		background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
+		// background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
 		// background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png");
 		// background-attachment: fixed;
 	}
@@ -45,14 +45,15 @@ html {
 	 */
 
 	.ob-pageTitle {
-		font-family: "Montserrat", sans-serif;
+		/* H1 */
+		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
 		font-weight: 700 !important;
 	}
 
 	.ob-title {
 		/* H2 */
 		margin-bottom: 2rem;
-		font-family: "Montserrat", sans-serif;
+		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
 		font-weight: 700 !important;
 
 		@include breakpoint(small only) {
@@ -63,8 +64,13 @@ html {
 	.ob-subtitle {
 		/* H3 */
 		margin-bottom: 2rem;
-		font-family: "Montserrat", sans-serif;
+		font-family: "Hind", sans-serif; // it overrides the foundation font rule
 		font-weight: 700 !important;
+		font-size: 120%;
+
+		&.isMarginless {
+			margin-bottom: unset;
+		}
 	}
 
 	.ob-dialog {
@@ -102,8 +108,8 @@ html {
 
 	/* The section is unique */
 	.Section {
-		padding-top: 9rem;
-		padding-bottom: 9rem;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
 
 		@include breakpoint(small only) {
 			padding-top: 3rem;
@@ -113,8 +119,8 @@ html {
 
 	/* The section contains several mini sections */
 	.Section.isMin {
-		padding-top: 9rem;
-		padding-bottom: 9rem;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
 
 		margin-top: 0 !important;
 		margin-bottom: 0 !important;
@@ -128,8 +134,8 @@ html {
 	/* The section needs a border separator in some cases */
 	/* (mostly after a banner) */
 	.Section.isTopBordered {
-		padding-top: calc(9rem - 20px);
-		padding-bottom: 9rem;
+		padding-top: calc(6rem - 20px);
+		padding-bottom: 6rem;
 
 		@include breakpoint(small only) {
 			padding-top: 3rem;
@@ -150,6 +156,10 @@ html {
 		@include breakpoint(small only) {
 			height: 110px !important;
 		}
+	}
+
+	.grid-container {
+		max-width: 62.5rem;
 	}
 
 	.columns {

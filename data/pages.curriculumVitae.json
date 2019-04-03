@@ -4,47 +4,115 @@
 			"grade": "POEI - Développement et Automatisation de Tests Logiciels",
 			"year": 2018,
 			"school": "IB - groupe Cegos, Aix-en-Provence",
-			"description": "Description",
-			"keywords": ["#informatique", "#autre"]
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in, ratione maxime earum est similique alias aspernatur! Praesentium vero officiis optio adipisci unde illo consectetur, deleniti facilis pariatur vitae. Fuga?",
+			"keywords": ["#informatique", "#autre"],
+			"links": [
+				{
+					"name": "Lien vers la formation",
+					"url": "http://www.google.fr"
+				}
+			]
 		},
 		{
 			"grade": "Diplôme d'ingénieur en Microélectronique et Télécommunications",
 			"year": 2017,
 			"school": "POLYTECH Marseille - Aix-Marseille Université",
-			"description": "Description",
-			"keywords": ["#électronique", "#autre"]
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in, ratione maxime earum est similique alias aspernatur! Praesentium vero officiis optio adipisci unde illo consectetur, deleniti facilis pariatur vitae. Fuga?",
+			"keywords": ["#électronique", "#autre"],
+			"links": [
+				{
+					"name": "Lien vers la formation",
+					"url": "http://www.google.fr"
+				},
+				{
+					"name": "Lien vers l'école",
+					"url": "http://www.google.fr"
+				}
+			]
 		},
 		{
 			"grade": "BTS en Assistance Technique d'Ingénieur",
 			"year": 2014,
 			"school": "Lycée du Rempart, Marseille 7ème",
-			"description": "Description",
-			"keywords": ["#organisation-industrielle", "#gestion-financière"]
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in, ratione maxime earum est similique alias aspernatur! Praesentium vero officiis optio adipisci unde illo consectetur, deleniti facilis pariatur vitae. Fuga?",
+			"keywords": ["#organisation-industrielle", "#gestion-financière"],
+			"links": [
+				{
+					"name": "Lien vers l'école",
+					"url": "http://www.google.fr"
+				}
+			]
 		},
 		{
 			"grade": "Bac STi - Génie électronique",
 			"year": 2012,
 			"school": "Lycée Pierre MENDÈS-FRANCE, Vitrolles",
-			"description": "Description",
-			"keywords": ["#électronique", "#autre"]
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in, ratione maxime earum est similique alias aspernatur! Praesentium vero officiis optio adipisci unde illo consectetur, deleniti facilis pariatur vitae. Fuga?",
+			"keywords": ["#électronique", "#autre"],
+			"links": []
 		}
 	],
 	"certifications": [
 		{
-			"name": " ",
-			"institution": " ",
-			"year": " "
+			"name": "CFTL/ISTQB Certification - Niveau Fondation",
+			"institution": "CFTL/ISTQB",
+			"year": "2018"
 		}
 	],
 	"experience": [
 		{
-			"jobname": " ",
+			"jobname": "Consultant ingénieur en électronique",
 			"year": {
-				"start": " ",
-				"end": " "
+				"start": "Octobre 2017",
+				"end": "Novembre 2017"
 			},
-			"company": " ",
-			"description": " "
+			"company": "ALTEN Rhône-Alpes",
+			"description": "Fiasco"
+		},
+		{
+			"jobname": "Stage en Recherche et Développement - Veille Technologique",
+			"year": {
+				"start": "Avril 2017",
+				"end": "Septembre 2017"
+			},
+			"company": "TechnicAtome",
+			"description": "Stage"
+		},
+		{
+			"jobname": "Stage en Recherche et Développement - Projet Industriel",
+			"year": {
+				"start": "Juin 2016",
+				"end": "Juillet 2016"
+			},
+			"company": "EURO TECHNIQUES INDUSTRIES",
+			"description": "Stage"
+		},
+		{
+			"jobname": "Conseiller de Vente Saisonnier en Aménagement et Finitions",
+			"year": {
+				"start": "Juin 2015",
+				"end": "Aout 2015"
+			},
+			"company": "BRICOMAN",
+			"description": "Job Saisonnier"
+		},
+		{
+			"jobname": "Stage d'Observation avec Projet Industriel de fin de Cycle",
+			"year": {
+				"start": "Mai 2013",
+				"end": "Juillet 2013"
+			},
+			"company": "Saint-Gobain - DISPANO",
+			"description": "Stage d'Observation"
+		},
+		{
+			"jobname": "Trieur-indexeur intérimaire de nuit",
+			"year": {
+				"start": "Février 2013",
+				"end": "Février 2013"
+			},
+			"company": "Groupe la Poste",
+			"description": "Intérim d'urgence"
 		}
 	],
 	"technical_skills": [

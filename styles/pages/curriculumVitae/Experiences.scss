@@ -1,0 +1,12 @@
+.Experiences {
+	.Entry {
+		padding: 2rem 0;
+		&-dates {
+			&.ob-subtitle {
+				font-size: 1.5rem;
+				font-weight: 400 !important;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

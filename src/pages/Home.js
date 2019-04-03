@@ -13,9 +13,8 @@ import AboutSite from "./home/AboutSite"
 class Home extends React.Component {
 	render() {
 		return (
-			<section className="mii-homepage">
+			<section className="Homepage">
 				<Banner />
-				<Intro data={HomeData.intro} />
 				<About
 					About={HomeData.about}
 					CVSection={HomeData.cvsection}

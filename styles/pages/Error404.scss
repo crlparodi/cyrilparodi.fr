@@ -1,0 +1,30 @@
+.Error404 {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	&-msg {
+		display: block;
+		margin: auto auto;
+
+		.Num404 {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 900;
+			font-size: 15rem;
+			opacity: 0.6;
+		}
+	}
+
+	.Section {
+		&-svg {
+			margin-top: 0px;
+			display: flex;
+			justify-content: center;
+			fill: $spec;
+
+			.overflow {
+				fill: $light;
+			}
+		}
+	}
+}

@@ -23,7 +23,7 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<section className="Header">
+			<section className="Header theme-light">
 				<div className="Content grid-container grid-x">
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}

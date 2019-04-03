@@ -1,5 +1,5 @@
 import React from "react"
-import { Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { TransitionGroup, CSSTransition } from "react-transition-group"
 
 /* COMPONENTS */
@@ -12,41 +12,46 @@ import ScrollToTop from "root/containers/ScrollToTop"
 /* PAGES - SECTIONS */
 import Home from "root/pages/Home"
 import CurriculumVitae from "root/pages/CurriculumVitae"
+import Error404 from "root/pages/Error404"
 
 class Root extends React.Component {
 	render() {
 		return (
-			<div>
-				<Header />
-				<Route
-					render={({ location }) => (
-						<TransitionGroup className="mii-router-transition-wrapper">
-							<CSSTransition
-								key={location.pathname}
-								classNames="fade"
-								timeout={400}
-								exit={false}
-							>
-								<Switch location={location}>
+			<Router>
+				<div>
+					<Header />
+					<Route
+						render={({ location }) => (
+							<TransitionGroup className="RouterTransitionWrapper">
+								<CSSTransition
+									key={location.pathname}
+									classNames="fade"
+									timeout={400}
+									exit={false}
+								>
 									<ScrollToTop>
-										<Route
-											exact
-											path="/"
-											component={Home}
-										/>
-										<Route
-											exact
-											path="/cv"
-											component={CurriculumVitae}
-										/>
+										<Switch location={location}>
+											<Route
+												exact
+												path="/"
+												component={Home}
+											/>
+											<Route
+												path="/cv"
+												component={CurriculumVitae}
+											/>
+											<Route
+												component={() => <Error404 />}
+											/>
+										</Switch>
 									</ScrollToTop>
-								</Switch>
-							</CSSTransition>
-						</TransitionGroup>
-					)}
-				/>
-				<Footer />
-			</div>
+								</CSSTransition>
+							</TransitionGroup>
+						)}
+					/>
+					<Footer />
+				</div>
+			</Router>
 		)
 	}
 }

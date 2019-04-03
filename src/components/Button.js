@@ -6,7 +6,6 @@ class Button extends React.Component {
 		super()
 		this.state = {
 			inner: props.inner,
-			ico: props.ico,
 			url: props.url,
 		}
 		this._isMounted = false

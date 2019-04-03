@@ -3,6 +3,9 @@ import React from "react"
 /* MEDIAS */
 import BannerBlaze from "img/dev2_chalk.min.png"
 
+/* COMPONENTS */
+import Button from "./Button"
+
 class AbstractBanner extends React.Component {
 	constructor(props) {
 		super()
@@ -21,10 +24,10 @@ class AbstractBanner extends React.Component {
 	}
 	updateDimensions() {
 		if (window.innerHeight <= 720) {
-			let update_height = window.innerHeight
+			let update_height = window.innerHeight - 64
 			if (this._isMounted) this.setState({ height: update_height })
 		} else {
-			let update_height = 720
+			let update_height = 720 - 64
 			if (this._isMounted) this.setState({ height: update_height })
 		}
 	}
@@ -86,7 +89,13 @@ class AbstractBanner extends React.Component {
 							près d'Aix-en-Provence, Provence-Alpes-Côte d'Azur,
 							FRANCE
 						</h2>
-						<p />
+						<Button
+							dark={true}
+							inner={"moncv.pdf"}
+							url={
+								"http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
+							}
+						/>
 					</div>
 				</div>
 			</section>

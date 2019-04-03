@@ -11,6 +11,20 @@ const Education = PropTypes.arrayOf(
 	}),
 )
 
+/* EXPERIENCES */
+const Experiences = PropTypes.arrayOf(
+	PropTypes.shape({
+		jobname: PropTypes.string,
+		year: PropTypes.shape({
+			start: PropTypes.string,
+			end: PropTypes.string,
+		}),
+		company: PropTypes.string,
+		description: PropTypes.string,
+	}),
+)
+
 export default {
 	Education,
+	Experiences,
 }

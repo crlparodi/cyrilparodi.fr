@@ -1,27 +1,148 @@
 .Education {
+	.Section-svg {
+		fill: $spec;
+		.overflow {
+			fill: $light;
+		}
+	}
 	.Entry {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding: 2rem 0;
+		padding: 3rem 0 2rem 0;
 		height: 100%;
 
-		&:nth-child(2n) {
-			flex-direction: row-reverse;
+		&-date {
+			display: block;
+			width: 150px;
+			height: 30px;
+			position: absolute;
+			&.isPiled {
+				top: 5px;
+				border: 1px solid $spec;
+				-ms-transform: rotate(-4deg); /* IE 9 */
+				-webkit-transform: rotate(-4deg); /* Safari */
+				transform: rotate(-4deg);
+			}
+			&.isPiling {
+				width: 100%;
+				height: 100%;
+				padding: auto 0;
+				border: 1px solid $light;
+				-ms-transform: rotate(4deg); /* IE 9 */
+				-webkit-transform: rotate(4deg); /* Safari */
+				transform: rotate(4deg);
+				font-family: "Montserrat", sans-serif;
+				font-weight: 700;
+			}
 		}
 
 		&-ob {
-			width: 60%;
-		}
+			width: 100%;
+			&-tab {
+				height: 130px;
+				margin: auto 0;
+				border-bottom: 1px solid $spec;
+				position: relative;
+				z-index: 1;
+				cursor: pointer;
 
-		&-pic {
-			width: 420px;
-			height: 300px;
+				&-topic {
+					margin: auto 0;
+					p {
+						margin-bottom: 0;
+					}
+				}
 
-			img {
-				display: block;
-				height: inherit;
-				margin: 0 auto;
+				&-pic {
+					max-width: 140px;
+					margin: auto auto;
+
+					.Blaze {
+						fill: $spec;
+						stroke: $spec;
+						-webkit-transition: 0.3s all ease;
+						transition: 0.3s all ease;
+					}
+				}
+
+				&:before {
+					-webkit-transition: 0.3s all ease;
+					transition: 0.3s all ease;
+					position: absolute;
+					top: 100%;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					opacity: 0.15;
+					content: "";
+					background-color: $spec;
+					z-index: -1;
+				}
+
+				&:hover {
+					&:before {
+						-webkit-transition: 0.3s all ease;
+						transition: 0.3s all ease;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						opacity: 0.15;
+					}
+				}
+			}
+
+			&-info {
+				overflow: hidden;
+				-webkit-transition: 0.3s all ease;
+				transition: 0.3s all ease;
+
+				.Box {
+					-webkit-transition: 0.3s all ease;
+					transition: 0.3s all ease;
+
+					&-chevron {
+						margin: 0.5rem 0;
+						color: $spec;
+					}
+
+					&-info {
+						.keyword {
+							color: $spec;
+						}
+
+						.links {
+							margin: 1rem 0;
+							display: flex;
+							justify-content: flex-end;
+
+							.Button {
+								width: unset;
+								height: unset;
+								margin: 0 0 0 1rem;
+								font-size: 1rem;
+							}
+						}
+					}
+
+					&.isHidden {
+						transform: translateY(-150%);
+					}
+
+					&.isVisible {
+						transform: translateY(0);
+					}
+				}
+
+				&.isHidden {
+					height: 0px;
+				}
+
+				&.isVisible {
+					height: 400px;
+				}
 			}
 		}
 	}
