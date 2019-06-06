@@ -1,0 +1,130 @@
+.Skills {
+	&-technical {
+		@include breakpoint(medium only) {
+			max-width: 40rem !important;
+			margin: 0 auto 1rem auto;
+		}
+		&-bricklayer {
+			margin: 0 auto;
+			width: 95% !important;
+			.Entry {
+				list-style-type: none;
+				margin: 0;
+				@include breakpoint(small) {
+					width: calc(100%);
+				}
+				@include breakpoint(medium) {
+					width: calc(50% - 5px);
+				}
+				@include breakpoint(large) {
+					width: calc(33% - 5px);
+				}
+
+				&:nth-child(2n) {
+					.Entry-name {
+						-ms-transform: rotate(1.5deg); /* IE 9 */
+						-webkit-transform: rotate(1.5deg); /* Safari */
+						transform: rotate(1.5deg);
+					}
+
+					.Entry-name-cover {
+						-ms-transform: rotate(-1.5deg); /* IE 9 */
+						-webkit-transform: rotate(-1.5deg); /* Safari */
+						transform: rotate(-1.5deg);
+					}
+				}
+
+				&-name {
+					margin: 10px 0;
+					border: 1px solid $spec;
+					background-color: $spec;
+					-ms-transform: rotate(-1.5deg); /* IE 9 */
+					-webkit-transform: rotate(-1.5deg); /* Safari */
+					transform: rotate(-1.5deg);
+
+					@include breakpoint(small only) {
+						position: -webkit-sticky;
+						position: sticky;
+						top: 80px;
+					}
+
+					&-cover {
+						height: 100%;
+						border: 1px solid $dark;
+						-ms-transform: rotate(1.5deg); /* IE 9 */
+						-webkit-transform: rotate(1.5deg); /* Safari */
+						transform: rotate(1.5deg);
+
+						color: $light;
+						background-color: $dark;
+						li {
+							padding: 0.5rem 0 !important;
+							font-family: "Montserrat", sans-serif;
+							font-weight: 700;
+
+							@include breakpoint(small only) {
+							}
+						}
+					}
+				}
+
+				&-list {
+					list-style-type: none;
+					margin: 0.5rem 0;
+					.Item {
+						padding: 0.1rem 0;
+					}
+				}
+			}
+		}
+	}
+
+	&-english {
+		@include breakpoint(medium only) {
+			width: 40rem;
+		}
+		@include breakpoint(medium down) {
+			margin: 2rem auto;
+		}
+		&-subtitle {
+			width: calc(33% - 5px);
+			border: 1px solid $spec;
+			background-color: $spec;
+			-ms-transform: rotate(1.5deg);
+			-webkit-transform: rotate(1.5deg);
+			transform: rotate(1.5deg);
+
+			@include breakpoint(small only) {
+				width: unset;
+				position: -webkit-sticky;
+				position: sticky;
+				top: 80px;
+			}
+
+			@include breakpoint(medium only) {
+				width: 100%;
+			}
+
+			&-cover {
+				border: 1px solid $dark;
+				color: $light;
+				background-color: $dark;
+				padding: 10px 0;
+				-ms-transform: rotate(-1.5deg);
+				-webkit-transform: rotate(-1.5deg);
+				transform: rotate(-1.5deg);
+				font-family: "Montserrat", sans-serif !important;
+				font-weight: 700;
+			}
+		}
+		&-level {
+			margin: 1rem 0;
+			font-weight: 700;
+		}
+		&-levelIndicator {
+			list-style-type: none;
+			margin: 0;
+			font-weight: 700;
+		}
+	}
+}

@@ -4,7 +4,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: $light;
+	background-color: color-map(background, dark);
 
 	transform: translateY(-120%);
 	transition: transform 0.3s ease-out;
@@ -30,7 +30,7 @@
 		.ob-link {
 			/* Override */
 			width: 40%;
-			border-bottom: 1px solid $dark;
+			border-bottom: 1px solid color-map(neutral, grey-300);
 			font-family: "Montserrat", sans-serif;
 			font-weight: 700;
 

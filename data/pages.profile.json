@@ -1,0 +1,54 @@
+{
+	"likes": [
+		{
+			"name": "le rétrocomputing.",
+			"jpg": "https://bit.ly/2COb9yP"
+		},
+		{
+			"name": "le rétrogaming.",
+			"jpg": "https://bit.ly/2COb9ij"
+		},
+		{
+			"name": "linux.",
+			"jpg": "https://bit.ly/2Sug7WS"
+		},
+		{
+			"name": "la récup.",
+			"jpg": "https://bit.ly/2Od00dc"
+		},
+		{
+			"name": "les séries tv.",
+			"jpg": "https://bit.ly/2OcsG5W"
+		},
+		{
+			"name": "les rpgs.",
+			"jpg": "https://bit.ly/2JotUtW"
+		},
+		{
+			"name": "la lecture. (dev. perso. - sociologie.)",
+			"jpg": "https://bit.ly/2PXllca"
+		}
+	],
+	"humanSkills": [
+		{
+			"name": "passion.",
+			"quote": "François Salvat de Monfort disait : « Le plus beau des métiers, c'est de vivre de sa passion ». Pourquoi attendre ?"
+		},
+		{
+			"name": "rigueur.",
+			"quote": "Le noir et blanc n'existent pas, seule les nuances de gris règnent ! Face à la complexité de notre société actuelle, l'esprit critique, le sens de l'analyse et la rigueur sont des outils dont je ne peux me passer."
+		},
+		{
+			"name": "curiosité.",
+			"quote": "Jean-Jacques Rousseau disait : « La curiosité naturelle à l'homme lui inspire l'envie d'apprendre »."
+		},
+		{
+			"name": "apprentissage.",
+			"quote": "La vie est un éternel apprentissage, même quand je dois apprendre un itinéraire routier... !"
+		},
+		{
+			"name": "polyvalence.",
+			"quote": "J'aime la diversité, et de facto, j'aime me diversifier. C'est ma manière à moi de développer mes compétences."
+		}
+	]
+}

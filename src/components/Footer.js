@@ -25,35 +25,24 @@ class Footer extends React.Component {
 	}
 	render() {
 		return (
-			<section className="Footer theme-dark">
-				<div className="Section isSvg">
-					<svg
-						className="Section-svg"
-						id="bigTriangleColor"
-						xmlns="http://www.w3.org/2000/svg"
-						version="1.1"
-						width="100%"
-						viewBox="0 0 100 100"
-						preserveAspectRatio="none"
-					>
-						<path
-							className="isUnder"
-							d="M 0 0 l 0 20 l 50 60 l 50 -60 l 0 -20"
-						/>
-						<path d="M 0 -1 l 0 1 l 50 80 l 50 -80.00 l 0 -1" />
-					</svg>
-					<div className="Section-scrollToTop">
-						<a
-							onClick={() => {
-								window.scrollTo(0, 0)
-							}}
-						>
-							<i className="fas fa-angle-double-up fa-5x" />
-						</a>
+			<div className="Footer">
+				<div className="Footer-container isContainer">
+					<div className="Footer-rollback">
+						<span className="Separator" />
+						<div className="ScrollToTop">
+							<a
+								onClick={() => {
+									window.scrollTo(0, 0)
+								}}
+							>
+								<i className="fas fa-angle-double-up fa-5x" />
+							</a>
+						</div>
+						<span className="Separator" />
 					</div>
+					{this.state.footerComponent}
 				</div>
-				{this.state.footerComponent}
-			</section>
+			</div>
 		)
 	}
 }

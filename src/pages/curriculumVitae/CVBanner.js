@@ -4,9 +4,9 @@ import React from "react"
 import BannerBlaze from "img/dev2_chalk.min.png"
 
 /* COMPONENTS */
-import Button from "./Button"
+import Button from "../../components/Button"
 
-class AbstractBanner extends React.Component {
+class CVBanner extends React.Component {
 	constructor(props) {
 		super()
 		/* NOTE TO MYSELF: When i'm adding a stateless propType to a stateful component,
@@ -61,36 +61,35 @@ class AbstractBanner extends React.Component {
 	render() {
 		return (
 			<section
-				className="AbstractBanner theme-dark"
+				className="CVBanner"
 				style={{ height: this.state.height + "px" }}
 			>
 				<div
-					className="AbstractBanner-container grid-container"
+					className="CVBanner-container isContainer"
 					style={{ height: this.state.caseHeight + "px" }}
 				>
 					<div
-						className="AbstractBanner-blaze cell"
+						className="CVBanner-blaze"
 						style={{
 							display: this.state.display,
 							backgroundImage: "url(" + BannerBlaze + ")",
 						}}
 					/>
-					<div className="AbstractBanner-title cell grid-y">
+					<div className="CVBanner-title">
 						<h1
-							className="Title"
+							className="ob-title"
 							style={{ display: this.state.display }}
 						>
 							Ingénieur en développement embarqué / logiciel.
 						</h1>
 						<h2
-							className="Subtitle"
+							className="ob-subtitle"
 							style={{ display: this.state.display }}
 						>
 							près d'Aix-en-Provence, Provence-Alpes-Côte d'Azur,
 							FRANCE
 						</h2>
 						<Button
-							dark={true}
 							inner={"moncv.pdf"}
 							url={
 								"http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
@@ -103,8 +102,8 @@ class AbstractBanner extends React.Component {
 	}
 }
 
-AbstractBanner.propTypes = {}
+CVBanner.propTypes = {}
 
-AbstractBanner.defaultProps = {}
+CVBanner.defaultProps = {}
 
-export default AbstractBanner
+export default CVBanner

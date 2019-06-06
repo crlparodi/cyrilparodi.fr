@@ -1,60 +1,126 @@
 import React from "react"
 
-/* PROP-TYPES */
-import PropShapes from "root/prop_types/pages.curriculumVitae"
-
 class Experiences extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {
 			data: props.data,
+			index: 0,
+		}
+	}
+	indexCheck = index => {
+		if (index == this.state.index) {
+			return "isVisible"
+		} else {
+			return "isHidden"
 		}
 	}
 	render() {
 		return (
-			<section className="Experiences Section theme-light">
-				<div className="Experiences-container grid-container">
-					<h2 className="Experiences-title ob-title text-center">
-						{"je suis passé par là."}
+			<section className="Experiences isWrapper">
+				<div className="Experiences-container isContainer">
+					<h2 className="Experiences-title ob-title isPrimary">
+						{"parcours professionnel."}
 					</h2>
-					<ul>
-						{this.state.data.map((experience, index) => {
-							return (
-								<li className="Entry" key={index}>
-									<h3 className="Entry-dates ob-subtitle">
-										{experience.year.start +
-											" - " +
-											experience.year.end}
-									</h3>
-									<h3 className="Entry-job ob-subtitle">
-										{experience.jobname}
-									</h3>
-									<p>{experience.company}</p>
-									<p>{experience.description}</p>
-								</li>
-							)
-						})}
-					</ul>
+					<div className="Experiences-content">
+						<ul className="Fields">
+							{this.state.data.map((data, fieldIndex) => {
+								return (
+									<a
+										className="Fields-entry"
+										href="javascript:void(0)"
+										key={fieldIndex}
+									>
+										<div
+											className="onCover text-center"
+											onClick={() => {
+												this.setState({
+													index: fieldIndex,
+												})
+											}}
+										>
+											<li>{data.field}</li>
+										</div>
+									</a>
+								)
+							})}
+						</ul>
+						<div className="Jobs">
+							{this.state.data.map((data, jobIndex) => {
+								return (
+									<div
+										className={
+											"Jobs-entries" +
+											" " +
+											this.indexCheck(jobIndex)
+										}
+										key={jobIndex}
+									>
+										{data.jobs.map((job, entryIndex) => {
+											return (
+												<div
+													className="Entry"
+													key={entryIndex}
+												>
+													<h6 className="Entry-dates">
+														{job.start +
+															" - " +
+															job.end}
+													</h6>
+													<h6 className="Entry-name">
+														{job.name}
+													</h6>
+													<p className="Entry-company">
+														{"chez" +
+															" " +
+															job.company}
+													</p>
+													<div className="Entry-description">
+														{job.description.map(
+															(
+																para,
+																paraIndex,
+															) => {
+																return (
+																	<p
+																		className="Para"
+																		key={
+																			paraIndex
+																		}
+																	>
+																		{para}
+																	</p>
+																)
+															},
+														)}
+													</div>
+												</div>
+											)
+										})}
+									</div>
+								)
+							})}
+						</div>
+					</div>
 				</div>
 			</section>
 		)
 	}
 }
 
-Experiences.propTypes = {
-	data: PropShapes.Experiences,
-}
-
 Experiences.defaultProps = {
 	data: [
 		{
-			jobname: "<NOM_DU_POSTE>",
-			year: {
-				start: "<DATE_DEBUT>",
-				end: "<DATE_FIN>",
-			},
-			company: "<ENTREPRISE_SOCIETE>",
-			description: "<DESCRIPTION>",
+			field: "<SECTEUR>",
+			jobs: [
+				{
+					name: "<NOM_DU_POSTE>",
+					start: "<DATE_DEBUT>",
+					end: "<DATE_FIN>",
+					company: "<ENTREPRISE_SOCIETE>",
+					description: ["<DESCRIPTION>", "<DESCRIPTION>"],
+				},
+			],
 		},
 	],
 }

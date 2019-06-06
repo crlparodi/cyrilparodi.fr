@@ -8,6 +8,7 @@
 		"@babel/preset-env": "^7.1.0",
 		"@babel/preset-react": "^7.0.0",
 		"babel-loader": "^8.0.4",
+		"bricklayer": "^0.4.3",
 		"bulma": "^0.7.2",
 		"css-loader": "^1.0.0",
 		"eslint": "^5.7.0",
@@ -37,5 +38,8 @@
 	"main": "index.js",
 	"repository": "https://github.com/crlparodi/project-mii.git",
 	"author": "Cyril PARODI <parodicyril@gmail.com>",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"bricks.js": "^1.8.0"
+	}
 }

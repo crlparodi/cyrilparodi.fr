@@ -4,19 +4,22 @@ import React from "react"
 import * as CVData from "data/pages.curriculumVitae.json"
 
 /* COMPONENTS */
-import AbstractBanner from "root/components/AbstractBanner"
+import CVBanner from "./curriculumVitae/CVBanner"
 import Summary from "./curriculumVitae/Summary"
 import Education from "./curriculumVitae/Education"
 import Experiences from "./curriculumVitae/Experiences"
+import Certifications from "./curriculumVitae/Certifications"
+import Skills from "./curriculumVitae/Skills"
 
 class CurriculumVitae extends React.Component {
 	render() {
 		return (
 			<div>
-				<AbstractBanner />
-				<Summary />
+				<CVBanner />
 				<Education data={CVData.education} />
 				<Experiences data={CVData.experience} />
+				<Certifications data={CVData.certifications} />
+				<Skills data={CVData.skills} />
 			</div>
 		)
 	}

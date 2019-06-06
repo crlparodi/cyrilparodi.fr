@@ -14,9 +14,9 @@ class EducationEntry extends React.Component {
 	}
 	render() {
 		return (
-			<div className="Entry">
-				<div className="Entry-date isPiled">
-					<div className="Entry-date isPiling text-center">
+			<div className="Entry isContainer">
+				<div className="Entry-date">
+					<div className="Entry-date onCover text-center">
 						<p>{this.state.data.year}</p>
 					</div>
 				</div>
@@ -36,7 +36,7 @@ class EducationEntry extends React.Component {
 						}}
 					>
 						<div className="Entry-ob-tab-topic cell auto">
-							<h3 className="ob-subtitle isMarginless">
+							<h3 className="ob-subtitle">
 								{this.state.data.grade}
 							</h3>
 							<p>{this.state.data.school}</p>
@@ -55,7 +55,11 @@ class EducationEntry extends React.Component {
 								<i className="fas fa-angle-double-down fa-2x" />
 							</div>
 							<div className="Box-info">
-								<p>{this.state.data.description}</p>
+								{this.state.data.description.map(
+									(description, index) => {
+										return <p key={index}>{description}</p>
+									},
+								)}
 								{this.state.data.keywords.map(
 									(keyword, index) => {
 										return (

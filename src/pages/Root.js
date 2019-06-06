@@ -10,7 +10,7 @@ import Footer from "root/components/Footer"
 import ScrollToTop from "root/containers/ScrollToTop"
 
 /* PAGES - SECTIONS */
-import Home from "root/pages/Home"
+import Profile from "root/pages/Profile"
 import CurriculumVitae from "root/pages/CurriculumVitae"
 import Error404 from "root/pages/Error404"
 
@@ -34,12 +34,13 @@ class Root extends React.Component {
 											<Route
 												exact
 												path="/"
-												component={Home}
+												component={Profile}
 											/>
 											<Route
 												path="/cv"
 												component={CurriculumVitae}
 											/>
+											<Route path="/projets" />
 											<Route
 												component={() => <Error404 />}
 											/>

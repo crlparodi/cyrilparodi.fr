@@ -1,123 +1,76 @@
 .Button {
-	display: block;
 	position: relative;
+	display: block;
 	padding: 10px;
-	margin: 0 auto;
 	border: 1px solid;
-	border-radius: 0;
+	min-width: 200px;
 
 	@include breakpoint(medium) {
 		padding: 10px;
-		font-size: 1.2rem;
-
-		@include breakpoint(large) {
-			width: 450px;
-		}
-		@include breakpoint(medium only) {
-			width: 85%;
-		}
+		font-size: 120%;
+		width: min-content;
 	}
 	@include breakpoint(small only) {
 		padding: 15px;
+		font-size: 100%;
 		width: 100%;
-		font-size: 1rem;
 	}
 
-	&.isLight {
-		z-index: 0;
+	z-index: 0;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+	color: color-map(text);
+	border-color: color-map(neutral, grey-50);
+	background: none;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+
+	&:before {
 		-webkit-transition: 0.3s all ease;
 		transition: 0.3s all ease;
-		color: $dark;
-		border-color: $dark !important;
-		background: none;
-		font-family: "Montserrat", sans-serif;
-		font-weight: 700;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 1;
+		content: "";
+		background-color: color-map(theme, primary);
+		z-index: -2;
+	}
+	&:hover {
+		color: color-map(background, dark);
+		border-color: color-map(theme, primary);
 		&:before {
 			-webkit-transition: 0.3s all ease;
 			transition: 0.3s all ease;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			top: 0;
 			opacity: 1;
-			content: "";
-			background-color: $dark;
-			z-index: -2;
 		}
-		&:hover {
-			color: $light;
-			border-color: $dark !important;
-			&:before {
-				-webkit-transition: 0.3s all ease;
-				transition: 0.3s all ease;
-				left: 0;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				opacity: 1;
-			}
-		}
-		&:focus {
-			color: $light;
-			border-color: $dark !important;
-			&:before {
-				transition: 0.3s all ease;
-				left: 0;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				opacity: 1;
-			}
+	}
+	&:focus {
+		color: color-map(background, dark);
+		border-color: color-map(theme, primary);
+		&:before {
+			transition: 0.3s all ease;
+			top: 0;
+			opacity: 1;
 		}
 	}
 
-	&.isDark {
-		z-index: 0;
-		-webkit-transition: 0.3s all ease;
-		transition: 0.3s all ease;
-		color: $light;
-		border-color: $light !important;
-		background: none;
-		font-family: "Montserrat", sans-serif;
-		font-weight: 700;
+	&.isAlt {
+		color: color-map(theme, secondary);
+		border-color: color-map(theme, secondary);
 		&:before {
-			-webkit-transition: 0.3s all ease;
-			transition: 0.3s all ease;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			opacity: 1;
-			content: "";
-			background-color: $light;
-			z-index: -2;
+			background-color: color-map(theme, secondary);
 		}
 		&:hover {
-			color: $dark;
-			border-color: $light !important;
-			&:before {
-				-webkit-transition: 0.3s all ease;
-				transition: 0.3s all ease;
-				left: 0;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				opacity: 1;
-			}
+			color: color-map(background, dark);
+			border-color: color-map(theme, secondary);
 		}
 		&:focus {
-			color: $dark;
-			border-color: $light !important;
-			&:before {
-				transition: 0.3s all ease;
-				left: 0;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				opacity: 1;
-			}
+			color: color-map(background, dark);
+			border-color: color-map(theme, secondary);
 		}
 	}
 }

@@ -11,7 +11,7 @@ const HeaderLinks = props => (
 			cv.
 		</Link>
 		<Link className="ob-link" to="" onClick={props.mobileClickHandler}>
-			portfolio.
+			projets.
 		</Link>
 		<a
 			className="ob-link"

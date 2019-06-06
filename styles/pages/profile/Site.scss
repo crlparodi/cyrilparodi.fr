@@ -1,0 +1,43 @@
+.Site {
+	text-align: justify;
+
+	.Topic {
+		@include breakpoint(medium) {
+			padding: 3rem 0 3rem 0;
+			@include xy-grid(horizontal, false);
+		}
+
+		@include breakpoint(small only) {
+			@include xy-grid(vertical, false);
+		}
+
+		&-remarks {
+			@include xy-cell(auto);
+			@include xy-gutters($gutter-position: right);
+		}
+
+		&-github {
+			@include breakpoint(medium) {
+				align-self: center;
+
+				@include xy-gutters($gutter-position: left);
+				@include xy-cell(3);
+
+				@include breakpoint(medium only) {
+					width: inherit;
+				}
+
+				/* OVERRIDE */
+				.Button {
+					margin: 0 0 0 auto;
+				}
+			}
+			@include breakpoint(small only) {
+				/* OVERRIDE */
+				.Button {
+					margin-top: 2rem;
+				}
+			}
+		}
+	}
+}

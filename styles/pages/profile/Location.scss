@@ -1,0 +1,52 @@
+.Location {
+	background-color: color-map(background, darker);
+	.Map {
+		@include breakpoint(medium) {
+			padding: 3rem 0;
+		}
+		&-frame {
+			@include breakpoint(large) {
+				-webkit-transform: rotate(2deg);
+				-ms-transform: rotate(2deg);
+				transform: rotate(2deg);
+
+				border: 1px solid color-map(theme, primary);
+				background-color: color-map(theme, primary);
+
+				.Map-frame.onCover {
+					-webkit-transform: rotate(-2deg);
+					-ms-transform: rotate(-2deg);
+					transform: rotate(-2deg);
+
+					border: none;
+					background-color: color-map(background, dark);
+				}
+			}
+
+			@include breakpoint(medium only) {
+				-webkit-transform: rotate(1.25deg);
+				-ms-transform: rotate(1.25deg);
+				transform: rotate(1.25deg);
+
+				border: 1px solid color-map(theme, primary);
+				background-color: color-map(theme, primary);
+
+				.Map-frame.onCover {
+					-webkit-transform: rotate(-1.25deg);
+					-ms-transform: rotate(-1.25deg);
+					transform: rotate(-1.25deg);
+
+					border: none;
+					background-color: color-map(background, dark);
+				}
+			}
+
+			&.onCover {
+				overflow: hidden;
+				padding: 0 0 480px 0;
+				position: relative;
+				height: 0;
+			}
+		}
+	}
+}

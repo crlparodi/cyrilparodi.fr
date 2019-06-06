@@ -1,10 +1,13 @@
 import React from "react"
+
+/* PROP-TYPES */
 import PropTypes from "prop-types"
 
 class Button extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {
+			alt: props.alt,
 			inner: props.inner,
 			url: props.url,
 		}
@@ -23,7 +26,7 @@ class Button extends React.Component {
 				className={
 					"Button" +
 					" " +
-					(this.props.dark ? "isDark" : "isLight") +
+					(this.state.alt ? "isAlt" : "") +
 					" " +
 					"text-center"
 				}
@@ -35,16 +38,11 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-	dark: PropTypes.bool,
-	inner: PropTypes.string,
-	ico: PropTypes.string,
-	url: PropTypes.string,
+	alt: PropTypes.bool,
 }
 
 Button.defaultProps = {
-	dark: true,
-	html: "<HTML>",
-	icon: "<ICO>",
+	inner: "<HTML>",
 	url: "<URL>",
 }
 

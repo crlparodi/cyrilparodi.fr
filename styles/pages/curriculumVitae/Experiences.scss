@@ -1,11 +1,155 @@
 .Experiences {
-	.Entry {
-		padding: 2rem 0;
-		&-dates {
-			&.ob-subtitle {
-				font-size: 1.5rem;
-				font-weight: 400 !important;
-				margin-bottom: 0;
+	background-color: color-map(background, darker);
+	&-content {
+		@include xy-grid(vertical, false);
+		@include breakpoint(medium) {
+			padding-top: 3rem;
+		}
+		.Fields {
+			list-style-type: none;
+			margin-left: 0;
+
+			@include breakpoint(medium) {
+				@include xy-grid(horizontal, false);
+			}
+			@include breakpoint(small only) {
+				@include xy-grid(vertical, false);
+			}
+
+			&-entry {
+				margin: 0.5rem 1rem;
+				border: 1px solid color-map(theme, primary);
+				background-color: color-map(theme, primary);
+
+				-ms-transform: rotate(1.25deg);
+				-webkit-transform: rotate(1.25deg);
+				transform: rotate(1.25deg);
+
+				transition: 0.3s all ease;
+				-webkit-transition: 0.3s all ease;
+
+				@include breakpoint(medium only) {
+					@include xy-cell-base(grow);
+				}
+				@include breakpoint(large) {
+					@include xy-cell(4);
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					outline: none;
+					border: 1px solid color-map(theme, secondary);
+					background-color: color-map(theme, secondary);
+
+					.onCover {
+						transition: 0.3s all ease;
+						-webkit-transition: 0.3s all ease;
+						color: color-map(theme, secondary);
+						border: 1px solid color-map(theme, secondary);
+					}
+				}
+
+				.onCover {
+					-ms-transform: rotate(-1.25deg);
+					-webkit-transform: rotate(-1.25deg);
+					transform: rotate(-1.25deg);
+
+					margin: unset;
+					padding: 0.5rem 0;
+					color: color-map(text);
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(background, darker);
+					z-index: 0;
+					position: relative;
+					transition: 0.3s all ease;
+					-webkit-transition: 0.3s all ease;
+					cursor: pointer;
+					font-family: "Montserrat", sans-serif;
+					font-weight: 700;
+				}
+
+				&:nth-child(2n) {
+					-ms-transform: rotate(-1.25deg);
+					-webkit-transform: rotate(-1.25deg);
+					transform: rotate(-1.25deg);
+
+					.onCover {
+						-ms-transform: rotate(1.25deg);
+						-webkit-transform: rotate(1.25deg);
+						transform: rotate(1.25deg);
+					}
+				}
+			}
+		}
+
+		.Jobs {
+			@include breakpoint(xlarge down) {
+				height: auto;
+
+				.Jobs-entries {
+					position: relative;
+
+					&.isHidden {
+						display: none;
+					}
+
+					&.isVisible {
+						display: block;
+					}
+				}
+			}
+			position: relative;
+			height: 580px;
+			margin: 1rem 0;
+
+			&-entries {
+				position: absolute;
+				transition: 0.3s all ease;
+				-webkit-transition: 0.3s all ease;
+				transform: translateY(-50%);
+				top: 50%;
+
+				&.isHidden {
+					opacity: 0;
+				}
+
+				&.isVisible {
+					opacity: 1;
+				}
+
+				.Entry {
+					margin-bottom: 2rem;
+					&-dates,
+					&-name {
+						font-family: "Montserrat", sans-serif;
+					}
+
+					&-dates {
+						margin-bottom: 0;
+					}
+
+					&-name {
+						font-weight: 700;
+						font-size: 120%;
+						margin-bottom: 0;
+					}
+
+					&-company {
+						font-weight: 700;
+						font-size: 120%;
+					}
+
+					&-description {
+						.Para {
+							margin-bottom: 0.3rem;
+
+							&:nth-child(1) {
+								font-weight: 700;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -6,20 +6,17 @@ import hyperlinks from "data/hyperlinks.json"
 class FooterTouch extends React.Component {
 	render() {
 		return (
-			<div className="FooterTouch grid-container">
-				<div className="FooterTouch-contact text-center">
-					{hyperlinks.social.map((link, index) => {
+			<div className="FooterTouch">
+				<div className="FooterTouch-contact">
+					{hyperlinks.contact.map((link, index) => {
 						return (
 							<a href={link.href} key={index} className="ob-link">
 								<i className={link.icon} key={index} />
 							</a>
 						)
 					})}
-					<a href={hyperlinks.contact.href} className="ob-link">
-						<i className={hyperlinks.contact.icon} />
-					</a>
 				</div>
-				<div className="FooterTouch-misc text-center">
+				<div className="FooterTouch-misc">
 					<p>
 						<img
 							alt="Creative Commons License"

@@ -21,75 +21,84 @@ html {
 
 	scroll-behavior: smooth;
 
-	@extend .theme-light;
+	color: color-map(text);
+	background-color: color-map(background, dark);
 
-	font-family: "Hind", sans-serif !important;
+	font-family: "Work Sans", sans-serif;
+
+	/* FOUNDATION UTILITIES OVERRIDE */
+
+	// TO REMOVE SOON
+
+	.grid-container {
+		max-width: 62.5rem;
+	}
 
 	/* THEME CONFIGURATIONS
 	 */
 
-	.theme-light {
-		color: $dark;
-		background-color: $light;
-	}
-
-	.theme-dark {
-		color: $light;
-		background-color: $dark;
-		// background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
-		// background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png");
-		// background-attachment: fixed;
-	}
-
 	/* CSS CUSTOM DECORATIVE OBJECTS
 	 */
 
-	.ob-pageTitle {
-		/* H1 */
-		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
-		font-weight: 700 !important;
-	}
-
 	.ob-title {
-		/* H2 */
-		margin-bottom: 2rem;
 		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
-		font-weight: 700 !important;
 
+		@include breakpoint(large) {
+			font-size: 300%;
+		}
+		@include breakpoint(medium only) {
+			font-size: 200%;
+		}
 		@include breakpoint(small only) {
-			font-size: 1.75rem;
+			font-size: 150%;
+		}
+
+		&.isPrimary {
+			position: relative;
+			margin-bottom: 3rem;
+
+			font-weight: 700;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: calc(100% + 15px);
+				width: 100px;
+				height: 5px;
+				background-color: color-map(theme, primary);
+
+				/* LEFT or RIGHT parameter to specify for each title */
+			}
+		}
+
+		&.isSecondary {
+			margin-bottom: 3rem;
+			font-weight: 700;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 120%;
+				width: 100px;
+				height: 5px;
+				background-color: color-map(theme, secondary);
+
+				/* LEFT or RIGHT parameter to specify for each title */
+			}
 		}
 	}
 
 	.ob-subtitle {
 		/* H3 */
-		margin-bottom: 2rem;
-		font-family: "Hind", sans-serif; // it overrides the foundation font rule
-		font-weight: 700 !important;
+		margin-bottom: 0.5rem;
+		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
+		font-weight: 700;
 		font-size: 120%;
 
-		&.isMarginless {
-			margin-bottom: unset;
-		}
-	}
-
-	.ob-dialog {
-		font-size: 1.5rem;
-		line-height: 2rem;
-		margin: 1.5rem 0;
-
 		@include breakpoint(small only) {
-			font-size: 1rem;
-			line-height: 1.5rem;
-		}
-	}
-
-	.ob-text {
-		font-size: 1.5rem;
-		line-height: 2rem;
-
-		@include breakpoint(small only) {
-			font-size: 1rem;
+			font-size: 110%;
 		}
 	}
 
@@ -99,91 +108,25 @@ html {
 
 		&:hover,
 		&:focus {
-			color: $spec !important;
+			color: color-map(theme, primary);
 		}
 	}
 
-	/* FOUNDATION UTILITIES OVERRIDE
-	 */
+	/* SPECIAL PARAMETERS */
 
-	/* The section is unique */
-	.Section {
+	.isContainer {
+		@include xy-grid-container();
+	}
+
+	/* CUSTOM SECTIONS */
+
+	.isWrapper {
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 
-		@include breakpoint(small only) {
+		@include breakpoint(medium down) {
 			padding-top: 3rem;
 			padding-bottom: 3rem;
 		}
-	}
-
-	/* The section contains several mini sections */
-	.Section.isMin {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
-
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-
-		@include breakpoint(small only) {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-		}
-	}
-
-	/* The section needs a border separator in some cases */
-	/* (mostly after a banner) */
-	.Section.isTopBordered {
-		padding-top: calc(6rem - 20px);
-		padding-bottom: 6rem;
-
-		@include breakpoint(small only) {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-		}
-
-		border-top: 10px solid $spec;
-	}
-
-	/* The section contains SVG/CSS shape dividers */
-	/* Don't forget to remove traditionnal mii-sections that could create conflicts */
-	.Section.isSvg {
-		display: flex; // It removes the extra margin not accessible via the css margin parameter
-		height: 9rem !important;
-
-		padding: 0;
-
-		@include breakpoint(small only) {
-			height: 110px !important;
-		}
-	}
-
-	.grid-container {
-		max-width: 62.5rem;
-	}
-
-	.columns {
-		margin: 0 !important;
-		padding: 0 !important;
-
-		&:last-child {
-			margin: 0 !important;
-		}
-	}
-
-	.container {
-		@include breakpoint(medium only) {
-			margin: 0 $tablet-gap;
-			width: calc(100% - (2 *#{$tablet-gap}));
-		}
-
-		@include breakpoint(small only) {
-			margin: 0 $mobile-gap;
-			width: calc(100% - (2 *#{$mobile-gap}));
-		}
-	}
-
-	.mobile {
-		// @include
 	}
 }

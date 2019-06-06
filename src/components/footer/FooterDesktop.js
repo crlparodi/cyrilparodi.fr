@@ -6,33 +6,26 @@ import hyperlinks from "data/hyperlinks.json"
 class FooterDesktop extends React.Component {
 	render() {
 		return (
-			<div className="FooterDesktop grid-container">
-				<div className="Contact grid-x grid-padding-y">
-					<div className="Contact-halfPart cell auto text-center">
-						<h3 className="ob-title">suivez-moi.</h3>
-						<div>
-							{hyperlinks.social.map((link, index) => {
-								return (
-									<a
-										href={link.href}
-										key={index}
-										className="ob-link"
-									>
-										<i className={link.icon} key={index} />
-									</a>
-								)
-							})}
-						</div>
-					</div>
-					<div className="Contact-halfPart cell auto text-center">
-						<h3 className="ob-title">contactez-moi.</h3>
-						<a href={hyperlinks.contact.href} className="ob-link">
-							<i className={hyperlinks.contact.icon} />
-						</a>
+			<div className="FooterDesktop">
+				<div className="FooterDesktop-contact">
+					<h3 className="ob-title isPrimary">
+						{"restons en contact !"}
+					</h3>
+					<div>
+						{hyperlinks.contact.map((link, index) => {
+							return (
+								<a
+									href={link.href}
+									key={index}
+									className="ob-link"
+								>
+									<i className={link.icon} key={index} />
+								</a>
+							)
+						})}
 					</div>
 				</div>
-				<span className="FooterDesktop-separator" />
-				<div className="Misc cell auto text-center">
+				<div className="FooterDesktop-misc">
 					<p>
 						<img
 							alt="Creative Commons License"
@@ -55,7 +48,7 @@ class FooterDesktop extends React.Component {
 						>
 							CC BY-NC-SA 4.0
 						</a>
-						. Cyril Parodi, 2018.
+						.<br /> Cyril Parodi, 2018.
 					</p>
 				</div>
 			</div>

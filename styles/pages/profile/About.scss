@@ -1,0 +1,56 @@
+.About {
+	/* OVERRIDE */
+	&.isWrapper {
+		padding-top: 3rem;
+	}
+
+	&-content {
+		@include breakpoint(medium) {
+			@include xy-grid(horizontal, false);
+			margin-top: 3rem;
+		}
+		@include breakpoint(small only) {
+			@include xy-grid(vertical, false);
+			.Button {
+				margin-top: 1rem;
+			}
+		}
+
+		.Picture {
+			align-self: center;
+
+			@include xy-cell(shrink);
+
+			@include breakpoint(small only) {
+				@include xy-gutters($gutter-position: bottom);
+			}
+
+			& img {
+				width: 192px;
+				border-radius: 50%;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+
+		.Topic {
+			align-self: center;
+
+			@include xy-cell(auto);
+
+			@include breakpoint(small only) {
+				@include xy-gutters($gutter-position: top);
+			}
+
+			&-bulletPoints {
+				margin-bottom: 0;
+
+				& > li {
+					&:nth-child(1) {
+						color: color-map(theme, primary);
+					}
+				}
+			}
+		}
+	}
+}

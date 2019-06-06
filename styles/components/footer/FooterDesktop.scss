@@ -1,39 +1,40 @@
 .FooterDesktop {
-	padding: 0 0 2rem 0;
+	padding: 2rem 0;
 
-	.Contact {
-		display: flex;
-		flex-direction: row;
+	@include xy-grid(horizontal, false);
+	@include xy-gutters($gutter-position: top bottom);
 
+	&-contact {
+		text-align: center;
+
+		@include xy-cell(50%);
+
+		/* OVERRIDE */
 		.ob-title {
-			/* Override */
-			margin-bottom: 1rem;
+			font-size: 200%;
+
+			&.isPrimary {
+				margin-bottom: 1rem;
+
+				&:before {
+					display: none;
+				}
+			}
 		}
+
+		/* OVERRIDE */
 		.ob-link {
-			/* Override */
 			margin: 0 10px 0 10px;
 			font-size: 3rem;
 			@include hoverDashesEffect();
 		}
 	}
 
-	&-separator {
-		display: block;
-		border: none;
-		height: 1px;
-		background: -webkit-gradient(
-			radial,
-			50% 50%,
-			0,
-			50% 50%,
-			350,
-			from($light),
-			to(rgba(255, 255, 255, 0))
-		);
-		margin: 2rem 0;
-	}
-
-	.Misc {
+	&-misc {
+		align-self: center;
+		text-align: center;
 		font-size: 0.8rem;
+
+		@include xy-cell(50%);
 	}
 }

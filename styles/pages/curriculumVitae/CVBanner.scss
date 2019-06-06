@@ -1,18 +1,17 @@
-.AbstractBanner {
+.CVBanner {
 	position: relative;
 	z-index: 0;
-	padding-top: 64px;
-	background-color: #003444 !important;
-	background-image: url("https://www.transparenttextures.com/patterns/ice-age.png");
+	background-color: #000000 !important;
+	background-image: url("https://www.transparenttextures.com/patterns/noisy-grid.png");
 
 	&-container {
-		//position: fixed;
 		right: 0;
 		left: 0;
-		margin: 0 auto;
 		height: calc(100% - 64px);
+		padding-top: 64px;
 
 		@include breakpoint(medium) {
+			margin: 0 auto;
 			@include xy-grid(horizontal, false);
 		}
 
@@ -31,26 +30,33 @@
 			@include xy-cell-base(4);
 		}
 		@include breakpoint(small only) {
-			width: 100%;
+			margin-top: 10px;
 			@include xy-cell-base(grow);
 		}
 	}
 
 	&-title {
-		justify-content: center;
+		@include xy-grid(vertical, false);
 
 		@include breakpoint(medium) {
-			padding-left: 3rem !important;
+			margin-top: auto;
+			margin-bottom: auto;
+			text-align: right;
 			@include xy-cell-base(auto);
+			@include breakpoint(large) {
+				padding: 1rem 1rem;
+				margin-left: 3rem !important;
+				background-color: hsla(202, 100%, 11%, 0.75);
+			}
 		}
 		@include breakpoint(small only) {
-			@include xy-cell-base(full);
 			text-align: center;
+			@include xy-cell-base(full);
 		}
 
-		.Title {
+		/* OVERRIDE */
+		.ob-title {
 			font-size: 2rem;
-			font-family: "Montserrat", sans-serif;
 			font-weight: 700 !important;
 
 			@include breakpoint(medium only) {
@@ -59,14 +65,15 @@
 			}
 
 			@include breakpoint(small only) {
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 				margin-bottom: 1rem;
 			}
 		}
 
-		.Subtitle {
-			font-family: "Montserrat", sans-serif;
+		/* OVERRIDE */
+		.ob-subtitle {
 			font-size: 1.3rem;
+			font-weight: 300;
 
 			@include breakpoint(medium down) {
 				font-size: 1rem;
@@ -75,13 +82,14 @@
 		}
 
 		.Button {
-			margin: 30px 0;
+			margin: 30px 0 0 auto;
 
-			@include breakpoint(medium down) {
-				@include breakpoint(medium only) {
-					width: 70%;
-				}
-				margin-top: 0;
+			@include breakpoint(medium only) {
+				margin: 0 0 0 auto;
+			}
+
+			@include breakpoint(small only) {
+				margin: 0 0 30px auto;
 			}
 		}
 	}

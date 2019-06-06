@@ -20,6 +20,6 @@
 
 	&:hover,
 	&:active {
-		color: $spec;
+		color: color-map(theme, primary);
 	}
 }

@@ -1,0 +1,218 @@
+.Likes {
+	background-color: color-map(background, darker);
+
+	&-grid {
+		@include breakpoint(medium) {
+			@include xy-grid(horizontal, true);
+		}
+		@include breakpoint(small only) {
+			@include xy-grid(vertical, false);
+		}
+
+		margin: 0;
+
+		.Like {
+			@include breakpoint(medium) {
+				@include breakpoint(large) {
+					@include xy-cell(4);
+					@include breakpoint(xxlarge) {
+						height: 240px;
+					}
+					@include breakpoint(large) {
+						height: 170px;
+					}
+					@include flex();
+					@include flex-align(center, middle);
+
+					.LikeImg {
+						z-index: 1;
+					}
+
+					.Like:hover {
+						.LikeImg {
+							top: 200%;
+						}
+					}
+
+					.LikeSpan {
+						margin-bottom: 0;
+
+						li {
+							vertical-align: middle;
+							font-size: 140%;
+						}
+
+						.ob-title {
+							vertical-align: middle;
+						}
+					}
+				}
+				@include breakpoint(medium only) {
+					@include xy-cell(6);
+					@include flex();
+					height: 120px;
+
+					.LikeSpan {
+						z-index: 1;
+						padding: 20px;
+						font-size: 140%;
+						background-color: rgba(0, 0, 0, 0.5);
+
+						li {
+							vertical-align: bottom;
+						}
+
+						.ob-title {
+							vertical-align: bottom;
+							font-size: 100%;
+							font-size: 160%;
+						}
+					}
+				}
+
+				margin-bottom: 2rem;
+
+				&:nth-child(n) {
+					-ms-transform: rotate(3deg); /* IE 9 */
+					-webkit-transform: rotate(3deg); /* Safari */
+					transform: rotate(3deg);
+					.Like.onCover {
+						@include breakpoint(medium only) {
+							.LikeSpan {
+								text-align: left;
+								&.isStart {
+									.ob-title {
+										text-align: inherit;
+									}
+								}
+							}
+						}
+						-ms-transform: rotate(-3deg); /* IE 9 */
+						-webkit-transform: rotate(-3deg); /* Safari */
+						transform: rotate(-3deg);
+					}
+				}
+
+				&:nth-child(2n) {
+					-ms-transform: rotate(-3deg); /* IE 9 */
+					-webkit-transform: rotate(-3deg); /* Safari */
+					transform: rotate(-3deg);
+					.Like.onCover {
+						@include breakpoint(medium only) {
+							.LikeSpan {
+								text-align: right;
+							}
+						}
+						-ms-transform: rotate(3deg); /* IE 9 */
+						-webkit-transform: rotate(3deg); /* Safari */
+						transform: rotate(3deg);
+					}
+				}
+			}
+			@include breakpoint(small only) {
+				@include flex();
+
+				height: 80px;
+				margin: 0 0.5rem 1.5rem 0.5rem;
+
+				&.onCover {
+					.LikeSpan {
+						z-index: 1;
+						padding: 20px;
+						background-color: rgba(0, 0, 0, 0.5);
+
+						li {
+							vertical-align: middle;
+							text-align: right;
+							font-size: 120%;
+						}
+
+						.ob-title {
+							vertical-align: middle;
+							text-align: right;
+						}
+					}
+				}
+
+				&:nth-child(n) {
+					-ms-transform: rotate(1.2deg); /* IE 9 */
+					-webkit-transform: rotate(1.2deg); /* Safari */
+					transform: rotate(1.2deg);
+					.Like.onCover {
+						-ms-transform: rotate(-1.2deg); /* IE 9 */
+						-webkit-transform: rotate(-1.2deg); /* Safari */
+						transform: rotate(-1.2deg);
+					}
+				}
+
+				&:nth-child(2n) {
+					-ms-transform: rotate(-1.2deg); /* IE 9 */
+					-webkit-transform: rotate(-1.2deg); /* Safari */
+					transform: rotate(-1.2deg);
+					.Like.onCover {
+						-ms-transform: rotate(1.2deg); /* IE 9 */
+						-webkit-transform: rotate(1.2deg); /* Safari */
+						transform: rotate(1.2deg);
+					}
+				}
+			}
+
+			border: 1px solid color-map(theme, primary);
+			background-color: color-map(theme, primary);
+
+			&.onCover {
+				position: relative;
+				overflow: hidden;
+				list-style: none;
+				margin: 0;
+				width: 100%;
+
+				color: color-map(text);
+				background-color: color-map(background, darker);
+
+				.LikeImg {
+					position: absolute;
+					width: 100%;
+					transform: translateY(-50%);
+					-moz-transform: translateY(-50%);
+					-webkit-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+					top: 50%;
+					transition: top 0.3s ease;
+					-moz-transition: top 0.3s ease;
+					-webkit-transition: top 0.3s ease;
+					filter: grayscale(1);
+				}
+
+				.LikeSpan {
+					display: table;
+					width: 100%;
+					height: 100%;
+					text-align: center;
+
+					&.isStart {
+						background-color: unset;
+					}
+
+					li {
+						display: table-cell;
+					}
+
+					/* COMPLEMENT */
+					.ob-title {
+						display: table-cell;
+						margin: 0 !important;
+
+						/* OVERRIDE */
+						&.isPrimary {
+							/* OVERRIDE */
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

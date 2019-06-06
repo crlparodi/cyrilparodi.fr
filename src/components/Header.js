@@ -23,8 +23,8 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<section className="Header theme-light">
-				<div className="Content grid-container grid-x">
+			<section className="Header">
+				<div className="Content isContainer grid-x">
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}
 					/>
@@ -32,7 +32,7 @@ class Header extends React.Component {
 						{"cyril"}
 						<span
 							style={{
-								color: "#db504a",
+								color: "#dd5800",
 							}}
 						>
 							{"."}

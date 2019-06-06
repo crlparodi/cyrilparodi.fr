@@ -3,6 +3,7 @@ import Loader from "react-loader-advanced"
 
 /* COMPONENTS */
 import Spinner from "root/components/Spinner"
+import Button from "root/components/Button"
 
 /* MEDIAS */
 import IMG from "img/desk.min.jpg"
@@ -59,20 +60,42 @@ class Banner extends React.Component {
 				backgroundStyle={{ backgroundColor: "rgba(0,0,0,0)" }}
 				hideContentOnLoad={true}
 			>
-				<div
-					className="Banner theme-dark"
+				<section
+					className="Banner isWrapper"
 					style={{
 						height: this.state.height + "px",
 						backgroundImage: "url(" + IMG + ")",
 						filter: "background sepia(1)",
 					}}
 				>
-					<div className="Banner-container grid-container grid-y">
-						<h1 className="WelcomeMsg ob-pageTitle text-center">
-							{"faire d'une passion un métier."}
-						</h1>
+					<div className="Banner-container">
+						<div className="Welcome">
+							<div className="Welcome-msg">
+								<h1 className="ob-title isPrimary">
+									{"faire d'une passion un métier."}
+								</h1>
+								<p>
+									{
+										"Jeune diplômé d'ingénieur originaire d'Aix-en-Provence, je souhaite quitter l'électronique pour démarrer ma carrière professionnelle dans le développement."
+									}
+								</p>
+							</div>
+							<div className="Welcome-links">
+								<Button
+									inner={"monparcours.html"}
+									url={"/cv"}
+								/>
+								<Button
+									alt
+									inner={"moncv.pdf"}
+									url={
+										"http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
+									}
+								/>
+							</div>
+						</div>
 					</div>
-				</div>
+				</section>
 			</Loader>
 		)
 	}

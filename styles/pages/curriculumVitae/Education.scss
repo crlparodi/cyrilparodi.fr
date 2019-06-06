@@ -1,147 +1,162 @@
 .Education {
-	.Section-svg {
-		fill: $spec;
-		.overflow {
-			fill: $light;
+	&-entries {
+		@include breakpoint(medium) {
+			padding-top: 3rem;
 		}
-	}
-	.Entry {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 3rem 0 2rem 0;
-		height: 100%;
+		.Entry {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-top: 3rem;
+			padding-bottom: 2rem;
+			height: 100%;
 
-		&-date {
-			display: block;
-			width: 150px;
-			height: 30px;
-			position: absolute;
-			&.isPiled {
+			&-date {
+				display: block;
+				width: 150px;
+				height: 30px;
+				position: absolute;
 				top: 5px;
-				border: 1px solid $spec;
+				border: 1px solid color-map(theme, primary);
+				background-color: color-map(theme, primary);
 				-ms-transform: rotate(-4deg); /* IE 9 */
 				-webkit-transform: rotate(-4deg); /* Safari */
 				transform: rotate(-4deg);
+
+				@include breakpoint(small only) {
+					transform: translateX(-50%) rotate(-4deg);
+					left: 50%;
+				}
+				&.onCover {
+					@include breakpoint(small only) {
+						left: 0;
+					}
+
+					top: 0;
+					width: 100%;
+					height: 100%;
+					padding: auto 0;
+					color: color-map(text);
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(background, dark);
+					-ms-transform: rotate(4deg); /* IE 9 */
+					-webkit-transform: rotate(4deg); /* Safari */
+					transform: rotate(4deg);
+					font-family: "Montserrat", sans-serif;
+					font-weight: 700;
+				}
 			}
-			&.isPiling {
+
+			&-ob {
 				width: 100%;
-				height: 100%;
-				padding: auto 0;
-				border: 1px solid $light;
-				-ms-transform: rotate(4deg); /* IE 9 */
-				-webkit-transform: rotate(4deg); /* Safari */
-				transform: rotate(4deg);
-				font-family: "Montserrat", sans-serif;
-				font-weight: 700;
-			}
-		}
-
-		&-ob {
-			width: 100%;
-			&-tab {
-				height: 130px;
-				margin: auto 0;
-				border-bottom: 1px solid $spec;
-				position: relative;
-				z-index: 1;
-				cursor: pointer;
-
-				&-topic {
+				&-tab {
+					height: 130px;
 					margin: auto 0;
-					p {
-						margin-bottom: 0;
+					border-bottom: 1px solid color-map(theme, primary);
+					position: relative;
+					z-index: 1;
+					cursor: pointer;
+
+					&-topic {
+						margin: auto 0;
+						p {
+							margin-bottom: 0;
+						}
 					}
-				}
 
-				&-pic {
-					max-width: 140px;
-					margin: auto auto;
+					&-pic {
+						max-width: 140px;
+						margin: auto auto;
 
-					.Blaze {
-						fill: $spec;
-						stroke: $spec;
-						-webkit-transition: 0.3s all ease;
-						transition: 0.3s all ease;
+						.Blaze {
+							fill: color-map(theme, primary);
+							stroke: color-map(theme, primary);
+							-webkit-transition: 0.3s all ease;
+							transition: 0.3s all ease;
+						}
+
+						@include breakpoint(small only) {
+							display: none;
+						}
 					}
-				}
 
-				&:before {
-					-webkit-transition: 0.3s all ease;
-					transition: 0.3s all ease;
-					position: absolute;
-					top: 100%;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					opacity: 0.15;
-					content: "";
-					background-color: $spec;
-					z-index: -1;
-				}
-
-				&:hover {
 					&:before {
 						-webkit-transition: 0.3s all ease;
 						transition: 0.3s all ease;
+						position: absolute;
+						top: 100%;
+						bottom: 0;
 						left: 0;
 						right: 0;
-						top: 0;
-						bottom: 0;
-						opacity: 0.15;
+						opacity: 0.2;
+						content: "";
+						background-color: color-map(theme, primary);
+						z-index: -1;
+					}
+
+					&:hover {
+						&:before {
+							-webkit-transition: 0.3s all ease;
+							transition: 0.3s all ease;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							opacity: 0.2;
+						}
 					}
 				}
-			}
 
-			&-info {
-				overflow: hidden;
-				-webkit-transition: 0.3s all ease;
-				transition: 0.3s all ease;
-
-				.Box {
+				&-info {
+					overflow: hidden;
 					-webkit-transition: 0.3s all ease;
 					transition: 0.3s all ease;
 
-					&-chevron {
-						margin: 0.5rem 0;
-						color: $spec;
-					}
-
-					&-info {
-						.keyword {
-							color: $spec;
+					.Box {
+						&-chevron {
+							margin: 0.5rem 0;
+							color: color-map(theme, primary);
 						}
 
-						.links {
-							margin: 1rem 0;
-							display: flex;
-							justify-content: flex-end;
+						&-info {
+							.keyword {
+								color: color-map(theme, secondary);
+							}
 
-							.Button {
-								width: unset;
-								height: unset;
-								margin: 0 0 0 1rem;
-								font-size: 1rem;
+							.links {
+								display: flex;
+								justify-content: end;
+
+								@include breakpoint(small only) {
+									display: block;
+								}
+
+								.Button {
+									width: unset;
+									height: unset;
+									margin: 1rem 0 0 1rem;
+									font-size: 1rem;
+
+									@include breakpoint(small only) {
+										margin: 1rem 0 0 0;
+
+										&:nth-child(1) {
+											margin: 2rem 0 0 0 !important;
+										}
+									}
+								}
 							}
 						}
 					}
 
 					&.isHidden {
-						transform: translateY(-150%);
+						display: none;
 					}
 
 					&.isVisible {
-						transform: translateY(0);
+						display: block;
 					}
-				}
-
-				&.isHidden {
-					height: 0px;
-				}
-
-				&.isVisible {
-					height: 400px;
 				}
 			}
 		}

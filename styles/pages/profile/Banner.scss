@@ -1,0 +1,96 @@
+.Banner {
+	position: relative;
+	background-size: cover;
+	background-position-y: 100%;
+
+	@include breakpoint(small only) {
+		background-position-x: 50%;
+	}
+
+	/* OVERRIDE */
+	&.isWrapper {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&-container {
+		height: 100%;
+		padding-top: 64px;
+
+		@include breakpoint(medium) {
+			padding-bottom: 2rem;
+			@include xy-grid-container();
+
+			@include breakpoint(large) {
+				display: flex;
+			}
+
+			@include breakpoint(medium only) {
+				display: block;
+			}
+		}
+
+		@include breakpoint(small only) {
+			display: table;
+		}
+
+		.Welcome {
+			padding: 20px 20px;
+
+			@include breakpoint(medium) {
+				width: 75%;
+
+				@include breakpoint(large) {
+					margin: auto 20px 20px auto;
+				}
+
+				@include breakpoint(medium only) {
+					float: right;
+					margin: 20px 20px;
+				}
+			}
+
+			@include breakpoint(small only) {
+				display: table-cell;
+				vertical-align: middle;
+				padding: 20px 0.625rem;
+			}
+
+			background-color: hsla(202, 100%, 11%, 0.75);
+
+			&-msg {
+				text-align: right;
+
+				/* COMPLEMENT */
+				.ob-title {
+					/* COMPLEMENT */
+					&.isPrimary {
+						/* COMPLEMENT */
+						&:before {
+							right: 0;
+						}
+					}
+				}
+			}
+
+			&-links {
+				justify-content: flex-end;
+
+				@include breakpoint(medium) {
+					@include xy-grid(horizontal, false);
+
+					.Button {
+						margin: 0 0 0 20px;
+					}
+				}
+
+				@include breakpoint(small only) {
+					@include xy-grid(vertical, false);
+					.Button {
+						margin: 10px 0 0 0;
+					}
+				}
+			}
+		}
+	}
+}

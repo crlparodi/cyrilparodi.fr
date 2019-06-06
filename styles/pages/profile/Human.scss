@@ -1,0 +1,58 @@
+.Human {
+	&-container {
+		.List {
+			@include breakpoint(medium) {
+				padding-top: 3rem;
+				@include xy-grid(horizontal, true);
+			}
+			@include breakpoint(small only) {
+				@include xy-grid(vertical, true);
+			}
+			list-style: none !important;
+			counter-reset: mii-counter;
+
+			.Prop {
+				@include xy-gutters($gutter-position: top bottom);
+				@include breakpoint(large) {
+					@include xy-cell(4);
+				}
+				@include breakpoint(medium only) {
+					@include xy-cell(6);
+				}
+				&-name {
+					position: relative;
+					z-index: 0;
+					counter-increment: mii-counter;
+					font-family: "Montserrat", sans-serif;
+					font-weight: 700;
+					text-align: left;
+					text-shadow: 2px 0 0 color-map(background, dark),
+						-2px 0 0 color-map(background, dark),
+						0 2px 0 color-map(background, dark),
+						0 -2px 0 color-map(background, dark),
+						1px 1px color-map(background, dark),
+						-1px -1px 0 color-map(background, dark),
+						1px -1px 0 color-map(background, dark),
+						-1px 1px 0 color-map(background, dark);
+					font-size: 1.5rem;
+					margin: 1rem 0 0.8rem 0;
+					padding-left: 30px;
+
+					&::before {
+						font-weight: 900;
+						position: absolute;
+						z-index: -1;
+						left: 0px;
+						top: -30px;
+						content: "0" counter(mii-counter);
+						font-family: "Montserrat", sans-serif;
+						font-size: 4rem;
+						margin-right: 0.2rem;
+						line-height: 1;
+						color: color-map(theme, primary);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.Certifications {
+	&-entries {
+		@include breakpoint(medium) {
+			padding-top: 3rem;
+		}
+		.Entry {
+			height: 150px;
+			align-items: center;
+
+			@include xy-grid(horizontal, false);
+
+			@include breakpoint(small only) {
+				justify-content: space-around;
+				&-info {
+					display: none;
+				}
+			}
+
+			&-blaze {
+				@include xy-gutters($gutter-position: left right);
+				.Blaze {
+					stroke: color-map(theme, primary);
+					fill: color-map(theme, primary);
+				}
+			}
+
+			&-info {
+				@include xy-gutters($gutter-position: left right);
+				&-name {
+					font-family: "Montserrat", sans-serif;
+					font-weight: 700;
+				}
+
+				@include breakpoint(medium) {
+					@include xy-cell-base(auto);
+					@include breakpoint(medium only) {
+						padding: 0 20px;
+					}
+				}
+			}
+
+			&-link {
+				@include xy-gutters($gutter-position: left right);
+				&.ob-link {
+					/* Override */
+					font-size: 2rem;
+					-webkit-transition: color 0.3s ease;
+					transition: color 0.3s ease;
+
+					@include breakpoint(medium only) {
+						padding: 0 20px;
+					}
+					@include breakpoint(large) {
+						@include hoverDashesEffect();
+					}
+					&:hover,
+					&:focus {
+						-webkit-transition: color 0.3s ease;
+						transition: color 0.3s ease;
+						color: $spec;
+					}
+				}
+			}
+		}
+	}
+}

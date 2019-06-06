@@ -1,4 +1,6 @@
 import React from "react"
+import ReactDOM from "react-dom"
+import Education from "./Education"
 
 class Summary extends React.Component {
 	render() {
@@ -7,33 +9,33 @@ class Summary extends React.Component {
 				<div className="Summary-container grid-container">
 					<div className="Mosaik text-center">
 						<div className="Mosaik-link">
-							<div className="isDouble">
+							<div className="onCover">
+								<i className="fas fa-graduation-cap fa-3x" />
+								<span>formations.</span>
+							</div>
+						</div>
+						<div className="Mosaik-link">
+							<div className="onCover">
 								<i className="fas fa-cogs fa-3x" />
 								<span>parcours professionnel.</span>
 							</div>
 						</div>
 						<div className="Mosaik-link">
-							<div className="isDouble">
+							<div className="onCover">
 								<i className="fas fa-medal fa-3x" />
 								<span>certifications.</span>
 							</div>
 						</div>
-						<a className="Mosaik-link" href="/#/cv/#EducationID">
-							<div className="isDouble">
-								<i className="fas fa-graduation-cap fa-3x" />
-								<span>formations.</span>
-							</div>
-						</a>
 						<div className="Mosaik-link">
-							<div className="isDouble">
-								<i className="fas fa-comments fa-3x" />
-								<span>langues.</span>
+							<div className="onCover">
+								<i className="fas fa-check fa-3x" />
+								<span>compétences techniques.</span>
 							</div>
 						</div>
 						<div className="Mosaik-link">
-							<div className="isDouble">
-								<i className="fas fa-check fa-3x" />
-								<span>compétences techniques.</span>
+							<div className="onCover">
+								<i className="fas fa-comments fa-3x" />
+								<span>langues.</span>
 							</div>
 						</div>
 					</div>
