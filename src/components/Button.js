@@ -8,6 +8,7 @@ class Button extends React.Component {
 		super()
 		this.state = {
 			alt: props.alt,
+			noredirect: props.noredirect,
 			inner: props.inner,
 			url: props.url,
 		}
@@ -23,6 +24,8 @@ class Button extends React.Component {
 		return (
 			<a
 				href={this.state.url}
+				target={this.state.noredirect ? "" : "_blank"}
+				rel={this.state.noredirect ? "" : "noopener noreferrer"}
 				className={
 					"Button" +
 					" " +
@@ -39,6 +42,7 @@ class Button extends React.Component {
 
 Button.propTypes = {
 	alt: PropTypes.bool,
+	noredirect: PropTypes.bool,
 }
 
 Button.defaultProps = {

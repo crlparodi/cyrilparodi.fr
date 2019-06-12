@@ -12,6 +12,7 @@ import ScrollToTop from "root/containers/ScrollToTop"
 /* PAGES - SECTIONS */
 import Profile from "root/pages/Profile"
 import CurriculumVitae from "root/pages/CurriculumVitae"
+import Portfolio from "./Portfolio"
 import Error404 from "root/pages/Error404"
 
 class Root extends React.Component {
@@ -40,7 +41,10 @@ class Root extends React.Component {
 												path="/cv"
 												component={CurriculumVitae}
 											/>
-											<Route path="/projets" />
+											<Route
+												path="/projets"
+												component={Portfolio}
+											/>
 											<Route
 												component={() => <Error404 />}
 											/>

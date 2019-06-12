@@ -1,5 +1,6 @@
 import React from "react"
 import Loader from "react-loader-advanced"
+import { Link } from "react-router-dom"
 
 /* COMPONENTS */
 import Spinner from "root/components/Spinner"
@@ -81,10 +82,9 @@ class Banner extends React.Component {
 								</p>
 							</div>
 							<div className="Welcome-links">
-								<Button
-									inner={"monparcours.html"}
-									url={"/cv"}
-								/>
+								<Link className="Button" to="/cv">
+									{"monparcours.html"}
+								</Link>
 								<Button
 									alt
 									inner={"moncv.pdf"}

@@ -1,15 +1,13 @@
 /* FONTS */
-
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap&subset=latin-ext");
 
 /* COLORS */
-
 $color-map: (
 	text: hsl(0, 0%, 95%) /* ANTI-FLASH WHITE */,
 	background: (
-		dark: hsl(202, 100%, 11%) /* MAASTRICHT BLUE (1) */,
-		darker: hsl(202, 100%, 4%) /* MAASTRICHT BLUE (2) */,
+		dark: hsl(202, 100%, 11%) /* MAASTRICHT BLUE */,
+		darker: hsl(202, 100%, 4%) /* RICH BLACK */,
 	),
 	theme: (
 		primary: hsl(183, 100%, 50%) /* SPANISH SKY BLUE */,

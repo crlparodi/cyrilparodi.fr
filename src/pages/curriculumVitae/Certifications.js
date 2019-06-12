@@ -42,6 +42,8 @@ class Certifications extends React.Component {
 										</p>
 									</div>
 									<a
+										target="_blank"
+										rel="noopener noreferrer"
 										className="Entry-link ob-link"
 										href={certification.document}
 									>

@@ -9,7 +9,6 @@ import Root from "./pages/Root"
 
 /* STYLES */
 import "styles/index.scss"
-import "foundation-sites/scss/foundation.scss"
 
 ReactDOM.render(<Root />, document.getElementById("root"))
 

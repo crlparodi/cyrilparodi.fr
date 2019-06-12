@@ -5,7 +5,6 @@ import * as CVData from "data/pages.curriculumVitae.json"
 
 /* COMPONENTS */
 import CVBanner from "./curriculumVitae/CVBanner"
-import Summary from "./curriculumVitae/Summary"
 import Education from "./curriculumVitae/Education"
 import Experiences from "./curriculumVitae/Experiences"
 import Certifications from "./curriculumVitae/Certifications"

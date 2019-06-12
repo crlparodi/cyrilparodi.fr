@@ -1,127 +1,234 @@
 .Skills {
-	&-technical {
+	background-color: color-map(background, darker);
+	&-container {
 		@include breakpoint(medium only) {
-			max-width: 40rem !important;
 			margin: 0 auto 1rem auto;
 		}
-		&-bricklayer {
-			margin: 0 auto;
-			width: 95% !important;
-			.Entry {
-				list-style-type: none;
-				margin: 0;
-				@include breakpoint(small) {
-					width: calc(100%);
-				}
-				@include breakpoint(medium) {
-					width: calc(50% - 5px);
+	}
+	&-programmingLanguages {
+		&-subtitle {
+			position: relative;
+			z-index: 1;
+
+			margin: 30px 0 30px 0;
+			padding: 0.5rem 0;
+
+			color: color-map(text);
+
+			font-weight: 700;
+
+			@include breakpoint(small only) {
+				display: flex;
+				align-items: center;
+				position: -webkit-sticky;
+				position: sticky;
+				border-bottom: 1px solid color-map(neutral, grey-200);
+				background-color: color-map(background, darker);
+				width: 100%;
+				height: 60px;
+				top: 64px;
+			}
+			@include breakpoint(medium) {
+				font-family: "Montserrat", sans-serif !important;
+				text-align: center;
+
+				margin-left: 0.9375rem;
+				@include breakpoint(medium only) {
+					width: calc(50% - 1.875rem);
 				}
 				@include breakpoint(large) {
-					width: calc(33% - 5px);
+					width: calc(33% - 1.875rem);
 				}
 
-				&:nth-child(2n) {
-					.Entry-name {
-						-ms-transform: rotate(1.5deg); /* IE 9 */
-						-webkit-transform: rotate(1.5deg); /* Safari */
-						transform: rotate(1.5deg);
-					}
-
-					.Entry-name-cover {
-						-ms-transform: rotate(-1.5deg); /* IE 9 */
-						-webkit-transform: rotate(-1.5deg); /* Safari */
-						transform: rotate(-1.5deg);
-					}
+				&::before {
+					position: absolute;
+					z-index: -1;
+					content: " ";
+					width: calc(100% + 4px);
+					height: 100%;
+					left: -2px;
+					top: 0;
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(theme, primary);
+					-ms-transform: rotate(1.5deg);
+					-webkit-transform: rotate(1.5deg);
+					transform: rotate(1.5deg);
 				}
 
-				&-name {
-					margin: 10px 0;
-					border: 1px solid $spec;
-					background-color: $spec;
-					-ms-transform: rotate(-1.5deg); /* IE 9 */
-					-webkit-transform: rotate(-1.5deg); /* Safari */
-					transform: rotate(-1.5deg);
-
-					@include breakpoint(small only) {
-						position: -webkit-sticky;
-						position: sticky;
-						top: 80px;
-					}
-
-					&-cover {
-						height: 100%;
-						border: 1px solid $dark;
-						-ms-transform: rotate(1.5deg); /* IE 9 */
-						-webkit-transform: rotate(1.5deg); /* Safari */
-						transform: rotate(1.5deg);
-
-						color: $light;
-						background-color: $dark;
-						li {
-							padding: 0.5rem 0 !important;
-							font-family: "Montserrat", sans-serif;
-							font-weight: 700;
-
-							@include breakpoint(small only) {
-							}
-						}
-					}
-				}
-
-				&-list {
-					list-style-type: none;
-					margin: 0.5rem 0;
-					.Item {
-						padding: 0.1rem 0;
-					}
+				&::after {
+					position: absolute;
+					z-index: -1;
+					content: " ";
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(background, darker);
 				}
 			}
 		}
 	}
-
-	&-english {
-		@include breakpoint(medium only) {
-			width: 40rem;
+	&-general {
+		margin: 0 auto;
+		@include breakpoint(medium) {
+			@include xy-grid(horizontal, true);
 		}
-		@include breakpoint(medium down) {
-			margin: 2rem auto;
+		.Entry {
+			list-style-type: none;
+			margin-left: 0;
+
+			@include breakpoint(medium) {
+				@include xy-gutters($gutter-position: left right);
+				@include breakpoint(medium only) {
+					@include xy-cell(6);
+				}
+				@include breakpoint(large) {
+					@include xy-cell(4);
+				}
+			}
+
+			&-subtitle {
+				position: relative;
+				z-index: 1;
+				margin: 10px 0;
+
+				color: color-map(text);
+				font-weight: 700;
+
+				@include breakpoint(small only) {
+					display: flex;
+					align-items: center;
+					width: unset;
+					position: -webkit-sticky;
+					position: sticky;
+					border-bottom: 1px solid color-map(neutral, grey-200);
+					background-color: color-map(background, darker);
+					width: 100%;
+					height: 60px;
+					top: 64px;
+				}
+
+				@include breakpoint(medium) {
+					text-align: center;
+					padding: 0.5rem 0 !important;
+					font-family: "Montserrat", sans-serif;
+
+					&::before {
+						position: absolute;
+						z-index: -1;
+						content: " ";
+						width: calc(100% + 4px);
+						height: 100%;
+						left: -2px;
+						top: 0;
+						border: 1px solid color-map(theme, primary);
+						background-color: color-map(theme, primary);
+						-ms-transform: rotate(1.5deg);
+						-webkit-transform: rotate(1.5deg);
+						transform: rotate(1.5deg);
+					}
+
+					&::after {
+						position: absolute;
+						z-index: -1;
+						content: " ";
+						width: 100%;
+						height: 100%;
+						left: 0;
+						top: 0;
+						border: 1px solid color-map(theme, primary);
+						background-color: color-map(background, darker);
+					}
+				}
+			}
+
+			&-list {
+				list-style-type: none;
+				margin: 0.5rem 0;
+				.Item {
+					@include breakpoint(small only) {
+						display: flex;
+						align-items: center;
+						min-height: 60px;
+						border-bottom: 1px solid color-map(neutral, grey-700);
+					}
+
+					padding: 0.1rem 0;
+				}
+			}
+		}
+	}
+	&-english {
+		@include breakpoint(medium) {
+			margin-left: 0.9375rem;
+			@include breakpoint(medium only) {
+				width: calc(50% - 1.875rem);
+			}
+			@include breakpoint(large) {
+				width: calc(33% - 1.875rem);
+			}
 		}
 		&-subtitle {
-			width: calc(33% - 5px);
-			border: 1px solid $spec;
-			background-color: $spec;
-			-ms-transform: rotate(1.5deg);
-			-webkit-transform: rotate(1.5deg);
-			transform: rotate(1.5deg);
+			position: relative;
+			z-index: 1;
+
+			margin: 10px 0;
+			padding: 0.5rem 0;
+
+			color: color-map(text);
+
+			font-weight: 700;
 
 			@include breakpoint(small only) {
-				width: unset;
+				display: flex;
+				align-items: center;
 				position: -webkit-sticky;
 				position: sticky;
-				top: 80px;
-			}
-
-			@include breakpoint(medium only) {
+				border-bottom: 1px solid color-map(neutral, grey-200);
+				background-color: color-map(background, darker);
 				width: 100%;
+				height: 60px;
+				top: 64px;
 			}
 
-			&-cover {
-				border: 1px solid $dark;
-				color: $light;
-				background-color: $dark;
-				padding: 10px 0;
-				-ms-transform: rotate(-1.5deg);
-				-webkit-transform: rotate(-1.5deg);
-				transform: rotate(-1.5deg);
+			@include breakpoint(medium) {
 				font-family: "Montserrat", sans-serif !important;
-				font-weight: 700;
+				text-align: center;
+
+				&::before {
+					position: absolute;
+					z-index: -1;
+					content: " ";
+					width: calc(100% + 4px);
+					height: 100%;
+					left: -2px;
+					top: 0;
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(theme, primary);
+					-ms-transform: rotate(1.5deg);
+					-webkit-transform: rotate(1.5deg);
+					transform: rotate(1.5deg);
+				}
+
+				&::after {
+					position: absolute;
+					z-index: -1;
+					content: " ";
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(background, darker);
+				}
 			}
 		}
 		&-level {
 			margin: 1rem 0;
 			font-weight: 700;
 		}
-		&-levelIndicator {
+		&-certifications {
 			list-style-type: none;
 			margin: 0;
 			font-weight: 700;

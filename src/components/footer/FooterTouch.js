@@ -10,7 +10,13 @@ class FooterTouch extends React.Component {
 				<div className="FooterTouch-contact">
 					{hyperlinks.contact.map((link, index) => {
 						return (
-							<a href={link.href} key={index} className="ob-link">
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href={link.href}
+								key={index}
+								className="ob-link"
+							>
 								<i className={link.icon} key={index} />
 							</a>
 						)

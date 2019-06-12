@@ -104,11 +104,14 @@ html {
 
 	.ob-link {
 		color: inherit;
+		-webkit-transition: color 0.3s ease !important;
 		transition: color 0.3s ease !important;
 
 		&:hover,
 		&:focus {
 			color: color-map(theme, primary);
+			-webkit-transition: color 0.3s ease !important;
+			transition: color 0.3s ease !important;
 		}
 	}
 

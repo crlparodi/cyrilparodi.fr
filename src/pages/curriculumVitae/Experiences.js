@@ -8,7 +8,7 @@ class Experiences extends React.Component {
 			index: 0,
 		}
 	}
-	indexCheck = index => {
+	indexCheck(index) {
 		if (index == this.state.index) {
 			return "isVisible"
 		} else {

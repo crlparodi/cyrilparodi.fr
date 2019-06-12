@@ -1,0 +1,72 @@
+.Projects-list {
+	list-style-type: none;
+	margin: 0;
+
+	> li > a {
+		position: relative;
+		display: block;
+		max-width: 75rem;
+		min-height: 80px;
+		padding: 0.9375rem;
+		margin: 0 auto;
+		text-decoration: none;
+		color: color-map(text);
+
+		> svg {
+			display: block;
+			float: left;
+			width: 60px;
+			height: 60px;
+			margin-right: 30px;
+			fill: color-map(text);
+
+			@include breakpoint(small only) {
+				display: none;
+			}
+		}
+	}
+
+	&-type-javascript {
+		border: 2px solid color-map(background, dark);
+		background-color: color-map(background, darker);
+		transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+		@include breakpoint(medium) {
+		}
+
+		&:hover {
+			background-color: color-map(theme, primary);
+
+			> a {
+				color: color-map(background, darker);
+
+				> svg {
+					fill: color-map(background, darker);
+				}
+			}
+		}
+	}
+
+	&-type-python {
+		border: 2px solid color-map(background, dark);
+		background-color: color-map(background, darker);
+		transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
+		&:hover {
+			background-color: color-map(theme, secondary);
+
+			> a {
+				color: color-map(background, darker);
+
+				> svg {
+					fill: color-map(background, darker);
+				}
+			}
+		}
+	}
+
+	.Title {
+		display: block;
+		font-size: 120%;
+	}
+}

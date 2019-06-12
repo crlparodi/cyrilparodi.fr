@@ -42,11 +42,19 @@
 					border: 1px solid color-map(theme, secondary);
 					background-color: color-map(theme, secondary);
 
+					-ms-transform: rotate(-1.25deg);
+					-webkit-transform: rotate(-1.25deg);
+					transform: rotate(-1.25deg);
+
 					.onCover {
 						transition: 0.3s all ease;
 						-webkit-transition: 0.3s all ease;
 						color: color-map(theme, secondary);
 						border: 1px solid color-map(theme, secondary);
+
+						-ms-transform: rotate(1.25deg);
+						-webkit-transform: rotate(1.25deg);
+						transform: rotate(1.25deg);
 					}
 				}
 
@@ -57,7 +65,7 @@
 
 					margin: unset;
 					padding: 0.5rem 0;
-					color: color-map(text);
+					color: color-map(theme, primary);
 					border: 1px solid color-map(theme, primary);
 					background-color: color-map(background, darker);
 					z-index: 0;
@@ -78,6 +86,20 @@
 						-ms-transform: rotate(1.25deg);
 						-webkit-transform: rotate(1.25deg);
 						transform: rotate(1.25deg);
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						-ms-transform: rotate(1.25deg);
+						-webkit-transform: rotate(1.25deg);
+						transform: rotate(1.25deg);
+
+						.onCover {
+							-ms-transform: rotate(-1.25deg);
+							-webkit-transform: rotate(-1.25deg);
+							transform: rotate(-1.25deg);
+						}
 					}
 				}
 			}

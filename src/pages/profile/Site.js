@@ -20,14 +20,19 @@ class Site extends React.Component {
 								<br />
 								<br />
 								{
-									"Le site a été dévéloppé avec React.js, les fichiers source du site sont disponible sur GitHub."
+									"Le site a été dévéloppé avec React.js, les fichiers source du site sont disponible sur GitHub. Vous pouvez aussi voir les quelques expérimentations de design pour ce site sur Codepen."
 								}
 							</p>
 						</div>
 						<div className="Topic-github">
 							<Button
+								alt
 								inner={"github.io"}
 								url={"https://github.com/crlparodi/project-mii"}
+							/>
+							<Button
+								inner={"codepen.io"}
+								url={"https://codepen.io/crlparodi/"}
 							/>
 						</div>
 					</div>

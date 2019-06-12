@@ -15,6 +15,8 @@ class FooterDesktop extends React.Component {
 						{hyperlinks.contact.map((link, index) => {
 							return (
 								<a
+									target="_blank"
+									rel="noopener noreferrer"
 									href={link.href}
 									key={index}
 									className="ob-link"

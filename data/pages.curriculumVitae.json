@@ -161,13 +161,71 @@
 		}
 	],
 	"skills": {
+		"languages": [
+			{
+				"year": "2011",
+				"fields": [
+					{
+						"name": "Language C",
+						"desc": "(Hardware/Embarqué)"
+					}
+				]
+			},
+			{
+				"year": "2015",
+				"fields": [
+					{
+						"name": "VHDL",
+						"desc": "pour la synthèse"
+					},
+					{
+						"name": "Language Assembleur",
+						"desc": "propriétaire (Microchip) et ARM 32bits"
+					}
+				]
+			},
+			{
+				"year": "2016",
+				"fields": [
+					{
+						"name": "Java SE",
+						"desc": ""
+					}
+				]
+			},
+			{
+				"year": "2018",
+				"fields": [
+					{
+						"name": "HTML/CSS JavaScript",
+						"desc": "dont ES6-ES2015"
+					},
+					{
+						"name": "Python 3",
+						"desc": ""
+					}
+				]
+			},
+			{
+				"year": "2019",
+				"fields": [
+					{
+						"name": "Shell Script",
+						"desc": "(bash) sous Linux"
+					}
+				]
+			}
+		],
 		"technical_level": [
 			{
 				"category_name": "Développement Embarqué",
 				"skills": [
 					"Architecture des Microprocesseurs et Mémoires",
-					"Intégration (Blocs IP) et Développement sur SoC & Microcontrôleurs ARM/Propriétaires",
-					"Synthétisation de composants sur FPGA"
+					"Intégration de Blocs IP et Synthèse Composant sur FPGA",
+					"Développement sur SoC ARM/FPGA, Microcontrôleurs et DSPs Propriétaires",
+					"Systèmes embarqués sous Arduino",
+					"Xilinx Vivado (SoC ZYNQ 7000), MPLAB IDE (Microchip), CCSTUDIO (Ti)",
+					"Traitement d'Image: Gestion des flux vidéos (Multiplexeur, Capture de Tracé 2D, Memory Management) sur SoC/FPGA"
 				]
 			},
 			{
@@ -182,7 +240,7 @@
 				"category_name": "Développement Web",
 				"skills": [
 					"DOM, Responsive Web Design",
-					"Sass, React.js",
+					"Sass, React.js, Webpack",
 					"MVC & SPA w/ AngularJS, Django",
 					"Type Checking (PropTypes by React, TypeScript)",
 					"TCP/IP, HTTP, REST, Architectures Client-Serveur (2/3, 3/3), Clients légers"

@@ -10,8 +10,12 @@ const HeaderLinks = props => (
 		<Link className="ob-link" to="/cv" onClick={props.mobileClickHandler}>
 			cv.
 		</Link>
-		<Link className="ob-link" to="" onClick={props.mobileClickHandler}>
-			projets.
+		<Link
+			className="ob-link"
+			to="/projets"
+			onClick={props.mobileClickHandler}
+		>
+			travaux.
 		</Link>
 		<a
 			className="ob-link"

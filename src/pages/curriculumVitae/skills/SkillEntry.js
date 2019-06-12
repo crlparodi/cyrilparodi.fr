@@ -12,12 +12,8 @@ class SkillEntry extends React.Component {
 	render() {
 		return (
 			<ul className="Entry">
-				<div className="Entry-name">
-					<div className="Entry-name-cover">
-						<li className="text-center">
-							{this.state.data.category_name}
-						</li>
-					</div>
+				<div className="Entry-subtitle">
+					<li>{this.state.data.category_name}</li>
 				</div>
 				<ul className="Entry-list">
 					{this.state.data.skills.map((skill, skillIndex) => {

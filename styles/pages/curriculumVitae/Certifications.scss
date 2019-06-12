@@ -44,20 +44,12 @@
 				&.ob-link {
 					/* Override */
 					font-size: 2rem;
-					-webkit-transition: color 0.3s ease;
-					transition: color 0.3s ease;
 
 					@include breakpoint(medium only) {
 						padding: 0 20px;
 					}
 					@include breakpoint(large) {
 						@include hoverDashesEffect();
-					}
-					&:hover,
-					&:focus {
-						-webkit-transition: color 0.3s ease;
-						transition: color 0.3s ease;
-						color: $spec;
 					}
 				}
 			}
