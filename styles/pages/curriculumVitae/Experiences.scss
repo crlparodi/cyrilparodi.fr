@@ -106,38 +106,18 @@
 		}
 
 		.Jobs {
-			@include breakpoint(xlarge down) {
-				height: auto;
-
-				.Jobs-entries {
-					position: relative;
-
-					&.isHidden {
-						display: none;
-					}
-
-					&.isVisible {
-						display: block;
-					}
-				}
-			}
-			position: relative;
-			height: 580px;
 			margin: 1rem 0;
 
 			&-entries {
-				position: absolute;
 				transition: 0.3s all ease;
 				-webkit-transition: 0.3s all ease;
-				transform: translateY(-50%);
-				top: 50%;
 
 				&.isHidden {
-					opacity: 0;
+					display: none;
 				}
 
 				&.isVisible {
-					opacity: 1;
+					display: block;
 				}
 
 				.Entry {

@@ -73,10 +73,8 @@
 			"grade": "Bac STi - Génie électronique",
 			"year": 2012,
 			"school": "Lycée Pierre MENDÈS-FRANCE, Vitrolles",
-			"description": [
-				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in, ratione maxime earum est similique alias aspernatur! Praesentium vero officiis optio adipisci unde illo consectetur, deleniti facilis pariatur vitae. Fuga?"
-			],
-			"keywords": ["#électronique", "#autre"],
+			"description": [],
+			"keywords": [],
 			"links": []
 		}
 	],

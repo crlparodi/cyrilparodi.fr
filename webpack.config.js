@@ -1,13 +1,14 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const webpack = require("webpack") //to access built-in plugins
 const path = require("path")
 
 module.exports = {
 	entry: "./src/index.js",
 	output: {
-		path: path.join(__dirname, "/public/"),
+		path: path.join(__dirname, "/dist/"),
 		filename: "bundle.js",
-		publicPath: "/",
+		publicPath: "./",
 	},
 	resolve: {
 		alias: {
