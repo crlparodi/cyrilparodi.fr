@@ -24,11 +24,6 @@ class FooterTouch extends React.Component {
 				</div>
 				<div className="FooterTouch-misc">
 					<p>
-						<img
-							alt="Creative Commons License"
-							src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-						/>
-						<br />
 						...powered by{" "}
 						<a
 							href="https://reactjs.org/"
@@ -41,11 +36,11 @@ class FooterTouch extends React.Component {
 						<br />
 						Ce site est sous licence{" "}
 						<a
-							href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+							href="https://www.gnu.org/licenses/gpl-3.0"
 							className="ob-link"
 							style={{ textDecoration: "underline" }}
 						>
-							CC BY-NC-SA 4.0
+							GNU General Public License v3
 						</a>
 						.
 						<br />

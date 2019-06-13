@@ -29,10 +29,6 @@ class FooterDesktop extends React.Component {
 				</div>
 				<div className="FooterDesktop-misc">
 					<p>
-						<img
-							alt="Creative Commons License"
-							src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-						/>
 						<br />
 						...powered by{" "}
 						<a
@@ -44,11 +40,11 @@ class FooterDesktop extends React.Component {
 						</a>
 						. Ce site est sous licence{" "}
 						<a
-							href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+							href="https://www.gnu.org/licenses/gpl-3.0"
 							className="ob-link"
 							style={{ textDecoration: "underline" }}
 						>
-							CC BY-NC-SA 4.0
+							GNU General Public License v3
 						</a>
 						.<br /> Cyril Parodi, 2018.
 					</p>

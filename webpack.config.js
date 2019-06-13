@@ -3,12 +3,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const webpack = require("webpack") //to access built-in plugins
 const path = require("path")
 
+const isProduction =
+	process.argv[process.argv.indexOf("--mode") + 1] === "production"
+
 module.exports = {
 	entry: "./src/index.js",
 	output: {
 		path: path.join(__dirname, "/dist/"),
 		filename: "bundle.js",
-		publicPath: isDevelopment ? "/" : "./",
+		publicPath: isProduction ? "./" : "/",
 	},
 	resolve: {
 		alias: {
