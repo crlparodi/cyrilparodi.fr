@@ -80,14 +80,19 @@ class CVBanner extends React.Component {
 							className="ob-title"
 							style={{ display: this.state.display }}
 						>
-							Ingénieur en développement embarqué / logiciel.
+							Cyril Parodi
+						</h1>
+						<h1
+							className="ob-title isLittle"
+							style={{ display: this.state.display }}
+						>
+							Ingénieur
 						</h1>
 						<h2
 							className="ob-subtitle"
 							style={{ display: this.state.display }}
 						>
-							près d'Aix-en-Provence, Provence-Alpes-Côte d'Azur,
-							FRANCE
+							Recherche un premier poste en <strong>développement embarqué/logiciel</strong><br /> ou <strong>automatisation de tests</strong>.
 						</h2>
 						<Button
 							inner={"moncv.pdf"}

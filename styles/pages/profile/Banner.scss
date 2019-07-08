@@ -26,7 +26,7 @@
 			}
 
 			@include breakpoint(medium only) {
-				display: block;
+				display: flex;
 			}
 		}
 
@@ -45,8 +45,7 @@
 				}
 
 				@include breakpoint(medium only) {
-					float: right;
-					margin: 20px 20px;
+					margin: auto auto 20px 20px;
 				}
 			}
 

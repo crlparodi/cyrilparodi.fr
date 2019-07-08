@@ -65,7 +65,7 @@ class Banner extends React.Component {
 					className="Banner isWrapper"
 					style={{
 						height: this.state.height + "px",
-						backgroundImage: "url(" + IMG + ")",
+						backgroundImage: "url(https://images.unsplash.com/photo-1484662020986-75935d2ebc66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
 						filter: "background sepia(1)",
 					}}
 				>

@@ -58,6 +58,20 @@
 					z-index: 1;
 					cursor: pointer;
 
+					@include breakpoint(small only){
+						height: 150px;
+					}
+
+					&-chevron {
+						margin: auto 0;
+						padding-left: 0;
+						color: color-map(theme, primary);
+						fill: none;
+						p {
+							margin-bottom: 0;
+						}
+					}
+
 					&-topic {
 						margin: auto 0;
 						p {
@@ -66,7 +80,7 @@
 					}
 
 					&-pic {
-						max-width: 140px;
+						max-width: 120px;
 						margin: auto auto;
 
 						.Blaze {
@@ -114,10 +128,8 @@
 					transition: 0.3s all ease;
 
 					.Box {
-						&-chevron {
-							margin: 0.5rem 0;
-							color: color-map(theme, primary);
-						}
+						margin: 2rem 0 0 0;
+						text-align: justify;
 
 						&-info {
 							.keyword {
@@ -135,7 +147,7 @@
 								.Button {
 									width: unset;
 									height: unset;
-									margin: 1rem 0 0 1rem;
+									margin: 2rem 0 0 1rem;
 									font-size: 1rem;
 
 									@include breakpoint(small only) {

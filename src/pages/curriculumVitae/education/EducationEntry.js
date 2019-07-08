@@ -33,16 +33,20 @@ class EducationEntry extends React.Component {
 									infoDisplay: "isHidden",
 								})
 							}
+							this.chevronDisplay() 
 						}}
 					>
+						<div className="Entry-ob-tab-pic cell shrink">
+							{this.state.blaze}
+						</div>
 						<div className="Entry-ob-tab-topic cell auto">
 							<h3 className="ob-subtitle">
 								{this.state.data.grade}
 							</h3>
 							<p>{this.state.data.school}</p>
 						</div>
-						<div className="Entry-ob-tab-pic cell shrink">
-							{this.state.blaze}
+						<div className="Entry-ob-tab-chevron cell shrink">
+							<i class="fas fa-angle-double-down fa-2x" />
 						</div>
 					</div>
 					<div
@@ -51,9 +55,6 @@ class EducationEntry extends React.Component {
 						}
 					>
 						<div className={"Box" + " " + this.state.infoDisplay}>
-							<div className="Box-chevron text-center">
-								<i className="fas fa-angle-double-down fa-2x" />
-							</div>
 							<div className="Box-info">
 								{this.state.data.description.map(
 									(description, index) => {
@@ -67,7 +68,7 @@ class EducationEntry extends React.Component {
 												className="keyword"
 												key={index}
 											>
-												{keyword}{" "}
+												{keyword}{", "}
 											</span>
 										)
 									},

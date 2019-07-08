@@ -18,12 +18,12 @@ class Skills extends React.Component {
 					<h2 className="Skills-container-title ob-title isPrimary">
 						{"mon savoir-faire."}
 					</h2>
-					<div className="Skills-programmingLanguages">
+					{/* <div className="Skills-programmingLanguages">
 						<div className="Skills-programmingLanguages-subtitle">
 							{"Chronologie des Langages"}
 						</div>
 						<Timeline data={this.state.data.languages} />
-					</div>
+					</div> */}
 					<div className="Skills-general">
 						{this.state.data.technical_level.map(
 							(skillCategory, SCIndex) => {

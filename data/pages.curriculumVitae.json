@@ -9,7 +9,7 @@
 				"Des connaissances basiques en développement logiciel et web (algorithmie, techniques de programmation et langages dédiés, design d'interfaces) et des cycles de développementent, ainsi qu'une étude approfondie du métier de testeur logiciel est nécessaire avant de se lancer dans l'automatisation (principalement destinés aux tests de non-régression en général).",
 				"Le cycle de formation a été prévu en conséquence, et une certification ISTQB (Niveau Fondation) a été délivrée à l'issue d'un examen en fin de cursus."
 			],
-			"keywords": ["#informatique", "#autre"],
+			"keywords": ["#informatique", "#développement-web", "#java", "#test-logiciel", "#automatisation-de-tests", "#architectures-web", "#IHM", "#GUI", "#ISTQB"],
 			"links": [
 				{
 					"name": "L'organisme de formation",
@@ -33,7 +33,8 @@
 				"Ce diplôme est le résultat de trois années de formation à POLYTECH Marseille, dont la filière Microélectronique et Télécommunication forme tous les futurs ingénieurs à concevoir toutes sortes de systèmes éléctroniques.",
 				"Les débouchés professionnels de cette filière sont multiples : Informatique, Haute-Technologies, Aéronautique, Automobile, Télécommunications, Énergie, Domotique, etc..."
 			],
-			"keywords": ["#électronique", "#autre"],
+			"keywords": ["#électronique", "#traitement-du-signal", "#systèmes-embarqués", "#conception-de-circuits-intégrés", "#développement-embarqué", "#langage-c", "#java", "#microprocesseurs", "#systems-on-chip", "#synthède-hardware", "#VHDL", "#microélectronique",
+				"#RFID", "#semiconducteurs", "#physique-des-composants"],
 			"links": [
 				{
 					"name": "L'école",
@@ -57,7 +58,7 @@
 				"Cette formation vise à former les futurs techniciens à trouver des solutions d'ordre techniques ou d'organisation, à des problématiques pouvant nuire à un processus de production dans une entreprise.",
 				"Cette formation se veut polyvalente, dans le but d'apporter une culture technique étendue."
 			],
-			"keywords": ["#organisation-industrielle", "#gestion-financière"],
+			"keywords": ["#organisation-industrielle", "#gestion-financière", "#électrotechnique", "#mécanique", "#production", "#logistique"],
 			"links": [
 				{
 					"name": "L'école",
@@ -74,7 +75,7 @@
 			"year": 2012,
 			"school": "Lycée Pierre MENDÈS-FRANCE, Vitrolles",
 			"description": [],
-			"keywords": [],
+			"keywords": ["#électronique", "#microprocesseurs", "#conception", "#traitement-du-signal", "#composants-passifs-et-actifs"],
 			"links": []
 		}
 	],
@@ -112,7 +113,7 @@
 					"description": [
 						"Veille technologique portant sur les architectures potentielles de contrôle-commandes en vue du déploiement des Sous Marins Nucléraires Lanceurs d'Engins de 3ème Génération (SNLE3G).",
 						"Conception d’un multiplexeur vidéo pour observer la gestion de flux vidéos numériques dans un FPGA",
-						"Conception de la synthèse matérielle du multiplexeur basée sur une architecture ZYNQ 7000 de Xilinx. Développement embarqué des couches de transition et applicatives (dont fonctions de tracé graphique en 2D pour les tests de performances).",
+						"Conception de la synthèse matérielle (en C) du multiplexeur basée sur une architecture ZYNQ 7000 de Xilinx. Développement embarqué des couches de transition et applicatives (dont fonctions de tracé graphique en 2D pour les tests de performances).",
 						"Mise en place de procédures de test matériel pour l'évaluation des performances du ZYNQ 7000 et les effets environnementaux sur ce dernier pendant les opérations de traitement d'image."
 					]
 				},
@@ -216,38 +217,35 @@
 		],
 		"technical_level": [
 			{
-				"category_name": "Développement Embarqué",
+				"category_name": "Dév. Embarqué (Langage C)",
 				"skills": [
 					"Architecture des Microprocesseurs et Mémoires",
-					"Intégration de Blocs IP et Synthèse Composant sur FPGA",
-					"Développement sur SoC ARM/FPGA, Microcontrôleurs et DSPs Propriétaires",
-					"Systèmes embarqués sous Arduino",
-					"Xilinx Vivado (SoC ZYNQ 7000), MPLAB IDE (Microchip), CCSTUDIO (Ti)",
+					"Intégration de Blocs IP sur FPGA",
+					"Développement sur SoC ARM/FPGA, Microcontrôleurs Propriétaires, Arduino",
+					"Xilinx Vivado (SoC ZYNQ 7000), MPLAB IDE (Microchip)",
 					"Traitement d'Image: Gestion des flux vidéos (Multiplexeur, Capture de Tracé 2D, Memory Management) sur SoC/FPGA"
 				]
 			},
 			{
-				"category_name": "Développement Applicatif",
+				"category_name": "Dév. Applicatif (Java)",
 				"skills": [
 					"GUI Swing, Collections, Threadding sous Java",
-					"Gestion des dépendances w/ Gradle",
-					"Programmation Android"
+					"Gestion des dépendances w/ Gradle"
 				]
 			},
 			{
-				"category_name": "Développement Web",
+				"category_name": "Dév. Web (JS + ES6 / Python)",
 				"skills": [
 					"DOM, Responsive Web Design",
 					"Sass, React.js, Webpack",
-					"MVC & SPA w/ AngularJS, Django",
-					"Type Checking (PropTypes by React, TypeScript)",
-					"TCP/IP, HTTP, REST, Architectures Client-Serveur (2/3, 3/3), Clients légers"
+					"MVC & SPA w/ Django",
+					"Type Checking (PropTypes by React)",
+					"HTTP, Architectures Clients légers"
 				]
 			},
 			{
 				"category_name": "Cycles de Dév. - Modélisation",
 				"skills": [
-					"Modèle en V & Cycles AGILE dont SCRUM",
 					"Modélisation Logicielle w/ UML Diagrams",
 					"Modélisation d'une Base de Données w/ Mérise, SQL"
 				]
