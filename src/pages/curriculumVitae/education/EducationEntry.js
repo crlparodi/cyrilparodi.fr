@@ -46,7 +46,7 @@ class EducationEntry extends React.Component {
 							<p>{this.state.data.school}</p>
 						</div>
 						<div className="Entry-ob-tab-chevron cell shrink">
-							<i class="fas fa-angle-double-down fa-2x" />
+							<i className="fas fa-angle-double-down fa-2x" />
 						</div>
 					</div>
 					<div
