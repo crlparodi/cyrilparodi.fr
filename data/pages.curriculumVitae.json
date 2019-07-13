@@ -89,20 +89,6 @@
 	],
 	"experience": [
 		{
-			"field": "Électronique",
-			"jobs": [
-				{
-					"name": "Consultant ingénieur en électronique",
-					"start": "Octobre 2017",
-					"end": "Novembre 2017",
-					"company": "ALTEN Rhône-Alpes",
-					"description": [
-						"Période d'intercontrat n'ayant abouti sur aucune mission technique."
-					]
-				}
-			]
-		},
-		{
 			"field": "Développement Embarqué",
 			"jobs": [
 				{
@@ -133,6 +119,15 @@
 		{
 			"field": "Autres",
 			"jobs": [
+				{
+					"name": "Consultant ingénieur en électronique",
+					"start": "Octobre 2017",
+					"end": "Novembre 2017",
+					"company": "ALTEN Rhône-Alpes",
+					"description": [
+						"Période d'intercontrat n'ayant abouti sur aucune mission technique."
+					]
+				},
 				{
 					"name": "Conseiller de Vente Saisonnier en Aménagement et Finitions",
 					"start": "Juillet 2015",
@@ -217,30 +212,60 @@
 		],
 		"technical_level": [
 			{
-				"category_name": "Dév. Embarqué (Langage C)",
+				"category_name": "Dév. Embarqué",
 				"skills": [
-					"Architecture des Microprocesseurs et Mémoires",
-					"Intégration de Blocs IP sur FPGA",
-					"Développement sur SoC ARM/FPGA, Microcontrôleurs Propriétaires, Arduino",
-					"Xilinx Vivado (SoC ZYNQ 7000), MPLAB IDE (Microchip)",
-					"Traitement d'Image: Gestion des flux vidéos (Multiplexeur, Capture de Tracé 2D, Memory Management) sur SoC/FPGA"
+					{
+						"language": "Langage C",
+						"orientedSkills": [
+							"Architecture des Microprocesseurs et Mémoires",
+							"Dév. sur SoC ARM/FPGA, Microcontrôleurs Propriétaires, Arduino",
+							"Traitement d'Image: Gestion des flux vidéos (Multiplexeur, Capture de Tracé 2D, Memory Management)"
+						]
+					}
+
 				]
 			},
 			{
-				"category_name": "Dév. Applicatif (Java)",
+				"category_name": "Dév. Applicatif",
 				"skills": [
-					"GUI Swing, Collections, Threadding sous Java",
-					"Gestion des dépendances w/ Gradle"
+					{
+						"language": "Java SE",
+						"orientedSkills": [
+							"Collections, Threadding",
+							"GUI Swing", 
+							"Gradle"
+						]
+					},
+					{
+						"language": "Langage C++ (En apprentissage autodidacte)",
+						"orientedSkills": [
+							"Collections, Exceptions",
+							"CMake",
+							"Tests Unitaires avec Google Test"
+						]
+					}
 				]
 			},
 			{
-				"category_name": "Dév. Web (JS + ES6 / Python)",
+				"category_name": "Dév. Web",
 				"skills": [
-					"DOM, Responsive Web Design",
-					"Sass, React.js, Webpack",
-					"MVC & SPA w/ Django",
-					"Type Checking (PropTypes by React)",
-					"HTTP, Architectures Clients légers"
+					{
+						"language": "HTML5/CSS3, JavaScript (ES6)",
+						"orientedSkills": [
+							"DOM, Responsive Web Design",
+							"Sass, ZURB Foundation",
+							"React.js, Webpack"
+						]
+					},
+					{
+						"language": "Python",
+						"orientedSkills": [
+							"Architecture MVC",
+							"HTTP, Architectures Clients légers",
+							"Back-Office et BDD w/ Django"
+						]
+					}
+
 				]
 			},
 			{
@@ -253,9 +278,9 @@
 			{
 				"category_name": "OS - Intégration Continue",
 				"skills": [
-					"Utilisateur Linux depuis 6 ans",
+					"Utilisateur Linux",
 					"Scripts Shell (Bash)",
-					"Git, Jenkins"
+					"Git"
 				]
 			},
 			{

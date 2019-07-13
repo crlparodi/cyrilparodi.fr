@@ -9,7 +9,7 @@ class EducationEntry extends React.Component {
 		this.state = {
 			data: props.data,
 			blaze: props.blaze,
-			infoDisplay: "isHidden",
+			infoStatus: "infoClosed",
 		}
 	}
 	render() {
@@ -24,16 +24,15 @@ class EducationEntry extends React.Component {
 					<div
 						className="Entry-ob-tab grid-x grid-padding-x"
 						onClick={() => {
-							if (this.state.infoDisplay === "isHidden") {
+							if (this.state.infoStatus === "infoClosed") {
 								this.setState({
-									infoDisplay: "isVisible",
+									infoStatus: "infoOpen",
 								})
 							} else {
 								this.setState({
-									infoDisplay: "isHidden",
+									infoStatus: "infoClosed",
 								})
 							}
-							this.chevronDisplay() 
 						}}
 					>
 						<div className="Entry-ob-tab-pic cell shrink">
@@ -45,16 +44,16 @@ class EducationEntry extends React.Component {
 							</h3>
 							<p>{this.state.data.school}</p>
 						</div>
-						<div className="Entry-ob-tab-chevron cell shrink">
+						<div className={"Chevron cell shrink" + " " + this.state.infoStatus}>
 							<i className="fas fa-angle-double-down fa-2x" />
 						</div>
 					</div>
 					<div
 						className={
-							"Entry-ob-info" + " " + this.state.infoDisplay
+							"Entry-ob-info" + " " + this.state.infoStatus
 						}
 					>
-						<div className={"Box" + " " + this.state.infoDisplay}>
+						<div className={"Box" + " " + this.state.infoStatus}>
 							<div className="Box-info">
 								{this.state.data.description.map(
 									(description, index) => {

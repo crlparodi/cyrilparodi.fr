@@ -6,6 +6,7 @@
 			padding-top: 3rem;
 		}
 		.Fields {
+			justify-content: center;
 			list-style-type: none;
 			margin-left: 0;
 
@@ -17,7 +18,7 @@
 			}
 
 			&-entry {
-				margin: 0.5rem 1rem;
+				margin: 1rem 1rem;
 				border: 1px solid color-map(theme, primary);
 				background-color: color-map(theme, primary);
 
@@ -122,6 +123,8 @@
 
 				.Entry {
 					margin-bottom: 2rem;
+					padding-bottom: 1rem;
+					border-bottom: 1px solid color-map(neutral, grey-500);
 					&-dates,
 					&-name {
 						font-family: "Montserrat", sans-serif;

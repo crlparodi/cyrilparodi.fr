@@ -147,6 +147,20 @@
 				list-style-type: none;
 				margin: 0.5rem 0;
 				.Item {
+					position: relative;
+					padding: 0.1rem 0;
+					
+					@include breakpoint(medium){
+						margin-left: 20px;
+						
+						&::before{
+							position: absolute;
+							content: "\00bb";
+							font-size: 1.5rem;
+							top: -8px;
+							left: -20px;
+						}
+					}
 					@include breakpoint(small only) {
 						display: flex;
 						align-items: center;
@@ -154,7 +168,25 @@
 						border-bottom: 1px solid color-map(neutral, grey-700);
 					}
 
-					padding: 0.1rem 0;
+				}
+				.Item-alt{
+					font-weight: 700;
+					.SubEntry-list{
+						font-weight: 300;
+						list-style-type: none;
+						.SubItem{
+							position: relative;
+							color: color-map(neutral, grey-300);
+
+							&::before{
+								position: absolute;
+								content: "\00bb";
+								font-size: 1.5rem;
+								left: -20px;
+								top: -8px;
+							}
+						}
+					}
 				}
 			}
 		}

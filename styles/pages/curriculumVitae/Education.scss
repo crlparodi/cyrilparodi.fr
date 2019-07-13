@@ -62,13 +62,22 @@
 						height: 150px;
 					}
 
-					&-chevron {
-						margin: auto 0;
-						padding-left: 0;
+					.Chevron {
+						margin: auto 20px auto 0;
+						padding: 0;
 						color: color-map(theme, primary);
 						fill: none;
 						p {
 							margin-bottom: 0;
+						}
+						transition: transform 0.2s ease-in-out;
+
+						&.infoClosed {
+							transform: rotate(0deg);
+						}
+
+						&.infoOpen {
+							transform: rotate(-180deg);
 						}
 					}
 
@@ -162,11 +171,11 @@
 						}
 					}
 
-					&.isHidden {
+					&.infoClosed {
 						display: none;
 					}
 
-					&.isVisible {
+					&.infoOpen {
 						display: block;
 					}
 				}

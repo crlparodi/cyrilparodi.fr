@@ -17,6 +17,22 @@ class SkillEntry extends React.Component {
 				</div>
 				<ul className="Entry-list">
 					{this.state.data.skills.map((skill, skillIndex) => {
+						if (skill.language){
+							return(
+								<li className="Item-alt" key={skillIndex}>
+									{skill.language}
+									<ul className="SubEntry-list">
+										{skill.orientedSkills.map((OSkill, OSIndex) => {
+											return(
+												<li className="SubItem" key={OSIndex}>
+													{OSkill}
+												</li>
+											)
+										})}
+									</ul>
+								</li>
+							)
+						}
 						return (
 							<li className="Item" key={skillIndex}>
 								{skill}
