@@ -15,7 +15,7 @@ const HeaderLinks = props => (
 			to="/projets"
 			onClick={props.mobileClickHandler}
 		>
-			travaux.
+			projets.
 		</Link>
 		<a
 			className="ob-link"
@@ -31,7 +31,7 @@ const HeaderLinks = props => (
 )
 
 HeaderLinks.propTypes = {
-	mobileClickHandler: PropTypes.func,
+	mobileClickHandler: PropTypes.func
 }
 
 export default HeaderLinks

@@ -1,4 +1,5 @@
 import React from "react"
+import * as ProjectsData from "data/pages.portfolio.json"
 
 /* COMPONENTS */
 import PortfolioBanner from "./portfolio/PortfBanner"
@@ -9,7 +10,7 @@ class Portfolio extends React.Component {
 		return (
 			<div>
 				<PortfolioBanner />
-				<Projects />
+				<Projects data={ProjectsData.projects}/>
 			</div>
 		)
 	}

@@ -1,102 +1,122 @@
-.Projects-list {
-	@include breakpoint(large){
-		@include xy-grid(horizontal);
-	}
-	@include breakpoint(medium down){
-		@include xy-grid(vertical);
-	}
-	list-style-type: none;
-	margin: 0;
+.Projects {
+    /* Override */
+    &.isWrapper {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
 
-	> a {
-		@include breakpoint(large){
-			width: calc(33% - 1.875rem);
-			min-height: 190px;
-			margin: auto 0.9375rem; 
-		}
-		@include breakpoint(medium down){
-			margin: 0;
-		}
-		color: color-map(text);
-		padding: 0.9375rem;
-		> li {
-			position: relative;
-			margin: 0 auto;
-			text-decoration: none;
-			color: color-map(text);
-	
-			> svg {
-				width: 60px;
-				height: 60px;
-				margin-right: 30px;
-				fill: color-map(text);
-	
-				@include breakpoint(small only) {
-					display: none;
-				}
-			}
-		}
-		&:hover{
-			color: color-map(theme, primary);
-		}
-	}
+    .Projects-list {
+        @include breakpoint(xlarge) {
+            @include xy-grid(vertical);
+        }
+        @include breakpoint(large down) {
+            @include xy-grid(horizontal, true);
+        }
+        list-style-type: none;
+    }
+}
 
-	&-type-javascript {
-		border: 2px solid color-map(background, dark);
-		background-color: color-map(background, darker);
-		transition: background-color 0.3s ease-out, color 0.3s ease-out;
+@include breakpoint(xlarge) {
+    .Loader {
+        margin: 1rem 0;
+        .Project {
+            overflow: hidden;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            min-height: 350px;
+            border: 1px solid color-map(text);
 
-		&:hover {
-			background-color: color-map(theme, primary);
+            .Link {
+                text-decoration: none;
+                color: color-map(text);
 
-			> li {
-				color: color-map(background, darker);
+                .Diamond {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    padding: 0 0.9375rem;
+                    background-color: rgba(0, 12, 20, 0.9);
+                    transition: all 0.3s ease-out;
+                    width: 40%;
 
-				> svg {
-					fill: color-map(background, darker);
-				}
-			}
-		}
-	}
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        top: 50%;
+                        right: -100px;
+                        border-left: 100px solid rgba(0, 12, 20, 0.9);
+                        border-bottom: 174px solid rgba(0, 12, 20, 0);
+                    }
 
-	&-type-python {
-		border: 2px solid color-map(background, dark);
-		background-color: color-map(background, darker);
-		transition: background-color 0.3s ease-out, color 0.3s ease-out;
+                    &-sibling {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            bottom: 50%;
+                            right: -100px;
+                            border-left: 100px solid rgba(0, 12, 20, 0.9);
+                            border-top: 174px solid rgba(0, 12, 20, 0);
+                        }
+                    }
+                    .Content {
+                        position: absolute;
+                        top: 50%;
+                        left: 4%;
+                        z-index: 1;
+                        transform: translateY(-50%);
+                        width: 400px;
 
-		&:hover {
-			background-color: #3ADB76;
+                        .Title {
+                            display: block;
+                            font-size: 180%;
+                        }
+                    }
+                }
+                &:hover {
+                    .Diamond {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
 
-			> li {
-				color: color-map(background, darker);
+@include breakpoint(large down) {
+    .Loader {
+        width: calc(50% - 1.875rem);
+        margin: 1rem 0.9375rem;
 
-				> svg {
-					fill: color-map(background, darker);
-				}
-			}
-		}
-	}
+        @include breakpoint(medium down) {
+            width: calc(100% - 1.875rem);
+            margin: 1rem 0.9375rem;
+        }
 
-	&-type-cpp {
-		border: 2px solid color-map(background, dark);
-		background-color: color-map(background, darker);
-		transition: background-color 0.3s ease-out, color 0.3s ease-out;
+        .Project {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 260px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid color-map(text);
 
-		&:hover {
-			background-color: color-map(neutral, grey-300);
+            @include breakpoint(small only) {
+                min-height: 180px;
+            }
 
-			> li {
-				color: color-map(background, darker);
-
-				> svg {
-					fill: color-map(background, darker);
-				}
-			}
-		}
-	}
-
-	.Title {
-		display: block;
-		font-size: 120%;
-	}
+            .Link {
+                height: 100%;
+                padding: 20px;
+                color: color-map(text);
+                background-color: rgba(0, 12, 20, 0.9);
+            }
+        }
+    }
 }
