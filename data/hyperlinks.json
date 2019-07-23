@@ -1,12 +1,16 @@
 {
-	"contact": [
-		{
-			"icon": "fab fa-linkedin-in",
-			"href": "https://www.linkedin.com/in/cyril-parodi"
-		},
-		{
-			"icon": "fas fa-envelope",
-			"href": "mailto:parodicyril@gmail.com"
-		}
-	]
+    "contact": [
+        {
+            "icon": "fab fa-linkedin",
+            "href": "https://www.linkedin.com/in/cyril-parodi"
+        },
+        {
+            "icon": "fas fa-envelope-square",
+            "href": "mailto:parodicyril@gmail.com"
+        },
+        {
+            "icon": "fab fa-github-square",
+            "href": "https://github.com/crlparodi"
+        }
+    ]
 }

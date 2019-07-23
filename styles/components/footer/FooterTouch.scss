@@ -1,16 +1,16 @@
 .FooterTouch {
-	padding: 2rem 0;
+    padding: 2rem 0;
 
-	text-align: center;
+    text-align: center;
 
-	&-contact {
-		padding-top: 1rem;
-		padding-bottom: 3rem;
+    &-contact {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
 
-		/* OVERRIDE */
-		.ob-link {
-			margin: 0 25px;
-			font-size: 3rem;
-		}
-	}
+        /* OVERRIDE */
+        .ob-link {
+            margin: 0 10px;
+            font-size: 4rem;
+        }
+    }
 }

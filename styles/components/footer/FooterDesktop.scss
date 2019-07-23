@@ -1,40 +1,40 @@
 .FooterDesktop {
-	padding: 2rem 0;
+    padding: 2rem 0;
 
-	@include xy-grid(horizontal, false);
-	@include xy-gutters($gutter-position: top bottom);
+    @include xy-grid(horizontal, false);
+    @include xy-gutters($gutter-position: top bottom);
 
-	&-contact {
-		text-align: center;
+    &-contact {
+        text-align: center;
 
-		@include xy-cell(50%);
+        @include xy-cell(50%);
 
-		/* OVERRIDE */
-		.ob-title {
-			font-size: 200%;
+        /* OVERRIDE */
+        .ob-title {
+            font-size: 200%;
 
-			&.isPrimary {
-				margin-bottom: 1rem;
+            &.isPrimary {
+                margin-bottom: 1rem;
 
-				&:before {
-					display: none;
-				}
-			}
-		}
+                &:before {
+                    display: none;
+                }
+            }
+        }
 
-		/* OVERRIDE */
-		.ob-link {
-			margin: 0 10px 0 10px;
-			font-size: 3rem;
-			@include hoverDashesEffect();
-		}
-	}
+        /* OVERRIDE */
+        .ob-link {
+            margin: 0;
+            font-size: 3rem;
+            @include hoverDashesEffect();
+        }
+    }
 
-	&-misc {
-		align-self: center;
-		text-align: center;
-		font-size: 0.8rem;
+    &-misc {
+        align-self: center;
+        text-align: center;
+        font-size: 0.8rem;
 
-		@include xy-cell(50%);
-	}
+        @include xy-cell(50%);
+    }
 }
