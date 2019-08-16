@@ -1,24 +1,17 @@
 {
     "projects": [
         {
-            "name": "project.mii",
-            "description": "Code source de ce site : http://cyrilparodi.fr.",
-            "language": "JavaScript, CSS",
-            "url": "http://github.com/crlparodi/project-mii",
-            "color": "#00F2FF"
-        },
-        {
-            "name": "project.cabbage",
+            "name": "cabbage",
             "description": "Maquette d'une plateforme communautaire de babysitting.",
             "language": "Python",
             "url": "http://github.com/crlparodi/project-cabbage",
             "color": "#3ADB76"
         },
         {
-            "name": "project.butterglue",
-            "description": "Moteur de traitement des métriques (CPU, Mémoire, etc) pour une interface de supervision en développement (project-butterscotch).",
+            "name": "butterscotch",
+            "description": "Mini interface de monitoring en Qt",
             "language": "C++",
-            "url": "http://github.com/crlparodi/project-butterglue",
+            "url": "http://github.com/crlparodi/project-butterscotch-gui",
             "color": "#F18808"
         }
     ]

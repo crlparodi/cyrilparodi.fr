@@ -8,7 +8,7 @@ import PBGLBanner from "img/ProjectsBanner/project-butterglue.png"
 /* COMPONENTS */
 import ProjectEntry from "./projects/ProjectEntry"
 
-const banners = [PMIIBanner, PCABBanner, PBGLBanner]
+const banners = [PCABBanner, PBGLBanner]
 
 class Projects extends React.Component {
 	constructor(props) {

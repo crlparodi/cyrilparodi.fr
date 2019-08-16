@@ -14,122 +14,122 @@
 
 body,
 html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
-	color: color-map(text);
-	background-color: color-map(background, dark);
+    color: color-map(text);
+    background-color: color-map(background, dark);
 
-	font-family: "Work Sans", sans-serif;
+    font-family: font-map(paragraph), sans-serif;
 
-	/* FOUNDATION UTILITIES OVERRIDE */
+    /* FOUNDATION UTILITIES OVERRIDE */
 
-	// TO REMOVE SOON
+    // TO REMOVE SOON
 
-	.grid-container {
-		max-width: 62.5rem;
-	}
+    .grid-container {
+        max-width: 62.5rem;
+    }
 
-	/* THEME CONFIGURATIONS
+    /* THEME CONFIGURATIONS
 	 */
 
-	/* CSS CUSTOM DECORATIVE OBJECTS
+    /* CSS CUSTOM DECORATIVE OBJECTS
 	 */
 
-	.ob-title {
-		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
+    .ob-title {
+        font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
 
-		@include breakpoint(large) {
-			font-size: 300%;
-		}
-		@include breakpoint(medium only) {
-			font-size: 200%;
-		}
-		@include breakpoint(small only) {
-			font-size: 150%;
-		}
+        @include breakpoint(large) {
+            font-size: 300%;
+        }
+        @include breakpoint(medium only) {
+            font-size: 200%;
+        }
+        @include breakpoint(small only) {
+            font-size: 150%;
+        }
 
-		&.isPrimary {
-			position: relative;
-			margin-bottom: 3rem;
+        &.isPrimary {
+            position: relative;
+            margin-bottom: 3rem;
 
-			font-weight: 700;
+            font-weight: 700;
 
-			&:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: calc(100% + 15px);
-				width: 100px;
-				height: 5px;
-				background-color: color-map(theme, primary);
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: calc(100% + 15px);
+                width: 100px;
+                height: 5px;
+                background-color: color-map(theme, primary);
 
-				/* LEFT or RIGHT parameter to specify for each title */
-			}
-		}
+                /* LEFT or RIGHT parameter to specify for each title */
+            }
+        }
 
-		&.isSecondary {
-			margin-bottom: 3rem;
-			font-weight: 700;
+        &.isSecondary {
+            margin-bottom: 3rem;
+            font-weight: 700;
 
-			&:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 120%;
-				width: 100px;
-				height: 5px;
-				background-color: color-map(theme, secondary);
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 120%;
+                width: 100px;
+                height: 5px;
+                background-color: color-map(theme, secondary);
 
-				/* LEFT or RIGHT parameter to specify for each title */
-			}
-		}
-	}
+                /* LEFT or RIGHT parameter to specify for each title */
+            }
+        }
+    }
 
-	.ob-subtitle {
-		/* H3 */
-		margin-bottom: 0.5rem;
-		font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
-		font-weight: 700;
-		font-size: 120%;
+    .ob-subtitle {
+        /* H3 */
+        margin-bottom: 0.5rem;
+        font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
+        font-weight: 700;
+        font-size: 120%;
 
-		@include breakpoint(small only) {
-			font-size: 110%;
-		}
-	}
+        @include breakpoint(small only) {
+            font-size: 110%;
+        }
+    }
 
-	.ob-link {
-		color: inherit;
-		-webkit-transition: color 0.3s ease !important;
-		transition: color 0.3s ease !important;
+    .ob-link {
+        color: inherit;
+        -webkit-transition: color 0.3s ease !important;
+        transition: color 0.3s ease !important;
 
-		&:hover,
-		&:focus {
-			color: color-map(theme, primary);
-			-webkit-transition: color 0.3s ease !important;
-			transition: color 0.3s ease !important;
-		}
-	}
+        &:hover,
+        &:focus {
+            color: color-map(theme, primary);
+            -webkit-transition: color 0.3s ease !important;
+            transition: color 0.3s ease !important;
+        }
+    }
 
-	/* SPECIAL PARAMETERS */
+    /* SPECIAL PARAMETERS */
 
-	.isContainer {
-		@include xy-grid-container();
-	}
+    .isContainer {
+        @include xy-grid-container();
+    }
 
-	/* CUSTOM SECTIONS */
+    /* CUSTOM SECTIONS */
 
-	.isWrapper {
-		padding-top: 6rem;
-		padding-bottom: 6rem;
+    .isWrapper {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
 
-		@include breakpoint(medium down) {
-			padding-top: 3rem;
-			padding-bottom: 3rem;
-		}
-	}
+        @include breakpoint(medium down) {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
 }

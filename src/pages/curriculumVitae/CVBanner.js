@@ -92,12 +92,12 @@ class CVBanner extends React.Component {
 							className="ob-subtitle"
 							style={{ display: this.state.display }}
 						>
-							Recherche un premier poste en <strong>développement embarqué/logiciel</strong><br /> ou <strong>automatisation de tests</strong>.
+							Recherche un premier poste en <strong>test logiciel</strong><br /> ou <strong>automatisation de tests</strong>.
 						</h2>
 						<Button
 							inner={"moncv.pdf"}
 							url={
-								"http://www.cyrilparodi.fr/docs/CV_6.1_1018_C.pdf"
+								"http://cyrilparodi.fr/docs/CV_6.1_0719.pdf"
 							}
 						/>
 					</div>

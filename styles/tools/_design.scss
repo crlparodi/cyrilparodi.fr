@@ -2,6 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap&subset=latin-ext");
 
+$font-map: (
+    title: "Montserrat",
+    paragraph: "Work Sans"
+) !default;
+
+@function font-map($font) {
+    @if map-has-key($map: $font-map, $key: $font) {
+        @return map-get($map: $font-map, $key: $font);
+    }
+    @warn "Unknown font '#{$font}";
+    @return null;
+}
+
 /* COLORS */
 $color-map: (
     text: hsl(0, 0%, 95%) /* ANTI-FLASH WHITE */,
@@ -31,7 +44,7 @@ $color-map: (
             map-get(map-get($color-map, $color), $tone)
         );
     }
-    @warn “Unknown palette ‘#{$color}’ ”;
+    @warn "Unknown palette ‘#{$color}’ ";
     @return null;
 }
 
