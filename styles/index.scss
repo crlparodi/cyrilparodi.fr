@@ -22,7 +22,7 @@ html {
     scroll-behavior: smooth;
 
     color: color-map(text);
-    background-color: color-map(background, dark);
+    background-color: color-map(background, primary);
 
     font-family: font-map(paragraph), sans-serif;
 
@@ -41,7 +41,7 @@ html {
 	 */
 
     .ob-title {
-        font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
+        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
 
         @include breakpoint(large) {
             font-size: 300%;
@@ -58,6 +58,7 @@ html {
             margin-bottom: 3rem;
 
             font-weight: 700;
+            text-transform: capitalize;
 
             &:before {
                 content: "";
@@ -93,7 +94,7 @@ html {
     .ob-subtitle {
         /* H3 */
         margin-bottom: 0.5rem;
-        font-family: "Montserrat", sans-serif; // it overrides the foundation font rule
+        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
         font-weight: 700;
         font-size: 120%;
 
@@ -115,21 +116,30 @@ html {
         }
     }
 
+    .ob-button {
+        @include button(
+            false,
+            color-map(theme, primary),
+            color-map(neutral, grey-300),
+            color-map(background, primary),
+            solid
+        );
+        font-size: 110% !important;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
     /* SPECIAL PARAMETERS */
 
     .isContainer {
         @include xy-grid-container();
+        max-width: 62.5rem;
     }
 
     /* CUSTOM SECTIONS */
 
     .isWrapper {
-        padding-top: 6rem;
-        padding-bottom: 6rem;
-
-        @include breakpoint(medium down) {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
-        }
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }

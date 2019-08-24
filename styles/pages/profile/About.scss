@@ -1,56 +1,87 @@
 .About {
-	/* OVERRIDE */
-	&.isWrapper {
-		padding-top: 3rem;
-	}
+    /* OVERRIDE */
+    &.isWrapper {
+        padding-top: 3rem;
+    }
 
-	&-content {
-		@include breakpoint(medium) {
-			@include xy-grid(horizontal, false);
-			margin-top: 3rem;
-		}
-		@include breakpoint(small only) {
-			@include xy-grid(vertical, false);
-			.Button {
-				margin-top: 1rem;
-			}
-		}
+    &-content {
+        font-size: 110%;
 
-		.Picture {
-			align-self: center;
+        @include breakpoint(medium) {
+            @include xy-grid(horizontal, false);
+            margin-top: 3rem;
+        }
+        @include breakpoint(small only) {
+            @include xy-grid(vertical, false);
+            .Button {
+                margin-top: 1rem;
+            }
+        }
 
-			@include xy-cell(shrink);
+        .Picture {
+            align-self: center;
 
-			@include breakpoint(small only) {
-				@include xy-gutters($gutter-position: bottom);
-			}
+            @include xy-cell(shrink);
 
-			& img {
-				width: 192px;
-				border-radius: 50%;
-				margin: 0 auto;
-				display: block;
-			}
-		}
+            @include breakpoint(small only) {
+                @include xy-gutters($gutter-position: bottom);
+            }
 
-		.Topic {
-			align-self: center;
+            img {
+                max-width: 192px;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
 
-			@include xy-cell(auto);
+        .Me {
+            @include breakpoint(large) {
+                @include xy-grid(horizontal, false);
+            }
+            @include breakpoint(medium down) {
+                @include xy-grid(vertical, false);
+            }
+            .Profile {
+                @include breakpoint(large) {
+                    padding-left: 20px;
+                    align-self: center;
+                }
 
-			@include breakpoint(small only) {
-				@include xy-gutters($gutter-position: top);
-			}
+                @include breakpoint(medium down) {
+                    align-self: stretch;
+                    @include breakpoint(small only) {
+                        @include xy-gutters($gutter-position: top);
+                    }
+                }
+            }
 
-			&-bulletPoints {
-				margin-bottom: 0;
+            .Facts {
+                @include breakpoint(large) {
+                    border-left: 1px solid color-map(theme, primary);
+                    padding-left: 20px;
+                    align-self: center;
+                }
 
-				& > li {
-					&:nth-child(1) {
-						color: color-map(theme, primary);
-					}
-				}
-			}
-		}
-	}
+                @include breakpoint(medium down) {
+                    align-self: stretch;
+                    border: none;
+                    padding-left: 0;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin-left: 0;
+
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
 }

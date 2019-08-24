@@ -1,16 +1,19 @@
 {
     "contact": [
         {
-            "icon": "fab fa-linkedin",
-            "href": "https://www.linkedin.com/in/cyril-parodi"
+            "icon": "fas fa-envelope-square",
+            "href": "mailto:parodicyril@gmail.com",
+            "inner": "parodicyril@gmail.com"
         },
         {
-            "icon": "fas fa-envelope-square",
-            "href": "mailto:parodicyril@gmail.com"
+            "icon": "fab fa-linkedin",
+            "href": "https://linkedin.com/in/cyril-parodi",
+            "inner": "https://linkedin.com/in/cyril-parodi"
         },
         {
             "icon": "fab fa-github-square",
-            "href": "https://github.com/crlparodi"
+            "href": "https://github.com/crlparodi",
+            "inner": "https://github.com/crlparodi"
         }
     ]
 }

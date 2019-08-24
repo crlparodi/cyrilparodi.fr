@@ -1,18 +1,18 @@
 import React from "react"
 
 class Human extends React.Component {
+	chartRef = React.createRef()
 	constructor(props) {
 		super()
 		this.state = {
-			data: props.data,
+			data: props.data
 		}
 	}
-
 	render() {
 		return (
 			<section className="Human isWrapper">
 				<div className="Human-container isContainer">
-					<h2 className="ob-title isPrimary">{"mes valeurs."}</h2>
+					<h2 className="ob-title isPrimary">{"mes valeurs"}</h2>
 					<ol className="List">
 						{this.state.data.map((humanSkill, HSIndex) => {
 							return (
@@ -37,7 +37,7 @@ class Human extends React.Component {
 }
 
 Human.defaultProps = {
-	data: "<NONE>",
+	data: "<NONE>"
 }
 
 export default Human

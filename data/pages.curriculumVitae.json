@@ -2,14 +2,13 @@
 	"education": [
 		{
 			"grade": "POEI - Développement et Automatisation de Tests Logiciels",
-			"year": 2018,
-			"school": "IB S.A., Aix-en-Provence",
+			"year": "Mai 2018 - Août 2018",
+			"school": "IB S.A. - groupe Cegos",
+			"location": "Aix-en-Provence",
 			"description": [
-				"Première étape de ma réorientation, ce cursus de formation orienté vers l'automatisation de tests logiciels ou web permet aux bénéficiaires d'en récupérer les outils techniques, logiciels et fonctionnels",
-				"Des connaissances basiques en développement logiciel et web (algorithmie, techniques de programmation et langages dédiés, design d'interfaces) et des cycles de développementent, ainsi qu'une étude approfondie du métier de testeur logiciel est nécessaire avant de se lancer dans l'automatisation (principalement destinés aux tests de non-régression en général).",
-				"Le cycle de formation a été prévu en conséquence, et une certification ISTQB (Niveau Fondation) a été délivrée à l'issue d'un examen en fin de cursus."
+				"Ce cursus permet de récupérer les outils techniques, logiciels et fonctionnels du test logiciel ainsi que les outils d'automatisation tels que Sélenium, HP UFT pour l'IHM ou bien Cucumber pour les scénarios. L'introduction au développement logiciel et web et aux cycles de développementent sont aussi au programme.",
+				"La certification ISTQB (Niveau Fondation) a été délivrée à l'issue d'un examen en fin de cursus."
 			],
-			"keywords": ["#informatique", "#développement-web", "#java", "#test-logiciel", "#automatisation-de-tests", "#architectures-web", "#IHM", "#GUI", "#ISTQB"],
 			"links": [
 				{
 					"name": "L'organisme de formation",
@@ -27,14 +26,12 @@
 		},
 		{
 			"grade": "Diplôme d'ingénieur en Microélectronique et Télécommunications",
-			"year": 2017,
-			"school": "POLYTECH Marseille - Aix-Marseille Université",
+			"year": "2014 - 2017",
+			"school": "POLYTECH Marseille",
+			"location": "Marseille",
 			"description": [
-				"Ce diplôme est le résultat de trois années de formation à POLYTECH Marseille, dont la filière Microélectronique et Télécommunication forme tous les futurs ingénieurs à concevoir toutes sortes de systèmes éléctroniques.",
-				"Les débouchés professionnels de cette filière sont multiples : Informatique, Haute-Technologies, Aéronautique, Automobile, Télécommunications, Énergie, Domotique, etc..."
+				"La filière Microélectronique et Télécommunication forme à concevoir toutes sortes de systèmes éléctroniques. De la conception matérielle (VLSI, CAO) au développement embarqué, en passant par la Physique des Composants, les techniques de Traitement du Signal, ou bien diverses applications industrielles (IoT, RFID, Traitement d'Image)."
 			],
-			"keywords": ["#électronique", "#traitement-du-signal", "#systèmes-embarqués", "#conception-de-circuits-intégrés", "#développement-embarqué", "#langage-c", "#java", "#microprocesseurs", "#systems-on-chip", "#synthède-hardware", "#VHDL", "#microélectronique",
-				"#RFID", "#semiconducteurs", "#physique-des-composants"],
 			"links": [
 				{
 					"name": "L'école",
@@ -52,13 +49,13 @@
 		},
 		{
 			"grade": "BTS en Assistance Technique d'Ingénieur",
-			"year": 2014,
-			"school": "Lycée du Rempart, Marseille 7ème",
+			"year": "2012 - 2014",
+			"school": "Lycée du Rempart",
+			"location": "Marseille",
 			"description": [
-				"Cette formation vise à former les futurs techniciens à trouver des solutions d'ordre techniques ou d'organisation, à des problématiques pouvant nuire à un processus de production dans une entreprise.",
-				"Cette formation se veut polyvalente, dans le but d'apporter une culture technique étendue."
+				"L'objectif est de trouver des solutions d'ordre techniques ou d'organisation, à des problématiques pouvant nuire à une chaîne de production. De la logistique à la gestion financière en passant par le management de la qualité.",
+				"Cette formation est polyvalente (Mécanique, Électrotechnique, Physique appliquée à l'électronique)."
 			],
-			"keywords": ["#organisation-industrielle", "#gestion-financière", "#électrotechnique", "#mécanique", "#production", "#logistique"],
 			"links": [
 				{
 					"name": "L'école",
@@ -72,11 +69,9 @@
 		},
 		{
 			"grade": "Bac STi - Génie électronique",
-			"year": 2012,
-			"school": "Lycée Pierre MENDÈS-FRANCE, Vitrolles",
-			"description": [],
-			"keywords": ["#électronique", "#microprocesseurs", "#conception", "#traitement-du-signal", "#composants-passifs-et-actifs"],
-			"links": []
+			"year": "2010 - 2012",
+			"school": "Lycée Pierre MENDÈS-FRANCE",
+			"location": "Vitrolles"
 		}
 	],
 	"certifications": [
@@ -96,8 +91,8 @@
 					"start": "Avril 2017",
 					"end": "Septembre 2017",
 					"company": "TechnicAtome",
+					"location": "Aix-en-Provence",					
 					"description": [
-						"Veille technologique portant sur les architectures potentielles de contrôle-commandes en vue du déploiement des Sous Marins Nucléraires Lanceurs d'Engins de 3ème Génération (SNLE3G).",
 						"Conception d’un multiplexeur vidéo pour observer la gestion de flux vidéos numériques dans un FPGA",
 						"Conception de la synthèse matérielle (en C) du multiplexeur basée sur une architecture ZYNQ 7000 de Xilinx. Développement embarqué des couches de transition et applicatives (dont fonctions de tracé graphique en 2D pour les tests de performances).",
 						"Mise en place de procédures de test matériel pour l'évaluation des performances du ZYNQ 7000 et les effets environnementaux sur ce dernier pendant les opérations de traitement d'image."
@@ -107,7 +102,8 @@
 					"name": "Stage en Recherche et Développement - Projet IoT",
 					"start": "Juin 2016",
 					"end": "Juillet 2016",
-					"company": "Groupe Euro Techniques Industries",
+					"company": "Groupe ETI",
+					"location": "Géménos (13)",
 					"description": [
 						"\"Petite\" initiation aux projets d'ingéniérie industrielle avec la réalisation d'un thermomètre de piscine connecté pour un usage particulier.",
 						"Le module se présente comme étant placé dans un boitier de mesure intégré dans un local à eau le plus proche et transmettant les informations à un compteur situé à proximité et accessible au particulier. L'éventualité d'une supervision en temps réel sur smartphone est aussi envisagée.",
@@ -124,6 +120,7 @@
 					"start": "Octobre 2017",
 					"end": "Novembre 2017",
 					"company": "ALTEN Rhône-Alpes",
+					"location": "Lyon",
 					"description": [
 						"Période d'intercontrat n'ayant abouti sur aucune mission technique."
 					]
@@ -133,13 +130,15 @@
 					"start": "Juillet 2015",
 					"end": "Août 2015",
 					"company": "BRICOMAN",
+					"location": "Vitrolles",
 					"description": []
 				},
 				{
 					"name": "Stage d'Observation avec Projet Industriel de fin de Cycle",
 					"start": "Mai 2013",
 					"end": "Juillet 2013",
-					"company": "Saint-Gobain - DISPANO",
+					"company": "Saint-Gobain",
+					"location": "Saint-Victoret",
 					"description": [
 						"Étude de la structure, des solutions d’organisation et de production afin de répondre à des besoins de l’entreprise à court et moyen-terme, avec réalisation d'un Projet Professionnel."
 					]
@@ -149,6 +148,7 @@
 					"start": "Février 2013",
 					"end": "Février 2013",
 					"company": "Groupe La Poste",
+					"location": "Vitrolles",
 					"description": []
 				}
 			]
@@ -176,17 +176,15 @@
 					{
 						"language": "Java SE",
 						"orientedSkills": [
-							"Collections, Threadding",
 							"GUI Swing", 
 							"Gradle"
 						]
 					},
 					{
-						"language": "Langage C++ (En cours d'apprentissage)",
+						"language": "Langage C++",
 						"orientedSkills": [
-							"Conteneurs",
 							"CMake",
-							"Tests Unitaires avec Google Test"
+							"Tests Unitaires w/ Google Test"
 						]
 					}
 				]
@@ -203,21 +201,41 @@
 						]
 					},
 					{
-						"language": "Python",
+						"language": "Python 3",
 						"orientedSkills": [
-							"Architecture MVC",
-							"HTTP, Architectures Clients légers",
-							"Back-Office et BDD w/ Django"
+							"Architecture MVC, Protocole HTTP",
+							"Back-Office w/ Django",
+							"Base de Données SQLite"
 						]
 					}
 
 				]
 			},
 			{
-				"category_name": "Cycles de Dév. - Modélisation",
+				"category_name": "Cycle de Dev. & Modélisation",
 				"skills": [
+					"Modèle en V et Itératif (AGILE)",
 					"Modélisation Logicielle w/ UML Diagrams",
 					"Modélisation d'une Base de Données w/ Mérise, SQL"
+				]
+			},
+			{
+				"category_name": "Test Logiciel",
+				"skills": [
+					"Conception, planification et exécution",
+					"Tests unitaires à Tests d'acceptation Util.",
+					"Lecture de Specs. et de Plans de Tests",
+					"Gestion sous HP ALM"
+				]
+			},
+			{
+				"category_name": "Automatisation des Tests",
+				"skills": [
+					"Tests de non-régression",
+					"Autom. de Scénatios en Java (Cucumber)",
+					"Autom. d'IHM Web en Java (Selenium)",
+					"GeckoDriver, ChromeDriver + PageObjects",
+					"Autom. d'IHM w/ HP UFT"
 				]
 			},
 			{
@@ -229,27 +247,13 @@
 				]
 			},
 			{
-				"category_name": "Test Logiciel - Automatisation",
+				"category_name": "Anglais",
 				"skills": [
-					"Conception, planification et exécution, Tests de non-régression",
-					"Gestion sous HP ALM",
-					"Automatisation de scénarios (Cucumber) et d'IHM (Sélénium & HP UFT)"
+					"Contenu Technique et Lecture de documentations",
+					"Niveau B1 à l'oral et B2 à l'écrit et l'écoute",
+					"790/990 au TOEIC - Mai 2016"
 				]
 			}
-		],
-		"english_level": {
-			"level": [
-				"Contenu Technique et Lecture de documentations",
-				"Niveau B1 à l'oral et B2 à l'écrit et l'écoute"
-			],
-			"certifications": [
-				{
-					"name": "TOEIC",
-					"score": 790,
-					"max": 990,
-					"date": "Mai 2016"
-				}
-			]
-		}
+		]
 	}
 }

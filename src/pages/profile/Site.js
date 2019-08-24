@@ -15,24 +15,25 @@ class Site extends React.Component {
 						<div className="Topic-remarks">
 							<p>
 								{
-									"J'avais envie de proposer un espace à mon image, c'est un projet personnel qui me tenait à coeur et sur lequel j'y mets du temps et de la passion."
+									"Je voulais proposer un espace à mon image, c'est un projet personnel qui me tenait à coeur et sur lequel j'y mets du temps et de la passion."
 								}
 								<br />
 								<br />
 								{
-									"Le site a été dévéloppé avec React.js, les fichiers source du site sont disponible sur GitHub. Vous pouvez aussi voir les quelques expérimentations de design pour ce site sur Codepen."
+									"Le site a été dévéloppé en React.js, les fichiers source du site sont disponible sur GitHub. Vous pouvez aussi voir les quelques expérimentations de design pour ce site sur Codepen."
 								}
 							</p>
 						</div>
 						<div className="Topic-github">
 							<Button
-								alt
 								inner={"github.io"}
-								url={"https://github.com/crlparodi/project-mii"}
+								url={
+									"https://github.com/crlparodi/cyrilparodi.fr"
+								}
 							/>
 							<Button
 								inner={"codepen.io"}
-								url={"https://codepen.io/crlparodi/"}
+								href={"https://codepen.io/crlparodi/"}
 							/>
 						</div>
 					</div>

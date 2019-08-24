@@ -7,10 +7,9 @@ class Button extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {
-			alt: props.alt,
 			noredirect: props.noredirect,
 			inner: props.inner,
-			url: props.url,
+			url: props.url
 		}
 		this._isMounted = false
 	}
@@ -26,13 +25,7 @@ class Button extends React.Component {
 				href={this.state.url}
 				target={this.state.noredirect ? "" : "_blank"}
 				rel={this.state.noredirect ? "" : "noopener noreferrer"}
-				className={
-					"Button" +
-					" " +
-					(this.state.alt ? "isAlt" : "") +
-					" " +
-					"text-center"
-				}
+				className="ob-button"
 			>
 				<span>{this.state.inner}</span>
 			</a>
@@ -41,13 +34,12 @@ class Button extends React.Component {
 }
 
 Button.propTypes = {
-	alt: PropTypes.bool,
-	noredirect: PropTypes.bool,
+	noredirect: PropTypes.bool
 }
 
 Button.defaultProps = {
 	inner: "<HTML>",
-	url: "<URL>",
+	url: "<URL>"
 }
 
 export default Button

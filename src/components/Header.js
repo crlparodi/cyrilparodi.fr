@@ -11,6 +11,24 @@ class Header extends React.Component {
 		super()
 		this.state = {
 			headerDrawerOpen: false,
+			headerType: "isOnTop"
+		}
+	}
+	componentDidMount() {
+		window.addEventListener("scroll", this.headerTypeSwitcher)
+	}
+	componentWillUnmount() {
+		window.addEventListener("scroll", this.headerTypeSwitcher)
+	}
+	headerTypeSwitcher = () => {
+		if (window.scrollY > 0) {
+			this.setState({
+				headerType: "isOnCover"
+			})
+		} else {
+			this.setState({
+				headerType: "isOnTop"
+			})
 		}
 	}
 	headerDrawerStateSwitcher = () => {
@@ -23,21 +41,13 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<section className="Header">
+			<section className={"Header" + " " + this.state.headerType}>
 				<div className="Content isContainer grid-x">
 					<HeaderToggleButton
 						drawerClickHandler={this.headerDrawerStateSwitcher}
 					/>
-					<div className="Content-logo cell auto">
-						{"cyril"}
-						<span
-							style={{
-								color: "#dd5800",
-							}}
-						>
-							{"."}
-						</span>
-						{"parodi"}
+					<div className={"Content-logo cell auto"}>
+						{"cyril parodi"}
 					</div>
 					<HeaderNav />
 				</div>

@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, "/dist/"),
 		filename: "bundle.js",
-		publicPath: isProduction ? "./" : "/",
+		publicPath: isProduction ? "./" : "/"
 	},
 	resolve: {
 		alias: {
@@ -19,15 +19,15 @@ module.exports = {
 			root: path.resolve(__dirname, "src"),
 			styles: path.resolve(__dirname, "styles"),
 			img: path.resolve(__dirname, "img"),
-			data: path.resolve(__dirname, "data"),
-		},
+			data: path.resolve(__dirname, "data")
+		}
 	},
 	module: {
 		rules: [
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: "babel-loader",
+				loader: "babel-loader"
 			},
 			{
 				test: /\.s(a|c)ss$/,
@@ -35,33 +35,33 @@ module.exports = {
 				loader: [
 					MiniCssExtractPlugin.loader,
 					"css-loader",
-					"sass-loader",
-				],
+					"sass-loader"
+				]
 			},
 			{
 				test: /\.(jpe?g|png|gif|pdf)$/i,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "media/[name].[ext]",
-					},
-				},
-			},
-		],
+						name: "media/[name].[ext]"
+					}
+				}
+			}
+		]
 	},
 	plugins: [
 		new HtmlWebPackPlugin({
 			template: "./public/index.html",
-			filename: "index.html",
+			filename: "index.html"
 		}),
 		new MiniCssExtractPlugin({
 			filename: "[name].css",
-			chunkFilename: "[id].css",
-		}),
+			chunkFilename: "[id].css"
+		})
 	],
 	devtool: "eval-source-map",
 	devServer: {
 		contentBase: path.join(__dirname, "/public/"),
-		historyApiFallback: true,
-	},
+		historyApiFallback: true
+	}
 }

@@ -1,0 +1,61 @@
+.Banner {
+    position: relative;
+    background-size: cover;
+    background-position-y: 100%;
+
+    @include breakpoint(small only) {
+        background-position-x: 50%;
+    }
+
+    /* OVERRIDE */
+    &.isWrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &-fluid {
+        height: 100%;
+        padding-top: 64px;
+        background-color: color-map(theme, primary);
+
+        @include breakpoint(medium down) {
+            @include xy-grid(vertical, false);
+            justify-content: center;
+
+            @include breakpoint(small only) {
+                text-align: center;
+            }
+
+            .Banner-container {
+                text-shadow: 3px 0 0 color-map(theme, primary),
+                    -3px 0 0 color-map(theme, primary),
+                    0 3px 0 color-map(theme, primary),
+                    0 -3px 0 color-map(theme, primary),
+                    2px 0 0 color-map(theme, primary),
+                    -2px 0 0 color-map(theme, primary),
+                    0 2px 0 color-map(theme, primary),
+                    0 -2px 0 color-map(theme, primary),
+                    1px 1px color-map(theme, primary),
+                    -1px -1px 0 color-map(theme, primary),
+                    1px -1px 0 color-map(theme, primary),
+                    -1px 1px 0 color-map(theme, primary);
+            }
+        }
+
+        .Banner-container {
+            padding: 0 3rem;
+            color: color-map(background, primary);
+
+            /* Override */
+            .ob-title {
+                font-weight: 700;
+                font-size: 400%;
+            }
+
+            /* Override */
+            .ob-subtitle {
+                font-size: 300%;
+            }
+        }
+    }
+}

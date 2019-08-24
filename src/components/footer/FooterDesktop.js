@@ -9,7 +9,7 @@ class FooterDesktop extends React.Component {
 			<div className="FooterDesktop">
 				<div className="FooterDesktop-contact">
 					<h3 className="ob-title isPrimary">
-						{"restons en contact !"}
+						{"Restons en contact"}
 					</h3>
 					<div>
 						{hyperlinks.contact.map((link, index) => {
@@ -22,6 +22,7 @@ class FooterDesktop extends React.Component {
 									className="ob-link"
 								>
 									<i className={link.icon} key={index} />
+									{link.inner}
 								</a>
 							)
 						})}
@@ -46,7 +47,7 @@ class FooterDesktop extends React.Component {
 						>
 							GNU General Public License v3
 						</a>
-						.<br /> Cyril Parodi, 2018.
+						.<br /> Cyril Parodi, 2018 - 2019.
 					</p>
 				</div>
 			</div>

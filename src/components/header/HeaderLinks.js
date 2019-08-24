@@ -5,17 +5,17 @@ import { Link } from "react-router-dom"
 const HeaderLinks = props => (
 	<div className="Nav">
 		<Link className="ob-link" to="/" onClick={props.mobileClickHandler}>
-			à propos.
+			à propos
 		</Link>
 		<Link className="ob-link" to="/cv" onClick={props.mobileClickHandler}>
-			cv.
+			cv
 		</Link>
 		<Link
 			className="ob-link"
 			to="/projets"
 			onClick={props.mobileClickHandler}
 		>
-			projets.
+			projets
 		</Link>
 		<a
 			className="ob-link"
@@ -25,7 +25,7 @@ const HeaderLinks = props => (
 				props.mobileClickHandler()
 			}}
 		>
-			contact.
+			contact
 		</a>
 	</div>
 )

@@ -12,6 +12,7 @@ class About extends React.Component {
 		super()
 		this.state = {
 			showLoader: true,
+			data: props.data
 		}
 		this._isMounted = false
 	}
@@ -23,7 +24,7 @@ class About extends React.Component {
 		hdImg.onload = () => {
 			if (this._isMounted) {
 				this.setState({
-					showLoader: false,
+					showLoader: false
 				})
 			}
 		}
@@ -36,7 +37,7 @@ class About extends React.Component {
 			<section className="About isWrapper">
 				<div className="About isContainer">
 					<h2 className="About-title ob-title isPrimary">
-						{"bonjour !"}
+						{"en bref"}
 					</h2>
 					<div className="About-content">
 						<div className="Picture">
@@ -44,54 +45,42 @@ class About extends React.Component {
 								show={this.state.showLoader}
 								message={<Spinner />}
 								backgroundStyle={{
-									backgroundColor: "rgba(0,0,0,0)",
+									backgroundColor: "rgba(0,0,0,0)"
 								}}
 								hideContentOnLoad={true}
 							>
 								<img src={SelfPic} title="self-picture." />
 							</Loader>
 						</div>
-						<div className="Topic">
-							<ul className="Topic-bulletPoints">
-								<li>
-									{
-										<b>
-											Je m'appelle Cyril, j'ai 24 ans et
-											suis originaire d'Aix-en-Provence.
-										</b>
-									}
-								</li>
-								<li>
-									{
-										"J'ai la nationalité française et suis titulaire d'un permis B avec véhicule."
-									}
-								</li>
-								<li>
-									{
-										"Je suis diplômé d'ingénieur à POLYTECH Marseille depuis Décembre 2017."
-									}
-								</li>
-								<li>
-									{
-										"Je suis né avec ue souris dans les mains, j'avais déjà mon propre PC à l'age de 5 ans... un vieux PC IBM que mon père avait récupéré à son travail. À l'époque, le stockage n'était pas énorme... (2 HDD de 2Go) et nos fameuses clés USB étaient des disquettes 3,5\"."
-									}
-								</li>
-								<li>
-									{
-										"Mon père et moi aimions partager et découvrir l'informatique par le passé, mais aujourd'hui, c'est moi qui assure le SAV familial..."
-									}
-								</li>
-								<li>
-									{
-										"J'ai un certain amour pour les FOSS (Free and Open-Source Software) et traine sous Linux depuis que Microsoft ait décidé de me forcer ses MàJs sous Windows 8.1/10..."
-									}
-								</li>
-								<li>
-									{
-										"Tous mes PCs actuels et anciens ont un prénom... (Don't judge me !)"
-									}
-								</li>
-							</ul>
+						<div className="Me">
+							<div className="Profile">
+								<p>
+									<b>{"Nom: "}</b>
+									{this.state.data.name}
+								</p>
+								<p>
+									<b>{"Âge: "}</b>
+									{this.state.data.age}
+								</p>
+								<p>
+									<b>{"Lieu: "}</b>
+									{this.state.data.location}
+								</p>
+							</div>
+							<div className="Facts">
+								<p>
+									<b>{"Facts: "}</b>
+								</p>
+								<ul>
+									{this.state.data.facts.map(
+										(item, itemIndex) => {
+											return (
+												<li key={itemIndex}>{item}</li>
+											)
+										}
+									)}
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

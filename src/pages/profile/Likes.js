@@ -1,5 +1,7 @@
 import React from "react"
 import Loader from "react-loader-advanced"
+import { Spring } from "react-spring/renderprops"
+import VisibilitySensor from "react-visibility-sensor"
 
 /* COMPONENTS */
 import Spinner from "root/components/Spinner"
@@ -9,7 +11,7 @@ class Likes extends React.Component {
 		super()
 		this.state = {
 			data: props.data,
-			showLoader: true,
+			showLoader: true
 		}
 		this._isMounted = false
 	}
@@ -21,7 +23,7 @@ class Likes extends React.Component {
 		likeImg.onLoad = () => {
 			if (this._isMounted) {
 				this.setState({
-					showLoader: false,
+					showLoader: false
 				})
 			}
 		}
@@ -33,29 +35,47 @@ class Likes extends React.Component {
 		return (
 			<section className="Likes isWrapper">
 				<div className="Likes-container isContainer">
+					<h2 className="ob-title isPrimary">{"Ce que j'aime"}</h2>
 					<ul className="Likes-grid">
-						<div className="Like isStart">
-							<div className="Like onCover onStart">
-								<div className="LikeSpan isStart">
-									<h2 className="ob-title isPrimary">
-										{"j'aime."}
-									</h2>
-								</div>
-							</div>
-						</div>
 						{this.state.data.map((taste, tasteIndex) => {
 							return (
-								<div className="Like isEntry" key={tasteIndex}>
-									<div className="Like onCover">
-										<img
-											className="LikeImg"
-											src={taste.jpg}
-										/>
-										<div className="LikeSpan isEntry">
-											<li>{taste.name}</li>
-										</div>
-									</div>
-								</div>
+								<VisibilitySensor
+									partialVisibility
+									key={tasteIndex}
+								>
+									{({ isVisible }) => (
+										<Spring
+											config={{
+												duration: 300
+											}}
+											to={{
+												opacity: isVisible ? 1 : 0,
+												transform: isVisible
+													? "translateY(0)"
+													: "translateY(80px)"
+											}}
+										>
+											{props => (
+												<div
+													className="Like isEntry"
+													style={{ ...props }}
+												>
+													<div className="Like onCover">
+														<img
+															className="LikeImg"
+															src={taste.jpg}
+														/>
+														<div className="LikeSpan isEntry">
+															<li>
+																{taste.name}
+															</li>
+														</div>
+													</div>
+												</div>
+											)}
+										</Spring>
+									)}
+								</VisibilitySensor>
 							)
 						})}
 					</ul>
@@ -69,9 +89,9 @@ Likes.defaultProps = {
 	data: [
 		{
 			name: "<NONE>",
-			jpg: "<JPG>",
-		},
-	],
+			jpg: "<JPG>"
+		}
+	]
 }
 
 export default Likes

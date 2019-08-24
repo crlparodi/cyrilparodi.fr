@@ -21,15 +21,18 @@ class Projects extends React.Component {
 		return (
 			<section className="Projects isWrapper">
 				<ul className="Projects-list isContainer">
-					{this.state.data.map((project, pIndex) => {
-						return (
-							<ProjectEntry
-								key={pIndex}
-								data={project}
-								background={banners[pIndex]}
-							/>
-						)
-					})}
+					<h2 className="ob-title isPrimary">{"mes projets."}</h2>
+					<div>
+						{this.state.data.map((project, pIndex) => {
+							return (
+								<ProjectEntry
+									key={pIndex}
+									data={project}
+									background={banners[pIndex]}
+								/>
+							)
+						})}
+					</div>
 				</ul>
 			</section>
 		)

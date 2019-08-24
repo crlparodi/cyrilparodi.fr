@@ -1,5 +1,5 @@
 .FooterDesktop {
-    padding: 2rem 0;
+    padding: 1rem 0;
 
     @include xy-grid(horizontal, false);
     @include xy-gutters($gutter-position: top bottom);
@@ -8,6 +8,7 @@
         text-align: center;
 
         @include xy-cell(50%);
+        @include xy-grid(vertical, false);
 
         /* OVERRIDE */
         .ob-title {
@@ -22,11 +23,21 @@
             }
         }
 
-        /* OVERRIDE */
-        .ob-link {
-            margin: 0;
-            font-size: 3rem;
-            @include hoverDashesEffect();
+        & > div {
+            align-self: center;
+            @include xy-grid(vertical, false);
+            text-align: left;
+            /* OVERRIDE */
+            .ob-link {
+                margin: 0 5px;
+
+                svg {
+                    position: relative;
+                    top: 0.5rem;
+                    font-size: 2rem;
+                    margin-right: 10px;
+                }
+            }
         }
     }
 

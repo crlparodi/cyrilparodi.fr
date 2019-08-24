@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group"
 /* COMPONENTS */
 import Header from "root/components/Header"
 import Footer from "root/components/Footer"
+import Banner from "root/components/Banner"
 
 /* CONTAINERS */
 import ScrollToTop from "root/containers/ScrollToTop"
@@ -21,6 +22,7 @@ class Root extends React.Component {
 			<Router>
 				<div>
 					<Header />
+					<Banner />
 					<Route
 						render={({ location }) => (
 							<TransitionGroup className="RouterTransitionWrapper">
@@ -30,26 +32,22 @@ class Root extends React.Component {
 									timeout={400}
 									exit={false}
 								>
-									<ScrollToTop>
-										<Switch location={location}>
-											<Route
-												exact
-												path="/"
-												component={Profile}
-											/>
-											<Route
-												path="/cv"
-												component={CurriculumVitae}
-											/>
-											<Route
-												path="/projets"
-												component={Portfolio}
-											/>
-											<Route
-												component={() => <Error404 />}
-											/>
-										</Switch>
-									</ScrollToTop>
+									<Switch location={location}>
+										<Route
+											exact
+											path="/"
+											component={Profile}
+										/>
+										<Route
+											path="/cv"
+											component={CurriculumVitae}
+										/>
+										<Route
+											path="/projets"
+											component={Portfolio}
+										/>
+										<Route component={() => <Error404 />} />
+									</Switch>
 								</CSSTransition>
 							</TransitionGroup>
 						)}

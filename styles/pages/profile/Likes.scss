@@ -1,7 +1,9 @@
 .Likes {
-	background-color: color-map(background, darker);
+	background-color: color-map(background, secondary);
 
 	&-grid {
+		padding-top: 2rem;
+
 		@include breakpoint(medium) {
 			@include xy-grid(horizontal, true);
 		}
@@ -12,14 +14,17 @@
 		margin: 0;
 
 		.Like {
+			text-transform: capitalize;
 			@include breakpoint(medium) {
 				@include breakpoint(large) {
+					border: 1px solid color-map(theme, primary);
+					background-color: color-map(theme, primary);
 					@include xy-cell(4);
 					@include breakpoint(xxlarge) {
 						height: 240px;
 					}
 					@include breakpoint(large) {
-						height: 170px;
+						height: 160px;
 					}
 					@include flex();
 					@include flex-align(center, middle);
@@ -41,10 +46,6 @@
 							vertical-align: middle;
 							font-size: 140%;
 						}
-
-						.ob-title {
-							vertical-align: middle;
-						}
 					}
 				}
 				@include breakpoint(medium only) {
@@ -56,16 +57,11 @@
 						z-index: 1;
 						padding: 20px;
 						font-size: 140%;
-						background-color: rgba(0, 0, 0, 0.5);
+						color: color-map(background, primary);
+						background-color: rgba(0, 0, 0, 0.3);
 
 						li {
 							vertical-align: bottom;
-						}
-
-						.ob-title {
-							vertical-align: bottom;
-							font-size: 100%;
-							font-size: 160%;
 						}
 					}
 				}
@@ -73,39 +69,44 @@
 				margin-bottom: 2rem;
 
 				&:nth-child(n) {
-					-ms-transform: rotate(3deg); /* IE 9 */
-					-webkit-transform: rotate(3deg); /* Safari */
-					transform: rotate(3deg);
-					.Like.onCover {
-						@include breakpoint(medium only) {
+					@include breakpoint(large) {
+						-ms-transform: rotate(3deg); /* IE 9 */
+						-webkit-transform: rotate(3deg); /* Safari */
+						transform: rotate(3deg);
+						.Like.onCover {
+							-ms-transform: rotate(-3deg); /* IE 9 */
+							-webkit-transform: rotate(-3deg); /* Safari */
+							transform: rotate(-3deg);
+						}
+					}
+					@include breakpoint(medium only) {
+						border: none;
+						.Like.onCover {
 							.LikeSpan {
 								text-align: left;
-								&.isStart {
-									.ob-title {
-										text-align: inherit;
-									}
-								}
 							}
 						}
-						-ms-transform: rotate(-3deg); /* IE 9 */
-						-webkit-transform: rotate(-3deg); /* Safari */
-						transform: rotate(-3deg);
 					}
 				}
 
 				&:nth-child(2n) {
-					-ms-transform: rotate(-3deg); /* IE 9 */
-					-webkit-transform: rotate(-3deg); /* Safari */
-					transform: rotate(-3deg);
-					.Like.onCover {
-						@include breakpoint(medium only) {
+					@include breakpoint(large){
+						-ms-transform: rotate(-3deg); /* IE 9 */
+						-webkit-transform: rotate(-3deg); /* Safari */
+						transform: rotate(-3deg);
+						.Like.onCover {
+							-ms-transform: rotate(3deg); /* IE 9 */
+							-webkit-transform: rotate(3deg); /* Safari */
+							transform: rotate(3deg);
+						}
+					}
+					@include breakpoint(medium only) {
+						border: none;
+						.Like.onCover {
 							.LikeSpan {
 								text-align: right;
 							}
 						}
-						-ms-transform: rotate(3deg); /* IE 9 */
-						-webkit-transform: rotate(3deg); /* Safari */
-						transform: rotate(3deg);
 					}
 				}
 			}
@@ -113,52 +114,25 @@
 				@include flex();
 
 				height: 80px;
-				margin: 0 0.5rem 1.5rem 0.5rem;
+				margin: 0 0.5rem 0 0.5rem;
 
 				&.onCover {
 					.LikeSpan {
 						z-index: 1;
 						padding: 20px;
-						background-color: rgba(0, 0, 0, 0.5);
+						color: color-map(background, primary);
+						background-color: rgba(0, 0, 0, 0.3);
 
 						li {
 							vertical-align: middle;
 							text-align: right;
 							font-size: 120%;
 						}
-
-						.ob-title {
-							vertical-align: middle;
-							text-align: right;
-						}
-					}
-				}
-
-				&:nth-child(n) {
-					-ms-transform: rotate(1.2deg); /* IE 9 */
-					-webkit-transform: rotate(1.2deg); /* Safari */
-					transform: rotate(1.2deg);
-					.Like.onCover {
-						-ms-transform: rotate(-1.2deg); /* IE 9 */
-						-webkit-transform: rotate(-1.2deg); /* Safari */
-						transform: rotate(-1.2deg);
-					}
-				}
-
-				&:nth-child(2n) {
-					-ms-transform: rotate(-1.2deg); /* IE 9 */
-					-webkit-transform: rotate(-1.2deg); /* Safari */
-					transform: rotate(-1.2deg);
-					.Like.onCover {
-						-ms-transform: rotate(1.2deg); /* IE 9 */
-						-webkit-transform: rotate(1.2deg); /* Safari */
-						transform: rotate(1.2deg);
 					}
 				}
 			}
 
-			border: 1px solid color-map(theme, primary);
-			background-color: color-map(theme, primary);
+
 
 			&.onCover {
 				position: relative;
@@ -168,7 +142,7 @@
 				width: 100%;
 
 				color: color-map(text);
-				background-color: color-map(background, darker);
+				background-color: color-map(background, secondary);
 
 				.LikeImg {
 					position: absolute;

@@ -1,161 +1,118 @@
 .Experiences {
-	background-color: color-map(background, darker);
-	&-content {
-		@include xy-grid(vertical, false);
-		@include breakpoint(medium) {
-			padding-top: 3rem;
-		}
-		.Fields {
-			justify-content: center;
-			list-style-type: none;
-			margin-left: 0;
+    background-color: color-map(background, secondary);
+    &-content {
+        @include xy-grid(vertical, false);
+        @include breakpoint(medium) {
+            padding-top: 3rem;
+        }
+        .Fields {
+            justify-content: center;
+            list-style-type: none;
+            margin-left: 0;
 
-			@include breakpoint(medium) {
-				@include xy-grid(horizontal, false);
-			}
-			@include breakpoint(small only) {
-				@include xy-grid(vertical, false);
-			}
+            @include breakpoint(medium) {
+                @include xy-grid(horizontal, false);
+            }
+            @include breakpoint(small only) {
+                @include xy-grid(vertical, false);
+            }
 
-			&-entry {
-				margin: 1rem 1rem;
-				border: 1px solid color-map(theme, primary);
-				background-color: color-map(theme, primary);
+            &-entry {
+                font-size: 120%;
+                padding: 10px 0;
+                text-align: center;
+                color: color-map(text);
+                border-bottom: 1px solid color-map(text);
 
-				-ms-transform: rotate(1.25deg);
-				-webkit-transform: rotate(1.25deg);
-				transform: rotate(1.25deg);
+                transition: 0.3s all ease;
+                -webkit-transition: 0.3s all ease;
 
-				transition: 0.3s all ease;
-				-webkit-transition: 0.3s all ease;
+                @include breakpoint(medium down) {
+                    @include xy-cell(auto);
 
-				@include breakpoint(medium only) {
-					@include xy-cell-base(grow);
-				}
-				@include breakpoint(large) {
-					@include xy-cell(4);
-				}
+                    & > li {
+                        height: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+                @include breakpoint(large) {
+                    @include xy-cell(4);
+                }
 
-				&:hover,
-				&:focus,
-				&:active {
-					outline: none;
-					border: 1px solid color-map(theme, secondary);
-					background-color: color-map(theme, secondary);
+                &:hover,
+                &:focus,
+                &:active {
+                    outline: none;
+                    color: color-map(theme, primary);
+                    border-bottom: 1px solid color-map(theme, primary);
+                }
+            }
+        }
 
-					-ms-transform: rotate(-1.25deg);
-					-webkit-transform: rotate(-1.25deg);
-					transform: rotate(-1.25deg);
+        .Jobs {
+            margin: 2.5rem 0;
 
-					.onCover {
-						transition: 0.3s all ease;
-						-webkit-transition: 0.3s all ease;
-						color: color-map(theme, secondary);
-						border: 1px solid color-map(theme, secondary);
+            &-entries {
+                transition: 0.3s all ease;
+                -webkit-transition: 0.3s all ease;
 
-						-ms-transform: rotate(1.25deg);
-						-webkit-transform: rotate(1.25deg);
-						transform: rotate(1.25deg);
-					}
-				}
+                &.isHidden {
+                    display: none;
+                }
 
-				.onCover {
-					-ms-transform: rotate(-1.25deg);
-					-webkit-transform: rotate(-1.25deg);
-					transform: rotate(-1.25deg);
+                &.isVisible {
+                    display: block;
+                }
 
-					margin: unset;
-					padding: 0.5rem 0;
-					color: color-map(theme, primary);
-					border: 1px solid color-map(theme, primary);
-					background-color: color-map(background, darker);
-					z-index: 0;
-					position: relative;
-					transition: 0.3s all ease;
-					-webkit-transition: 0.3s all ease;
-					cursor: pointer;
-					font-family: "Montserrat", sans-serif;
-					font-weight: 700;
-				}
+                .Entry {
+                    margin-bottom: 2rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid color-map(neutral, grey-500);
+                    &-dates,
+                    &-name {
+                        font-family: font-map(title), sans-serif;
+                    }
 
-				&:nth-child(2n) {
-					-ms-transform: rotate(-1.25deg);
-					-webkit-transform: rotate(-1.25deg);
-					transform: rotate(-1.25deg);
+                    &-dates {
+                        margin-bottom: 0;
+                    }
 
-					.onCover {
-						-ms-transform: rotate(1.25deg);
-						-webkit-transform: rotate(1.25deg);
-						transform: rotate(1.25deg);
-					}
+                    &-name {
+                        font-weight: 700;
+                        font-size: 120%;
+                        margin-bottom: 0;
+                    }
 
-					&:hover,
-					&:focus,
-					&:active {
-						-ms-transform: rotate(1.25deg);
-						-webkit-transform: rotate(1.25deg);
-						transform: rotate(1.25deg);
+                    &-company {
+                        font-weight: 700;
+                        font-size: 120%;
+                    }
 
-						.onCover {
-							-ms-transform: rotate(-1.25deg);
-							-webkit-transform: rotate(-1.25deg);
-							transform: rotate(-1.25deg);
-						}
-					}
-				}
-			}
-		}
+                    &-description {
+                        .Para {
+                            margin-bottom: 0.3rem;
 
-		.Jobs {
-			margin: 2.5rem 0;
+                            &:nth-child(1) {
+                                font-weight: 700;
+                            }
 
-			&-entries {
-				transition: 0.3s all ease;
-				-webkit-transition: 0.3s all ease;
+                            @include breakpoint(medium down) {
+                                display: none;
 
-				&.isHidden {
-					display: none;
-				}
+                                &:first-child {
+                                    display: list-item;
+                                }
+                            }
+                        }
+                    }
 
-				&.isVisible {
-					display: block;
-				}
-
-				.Entry {
-					margin-bottom: 2rem;
-					padding-bottom: 1rem;
-					border-bottom: 1px solid color-map(neutral, grey-500);
-					&-dates,
-					&-name {
-						font-family: "Montserrat", sans-serif;
-					}
-
-					&-dates {
-						margin-bottom: 0;
-					}
-
-					&-name {
-						font-weight: 700;
-						font-size: 120%;
-						margin-bottom: 0;
-					}
-
-					&-company {
-						font-weight: 700;
-						font-size: 120%;
-					}
-
-					&-description {
-						.Para {
-							margin-bottom: 0.3rem;
-
-							&:nth-child(1) {
-								font-weight: 700;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
 }

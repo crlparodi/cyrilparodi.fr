@@ -5,7 +5,7 @@ class Experiences extends React.Component {
 		super()
 		this.state = {
 			data: props.data,
-			index: 0,
+			index: 0
 		}
 	}
 	indexCheck(index) {
@@ -30,17 +30,13 @@ class Experiences extends React.Component {
 										className="Fields-entry"
 										href="javascript:void(0)"
 										key={fieldIndex}
+										onClick={() => {
+											this.setState({
+												index: fieldIndex
+											})
+										}}
 									>
-										<div
-											className="onCover text-center"
-											onClick={() => {
-												this.setState({
-													index: fieldIndex,
-												})
-											}}
-										>
-											<li>{data.field}</li>
-										</div>
+										<li>{data.field}</li>
 									</a>
 								)
 							})}
@@ -71,29 +67,27 @@ class Experiences extends React.Component {
 														{job.name}
 													</h6>
 													<p className="Entry-company">
-														{"chez" +
-															" " +
-															job.company}
+														{job.company}
 													</p>
-													<div className="Entry-description">
+													<ul className="Entry-description">
 														{job.description.map(
 															(
 																para,
-																paraIndex,
+																paraIndex
 															) => {
 																return (
-																	<p
+																	<li
 																		className="Para"
 																		key={
 																			paraIndex
 																		}
 																	>
 																		{para}
-																	</p>
+																	</li>
 																)
-															},
+															}
 														)}
-													</div>
+													</ul>
 												</div>
 											)
 										})}
@@ -118,11 +112,11 @@ Experiences.defaultProps = {
 					start: "<DATE_DEBUT>",
 					end: "<DATE_FIN>",
 					company: "<ENTREPRISE_SOCIETE>",
-					description: ["<DESCRIPTION>", "<DESCRIPTION>"],
-				},
-			],
-		},
-	],
+					description: ["<DESCRIPTION>", "<DESCRIPTION>"]
+				}
+			]
+		}
+	]
 }
 
 export default Experiences

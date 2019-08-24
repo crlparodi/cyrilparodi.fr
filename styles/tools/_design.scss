@@ -1,10 +1,12 @@
 /* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Barlow:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900");
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap&subset=latin-ext");
 
 $font-map: (
-    title: "Montserrat",
-    paragraph: "Work Sans"
+    title: "Barlow",
+    paragraph: "Barlow"
 ) !default;
 
 @function font-map($font) {
@@ -17,22 +19,21 @@ $font-map: (
 
 /* COLORS */
 $color-map: (
-    text: hsl(0, 0%, 95%) /* ANTI-FLASH WHITE */,
+    text: #333333,
     background: (
-        dark: hsl(202, 100%, 11%) /* MAASTRICHT BLUE */,
-        darker: hsl(204, 100%, 4%) /* RICH BLACK */
+        primary: #ffffff,
+        secondary: #ebfafa
     ),
     theme: (
-        primary: hsl(183, 100%, 50%) /* SPANISH SKY BLUE */,
-        secondary: hsl(24, 100%, 43%) /* PERSIMMON */
+        primary: #25ced1
     ),
     neutral: (
-        grey-50: hsl(204, 15%, 94%) /* MATERIAL BLUE GREY 50 */,
-        grey-100: hsl(198, 16%, 84%) /* MATERIAL BLUE GREY 100 */,
-        grey-300: hsl(200, 16%, 62%) /* MATERIAL BLUE GREY 300 */,
-        grey-500: hsl(200, 18%, 46%) /* MATERIAL BLUE GREY 500 */,
-        grey-700: hsl(199, 18%, 33%) /* MATERIAL BLUE GREY 700 */,
-        grey-900: hsl(200, 19%, 18%) /* MATERIAL BLUE GREY 900 */
+        grey-50: hsl(204, 15%, 94%),
+        grey-100: hsl(198, 16%, 84%),
+        grey-300: hsl(200, 16%, 62%),
+        grey-500: hsl(200, 18%, 46%),
+        grey-700: hsl(199, 18%, 33%),
+        grey-900: hsl(200, 19%, 18%)
     )
 ) !default;
 

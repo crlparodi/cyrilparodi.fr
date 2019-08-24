@@ -5,7 +5,7 @@ class HeaderToggleButton extends React.Component {
 	render() {
 		return (
 			<div
-				className="HeaderToggle cell shrink"
+				className={"HeaderToggle cell shrink"}
 				onClick={this.props.drawerClickHandler}
 			>
 				<i className="Toggle fas fa-bars" aria-hidden="true" />
@@ -15,7 +15,7 @@ class HeaderToggleButton extends React.Component {
 }
 
 HeaderToggleButton.propTypes = {
-	drawerClickHandler: PropTypes.func,
+	drawerClickHandler: PropTypes.func
 }
 
 export default HeaderToggleButton
