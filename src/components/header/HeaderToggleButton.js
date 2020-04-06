@@ -1,6 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+/* MODULES */
+import { FontAwesomeIcon } from 'modules/@fortawesome/react-fontawesome'
+import {
+	faBars
+} from 'modules/@fortawesome/free-solid-svg-icons'
+
 class HeaderToggleButton extends React.Component {
 	render() {
 		return (
@@ -8,7 +14,7 @@ class HeaderToggleButton extends React.Component {
 				className={"HeaderToggle cell shrink"}
 				onClick={this.props.drawerClickHandler}
 			>
-				<i className="Toggle fas fa-bars" aria-hidden="true" />
+				<FontAwesomeIcon icon={faBars} />
 			</div>
 		)
 	}

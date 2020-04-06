@@ -1,10 +1,10 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const webpack = require("webpack") //to access built-in plugins
-const path = require("path")
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack"); //to access built-in plugins
+const path = require("path");
 
 const isProduction =
-	process.argv[process.argv.indexOf("--mode") + 1] === "production"
+	process.argv[process.argv.indexOf("--mode") + 1] === "production";
 
 module.exports = {
 	entry: "./src/index.js",
@@ -27,7 +27,10 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: "babel-loader"
+				loader: "babel-loader",
+				query: {
+					presets: ["@babel/env", "@babel/react"]
+				}
 			},
 			{
 				test: /\.s(a|c)ss$/,
@@ -63,5 +66,8 @@ module.exports = {
 	devServer: {
 		contentBase: path.join(__dirname, "/public/"),
 		historyApiFallback: true
+	},
+	watchOptions: {
+		ignored: /node_modules/
 	}
-}
+};

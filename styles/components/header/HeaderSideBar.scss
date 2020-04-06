@@ -1,44 +1,48 @@
 .SideBar {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: color-map(background, primary);
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: color-map(bg);
 
-    transform: translateY(-120%);
-    transition: transform 0.3s ease-out;
+	transform: translateY(-120%);
+	transition: transform 0.3s ease-out;
 
-    @include breakpoint(large) {
-        display: none;
-    }
+	@include breakpoint(large) {
+		display: none;
+	}
 
-    &.isOpen {
-        transform: translateY(0);
-    }
+	&.isOpen {
+		transform: translateY(0);
+	}
 
-    .Nav {
-        height: auto;
-        padding: 64px 64px 32px 64px;
-        display: flex;
-        flex-direction: column;
+	.Nav {
+		height: auto;
+		padding: 95px 64px 32px 64px;
+		display: flex;
+		flex-direction: column;
 
-        @include breakpoint(small only) {
-            padding: 64px 36px 32px 36px;
-        }
+		@include breakpoint(small only) {
+			padding: 95px 32px 32px 32px;
+		}
 
-        .ob-link {
-            /* Override */
-            width: 40%;
-            border-bottom: 1px solid color-map(neutral, grey-300);
-            font-family: font-map(title), sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
+		.ob-link {
+			/* Override */
+			max-width: 20rem;
+			border-bottom: 1px solid color-map(txt);
+			font-family: font-map(title), sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			@include breakpoint(small only) {
+				width: 100%;
+				text-align: center;
+			}
 
-            @include breakpoint(small only) {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    }
+			svg {
+				display: none;
+			}
+		}
+	}
 }

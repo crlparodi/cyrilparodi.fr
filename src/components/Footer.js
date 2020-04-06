@@ -1,50 +1,60 @@
-import React from "modules/react"
+import React from "react"
 
-/* COMPONENTS */
-import FooterDesktop from "./footer/FooterDesktop"
-import FooterTouch from "./footer/FooterTouch"
+/* PROP-TYPES */
+import * as PropSets from "root/prop-types/Resume";
+
+/* MEDIAS */
+import SocialMedia from "root/components/SocialMedia";
 
 class Footer extends React.Component {
-	constructor() {
-		super()
-		this.state = {
-			footerComponent: null,
-		}
+	constructor(props) {
+		super(props)
+		this.data = props.data;
 	}
-	componentDidMount() {
-		this.footerScreenAdapter()
-		window.addEventListener("resize", this.footerScreenAdapter.bind(this))
-	}
-	footerScreenAdapter() {
-		if (window.innerWidth <= 1023) {
-			this.setState({ footerComponent: <FooterTouch /> })
-		}
-		if (window.innerWidth > 1023) {
-			this.setState({ footerComponent: <FooterDesktop /> })
-		}
-	}
+
 	render() {
 		return (
-			<div className="Footer">
-				<div className="Footer-container isContainer">
-					<div className="Footer-rollback">
-						<span className="Separator" />
-						<div className="ScrollToTop">
-							<a
-								onClick={() => {
-									window.scrollTo(0, 0)
-								}}
-							>
-								<i className="fas fa-angle-double-up fa-5x" />
-							</a>
-						</div>
-						<span className="Separator" />
+			<div className="Footer isWrapper">
+				<div className="Footer isContainer">
+					<div className="Footer-contacts">
+						<SocialMedia
+							email={this.data.email}
+							profiles={this.data.profiles}
+						/>
 					</div>
-					{this.state.footerComponent}
+					<div className="Footer-misc">
+					<p>
+						...powered by{" "}
+						<a
+							href="https://reactjs.org/"
+							className="ob-link"
+							style={{ textDecoration: "underline" }}
+						>
+							React.js
+						</a>
+						.
+						<br />
+						Ce site est sous licence{" "}
+						<a
+							href="https://www.gnu.org/licenses/gpl-3.0"
+							className="ob-link"
+							style={{ textDecoration: "underline" }}
+						>
+							GNU General Public License v3
+						</a>
+						.
+						<br />
+						Cyril Parodi, 2018 - 2020.
+					</p>
+				</div>
 				</div>
 			</div>
 		)
 	}
 }
+
+Footer.propTypes = {
+	data: PropSets.basics
+};
 
 export default Footer

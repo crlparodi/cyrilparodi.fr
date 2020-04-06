@@ -1,12 +1,6 @@
-<img src="./img/project-mii-logo.png" width=500>
+# cyrilparodi.fr
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-
-###### ...by Cyril PARODI
-
-Voici le code source ayant permis de construire le site **http://cyrilparodi.fr**.
-
-Le site est construit sur une base React.js, la matérialisation en composants du site se fait pour chaque section. Vous pouvez retrouver ici les différents élements de conception.
+Code source du site
 
 ## Construction du site
 
@@ -51,15 +45,11 @@ Le site est construit sur une base React.js, la matérialisation en composants d
 
 ## Installer les paquets
 
-`yarn` ou `npm install`
+`yarn`
 
 ## Lancer le serveur de développement
 
 `yarn start`
-
-## Charte graphique et démonstrations
-
-La charte graphique du site ainsi que toutes les démonstrations faites sur ce dernier, sont disponibles sur [codepen.io/crlparodi](codepen.io/crlparodi).
 
 ## Licence d'utilisation
 

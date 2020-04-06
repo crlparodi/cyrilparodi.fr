@@ -1,12 +1,8 @@
 .HeaderToggle {
-    margin: 0 20px 0 20px;
+    margin: auto 20px;
     font-size: 2rem;
 
     cursor: pointer;
-
-    @include breakpoint(small only) {
-        margin: 0 20px 0 10px;
-    }
 
     @include breakpoint(large) {
         display: none;

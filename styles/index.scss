@@ -10,136 +10,148 @@
 
 /* 3 COMPONENTS AND PAGES STYLE IMPORT */
 @import "./components/all";
-@import "./pages/all";
+@import "./navigation/all";
 
 body,
 html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 
-    color: color-map(text);
-    background-color: color-map(background, primary);
+	color: color-map(txt);
+	background-color: color-map(bg);
 
-    font-family: font-map(paragraph), sans-serif;
+	font-family: font-map(paragraph), sans-serif;
 
-    /* FOUNDATION UTILITIES OVERRIDE */
-
-    // TO REMOVE SOON
-
-    .grid-container {
-        max-width: 62.5rem;
-    }
-
-    /* THEME CONFIGURATIONS
+	/* THEME CONFIGURATIONS
 	 */
 
-    /* CSS CUSTOM DECORATIVE OBJECTS
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: font-map(title), sans-serif;
+	}
+
+	/* CSS CUSTOM DECORATIVE OBJECTS
 	 */
 
-    .ob-title {
-        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
+	.ob-title {
+		/* H1, H2 */
+		font-family: font-map(title), sans-serif; // it overrides the foundation font rule
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-weight: 700;
 
-        @include breakpoint(large) {
-            font-size: 300%;
-        }
-        @include breakpoint(medium only) {
-            font-size: 200%;
-        }
-        @include breakpoint(small only) {
-            font-size: 150%;
-        }
+		@include breakpoint(large) {
+			font-size: 3rem;
+		}
+		@include breakpoint(medium only) {
+			font-size: 2rem;
+		}
+		@include breakpoint(small only) {
+			font-size: 1.5rem;
+		}
 
-        &.isPrimary {
-            position: relative;
-            margin-bottom: 3rem;
+		&.isMono {
+			position: relative;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			font-family: font-map(mono), monospace;
+			border-bottom: 2px solid color-map(txt);
+			word-wrap: break-word;
 
-            font-weight: 700;
-            text-transform: capitalize;
+			&::before {
+				content: "#>";
+			}
 
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: calc(100% + 15px);
-                width: 100px;
-                height: 5px;
-                background-color: color-map(theme, primary);
+			&::after {
+				content: "_";
+			}
+		}
+	}
 
-                /* LEFT or RIGHT parameter to specify for each title */
-            }
-        }
+	.ob-subtitle {
+		/* H3 */
+		margin-bottom: 0.5rem;
+		font-family: font-map(title), sans-serif; // it overrides the foundation font rule
+		font-weight: 700;
+		text-transform: capitalize;
 
-        &.isSecondary {
-            margin-bottom: 3rem;
-            font-weight: 700;
+		@include breakpoint(large) {
+			font-size: 2rem;
+		}
+		@include breakpoint(medium only) {
+			font-size: 1.5rem;
+		}
+		@include breakpoint(small only) {
+			font-size: 1.3rem;
+		}
+	}
 
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 120%;
-                width: 100px;
-                height: 5px;
-                background-color: color-map(theme, secondary);
+	.ob-link {
+		color: inherit;
+		-webkit-transition: color 0.3s ease-out;
+		transition: color 0.3s ease-out;
 
-                /* LEFT or RIGHT parameter to specify for each title */
-            }
-        }
-    }
+		&:hover,
+		&:focus {
+			color: color-map(acc);
+		}
 
-    .ob-subtitle {
-        /* H3 */
-        margin-bottom: 0.5rem;
-        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
-        font-weight: 700;
-        font-size: 120%;
+		&.isFromHeader  {
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 1px dotted color-map(acc);
+				color: color-map(acc);
+			}
+		}
+	}
 
-        @include breakpoint(small only) {
-            font-size: 110%;
-        }
-    }
+	.ob-button {
+		@include button(false, color-map(acc), black, black, solid);
+		margin: 0;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: font-map(title);
+		font-size: 110% !important;
+		font-weight: 700;
 
-    .ob-link {
-        color: inherit;
-        -webkit-transition: color 0.3s ease !important;
-        transition: color 0.3s ease !important;
+		&:hover,
+		&:focus,
+		&:active {
+			color: color-map(txt);
+			background-color: color-map(bg2);
+		}
+	}
 
-        &:hover,
-        &:focus {
-            color: color-map(theme, primary);
-            -webkit-transition: color 0.3s ease !important;
-            transition: color 0.3s ease !important;
-        }
-    }
+	/* SPECIAL PARAMETERS */
 
-    .ob-button {
-        @include button(
-            false,
-            color-map(theme, primary),
-            color-map(neutral, grey-300),
-            color-map(background, primary),
-            solid
-        );
-        font-size: 110% !important;
-        font-weight: 700;
-        margin-right: 10px;
-    }
+	.isContainer {
+		@include xy-grid-container();
+		max-width: 71.25rem;
+		height: 100%;
 
-    /* SPECIAL PARAMETERS */
+		@include breakpoint(medium only) {
+			max-width: 42.5rem;
+		}
+	}
 
-    .isContainer {
-        @include xy-grid-container();
-        max-width: 62.5rem;
-    }
+	/* CUSTOM SECTIONS */
 
-    /* CUSTOM SECTIONS */
+	.isWrapper {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 
-    .isWrapper {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
+		@include breakpoint(small only) {
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
+	}
 }

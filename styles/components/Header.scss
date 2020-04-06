@@ -1,77 +1,76 @@
 .Header {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 64px;
-    line-height: 64px;
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	height: 95px;
+	padding: 10px 0;
 
-    .Content-logo {
-        margin: 0 0 0 10px;
-        font-size: 1.2rem;
-        font-family: font-map(title), sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
+	&.isOnTop {
+		transition: background-color 0.5s ease-out;
+	}
 
-        @include breakpoint(medium down) {
-            text-align: right;
-            margin: 0 20px 0 0;
-        }
-    }
+	&.isOnCover {
+		background-color: rgba($color: #000000, $alpha: 0.8);
+		-webkit-transition: background-color 0.5s ease-out;
+		-moz-transition: background-color 0.5s ease-out;
+		transition: background-color 0.5s ease-out;
+	}
 
-    &.isOnTop {
-        transition: background-color 0.3s ease;
+	.Content-logo {
+		display: flex;
 
-        .Content {
-            &-logo {
-                opacity: 0;
-                transition: opacity 0.3s ease;
-            }
+		@include breakpoint(large only) {
+			margin: 0 0 0 10px;
+		}
 
-            .HeaderDesktop > .Nav > .ob-link,
-            .HeaderToggle > .Toggle {
-                color: color-map(background, primary);
-                transition: color 0.3s ease;
-            }
-        }
-        .SideBar {
-            background-color: color-map(theme, primary);
+		@include breakpoint(medium down) {
+			justify-content: flex-end;
+			margin: 0 10px 0 0;
+		}
 
-            .Nav > .ob-link {
-                color: color-map(background, primary);
-                border-bottom: 1px solid color-map(neutral, grey-50);
-            }
-        }
-    }
+		.Logo {
+			vertical-align: middle;
+			margin: auto 0;
 
-    &.isOnCover {
-        background-color: color-map(background, primary);
-        transition: background-color 0.3s ease;
+			.ob-link {
+				height: min-content;
+				font-family: font-map(mono), monospace;
+				font-size: 1.2rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 5px;
+				padding: 7px 10px 5px;
+				border: 1px solid color-map(txt);
+				-webkit-transition: all 0.5s ease-out;
+				-moz-transition: all 0.5s ease-out;
+				transition: all 0.5s ease-out;
+				display: flex;
+				align-items: center;
 
-        .Content {
-            &-logo {
-                opacity: 1;
-                transition: opacity 0.3s ease;
-            }
+				&:hover,
+				&:focus,
+				&:active {
+					color: color-map(acc);
+					border-color: color-map(acc);
+				}
+			}
+		}
+	}
 
-            .HeaderDesktop > .Nav > .ob-link,
-            .HeaderToggle > .Toggle {
-                color: color-map(text);
-                -webkit-transition: color 0.3s ease;
-                transition: color 0.3s ease;
+	.Content {
+		position: relative;
+		z-index: 30;
 
-                &:hover,
-                &:focus,
-                &:active {
-                    color: color-map(theme, primary);
-                    -webkit-transition: color 0.3s ease;
-                    transition: color 0.3s ease;
-                }
-            }
-        }
-    }
+		.Nav > .ob-link,
+		.HeaderToggle > .Toggle {
+			-webkit-transition: color 0.5s ease-out;
+			transition: color 0.5s ease-out;
 
-    .Content {
-        position: relative;
-        z-index: 30;
-    }
+			&:hover,
+			&:focus,
+			&:active {
+				color: color-map(acc);
+			}
+		}
+	}
 }

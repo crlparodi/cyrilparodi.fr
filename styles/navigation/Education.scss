@@ -1,0 +1,121 @@
+.Education {
+	&-entries {
+		@include breakpoint(large) {
+			padding-top: 3rem;
+		}
+		@include breakpoint(medium down) {
+			margin-left: 0;
+			list-style-type: none;
+		}
+		.Entry {
+			padding-bottom: 1rem;
+
+			&-L,
+			&-R {
+				.ob-subtitle {
+					font-size: 1.2rem;
+				}
+			}
+
+			@include breakpoint(large) {
+				@include xy-grid(horizontal, false);
+				&-L {
+					@include xy-cell(3);
+					padding-left: 5px;
+
+					.Year {
+						font-size: 1.2rem;
+					}
+				}
+				&-R {
+					@include xy-cell(auto);
+					margin-bottom: 1.5rem;
+
+					&-Bottom {
+						@include xy-grid(horizontal, false);
+
+						svg {
+							position: relative;
+							// top: 5px;
+							// margin-right: 10px;
+							color: color-map(acc);
+						}
+						.Locations {
+							font-weight: 700;
+							color: color-map(acc);
+							padding-right: 10px;
+						}
+						.Links {
+							/* Override */
+							.ob-link {
+								text-decoration: underline;
+								// margin-right: 5px;
+							}
+						}
+					}
+				}
+			}
+			@include breakpoint(medium down) {
+				padding: 0;
+				margin-bottom: 1rem;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+				&-R {
+					.Description,
+					.Links {
+						display: none;
+					}
+
+					&-Bottom {
+						@include xy-grid(horizontal, false);
+						svg {
+							position: relative;
+							top: 5px;
+							margin-right: 5px;
+							color: color-map(acc);
+						}
+						.Locations {
+							font-weight: 700;
+							color: color-map(acc);
+						}
+					}
+				}
+
+				&:after {
+					display: none;
+				}
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+
+			&::before {
+				position: relative;
+				content: "";
+				width: 5px;
+				background: color-map(acc);
+				top: 25px;
+			}
+
+			&::after {
+				position: relative;
+				content: "";
+				width: 20px;
+				height: 20px;
+				border: 5px solid color-map(acc);
+				border-radius: 50%;
+				background: color-map(gb);
+				left: calc(-100% + 12.5px);
+				top: 5px;
+			}
+
+			&:last-child {
+				&:before {
+					color: color-map(gb);
+					width: 5px;
+					background: unset;
+				}
+			}
+		}
+	}
+}

@@ -8,7 +8,7 @@ class Backdrop extends React.Component {
 			backdropClasses: "",
 		}
 	}
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		this.backdropState(props.show)
 	}
 	backdropState(prop) {

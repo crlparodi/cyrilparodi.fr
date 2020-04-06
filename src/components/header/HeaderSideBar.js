@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 /* COMPONENTS */
-import HeaderLinks from "root/components/header/HeaderLinks"
+import HeaderNav from "root/components/header/HeaderNav"
 
 class HeaderSideBar extends React.Component {
 	constructor() {
@@ -12,7 +12,7 @@ class HeaderSideBar extends React.Component {
 		}
 	}
 
-	componentWillReceiveProps(props) {
+	UNSAFE_componentWillReceiveProps(props) {
 		this.headerDrawerState(props.show)
 	}
 
@@ -26,7 +26,7 @@ class HeaderSideBar extends React.Component {
 	render() {
 		return (
 			<div className={"SideBar" + this.state.sideBarClasses}>
-				<HeaderLinks mobileClickHandler={this.props.clickHandler} />
+				<HeaderNav navHandler={this.props.navHandler} mobileClickHandler={this.props.clickHandler} />
 			</div>
 		)
 	}
@@ -34,6 +34,7 @@ class HeaderSideBar extends React.Component {
 
 HeaderSideBar.propTypes = {
 	show: PropTypes.bool,
+	navHandler: PropTypes.func,
 	clickHandler: PropTypes.func,
 }
 

@@ -1,44 +1,53 @@
 .Footer {
-    &-rollback {
-        @include xy-grid(horizontal, false);
+	background-color: color-map(bg2);
 
-        .Separator {
-            margin: auto 1rem;
+	@include breakpoint(large) {
+		@include xy-grid(horizontal, false);
+	}
+	@include breakpoint(medium down) {
+		@include xy-grid(vertical, false);
+	}
 
-            display: block;
-            border: none;
-            height: 1px;
-            background: -webkit-gradient(
-                radial,
-                50% 50%,
-                0,
-                50% 50%,
-                350,
-                from(color-map(text)),
-                to(rgba(255, 255, 255, 0))
-            );
+	&-contacts {
+		text-align: center;
+		margin-bottom: 1rem;
 
-            @include xy-cell(auto);
-            @include xy-gutters($gutter-position: left right);
-        }
+		@include breakpoint(large) {
+			@include xy-cell(6);
+			align-self: center;
+		}
+		@include breakpoint(medium down) {
+			@include xy-cell(12);
+		}
 
-        .ScrollToTop {
-            padding-top: 1rem;
-            text-align: center;
+		svg {
+			border: 1px solid color-map(txt);
+			border-radius: 50%;
+			padding: 10px;
+			margin: 0 10px;
+			width: 3.5rem !important;
+			font-size: 3.5rem;
+			-webkit-transition: border 0.5s ease-out;
+			-moz-transition: border 0.5s ease-out;
+			transition: border 0.5s ease-out;
 
-            @include xy-cell(shrink);
-            @include xy-gutters($gutter-position: left right);
+			&:hover,
+			&:focus,
+			&:active {
+				border-color: color-map(acc);
+			}
+		}
+	}
 
-            a {
-                color: color-map(text);
-                transition: color 0.3s ease;
-                &:hover {
-                    color: color-map(theme, primary);
-                }
-                &:focus {
-                    color: color-map(theme, primary);
-                }
-            }
-        }
-    }
+	&-misc  {
+		text-align: center;
+
+		@include breakpoint(large) {
+			@include xy-cell(6);
+			align-self: center;
+		}
+		@include breakpoint(medium down) {
+			@include xy-cell(12);
+		}
+	}
 }

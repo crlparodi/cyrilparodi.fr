@@ -1,0 +1,32 @@
+{
+	"projects": [
+		{
+			"name": "cyrilparodi.fr",
+			"type": "Web",
+			"description": "Le site, powered by React.js",
+			"languages": ["JavaScript"],
+			"url": "http://github.com/crlparodi/cyrilparodi.fr"
+		},
+		{
+			"name": "atmos",
+			"type": "Android Application - WIP",
+			"description": "Application Domotique DIY pour observer et gérer en temps réel la température du foyer",
+			"languages": ["Java"],
+			"url": "http://github.com/crlparodi/atmos"
+		},
+		{
+			"name": "cabbage",
+			"type": "Web",
+			"description": "Maquette d'une plateforme communautaire de babysitting.",
+			"languages": ["Python"],
+			"url": "http://github.com/crlparodi/cabbage"
+		},
+		{
+			"name": "butterscotch",
+			"type": "Software - WIP",
+			"description": "Mini interface de monitoring en Qt",
+			"languages": ["Python"],
+			"url": "http://github.com/crlparodi/butterscotch"
+		}
+	]
+}

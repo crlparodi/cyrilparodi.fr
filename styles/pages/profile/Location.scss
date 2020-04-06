@@ -1,8 +1,0 @@
-.Location {
-    background-color: color-map(background, secondary);
-    .Map {
-        @include breakpoint(medium) {
-            padding: 3rem 0;
-        }
-    }
-}

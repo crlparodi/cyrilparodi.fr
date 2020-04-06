@@ -1,61 +1,145 @@
 .Banner {
-    position: relative;
-    background-size: cover;
-    background-position-y: 100%;
+	background-size: cover;
+	background-position-y: 100%;
 
-    @include breakpoint(small only) {
-        background-position-x: 50%;
-    }
+	@include breakpoint(small only) {
+		background-position-x: 50%;
+	}
 
-    /* OVERRIDE */
-    &.isWrapper {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+	/* OVERRIDE */
+	&.isWrapper {
+		padding-top: 0;
+		padding-bottom: 0;
+		background-size: cover;
+		background-position-x: center;
+		background-position-y: bottom;
+		background-attachment: fixed;
 
-    &-fluid {
-        height: 100%;
-        padding-top: 64px;
-        background-color: color-map(theme, primary);
+		@include breakpoint(large down) {
+			background-position-x: right;
+		}
+	}
 
-        @include breakpoint(medium down) {
-            @include xy-grid(vertical, false);
-            justify-content: center;
+	&-backgroundCover {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(17, 17, 17, 0.6);
+	}
 
-            @include breakpoint(small only) {
-                text-align: center;
-            }
+	&-container {
+		position: relative;
 
-            .Banner-container {
-                text-shadow: 3px 0 0 color-map(theme, primary),
-                    -3px 0 0 color-map(theme, primary),
-                    0 3px 0 color-map(theme, primary),
-                    0 -3px 0 color-map(theme, primary),
-                    2px 0 0 color-map(theme, primary),
-                    -2px 0 0 color-map(theme, primary),
-                    0 2px 0 color-map(theme, primary),
-                    0 -2px 0 color-map(theme, primary),
-                    1px 1px color-map(theme, primary),
-                    -1px -1px 0 color-map(theme, primary),
-                    1px -1px 0 color-map(theme, primary),
-                    -1px 1px 0 color-map(theme, primary);
-            }
-        }
+		height: 100%;
+		padding-top: 95px;
 
-        .Banner-container {
-            padding: 0 3rem;
-            color: color-map(background, primary);
+		text-align: center;
 
-            /* Override */
-            .ob-title {
-                font-weight: 700;
-                font-size: 400%;
-            }
+		@include breakpoint(medium down) {
+			@include xy-grid(vertical, false);
+			justify-content: center;
 
-            /* Override */
-            .ob-subtitle {
-                font-size: 300%;
-            }
-        }
-    }
+			@include breakpoint(small only) {
+				text-align: center;
+			}
+		}
+
+		.Content {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+
+			/* Override */
+			.ob-title {
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				border-bottom: 2px solid color-map(txt);
+				font-family: font-map(title), sans-serif;
+				font-weight: 700;
+				font-size: 4rem;
+
+				letter-spacing: 10px;
+
+				@include breakpoint(small only) {
+					padding: 20px 15px 15px;
+					font-size: 3rem;
+				}
+			}
+
+			/* Override */
+			.ob-subtitle {
+				font-size: 300%;
+			}
+
+			.Contacts {
+				margin: 6rem 0 2rem 0;
+
+				svg {
+					border: 1px solid color-map(txt);
+					border-radius: 50%;
+					padding: 10px;
+					margin: 0 10px;
+					width: 3.5rem;
+					font-size: 3.5rem;
+					-webkit-transition: border 0.5s ease-out;
+					-moz-transition: border 0.5s ease-out;
+					transition: border 0.5s ease-out;
+
+					&:hover,
+					&:focus,
+					&:active {
+						border-color: color-map(acc);
+					}
+				}
+			}
+
+			/* Override */
+			.ob-button {
+				svg {
+					margin-right: 20px;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.Credits {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			bottom: 0%;
+			left: 50%;
+
+			.UnsplashCredit {
+				background-color: color-map(bg2);
+				color: color-map(txt);
+				text-decoration: none;
+				padding: 4px 6px;
+				font-family: font-map(title);
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 1.2;
+				display: inline-block;
+				border-radius: 3px;
+
+				span  {
+					display: inline-block;
+					padding: 2px 3px;
+				}
+
+				svg {
+					margin: 0 3px;
+					height: 12px;
+					width: auto;
+					position: relative;
+					vertical-align: middle;
+					top: -2px;
+					fill: white;
+				}
+
+				.Author {
+					display: inline-block;
+					padding: 2px 3px;
+				}
+			}
+		}
+	}
 }

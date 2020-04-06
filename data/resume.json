@@ -1,0 +1,273 @@
+{
+	"basics": {
+		"name": "Cyril Parodi",
+		"age": 25,
+		"label": "Ingénieur",
+		"email": "parodicyril@gmail.com",
+		"summary": [
+			"Jeune ingénieur originaire d'Aix-en-Provence, j'ai passé la majeure partie de ma tendre enfance à taper dans un clavier.",
+			"J'étais à la recherche permanente de nouvelles façons de m'amuser dans l'électronique et le suis depuis peu, dans l'informatique.",
+			"Professionnel, rigoureux et passionné, je n'arrête jamais d'apprendre et c'est cette qualité qui me motive dans tous mes (futurs) projets."
+		],
+		"target": "Validation Logicielle avec Automatisation de Tests",
+		"location": {
+			"city": "Saint Victoret",
+			"country": "France",
+			"region": "Provence-Alpes-Côte D'Azur"
+		},
+		"profiles": [
+			{
+				"network": "linkedin",
+				"url": "https://www.linkedin.com/in/cyril-parodi/"
+			},
+			{
+				"network": "github",
+				"url": "http://github.com/crlparodi/"
+			}
+		]
+	},
+	"works": [
+		{
+			"company": "Systerel",
+			"position": "Ingénieur en Validation Logicielle",
+			"website": "http://www.systerel.fr/",
+			"startDate": "10/2019",
+			"endDate": "03/2020",
+			"projects": [
+				{
+					"summary": "Projet HITACHI - Validation du logiciel SIL 4 CBTC Bord (Basée sur la modélisation SCADE) (Norme EN50128)",
+					"highlights": [
+						"Validation des composants SCADE répondant à des exigences fonctionnelles du logiciel selon la spécification détaillée d'Hitachi",
+						"Ecriture des Cas de Tests basée sur un pre-Calcul des classes d'équivalences de l'exigence",
+						"Ecriture des scripts Python de scénario afin d'automatiser l'exécution des cas de tests",
+						"Execution des scénarios automatisés dans un simulateur boîte noire et génération des spécifications de test",
+						"Relecture croisée des exigences avec prise en compte et vérification d'erreurs",
+						"Rejeu global des scénarios en début ou fin de version",
+						"Correction des erreurs d'exécution ou régressions des scénarios durant le rejeu",
+						"Contribution à la recherche de probes nécessaires à l'implémentation"
+					]
+				}
+			]
+		},
+		{
+			"company": "TechnicAtome",
+			"position": "Stage en Recherche et Développement - Veille Technologique",
+			"website": "https://www.technicatome.com/",
+			"startDate": "04/2017",
+			"endDate": "09/2017",
+			"projects": [
+				{
+					"summary": "Etude de la gestion des flux vidéos numériques sur un SoC ARM/FPGA - Réalisation d'un multiplexeur vidéo",
+					"highlights": [
+						"Evaluation du matériel destiné à alimenter les systèmes de controle-commande des Sous-Marins Nucléaires Lanceurs d'Engins de 3ème Génération (SNLE 3G)",
+						"Conception d’un multiplexeur vidéo pour observer la gestion de flux vidéos numériques dans un FPGA",
+						"Conception de la synthèse matérielle (en C) du multiplexeur basée sur une architecture ZYNQ 7000 de Xilinx. Développement embarqué des couches de transition et applicatives (dont fonctions de tracé graphique en 2D pour les tests de performances).",
+						"Mise en place de procédures de test matériel pour l'évaluation des performances du ZYNQ 7000 et les effets environnementaux sur ce dernier pendant les opérations de traitement d'image."
+					]
+				}
+			]
+		},
+		{
+			"company": "Groupe Euro Techniques Industries",
+			"position": "Stage en Recherche et Développement - Projet IoT/Domotique",
+			"website": "https://www.eti-offshore.com/",
+			"startDate": "06/2016",
+			"endDate": "07/2016",
+			"projects": [
+				{
+					"summary": "Réalisation d'un Thermomètre Connecté pour Particuliers",
+					"highlights": [
+						"\"Petite\" initiation aux projets d'ingéniérie industrielle avec la réalisation d'un thermomètre de piscine connecté pour un usage particulier.",
+						"Le module se présente comme étant placé dans un boitier de mesure intégré dans un local à eau le plus proche et transmettant les informations à un compteur situé à proximité et accessible au particulier. L'éventualité d'une supervision en temps réel sur smartphone est aussi envisagée.",
+						"Creation d'un cahier des charges, planification du projet sur deux mois et réalisation d'une étude de marché."
+					]
+				}
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "IB S.A. (avec Pole Emploi)",
+			"area": "Informatique - Automatisation de Tests Logiciels",
+			"studyType": "POEI",
+			"startDate": "Mai 2018",
+			"endDate": "Aout 2018",
+			"description": [
+				"Ce cursus permet de récupérer les outils techniques, logiciels et fonctionnels du test logiciel ainsi que les outils d'automatisation tels que Sélenium, HP UFT pour l'IHM ou bien Cucumber pour les scénarios. L'introduction au développement logiciel et web et aux cycles de développementent sont aussi au programme.",
+				"La certification ISTQB (Niveau Fondation) a été délivrée à l'issue d'un examen en fin de cursus."
+			],
+			"links": [
+				{
+					"name": "Contenu du cursus",
+					"url": "https://docs.google.com/spreadsheets/d/1fkTPRNmKgE_VKdv4nAlEaaF7KR7cEGSwlxoITluCK3w/edit?usp=sharing"
+				},
+				{
+					"name": "Certificat ISTQB",
+					"url": "http://scr.istqb.org/?name=PARODI&number=18-CTFL-139825-07&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
+				}
+			]
+		},
+		{
+			"institution": "POLYTECH Marseille",
+			"area": "Microélectronique et Télécommunications",
+			"studyType": "Diplôme d'ingénieur",
+			"startDate": "2014",
+			"endDate": "2017",
+			"description": [
+				"La filière Microélectronique et Télécommunication forme à concevoir toutes sortes de systèmes éléctroniques. De la conception matérielle (VLSI, CAO) au développement embarqué, en passant par la Physique des Composants, les techniques de Traitement du Signal, ou bien diverses applications industrielles (IoT, RFID, Traitement d'Image)."
+			],
+			"links": [
+				{
+					"name": "La formation",
+					"url": "https://polytech.univ-amu.fr/formations/cycle-ingenieur/microelectronique-telecommunications"
+				},
+				{
+					"name": "Contenu du cycle",
+					"url": "https://docs.google.com/spreadsheets/d/12tMKoT1p8iNaEeAgiGnYnxWeRL8-7p6w7Q0nwZErqds/edit?usp=sharing"
+				}
+			]
+		},
+		{
+			"institution": "Lycée du Rempart (13)",
+			"area": "Assistance Technique d'Ingénieur",
+			"studyType": "BTS",
+			"startDate": "2012",
+			"endDate": "2014",
+			"description": [
+				"L'objectif est de trouver des solutions d'ordre techniques ou d'organisation, à des problématiques pouvant nuire à une chaîne de production. De la logistique à la gestion financière en passant par le management de la qualité.",
+				"Cette formation est polyvalente (Mécanique, Électrotechnique, Physique appliquée à l'électronique)."
+			],
+			"links": []
+		}
+	],
+	"awards": [
+		{
+			"title": "Certification ISTQB - Niveau Fondation edition 2011",
+			"date": "Juillet 2018",
+			"awarder": "International Software Quality Institute (iSQI)",
+			"document": "http://scr.istqb.org/?name=PARODI&number=18-CTFL-139825-07&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
+		}
+	],
+	"skills": {
+		"soft": [
+			{
+				"skill": "passion",
+				"eval": 5
+			},
+			{
+				"skill": "rigueur",
+				"eval": 4
+			},
+			{
+				"skill": "curiosité",
+				"eval": 4
+			},
+			{
+				"skill": "apprentissage",
+				"eval": 5
+			},
+			{
+				"skill": "polyvalence",
+				"eval": 3
+			},
+			{
+				"skill": "professionnalisme",
+				"eval": 4
+			}
+		],
+		"technical": [
+			{
+				"category": "Validation Logicielle",
+				"skills": [
+					"Traitement d'exigences liées aux évolutions",
+					"Couverture de branche ou Calcul des classes d'équivalence",
+					"Relecture croisée (cross-check) et Rejeux",
+					"Projet en Cycle en V",
+					"Lecture de specifications fonctionnelle d'exigences"
+				]
+			},
+			{
+				"category": "Automatisation des Tests",
+				"skills": [
+					"Automatisation en Java (Cucumber -> Scénarios, Selenium -> IHM)",
+					"Automatisation en Python (Logiciel Simulateur)",
+					"Automatisation d'IHM w/ HP UFT"
+				]
+			},
+			{
+				"category": "Dév. Embarqué",
+				"skills": [
+					"Dév. sur SoC ARM/FPGA, Microcontrôleurs Propriétaires, Arduino (C et Assembleur)",
+					"Traitement d'Image: Gestion des flux vidéos (Multiplexeur, Capture de Tracé 2D, Memory Management)"
+				]
+			},
+			{
+				"category": "Electronique & Internet des Objets",
+				"skills": [
+					"Intégration de Systèmes et Sous-Systèmes basés sur des Composants Virtuels (Blocs IP)",
+					"Applications orientées IoT avec mise à contribution des Capteurs et de leur physique",
+					"Mettre en oeuvre des communications Sans-Fil : Bluetooth 4.1 (dont BLE) , Wi-Fi IEEE 802.11"
+				]
+			}
+		],
+		"resources": [
+			{
+				"category": "Langages",
+				"res": ["Langage C", "Python", "Java", "JavaScript (ES6/ES2015)", "Shell (BaSH)"]
+			},
+			{
+				"category": "OS - Gest. de Versions",
+				"res": ["Linux -> Debian-based, Arch-based", "Scripts Shell", "Git"]
+			},
+			{
+				"category": "SoCs",
+				"res": ["Microcontrôleurs Microchip", "SoCs ARM/FPGA XIlinx (ZYNQ)", "Arduino"]
+			},
+			{
+				"category": "Dév. Mobile",
+				"res": [
+					"Architecture Android",
+					"Cycle de vie d'une Application",
+					"Threadding et Handlers",
+					"GUI, RecyclerView"
+				]
+			},
+			{
+				"category": "Dév. Web Front-End",
+				"res": ["Sass (SCSS)", "ZURB Foundation", "React.js", "Webpack"]
+			},
+			{
+				"category": "Dév. Web Back-End",
+				"res": ["Architecture MVC", "Protocole HTTP", "Django", "Mérise, SQL"]
+			}
+		],
+		"languages": [
+			{
+				"language": "Anglais",
+				"fluency": "Lecture et Ecriture (Niveau B2 - Documentations techniques)"
+			}
+		]
+	},
+	"interests": [
+		{
+			"name": "programmation / dév",
+			"keywords": ["android", "python", "react", "git"]
+		},
+		{
+			"name": "linux",
+			"keywords": ["debian", "apt", "foss", "xfce", "shell"]
+		},
+		{
+			"name": "rétrocomputing",
+			"keywords": ["restauration"]
+		},
+		{
+			"name": "séries",
+			"keywords": ["drama"]
+		},
+		{
+			"name": "lecture",
+			"keywords": ["dev-perso", "sociologie"]
+		}
+	]
+}

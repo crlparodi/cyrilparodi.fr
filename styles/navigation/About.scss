@@ -1,0 +1,115 @@
+.About {
+	/* OVERRIDE */
+	&.isWrapper {
+		padding-top: 3rem;
+	}
+
+	&-content {
+		font-size: 110%;
+
+		@include breakpoint(xlarge) {
+			@include xy-grid(horizontal, false);
+			margin-top: 3rem;
+		}
+		@include breakpoint(large down) {
+			@include xy-grid(vertical, false);
+			max-width: 42.5rem;
+			margin: 3rem auto 0 auto;
+		}
+		@include breakpoint(small only) {
+			@include xy-grid(vertical, false);
+		}
+
+		.Story {
+			@include breakpoint(xlarge) {
+				@include xy-cell(4);
+			}
+
+			@include breakpoint(large down) {
+				@include xy-cell(auto);
+			}
+
+			padding: 10px;
+			text-align: justify;
+
+			&-img {
+				display: block;
+				width: 200px;
+				border-radius: 50%;
+				margin: 0 auto 20px auto;
+				margin-bottom: 20px;
+			}
+
+			&-sign {
+				font-family: font-map(title), sans-serif;
+				font-weight: 700;
+				text-align: end;
+			}
+		}
+
+		.Infos {
+			@include xy-cell(auto);
+			@include xy-grid(vertical, false);
+
+			@include breakpoint(xlarge) {
+				padding: 20px;
+				flex-direction: column-reverse;
+				background-color: color-map(bg2);
+			}
+
+			@include breakpoint(large down) {
+				padding: 20px 0;
+				flex-direction: column;
+				background: none;
+				border-top: 1px solid color-map(txt);
+			}
+
+			&-img {
+				@include xy-cell(6);
+				margin: 0 auto;
+
+				width: auto;
+				height: auto;
+
+				@include breakpoint(xlarge) {
+					max-width: 80%;
+					max-height: 80%;
+				}
+
+				@include breakpoint(large medium only) {
+					margin-bottom: 20px;
+					max-width: 80%;
+					max-height: 80%;
+				}
+
+				@include breakpoint(small only) {
+					margin-bottom: 20px;
+					max-width: 100%;
+					max-height: 90%;
+				}
+			}
+
+			&-list {
+				@include xy-cell(auto);
+
+				list-style: none;
+				font-family: "Overpass Mono", sans-serif;
+				font-size: 1rem;
+
+				&-element {
+					margin-bottom: 10px;
+					text-transform: uppercase;
+
+					.Entry {
+						font-weight: 700;
+					}
+
+					/* Override */
+					.ob-link {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

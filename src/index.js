@@ -5,7 +5,7 @@ import ReactDOM from "react-dom"
 import registerServiceWorker from "./registerServiceWorker"
 
 /* COMPONENTS */
-import Root from "./pages/Root"
+import Root from "./navigation/Root"
 
 /* STYLES */
 import "styles/index.scss"
