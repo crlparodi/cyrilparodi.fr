@@ -1,6 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack"); //to access built-in plugins
 const path = require("path");
 
 const isProduction =
@@ -62,12 +61,13 @@ module.exports = {
 			chunkFilename: "[id].css"
 		})
 	],
-	devtool: "eval-source-map",
 	devServer: {
 		contentBase: path.join(__dirname, "/public/"),
 		// historyApiFallback: true
 	},
 	watchOptions: {
 		ignored: /node_modules/
-	}
+	},
 };
+
+
