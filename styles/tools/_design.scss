@@ -6,8 +6,8 @@
 $font-map: (
 	title: "Overpass",
 	paragraph: "Lato",
+	mono: "Overpass Mono",
 	// mono: "CaveStoryRegular",
-		mono: "Overpass Mono",
 ) !default;
 
 @function font-map($font) {

@@ -1,15 +1,12 @@
 .Education {
-	&-entries {
-		@include breakpoint(large) {
-			padding-top: 3rem;
-		}
+	&-content {
+		margin-top: 1.5rem;
+		margin-bottom: 0;
 		@include breakpoint(medium down) {
 			margin-left: 0;
 			list-style-type: none;
 		}
 		.Entry {
-			padding-bottom: 1rem;
-
 			&-L,
 			&-R {
 				.ob-subtitle {
@@ -28,8 +25,8 @@
 					}
 				}
 				&-R {
+					margin-bottom: 2rem;
 					@include xy-cell(auto);
-					margin-bottom: 1.5rem;
 
 					&-Bottom {
 						@include xy-grid(horizontal, false);
@@ -104,16 +101,21 @@
 				height: 20px;
 				border: 5px solid color-map(acc);
 				border-radius: 50%;
-				background: color-map(gb);
+				background: color-map(bg);
 				left: calc(-100% + 12.5px);
 				top: 5px;
 			}
 
 			&:last-child {
+				padding-bottom: 0;
 				&:before {
-					color: color-map(gb);
+					color: color-map(bg);
 					width: 5px;
 					background: unset;
+				}
+
+				.Entry-R {
+					margin-bottom: 0;
 				}
 			}
 		}

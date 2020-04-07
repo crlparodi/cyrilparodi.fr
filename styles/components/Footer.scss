@@ -1,53 +1,59 @@
 .Footer {
 	background-color: color-map(bg2);
 
-	@include breakpoint(large) {
-		@include xy-grid(horizontal, false);
-	}
-	@include breakpoint(medium down) {
-		@include xy-grid(vertical, false);
-	}
-
-	&-contacts {
-		text-align: center;
-		margin-bottom: 1rem;
-
+	&-content {
+		margin-top: 1.5rem;
 		@include breakpoint(large) {
-			@include xy-cell(6);
-			align-self: center;
+			@include xy-grid(horizontal, false);
 		}
 		@include breakpoint(medium down) {
-			@include xy-cell(12);
+			@include xy-grid(vertical, false);
 		}
+		.Contacts {
+			margin-bottom: 1.5rem;
+			text-align: center;
 
-		svg {
-			border: 1px solid color-map(txt);
-			border-radius: 50%;
-			padding: 10px;
-			margin: 0 10px;
-			width: 3.5rem !important;
-			font-size: 3.5rem;
-			-webkit-transition: border 0.5s ease-out;
-			-moz-transition: border 0.5s ease-out;
-			transition: border 0.5s ease-out;
+			@include breakpoint(large) {
+				@include xy-cell(6);
+				align-self: center;
+			}
+			@include breakpoint(medium down) {
+				@include xy-cell(12);
+			}
 
-			&:hover,
-			&:focus,
-			&:active {
-				border-color: color-map(acc);
+			/* Override */
+			.ob-title {
+				margin-bottom: 1.5rem;
+			}
+
+			svg {
+				border: 1px solid color-map(txt);
+				border-radius: 50%;
+				padding: 10px;
+				margin: 0 10px;
+				width: 3.5rem !important;
+				font-size: 3.5rem;
+				-webkit-transition: border 0.5s ease-out;
+				-moz-transition: border 0.5s ease-out;
+				transition: border 0.5s ease-out;
+
+				&:hover,
+				&:focus,
+				&:active {
+					border-color: color-map(acc);
+				}
 			}
 		}
-	}
 
-	&-misc  {
-		text-align: center;
-
-		@include breakpoint(large) {
-			@include xy-cell(6);
-			align-self: center;
-		}
-		@include breakpoint(medium down) {
-			@include xy-cell(12);
+		.Misc {
+			@include breakpoint(large) {
+				align-self: center;
+				@include xy-cell(6);
+			}
+			@include breakpoint(medium down) {
+				text-align: center;
+				@include xy-cell(12);
+			}
 		}
 	}
 }

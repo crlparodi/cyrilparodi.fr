@@ -54,7 +54,7 @@ class Education extends React.Component {
 			<section className="Education isWrapper" ref={this.ref}>
 				<div className="Education isContainer">
 					<h2 className="ob-title isMono">{"formations"}</h2>
-					<ul className="Education-entries">
+					<ul className="Education-content">
 						{this.data.map((education, index) => {
 							return (
 								<li className="Entry isContainer" key={index}>

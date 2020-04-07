@@ -26,7 +26,7 @@ class PDF extends React.Component {
 				<div className="PDF-backgroundCover isWrapper">
                     <div className="PDF-container isContainer">
                         <p>Besoin d'un format papier ? Téléchargez une version A4 ci-dessous:</p>
-                        <a className="ob-button">
+                        <a className="ob-button" href="http://cyrilparodi.fr/cv/cv.pdf">
                             <FontAwesomeIcon icon={faFilePdf} />
                             {"Télécharger le CV"}
                         </a>

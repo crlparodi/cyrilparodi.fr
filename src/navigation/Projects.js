@@ -20,6 +20,7 @@ class Projects extends React.Component {
 			<section className="Projects isWrapper" ref={this.ref}>
 				<div className="Projects isContainer">
 					<h2 className="ob-title isMono">{"projets"}</h2>
+					<div className="Projects-content">
 					<div className="Web">
 						<a className="ob-link" target="_blank" href={github + "cyrilparodi.fr"}>
 							<FontAwesomeIcon icon={faReact} />
@@ -61,9 +62,10 @@ class Projects extends React.Component {
 					<div className="Github">
 						<a className="ob-button" target="_blank" href={github}>
 							<FontAwesomeIcon icon={faGithub} />
-							{"mon profil github"}
+							{"dépôts github"}
 						</a>
 					</div>
+				</div>
 				</div>
 			</section>
 		);

@@ -65,7 +65,7 @@ class Banner extends React.Component {
 									profiles={this.data.profiles}
 								/>
 							</div>
-							<a className="ob-button">
+							<a className="ob-button" href="http://cyrilparodi.fr/cv/cv.pdf">
 								<FontAwesomeIcon icon={faFilePdf} />
 								{"Télécharger le CV"}
 							</a>

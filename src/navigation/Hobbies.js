@@ -30,7 +30,7 @@ class Hobbies extends React.Component {
 			<section className="Hobbies isWrapper" ref={this.ref}>
 				<div className="Hobbies isContainer">
 					<h2 className="ob-title isMono">{"centres d'intérêt"}</h2>
-					<ul className="Hobbies-entries">
+					<ul className="Hobbies-content">
 						{this.data.map((hobby, hobbIndex) => {
 							return(
 								<li className="Hobby" key={hobbIndex}>

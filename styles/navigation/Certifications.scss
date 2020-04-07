@@ -1,8 +1,7 @@
 .Certifications {
-	&-entries {
-		@include breakpoint(medium) {
-			padding-top: 3rem;
-		}
+	&-content {
+		margin-top: 1.5rem;
+
 		.Entry {
 			@include xy-grid(horizontal, false);
 

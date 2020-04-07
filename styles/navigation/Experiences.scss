@@ -1,21 +1,18 @@
 .Experiences {
 	&-content {
+		margin-top: 1.5rem;
+
 		@include breakpoint(medium only) {
 			max-width: 42.5rem;
-			margin: auto auto;
+			margin: 1.5rem auto 0 auto;
 		}
 
 		.Left-Colon {
 			display: inline-block;
 			vertical-align: top;
-			margin: 3rem 0;
 
 			@include breakpoint(large) {
 				@include xy-cell(2);
-			}
-
-			@include breakpoint(medium down) {
-				margin: 3rem 0 1rem 0;
 			}
 
 			@include breakpoint(small only) {
@@ -36,15 +33,11 @@
 			}
 		}
 		.Right-Colon {
-			margin: 3rem 0;
+			margin-bottom: 1.5rem;
 			display: inline-block;
 
 			@include breakpoint(large) {
 				@include xy-cell(10);
-			}
-
-			@include breakpoint(medium down) {
-				margin: 0 0 3rem 0;
 			}
 
 			@include breakpoint(small only) {

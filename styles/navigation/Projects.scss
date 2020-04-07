@@ -1,78 +1,82 @@
 .Projects {
-	.Web,
-	.Android,
-	.Python {
-		@include xy-grid(vertical, false);
+	&-content {
+		margin-top: 1.5rem;
 
-		@include breakpoint(small only) {
-			display: none;
-		}
+		.Web,
+		.Android,
+		.Python {
+			@include xy-grid(vertical, false);
 
-		svg {
-			margin: 0 20px;
-			display: inline-block;
-			vertical-align: middle;
-			max-width: 40px;
-			width: auto;
-			height: auto;
-			font-size: 2rem;
-		}
-		/* Override */
-		.ob-link {
-			padding: 0.5rem 0;
-			margin-bottom: 0.1rem;
-			background-color: color-map(bg2);
-			-webkit-transition: all 0.3s ease-out;
-			transition: all 0.3s ease-out;
+			@include breakpoint(small only) {
+				display: none;
+			}
 
-			.Info {
+			svg {
+				margin: 0 20px;
 				display: inline-block;
 				vertical-align: middle;
+				max-width: 40px;
+				width: auto;
+				height: auto;
+				font-size: 2rem;
+			}
+			/* Override */
+			.ob-link {
+				padding: 0.5rem 0;
+				margin-bottom: 0.1rem;
+				background-color: color-map(bg2);
+				-webkit-transition: all 0.3s ease-out;
+				transition: all 0.3s ease-out;
 
-				&-name {
-					margin: 0;
-					font-size: 1.2rem;
-				}
+				.Info {
+					display: inline-block;
+					vertical-align: middle;
 
-				&-desc {
-					margin: 0;
+					&-name {
+						margin: 0;
+						font-size: 1.2rem;
+					}
+
+					&-desc {
+						margin: 0;
+					}
 				}
 			}
 		}
-	}
 
-	.Web > .ob-link {
-		&:hover {
-			color: color-map(bg2);
-			background-color: #00c3ff;
+		.Web > .ob-link {
+			&:hover {
+				color: color-map(bg2);
+				background-color: #00c3ff;
+			}
 		}
-	}
 
-	.Android > .ob-link {
-		&:hover {
-			color: color-map(bg2);
-			background-color: #00ff55;
+		.Android > .ob-link {
+			&:hover {
+				color: color-map(bg2);
+				background-color: #00ff55;
+			}
 		}
-	}
 
-	.Python > .ob-link {
-		&:hover {
-			color: color-map(bg2);
-			background-color: #ffd000;
+		.Python > .ob-link {
+			&:hover {
+				color: color-map(bg2);
+				background-color: #ffd000;
+			}
 		}
-	}
 
-	.Github {
-		text-align: center;
+		.Github {
+			text-align: center;
 
-		/* Override */
-		.ob-button {
-			display: inline-block;
-			margin-top: 1.5rem;
+			/* Override */
+			.ob-button {
+				display: inline-block;
+				margin-top: 1.5rem;
 
-			svg {
-				margin-right: 20px;
-				font-size: 1.2rem;
+				svg {
+					margin-right: 20px;
+					font-size: 1.2rem;
+				}
 			}
 		}
 	}

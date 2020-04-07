@@ -4,9 +4,6 @@ import PropTypes from "prop-types"
 /* PROP-TYPES */
 import * as PropSets from "root/prop-types/Resume";
 
-/* MEDIAS */
-import ISTQBBlaze from "img/ISTQBLogo"
-
 /* FONT-AWESOME */
 import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "modules/@fortawesome/free-solid-svg-icons"
@@ -24,7 +21,7 @@ class Certifications extends React.Component {
 					<h2 className="ob-title isMono">
 						{"certifications"}
 					</h2>
-					<div className="Certifications-entries">
+					<div className="Certifications-content">
 						{this.data.map((certification, certifIndex) => {
 							return (
 								<div className="Entry" key={certifIndex}>

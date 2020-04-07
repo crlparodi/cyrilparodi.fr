@@ -36,8 +36,8 @@ class Experiences extends React.Component {
 											<p className="Date">{DateBinary(data.startDate) + " - " + DateBinary(data.endDate)}</p> */}
 										</div>
 										<div className="Right-Colon">
-											<h4 className="Company"><a className="Company-link ob-link" href={data.website}>{data.company}</a></h4>
-											<h3 className="Positon">{data.position}</h3>
+											<h5 className="Company"><a className="Company-link ob-link" href={data.website}>{data.company}</a></h5>
+											<h4 className="Positon">{data.position}</h4>
 											<div className="Projects">
 												{data.projects.map((project, project_index) => {
 													return(

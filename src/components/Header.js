@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-/* IMG */
-import Logo from "img/Logo";
-
 /* COMPONENTS */
 import HeaderToggleButton from "./header/HeaderToggleButton";
 import HeaderNav from "./header/HeaderNav";
