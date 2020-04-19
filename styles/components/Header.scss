@@ -5,6 +5,8 @@
 	height: 95px;
 	padding: 10px 0;
 
+	color: var(--generic-txt);
+
 	&.isOnTop {
 		transition: background-color 0.5s ease-out;
 	}
@@ -40,7 +42,7 @@
 				text-transform: uppercase;
 				letter-spacing: 5px;
 				padding: 7px 10px 5px;
-				border: 1px solid color-map(txt);
+				border: 1px solid var(--generic-txt);
 				-webkit-transition: all 0.5s ease-out;
 				-moz-transition: all 0.5s ease-out;
 				transition: all 0.5s ease-out;
@@ -50,8 +52,8 @@
 				&:hover,
 				&:focus,
 				&:active {
-					color: color-map(acc);
-					border-color: color-map(acc);
+					color: var(--content-accent);
+					border-color: var(--content-accent);
 				}
 			}
 		}
@@ -69,7 +71,7 @@
 			&:hover,
 			&:focus,
 			&:active {
-				color: color-map(acc);
+				color: var(--generic-accent);
 			}
 		}
 	}

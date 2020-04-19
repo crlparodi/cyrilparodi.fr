@@ -11,7 +11,6 @@ import * as PropSets from "root/prop-types/Resume";
 import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
-
 class PDF extends React.Component {
 	constructor(props) {
 		super(props);
@@ -19,19 +18,24 @@ class PDF extends React.Component {
 	}
 	render() {
 		return (
-			<section className="PDF" style={{
-                backgroundImage: "url(" + IMG + ")",
-            }}
-            ref={this.ref}>
+			<section
+				className="PDF"
+				style={{
+					backgroundImage: "url(" + IMG + ")",
+				}}
+				ref={this.ref}>
 				<div className="PDF-backgroundCover isWrapper">
-                    <div className="PDF-container isContainer">
-                        <p>Besoin d'un format papier ? Téléchargez une version A4 ci-dessous:</p>
-                        <a className="ob-button" href="http://cyrilparodi.fr/cv/cv.pdf">
-                            <FontAwesomeIcon icon={faFilePdf} />
-                            {"Télécharger le CV"}
-                        </a>
-                    </div>
-                </div>
+					<div className="PDF-container isContainer">
+						<p>Besoin d'un format papier ? Téléchargez une version A4 ci-dessous:</p>
+						<a
+							className="ob-button"
+							target="_blank"
+							href="https://www.cyril-parodi.fr/doc/CV_6.5_0420_WEB.pdf">
+							<FontAwesomeIcon icon={faFilePdf} />
+							{"Télécharger le CV"}
+						</a>
+					</div>
+				</div>
 			</section>
 		);
 	}

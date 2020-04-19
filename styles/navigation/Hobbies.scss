@@ -45,8 +45,8 @@
 						rgba(255, 255, 255, 0.1) 0%,
 						rgba(17, 17, 17, 0) 100%
 					);
-					background-color: color-map(bg2);
-					border: 1px solid color-map(bg2);
+					background-color: var(--content-bg2);
+					border: 1px solid var(--content-bg2);
 					border-radius: 0.2rem;
 				}
 			}

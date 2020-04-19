@@ -21,9 +21,6 @@ html {
 
 	scroll-behavior: smooth;
 
-	color: color-map(txt);
-	background-color: color-map(bg);
-
 	font-family: font-map(paragraph), sans-serif;
 
 	/* THEME CONFIGURATIONS
@@ -37,6 +34,12 @@ html {
 	h6 {
 		font-family: font-map(title), sans-serif;
 	}
+
+	/* CSS THEMES
+	 */
+
+	color: var(--content-txt);
+	background-color: var(--content-bg);
 
 	/* CSS CUSTOM DECORATIVE OBJECTS
 	 */
@@ -63,17 +66,17 @@ html {
 			position: relative;
 			padding-bottom: 20px;
 			font-family: font-map(mono), monospace;
-			border-bottom: 2px solid color-map(txt);
+			border-bottom: 2px solid var(--content-txt);
 			word-wrap: break-word;
 
 			&::before {
 				content: "#>";
-				color: color-map(acc);
+				color: var(--content-accent);
 			}
 
 			&::after {
 				content: "_";
-				color: color-map(acc);
+				color: var(--content-accent);
 			}
 		}
 	}
@@ -103,21 +106,21 @@ html {
 
 		&:hover,
 		&:focus {
-			color: color-map(acc);
+			color: var(--content-accent);
 		}
 
 		&.isFromHeader  {
 			&:hover,
 			&:focus,
 			&:active {
-				outline: 1px dotted color-map(acc);
-				color: color-map(acc);
+				outline: 1px dotted var(--content-accent);
+				color: var(--content-accent);
 			}
 		}
 	}
 
 	.ob-button {
-		@include button(false, color-map(acc), black, black, solid);
+		@include button(false, var(--content-accent), black, black, solid);
 		margin: 0;
 		text-transform: uppercase;
 		letter-spacing: 2px;
@@ -129,8 +132,8 @@ html {
 		&:hover,
 		&:focus,
 		&:active {
-			color: color-map(txt);
-			background-color: color-map(bg2);
+			color: var(--content-txt);
+			background-color: var(--content-bg2);
 		}
 	}
 

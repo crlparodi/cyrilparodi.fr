@@ -24,7 +24,7 @@
 			.ob-link {
 				padding: 0.5rem 0;
 				margin-bottom: 0.1rem;
-				background-color: color-map(bg2);
+				background-color: var(--content-bg2);
 				-webkit-transition: all 0.3s ease-out;
 				transition: all 0.3s ease-out;
 
@@ -46,21 +46,21 @@
 
 		.Web > .ob-link {
 			&:hover {
-				color: color-map(bg2);
+				color: var(--generic-bg2);
 				background-color: #00c3ff;
 			}
 		}
 
 		.Android > .ob-link {
 			&:hover {
-				color: color-map(bg2);
+				color: var(--generic-bg2);
 				background-color: #00ff55;
 			}
 		}
 
 		.Python > .ob-link {
 			&:hover {
-				color: color-map(bg2);
+				color: var(--generic-bg2);
 				background-color: #ffd000;
 			}
 		}

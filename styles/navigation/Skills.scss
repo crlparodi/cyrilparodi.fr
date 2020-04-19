@@ -40,7 +40,7 @@
 				width: 100%;
 				height: 2px;
 				//border: 1px solid color-map(txt);
-				background: color-map(bg2);
+				background: var(--content-bg2);
 
 				.ProgressBar {
 					position: absolute;
@@ -51,11 +51,11 @@
 					font-weight: 700;
 					text-align: end;
 					padding-right: 10px;
-					color: color-map(txt);
-					background-color: color-map(acc);
-					-webkit-box-shadow: 0px 0px 12px 0px rgba(37, 206, 209, 1);
-					-moz-box-shadow: 0px 0px 12px 0px rgba(37, 206, 209, 1);
-					box-shadow: 0px 0px 12px 0px rgba(37, 206, 209, 1);
+					color: var(--content-txt);
+					background-color: var(--content-accent);
+					-webkit-box-shadow: 0px 0px 12px 0px var(--content-accent);
+					-moz-box-shadow: 0px 0px 12px 0px var(--content-accent);
+					box-shadow: 0px 0px 12px 0px var(--content-accent);
 				}
 			}
 		}
@@ -74,7 +74,7 @@
 				font-family: font-map(title), sans-serif;
 				font-size: 1.5rem;
 				font-weight: 700;
-				color: color-map(acc);
+				color: var(--content-accent);
 			}
 
 			&-fluency {
@@ -96,7 +96,7 @@
 			z-index: 0;
 			margin: 0.5rem 0;
 			padding: 0.9375rem;
-			background-color: color-map(bg2);
+			background-color: var(--content-bg2);
 
 			@include breakpoint(xlarge) {
 				@include xy-cell(6);
@@ -126,7 +126,7 @@
 				max-width: 100px;
 				width: auto;
 				height: auto;
-				color: color-map(bg);
+				color: var(--content-bg);
 				opacity: 0.5;
 			}
 		}
@@ -169,8 +169,8 @@
 						rgba(255, 255, 255, 0.1) 0%,
 						rgba(17, 17, 17, 0) 100%
 					);
-					background-color: color-map(bg2);
-					border: 1px solid color-map(bg2);
+					background-color: var(--content-bg2);
+					border: 1px solid var(--content-bg2);
 					border-radius: 0.2rem;
 				}
 			}

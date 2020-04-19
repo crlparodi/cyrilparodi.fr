@@ -8,10 +8,8 @@ import IMG from "img/board.jpg";
 import SocialMedia from "root/components/SocialMedia";
 
 /* FONT-AWESOME */
-import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome"
-import {
-	faFilePdf
-} from "modules/@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome";
+import { faFilePdf } from "modules/@fortawesome/free-solid-svg-icons";
 
 class Banner extends React.Component {
 	constructor(props) {
@@ -65,7 +63,10 @@ class Banner extends React.Component {
 									profiles={this.data.profiles}
 								/>
 							</div>
-							<a className="ob-button" href="http://cyrilparodi.fr/cv/cv.pdf">
+							<a
+								className="ob-button"
+								target="_blank"
+								href="https://www.cyril-parodi.fr/doc/CV_6.5_0420_WEB.pdf">
 								<FontAwesomeIcon icon={faFilePdf} />
 								{"Télécharger le CV"}
 							</a>
@@ -80,15 +81,11 @@ class Banner extends React.Component {
 								title="Crédits photo: Christian WIEDIGER"
 								className="UnsplashCredit">
 								<span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 32 32">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 										<path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
 									</svg>
 								</span>
-								<span className="Author">
-									Christian WIEDIGER
-								</span>
+								<span className="Author">Christian WIEDIGER</span>
 							</a>
 						</div>
 					</div>
@@ -103,7 +100,7 @@ class Banner extends React.Component {
 }
 
 Banner.propTypes = {
-	data: PropSets.basics
+	data: PropSets.basics,
 };
 
 export default Banner;

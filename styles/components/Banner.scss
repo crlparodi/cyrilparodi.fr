@@ -1,4 +1,5 @@
 .Banner {
+	color: var(--generic-txt);
 	background-size: cover;
 	background-position-y: 100%;
 
@@ -53,7 +54,7 @@
 			.ob-title {
 				padding-bottom: 20px;
 				margin-bottom: 20px;
-				border-bottom: 2px solid color-map(txt);
+				border-bottom: 2px solid var(--generic-txt);
 				font-family: font-map(title), sans-serif;
 				font-weight: 700;
 				font-size: 4rem;
@@ -75,7 +76,7 @@
 				margin: 6rem 0 2rem 0;
 
 				svg {
-					border: 1px solid color-map(txt);
+					border: 1px solid var(--generic-txt);
 					border-radius: 50%;
 					padding: 10px;
 					margin: 0 10px;
@@ -88,7 +89,7 @@
 					&:hover,
 					&:focus,
 					&:active {
-						border-color: color-map(acc);
+						border-color: var(--content-acc);
 					}
 				}
 			}
@@ -109,8 +110,8 @@
 			left: 50%;
 
 			.UnsplashCredit {
-				background-color: color-map(bg2);
-				color: color-map(txt);
+				background-color: var(--generic-bg2);
+				color: var(--generic-txt);
 				text-decoration: none;
 				padding: 4px 6px;
 				font-family: font-map(title);

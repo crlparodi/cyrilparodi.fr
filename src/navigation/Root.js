@@ -7,6 +7,7 @@ import * as ResumeData from "data/resume.json";
 import Header from "root/components/Header";
 import Footer from "root/components/Footer";
 import Banner from "root/components/Banner";
+import Toolbox from "root/components/Toolbox";
 
 /* NAVIGATION COMPONENTS */
 import About from "./About";
@@ -19,8 +20,9 @@ import Projects from "./Projects";
 import PDF from "./PDF";
 
 class Root extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
+		this.switchTheme = props.switchTheme;
 		this.aboutReference = React.createRef();
 		this.expReference = React.createRef();
 		this.educReference = React.createRef();
@@ -71,6 +73,7 @@ class Root extends React.Component {
 			<>
 				<Header navHandler={this.navigationHandler.bind(this)} />
 				<Banner data={ResumeData.basics} />
+				<Toolbox themeHandler={this.switchTheme.bind(this)} />
 				<About data={ResumeData.basics} reference={this.aboutReference} />
 				<Experiences data={ResumeData.works} reference={this.expReference} />
 				<Education data={ResumeData.education} reference={this.educReference} />

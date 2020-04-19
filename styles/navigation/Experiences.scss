@@ -25,7 +25,7 @@
 				font-family: font-map(title), sans-serif;
 				font-size: 1.2rem;
 				font-weight: 700;
-				color: color-map(acc);
+				color: var(--content-accent);
 
 				@include breakpoint(medium down) {
 					padding: 0;
@@ -62,7 +62,7 @@
 
 				&-entry {
 					padding: 20px;
-					background-color: color-map(bg2);
+					background-color: var(--content-bg2);
 
 					.Project {
 						position: relative;
@@ -82,7 +82,7 @@
 						width: 150px;
 						max-height: 150px;
 						height: auto;
-						color: color-map(bg);
+						color: var(--content-bg);
 						opacity: 0.5;
 					}
 				}
