@@ -32,12 +32,12 @@ class Footer extends React.Component {
 								</a>
 								.
 								<br />
-								Ce site est sous licence{" "}
+								Le code source de ce site est sous licence{" "}
 								<a
-									href="https://www.gnu.org/licenses/gpl-3.0"
+									href="https://www.apache.org/licenses/LICENSE-2.0"
 									className="ob-link"
 									style={{ textDecoration: "underline" }}>
-									GNU General Public License v3
+									Apache version 2.0
 								</a>
 								.
 								<br />
