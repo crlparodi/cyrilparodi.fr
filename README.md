@@ -12,4 +12,4 @@ Code source du site
 
 ## Licence d'utilisation
 
-Le code source de ce site est sous licence [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0).
+Le code source de ce site est sous licence [Apache v2.0](http://www.apache.org/licenses/LICENSE-2.0).
