@@ -14,6 +14,7 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 class PDF extends React.Component {
 	constructor(props) {
 		super(props);
+		this.data = props.data;
 		this.ref = props.reference;
 	}
 	render() {
@@ -30,7 +31,7 @@ class PDF extends React.Component {
 						<a
 							className="ob-button"
 							target="_blank"
-							href="https://www.cyril-parodi.fr/doc/CV_6.5_0420_WEB.pdf">
+							href={this.data.curriculum_vitae.url}>
 							<FontAwesomeIcon icon={faFilePdf} />
 							{"Télécharger le CV"}
 						</a>
@@ -42,6 +43,7 @@ class PDF extends React.Component {
 }
 
 PDF.propTypes = {
+	data: PropSets.basics,
 	reference: PropTypes.any,
 };
 

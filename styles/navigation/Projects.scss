@@ -2,9 +2,7 @@
 	&-content {
 		margin-top: 1.5rem;
 
-		.Web,
-		.Android,
-		.Python {
+		.Entry {
 			@include xy-grid(vertical, false);
 
 			@include breakpoint(small only) {
@@ -44,24 +42,10 @@
 			}
 		}
 
-		.Web > .ob-link {
+		.Entry > .ob-link {
 			&:hover {
 				color: var(--generic-bg2);
-				background-color: #00c3ff;
-			}
-		}
-
-		.Android > .ob-link {
-			&:hover {
-				color: var(--generic-bg2);
-				background-color: #00ff55;
-			}
-		}
-
-		.Python > .ob-link {
-			&:hover {
-				color: var(--generic-bg2);
-				background-color: #ffd000;
+				background-color: var(--content-accent);
 			}
 		}
 

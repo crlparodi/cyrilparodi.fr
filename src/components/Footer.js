@@ -41,7 +41,7 @@ class Footer extends React.Component {
 								</a>
 								.
 								<br />
-								Cyril Parodi, 2018 - 2020.
+								{this.data.name}, 2020.
 							</p>
 						</div>
 					</div>

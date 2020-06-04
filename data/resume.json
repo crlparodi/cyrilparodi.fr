@@ -1,0 +1,99 @@
+{
+	"basics": {
+		"name": "<NAME>",
+		"age": 99,
+		"label": "<LABEL>",
+		"email": "<MAIL>",
+		"summary": ["<SUMMARY>", "<SUMMARY>"],
+		"target": "<TARGET>",
+		"location": {
+			"city": "<CITY>",
+			"country": "<COUNTRY>",
+			"region": "<REGION>"
+		},
+		"profiles": [
+			{
+				"network": "linkedin",
+				"url": "<URL>"
+			},
+			{
+				"network": "github",
+				"url": "<URL>"
+			}
+		],
+		"curriculum_vitae": {
+			"url": "<URL>"
+		}
+	},
+	"works": [
+		{
+			"company": "<COMPANY>",
+			"position": "<POSITION>",
+			"website": "<WEBSITE>",
+			"startDate": "<START>",
+			"endDate": "<END>",
+			"projects": [
+				{
+					"summary": "<SUMMARY>",
+					"highlights": []
+				}
+			]
+		}
+	],
+	"education": [
+		{
+			"institution": "<INSTITUTION>",
+			"area": "<AREA>",
+			"studyType": "<TYPE>",
+			"startDate": "<START>",
+			"endDate": "<END>",
+			"description": [],
+			"links": [
+				{
+					"name": "<NAME>",
+					"url": "<URL>"
+				}
+			]
+		}
+	],
+	"awards": [
+		{
+			"title": "<TITLE>",
+			"date": "<DATE>",
+			"awarder": "<AWARDER>",
+			"document": "<URL>"
+		}
+	],
+	"skills": {
+		"soft": [
+			{
+				"skill": "<SKILL>",
+				"eval": 5
+			}
+		],
+		"technical": [
+			{
+				"category": "<CATEGORY>",
+				"skills": ["<SKILLS>"]
+			}
+		],
+		"resources": [
+			{
+				"category": "<CAT>",
+				"res": ["<RES_1>", "<RES_2>"]
+			}
+		],
+		"languages": [
+			{
+				"language": "<LANGUAGE>",
+				"fluency": "<LEVEL>"
+			}
+		]
+	},
+	"interests": [
+		{
+			"name": "<NAME>",
+			"keywords": ["<KEYWORD_1>", "<KEYWORD_2>", "<KEYWORD_3>"]
+		}
+	]
+}

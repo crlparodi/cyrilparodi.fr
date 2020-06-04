@@ -1,0 +1,9 @@
+{
+	"projects": [
+		{
+			"name": "<NAME>",
+			"description": "<DESCRIPTION>",
+			"url": "<URL>"
+		}
+	]
+}

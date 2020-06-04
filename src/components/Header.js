@@ -40,7 +40,7 @@ class Header extends React.Component {
 	}
 
 	headerDrawerStateSwitcher() {
-		this.setState(prevState => {
+		this.setState((prevState) => {
 			return { headerDrawerOpen: !prevState.headerDrawerOpen };
 		});
 	}
@@ -60,12 +60,12 @@ class Header extends React.Component {
 								className="ob-link"
 								href="#void"
 								onClick={() => {
-									if(this.state.headerDrawerOpen){
-										this.headerDrawerStateSwitcher()
+									if (this.state.headerDrawerOpen) {
+										this.headerDrawerStateSwitcher();
 									}
 									window.scrollTo(0, 0);
 								}}>
-								{/* <Logo /> */} {">CYP_"}
+								{/* <Logo /> */} {">LOGO_"}
 							</a>
 						</div>
 					</div>
@@ -76,14 +76,17 @@ class Header extends React.Component {
 					navHandler={this.navHandler}
 					clickHandler={this.headerDrawerStateSwitcher}
 				/>
-				<Backdrop show={this.state.headerDrawerOpen} clickHandler={this.headerBackdropRetrieve} />
+				<Backdrop
+					show={this.state.headerDrawerOpen}
+					clickHandler={this.headerBackdropRetrieve}
+				/>
 			</section>
 		);
 	}
 }
 
 Header.propTypes = {
-	navHandler: PropTypes.func
-}
+	navHandler: PropTypes.func,
+};
 
 export default Header;

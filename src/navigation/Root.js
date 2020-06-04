@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 
 /* DATA */
+import * as ProjectsData from "data/projects.json";
 import * as ResumeData from "data/resume.json";
 
 /* GENERIC COMPONENTS */
@@ -71,17 +72,21 @@ class Root extends React.Component {
 	render() {
 		return (
 			<>
+				<Toolbox themeHandler={this.switchTheme.bind(this)} />
 				<Header navHandler={this.navigationHandler.bind(this)} />
 				<Banner data={ResumeData.basics} />
-				<Toolbox themeHandler={this.switchTheme.bind(this)} />
 				<About data={ResumeData.basics} reference={this.aboutReference} />
 				<Experiences data={ResumeData.works} reference={this.expReference} />
 				<Education data={ResumeData.education} reference={this.educReference} />
 				<Skills data={ResumeData.skills} reference={this.skillsReference} />
 				<Certifications data={ResumeData.awards} reference={this.awardReference} />
 				<Hobbies data={ResumeData.interests} reference={this.hobbiesReference} />
-				<Projects reference={this.projReference} />
-				<PDF reference={this.pdfReference} />
+				<Projects
+					data={ResumeData.basics}
+					projects={ProjectsData.projects}
+					reference={this.projReference}
+				/>
+				<PDF data={ResumeData.basics} reference={this.pdfReference} />
 				<Footer data={ResumeData.basics} />
 			</>
 		);

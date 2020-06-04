@@ -22,6 +22,10 @@ class Skills extends React.Component {
 			<section className="Skills isWrapper" ref={this.ref}>
 				<div className="Skills isContainer">
 					<h2 className="ob-title isMono">{"compétences"}</h2>
+					<h3 className="ob-subtitle isMono">{"compétences techniques"}</h3>
+					<div className="TechnicalSkills">
+						<TechnicalSkills technical={this.data.technical} />
+					</div>
 					<h3 className="ob-subtitle isMono">{"personnalité"}</h3>
 					<ul className="SoftSkills">
 						<SoftSkills soft={this.data.soft} />
@@ -30,14 +34,10 @@ class Skills extends React.Component {
 					<div className="Languages">
 						<Languages languages={this.data.languages} />
 					</div>
-					<h3 className="ob-subtitle isMono">{"compétences techniques"}</h3>
-					<div className="TechnicalSkills">
-						<TechnicalSkills technical={this.data.technical} />
-					</div>
-					<h3 className="ob-subtitle isMono">{"ressources"}</h3>
+					{/* <h3 className="ob-subtitle isMono">{"ressources"}</h3>
 					<div className="Resources">
 						<Resources resources={this.data.resources} />
-					</div>
+					</div> */}
 				</div>
 			</section>
 		);

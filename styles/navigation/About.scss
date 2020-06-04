@@ -24,7 +24,7 @@
 			@include breakpoint(large down) {
 				margin-bottom: 1rem;
 				max-width: 150px;
-				align-self: flex-start;
+				align-self: center;
 			}
 
 			@include xy-cell(shrink);

@@ -6,13 +6,16 @@ import * as PropSets from "root/prop-types/Resume";
 
 /* FONT-AWESOME */
 import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome";
-import { faReact, faAndroid, faPython, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "modules/@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const github = "https://github.com/crlparodi/";
+const github = "<URL>";
 
 class Projects extends React.Component {
 	constructor(props) {
 		super(props);
+		this.data = props.data;
+		this.projects = props.projects;
 		this.ref = props.reference;
 	}
 	render() {
@@ -21,51 +24,27 @@ class Projects extends React.Component {
 				<div className="Projects isContainer">
 					<h2 className="ob-title isMono">{"projets"}</h2>
 					<div className="Projects-content">
-					<div className="Web">
-						<a className="ob-link" target="_blank" href={github + "cyrilparodi.fr"}>
-							<FontAwesomeIcon icon={faReact} />
-							<div className="Info">
-								<h3 className="Info-name">cyrilparodi.fr</h3>
-								<p className="Info-desc">Powered by React.js</p>
-							</div>
-						</a>
+						{this.projects.map((project, project_index) => {
+							return (
+								<div className="Entry" key={project_index}>
+									<a className="ob-link" target="_blank" href={project.url}>
+										<FontAwesomeIcon icon={faCode} />
+										<div className="Info">
+											<h3 className="Info-name">{project.name}</h3>
+											<p className="Info-desc">{project.description}</p>
+										</div>
+									</a>
+								</div>
+							);
+						})}
+
+						<div className="Github">
+							<a className="ob-button" target="_blank" href={this.data.profiles[2]}>
+								<FontAwesomeIcon icon={faGithub} />
+								{"dépôts github"}
+							</a>
+						</div>
 					</div>
-					<div className="Android">
-						<a className="ob-link" target="_blank" href={github + "atmos"}>
-							<FontAwesomeIcon icon={faAndroid} />
-							<div className="Info">
-								<h3 className="Info-name">atmos</h3>
-								<p className="Info-desc">Un projet domotique DIY</p>
-							</div>
-						</a>
-					</div>
-					<div className="Python">
-						<a className="ob-link" target="_blank" href={github + "cabbage"}>
-							<FontAwesomeIcon icon={faPython} />
-							<div className="Info">
-								<h3 className="Info-name">cabbage</h3>
-								<p className="Info-desc">
-									Maquette fictive d'une plateforme de babysitting
-								</p>
-							</div>
-						</a>
-						<a className="ob-link" target="_blank" href={github + "butterscotch"}>
-							<FontAwesomeIcon icon={faPython} />
-							<div className="Info">
-								<h3 className="Info-name">butterscotch</h3>
-								<p className="Info-desc">
-									Une interface de monitoring basée sur le projet Prometheus
-								</p>
-							</div>
-						</a>
-					</div>
-					<div className="Github">
-						<a className="ob-button" target="_blank" href={github}>
-							<FontAwesomeIcon icon={faGithub} />
-							{"dépôts github"}
-						</a>
-					</div>
-				</div>
 				</div>
 			</section>
 		);
@@ -73,6 +52,7 @@ class Projects extends React.Component {
 }
 
 Projects.propTypes = {
+	data: PropSets.basics,
 	reference: PropTypes.any,
 };
 

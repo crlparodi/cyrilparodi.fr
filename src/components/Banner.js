@@ -4,7 +4,8 @@ import React from "react";
 import * as PropSets from "root/prop-types/Resume";
 
 /* MEDIAS */
-import IMG from "img/board.jpg";
+import BannerPicture from "img/board.jpg";
+
 import SocialMedia from "root/components/SocialMedia";
 
 /* FONT-AWESOME */
@@ -50,13 +51,13 @@ class Banner extends React.Component {
 				className="Banner isWrapper"
 				style={{
 					height: this.state.height + "px",
-					backgroundImage: "url(" + IMG + ")",
+					backgroundImage: "url(" + BannerPicture + ")",
 				}}>
 				<div className="Banner-backgroundCover">
 					<div className="Banner-container isContainer">
 						<div className="Content">
-							<h1 className="ob-title">{"CYRIL PARODI"}</h1>
-							<h2 className="ob-subtitle">{"Ingénieur"}</h2>
+							<h1 className="ob-title">{this.data.name}</h1>
+							<h2 className="ob-subtitle">{this.data.label}</h2>
 							<div className="Contacts">
 								<SocialMedia
 									email={this.data.email}
@@ -66,7 +67,7 @@ class Banner extends React.Component {
 							<a
 								className="ob-button"
 								target="_blank"
-								href="https://www.cyril-parodi.fr/doc/CV_6.5_0420_WEB.pdf">
+								href={this.data.curriculum_vitae.url}>
 								<FontAwesomeIcon icon={faFilePdf} />
 								{"Télécharger le CV"}
 							</a>
