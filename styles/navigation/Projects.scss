@@ -1,67 +1,67 @@
 .Projects {
-	&-content {
-		margin-top: 1.5rem;
+    &-content {
+        margin-top: 1.5rem;
 
-		.Entry {
-			@include xy-grid(vertical, false);
+        .Entry {
+            @include xy-grid(vertical, false);
 
-			@include breakpoint(small only) {
-				display: none;
-			}
+            @include breakpoint(small only) {
+                display: none;
+            }
 
-			svg {
-				margin: 0 20px;
-				display: inline-block;
-				vertical-align: middle;
-				max-width: 40px;
-				width: auto;
-				height: auto;
-				font-size: 2rem;
-			}
-			/* Override */
-			.ob-link {
-				padding: 0.5rem 0;
-				margin-bottom: 0.1rem;
-				background-color: var(--content-bg2);
-				-webkit-transition: all 0.3s ease-out;
-				transition: all 0.3s ease-out;
+            svg {
+                margin: 0 20px;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 40px;
+                width: auto;
+                height: auto;
+                font-size: 2rem;
+            }
+            /* Override */
+            .ob-link {
+                padding: 0.5rem 0;
+                margin-bottom: 0.1rem;
+                background-color: var(--content-bg2);
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
 
-				.Info {
-					display: inline-block;
-					vertical-align: middle;
+                .Info {
+                    display: inline-block;
+                    vertical-align: middle;
 
-					&-name {
-						margin: 0;
-						font-size: 1.2rem;
-					}
+                    &-name {
+                        margin: 0;
+                        font-size: 1.2rem;
+                    }
 
-					&-desc {
-						margin: 0;
-					}
-				}
-			}
-		}
+                    &-desc {
+                        margin: 0;
+                    }
+                }
+            }
+        }
 
-		.Entry > .ob-link {
-			&:hover {
-				color: var(--generic-bg2);
-				background-color: var(--content-accent);
-			}
-		}
+        .Entry > .ob-link {
+            &:hover {
+                color: var(--generic-bg2);
+                background-color: var(--content-accent);
+            }
+        }
 
-		.Github {
-			text-align: center;
+        .Github {
+            text-align: center;
 
-			/* Override */
-			.ob-button {
-				display: inline-block;
-				margin-top: 1.5rem;
+            /* Override */
+            .ob-button {
+                display: inline-block;
+                margin-top: 1.5rem;
 
-				svg {
-					margin-right: 20px;
-					font-size: 1.2rem;
-				}
-			}
-		}
-	}
+                svg {
+                    margin-right: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
 }

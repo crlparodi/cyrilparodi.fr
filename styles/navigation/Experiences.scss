@@ -1,92 +1,92 @@
 .Experiences {
-	&-content {
-		margin-top: 1.5rem;
+    &-content {
+        margin-top: 1.5rem;
 
-		@include breakpoint(medium only) {
-			max-width: 42.5rem;
-			margin: 1.5rem auto 0 auto;
-		}
+        @include breakpoint(medium only) {
+            max-width: 42.5rem;
+            margin: 1.5rem auto 0 auto;
+        }
 
-		.Left-Colon {
-			display: inline-block;
-			vertical-align: top;
+        .Left-Colon {
+            display: inline-block;
+            vertical-align: top;
 
-			@include breakpoint(large) {
-				@include xy-cell(2);
-			}
+            @include breakpoint(large) {
+                @include xy-cell(2);
+            }
 
-			@include breakpoint(small only) {
-				display: block;
-			}
+            @include breakpoint(small only) {
+                display: block;
+            }
 
-			.Date {
-				margin: 0;
-				padding: 0.625rem;
-				font-family: font-map(title), sans-serif;
-				font-size: 1.2rem;
-				font-weight: 700;
-				color: var(--content-accent);
+            .Date {
+                margin: 0;
+                padding: 0.625rem;
+                font-family: font-map(title), sans-serif;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: var(--content-accent);
 
-				@include breakpoint(medium down) {
-					padding: 0;
-				}
-			}
-		}
-		.Right-Colon {
-			margin-bottom: 1.5rem;
-			display: inline-block;
+                @include breakpoint(medium down) {
+                    padding: 0;
+                }
+            }
+        }
+        .Right-Colon {
+            margin-bottom: 1.5rem;
+            display: inline-block;
 
-			@include breakpoint(large) {
-				@include xy-cell(10);
-			}
+            @include breakpoint(large) {
+                @include xy-cell(10);
+            }
 
-			@include breakpoint(small only) {
-				display: block;
-			}
+            @include breakpoint(small only) {
+                display: block;
+            }
 
-			.Company {
-				/* Override */
-				.ob-link {
-					text-decoration: underline;
-					margin-bottom: auto;
-				}
-			}
+            .Company {
+                /* Override */
+                .ob-link {
+                    text-decoration: underline;
+                    margin-bottom: auto;
+                }
+            }
 
-			.Projects {
-				position: relative;
-				z-index: 0;
+            .Projects {
+                position: relative;
+                z-index: 0;
 
-				@include breakpoint(small only) {
-					display: none;
-				}
+                @include breakpoint(small only) {
+                    display: none;
+                }
 
-				&-entry {
-					padding: 20px;
-					background-color: var(--content-bg2);
+                &-entry {
+                    padding: 20px;
+                    background-color: var(--content-bg2);
 
-					.Project {
-						position: relative;
-						z-index: 20;
-					}
+                    .Project {
+                        position: relative;
+                        z-index: 20;
+                    }
 
-					ul {
-						position: relative;
-						z-index: 20;
-					}
+                    ul {
+                        position: relative;
+                        z-index: 20;
+                    }
 
-					svg {
-						position: absolute;
-						z-index: 10;
-						bottom: 20px;
-						right: 30px;
-						width: 150px;
-						max-height: 150px;
-						height: auto;
-						color: var(--content-bg);
-						opacity: 0.5;
-					}
-				}
-			}
-		}
-	}
+                    svg {
+                        position: absolute;
+                        z-index: 10;
+                        bottom: 20px;
+                        right: 30px;
+                        width: 150px;
+                        max-height: 150px;
+                        height: auto;
+                        color: var(--content-bg);
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
 }

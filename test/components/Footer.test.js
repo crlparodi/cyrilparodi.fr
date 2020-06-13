@@ -1,6 +1,8 @@
 import React from "react";
-import About from "root/navigation/About";
+import ReactDOM from "react-dom";
+import Footer from "root/components/Footer";
 import { render } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 
 const testContent = {
 	data: {
@@ -23,15 +25,14 @@ const testContent = {
 	},
 };
 
-describe("About", () => {
-	it("renders without crashing", () => {
-		const component = render(<About data={testContent.data} />);
+describe("Footer", () => {
+	it("renders without crash", () => {
+		ReactDOM.render(<Footer data={testContent.data} />, document.createElement("div"));
 	});
 
 	it("renders correctly", () => {
-		const { container } = render(<About data={testContent.data} />);
+		const { container } = render(<Footer data={testContent.data} />);
+
 		expect(container).toBeTruthy();
-		expect(container.querySelector(".Self-p").firstChild).toBeTruthy();
-		expect(container.querySelector(".Self-list")).toBeTruthy();
 	});
 });

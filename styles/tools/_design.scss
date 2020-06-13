@@ -4,49 +4,49 @@
 @import url("https://fontlibrary.org/face/cave-story");
 
 $font-map: (
-	title: "Overpass",
-	paragraph: "Lato",
-	mono: "Overpass Mono",
-	// mono: "CaveStoryRegular",
+    title: "Overpass",
+    paragraph: "Lato",
+    mono: "Overpass Mono",
+    // mono: "CaveStoryRegular",
 ) !default;
 
 @function font-map($font) {
-	@if map-has-key($map: $font-map, $key: $font) {
-		@return map-get($map: $font-map, $key: $font);
-	}
-	@warn "Unknown font '#{$font}";
-	@return null;
+    @if map-has-key($map: $font-map, $key: $font) {
+        @return map-get($map: $font-map, $key: $font);
+    }
+    @warn "Unknown font '#{$font}";
+    @return null;
 }
 
 html {
-	--generic-txt: #e7ecef;
-	--generic-bg: #272932;
-	--generic-bg2: #111111;
-	--generic-accent: #25ced1;
+    --generic-txt: #e7ecef;
+    --generic-bg: #272932;
+    --generic-bg2: #111111;
+    --generic-accent: #25ced1;
 
-	&[theme="theme-light"] {
-		--content-txt: #111111;
-		--content-bg: #ffffff;
-		--content-bg2: #c3c7c9;
-		--content-accent: #f85a3e;
-	}
+    &[theme="theme-light"] {
+        --content-txt: #111111;
+        --content-bg: #ffffff;
+        --content-bg2: #c3c7c9;
+        --content-accent: #f85a3e;
+    }
 
-	&[theme="theme-dark"] {
-		--content-txt: #e7ecef;
-		--content-bg: #252525;
-		--content-bg2: #111111;
-		--content-accent: #25ced1;
-	}
+    &[theme="theme-dark"] {
+        --content-txt: #e7ecef;
+        --content-bg: #252525;
+        --content-bg2: #111111;
+        --content-accent: #25ced1;
+    }
 
-	// &[theme="theme-terminal"] {
-	// 	--generic-txt: #1add00;
-	// 	--generic-bg: #000000;
-	// 	--generic-bg2: #000000;
-	// 	--generic-accent: #1add00;
+    // &[theme="theme-terminal"] {
+    // 	--generic-txt: #1add00;
+    // 	--generic-bg: #000000;
+    // 	--generic-bg2: #000000;
+    // 	--generic-accent: #1add00;
 
-	// 	--content-txt: #1add00;
-	// 	--content-bg: #000000;
-	// 	--content-bg2: #000000;
-	// 	--content-accent: #1add00;
-	// }
+    // 	--content-txt: #1add00;
+    // 	--content-bg: #000000;
+    // 	--content-bg2: #000000;
+    // 	--content-accent: #1add00;
+    // }
 }

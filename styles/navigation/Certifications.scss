@@ -1,50 +1,50 @@
 .Certifications {
-	&-content {
-		margin-top: 1.5rem;
+    &-content {
+        margin-top: 1.5rem;
 
-		.Entry {
-			@include xy-grid(horizontal, false);
+        .Entry {
+            @include xy-grid(horizontal, false);
 
-			@include breakpoint(small only) {
-				@include xy-grid(vertical, false);
-				justify-content: space-around;
-			}
+            @include breakpoint(small only) {
+                @include xy-grid(vertical, false);
+                justify-content: space-around;
+            }
 
-			.Info {
-				@include xy-gutters($gutter-position: left right);
+            .Info {
+                @include xy-gutters($gutter-position: left right);
 
-				@include breakpoint(medium) {
-					@include xy-cell-base(auto);
-					@include breakpoint(medium only) {
-						padding: 0 20px;
-					}
-				}
+                @include breakpoint(medium) {
+                    @include xy-cell-base(auto);
+                    @include breakpoint(medium only) {
+                        padding: 0 20px;
+                    }
+                }
 
-				@include breakpoint(small only) {
-					// display: none;
-				}
+                @include breakpoint(small only) {
+                    // display: none;
+                }
 
-				.Name {
-					font-family: font-map(title), sans-serif;
-					font-weight: 700;
-				}
-			}
+                .Name {
+                    font-family: font-map(title), sans-serif;
+                    font-weight: 700;
+                }
+            }
 
-			.Link {
-				align-self: center;
-				@include xy-gutters($gutter-position: left right);
-				@include breakpoint(small only) {
-					align-self: flex-end;
-				}
-				&.ob-link {
-					/* Override */
-					font-size: 2rem;
+            .Link {
+                align-self: center;
+                @include xy-gutters($gutter-position: left right);
+                @include breakpoint(small only) {
+                    align-self: flex-end;
+                }
+                &.ob-link {
+                    /* Override */
+                    font-size: 2rem;
 
-					@include breakpoint(medium only) {
-						padding: 0 20px;
-					}
-				}
-			}
-		}
-	}
+                    @include breakpoint(medium only) {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
 }

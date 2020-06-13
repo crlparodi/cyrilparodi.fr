@@ -1,179 +1,179 @@
 .Skills {
-	/* Override */
-	.ob-subtitle {
-		margin-top: 3rem;
+    /* Override */
+    .ob-subtitle {
+        margin-top: 3rem;
 
-		@include breakpoint(small only) {
-			padding-top: 1rem;
-		}
-	}
+        @include breakpoint(small only) {
+            padding-top: 1rem;
+        }
+    }
 
-	.SoftSkills {
-		list-style: none;
-		margin: 0;
+    .SoftSkills {
+        list-style: none;
+        margin: 0;
 
-		@include xy-grid(horizontal, true);
+        @include xy-grid(horizontal, true);
 
-		.SoftSkill {
-			@include breakpoint(xlarge) {
-				@include xy-cell(4);
-			}
+        .SoftSkill {
+            @include breakpoint(xlarge) {
+                @include xy-cell(4);
+            }
 
-			@include breakpoint(large only) {
-				@include xy-cell(6);
-			}
+            @include breakpoint(large only) {
+                @include xy-cell(6);
+            }
 
-			@include breakpoint(medium down) {
-				@include xy-cell(12);
-			}
+            @include breakpoint(medium down) {
+                @include xy-cell(12);
+            }
 
-			&-skill {
-				margin-bottom: 0.5rem;
-				font-family: font-map(title), sans-serif;
-				font-size: 1.5rem;
-				text-transform: capitalize;
-			}
+            &-skill {
+                margin-bottom: 0.5rem;
+                font-family: font-map(title), sans-serif;
+                font-size: 1.5rem;
+                text-transform: capitalize;
+            }
 
-			&-progress {
-				margin-bottom: 2rem;
-				position: relative;
-				width: 100%;
-				height: 2px;
-				//border: 1px solid color-map(txt);
-				background: var(--content-bg2);
+            &-progress {
+                margin-bottom: 2rem;
+                position: relative;
+                width: 100%;
+                height: 2px;
+                //border: 1px solid color-map(txt);
+                background: var(--content-bg2);
 
-				.ProgressBar {
-					position: absolute;
-					left: 0;
-					height: 100%;
-					font-family: font-map(mono), monospace;
-					font-size: 1.2rem;
-					font-weight: 700;
-					text-align: end;
-					padding-right: 10px;
-					color: var(--content-txt);
-					background-color: var(--content-accent);
-					-webkit-box-shadow: 0px 0px 12px 0px var(--content-accent);
-					-moz-box-shadow: 0px 0px 12px 0px var(--content-accent);
-					box-shadow: 0px 0px 12px 0px var(--content-accent);
-				}
-			}
-		}
-	}
+                .ProgressBar {
+                    position: absolute;
+                    left: 0;
+                    height: 100%;
+                    font-family: font-map(mono), monospace;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    text-align: end;
+                    padding-right: 10px;
+                    color: var(--content-txt);
+                    background-color: var(--content-accent);
+                    -webkit-box-shadow: 0px 0px 12px 0px var(--content-accent);
+                    -moz-box-shadow: 0px 0px 12px 0px var(--content-accent);
+                    box-shadow: 0px 0px 12px 0px var(--content-accent);
+                }
+            }
+        }
+    }
 
-	.Languages {
-		margin: 1.5rem 0;
-		.Language {
-			margin: 0.5rem 0.9375rem;
-			list-style: none;
+    .Languages {
+        margin: 1.5rem 0;
+        .Language {
+            margin: 0.5rem 0.9375rem;
+            list-style: none;
 
-			&-language {
-				display: inline-block;
-				margin-right: 30px;
-				margin-bottom: 0;
-				font-family: font-map(title), sans-serif;
-				font-size: 1.5rem;
-				font-weight: 700;
-				color: var(--content-accent);
-			}
+            &-language {
+                display: inline-block;
+                margin-right: 30px;
+                margin-bottom: 0;
+                font-family: font-map(title), sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--content-accent);
+            }
 
-			&-fluency {
-				display: inline-block;
-				margin-bottom: 0;
-				font-size: 1.2rem;
-			}
-		}
-	}
+            &-fluency {
+                display: inline-block;
+                margin-bottom: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
 
-	.TechnicalSkills {
-		list-style: none;
-		margin: 0;
+    .TechnicalSkills {
+        list-style: none;
+        margin: 0;
 
-		@include xy-grid(horizontal, true);
+        @include xy-grid(horizontal, true);
 
-		.TechnicalSkill {
-			position: relative;
-			z-index: 0;
-			margin: 0.5rem 0;
-			padding: 0.9375rem;
-			background-color: var(--content-bg2);
+        .TechnicalSkill {
+            position: relative;
+            z-index: 0;
+            margin: 0.5rem 0;
+            padding: 0.9375rem;
+            background-color: var(--content-bg2);
 
-			@include breakpoint(xlarge) {
-				@include xy-cell(6);
-			}
-			@include breakpoint(large down) {
-				@include xy-cell(12);
-			}
+            @include breakpoint(xlarge) {
+                @include xy-cell(6);
+            }
+            @include breakpoint(large down) {
+                @include xy-cell(12);
+            }
 
-			&-category {
-				position: relative;
-				z-index: 20;
-				margin-bottom: 0.5rem;
-				font-family: font-map(title), sans-serif;
-				font-size: 1.5rem;
-			}
+            &-category {
+                position: relative;
+                z-index: 20;
+                margin-bottom: 0.5rem;
+                font-family: font-map(title), sans-serif;
+                font-size: 1.5rem;
+            }
 
-			&-skills {
-				position: relative;
-				z-index: 20;
-			}
+            &-skills {
+                position: relative;
+                z-index: 20;
+            }
 
-			svg {
-				position: absolute;
-				z-index: 10;
-				right: 20px;
-				bottom: 20px;
-				max-width: 100px;
-				width: auto;
-				height: auto;
-				color: var(--content-bg);
-				opacity: 0.5;
-			}
-		}
-	}
+            svg {
+                position: absolute;
+                z-index: 10;
+                right: 20px;
+                bottom: 20px;
+                max-width: 100px;
+                width: auto;
+                height: auto;
+                color: var(--content-bg);
+                opacity: 0.5;
+            }
+        }
+    }
 
-	.Resources {
-		list-style: none;
+    .Resources {
+        list-style: none;
 
-		@include xy-grid(horizontal, true);
-		.Resource {
-			margin-bottom: 2rem;
-			@include breakpoint(xlarge) {
-				@include xy-cell(4);
-			}
+        @include xy-grid(horizontal, true);
+        .Resource {
+            margin-bottom: 2rem;
+            @include breakpoint(xlarge) {
+                @include xy-cell(4);
+            }
 
-			@include breakpoint(large only) {
-				@include xy-cell(6);
-			}
+            @include breakpoint(large only) {
+                @include xy-cell(6);
+            }
 
-			@include breakpoint(medium down) {
-				@include xy-cell(12);
-			}
+            @include breakpoint(medium down) {
+                @include xy-cell(12);
+            }
 
-			&-category {
-				margin-bottom: 0.5rem;
-				font-family: font-map(title), sans-serif;
-				font-size: 1.2rem;
-			}
+            &-category {
+                margin-bottom: 0.5rem;
+                font-family: font-map(title), sans-serif;
+                font-size: 1.2rem;
+            }
 
-			&-res {
-				margin: 0;
-				list-style: none;
+            &-res {
+                margin: 0;
+                list-style: none;
 
-				li {
-					padding: 0 5px;
-					margin: 0 10px 5px 0;
-					display: inline-block;
-					background: linear-gradient(
-						to bottom,
-						rgba(255, 255, 255, 0.1) 0%,
-						rgba(17, 17, 17, 0) 100%
-					);
-					background-color: var(--content-bg2);
-					border: 1px solid var(--content-bg2);
-					border-radius: 0.2rem;
-				}
-			}
-		}
-	}
+                li {
+                    padding: 0 5px;
+                    margin: 0 10px 5px 0;
+                    display: inline-block;
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0.1) 0%,
+                        rgba(17, 17, 17, 0) 100%
+                    );
+                    background-color: var(--content-bg2);
+                    border: 1px solid var(--content-bg2);
+                    border-radius: 0.2rem;
+                }
+            }
+        }
+    }
 }

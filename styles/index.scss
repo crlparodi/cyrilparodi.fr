@@ -14,145 +14,145 @@
 
 body,
 html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
-	font-family: font-map(paragraph), sans-serif;
+    font-family: font-map(paragraph), sans-serif;
 
-	/* THEME CONFIGURATIONS
+    /* THEME CONFIGURATIONS
 	 */
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: font-map(title), sans-serif;
-	}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: font-map(title), sans-serif;
+    }
 
-	/* CSS THEMES
+    /* CSS THEMES
 	 */
 
-	color: var(--content-txt);
-	background-color: var(--content-bg);
+    color: var(--content-txt);
+    background-color: var(--content-bg);
 
-	/* CSS CUSTOM DECORATIVE OBJECTS
+    /* CSS CUSTOM DECORATIVE OBJECTS
 	 */
 
-	.ob-title {
-		/* H1, H2 */
-		margin: 0;
-		font-family: font-map(title), sans-serif; // it overrides the foundation font rule
-		text-transform: uppercase;
-		letter-spacing: 5px;
-		font-weight: 700;
+    .ob-title {
+        /* H1, H2 */
+        margin: 0;
+        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: 700;
 
-		@include breakpoint(large) {
-			font-size: 2rem;
-		}
-		@include breakpoint(medium only) {
-			font-size: 1.6rem;
-		}
-		@include breakpoint(small only) {
-			font-size: 1.3rem;
-		}
+        @include breakpoint(large) {
+            font-size: 2rem;
+        }
+        @include breakpoint(medium only) {
+            font-size: 1.6rem;
+        }
+        @include breakpoint(small only) {
+            font-size: 1.3rem;
+        }
 
-		&.isMono {
-			position: relative;
-			padding-bottom: 20px;
-			font-family: font-map(mono), monospace;
-			border-bottom: 2px solid var(--content-txt);
-			word-wrap: break-word;
+        &.isMono {
+            position: relative;
+            padding-bottom: 20px;
+            font-family: font-map(mono), monospace;
+            border-bottom: 2px solid var(--content-txt);
+            word-wrap: break-word;
 
-			&::before {
-				content: "#>";
-				color: var(--content-accent);
-			}
+            &::before {
+                content: "#>";
+                color: var(--content-accent);
+            }
 
-			&::after {
-				content: "_";
-				color: var(--content-accent);
-			}
-		}
-	}
+            &::after {
+                content: "_";
+                color: var(--content-accent);
+            }
+        }
+    }
 
-	.ob-subtitle {
-		/* H3 */
-		margin-bottom: 0.5rem;
-		font-family: font-map(title), sans-serif; // it overrides the foundation font rule
-		font-weight: 700;
-		text-transform: capitalize;
+    .ob-subtitle {
+        /* H3 */
+        margin-bottom: 0.5rem;
+        font-family: font-map(title), sans-serif; // it overrides the foundation font rule
+        font-weight: 700;
+        text-transform: capitalize;
 
-		@include breakpoint(large) {
-			font-size: 1.5rem;
-		}
-		@include breakpoint(medium only) {
-			font-size: 1.2rem;
-		}
-		@include breakpoint(small only) {
-			font-size: 1.1rem;
-		}
-	}
+        @include breakpoint(large) {
+            font-size: 1.5rem;
+        }
+        @include breakpoint(medium only) {
+            font-size: 1.2rem;
+        }
+        @include breakpoint(small only) {
+            font-size: 1.1rem;
+        }
+    }
 
-	.ob-link {
-		color: inherit;
-		-webkit-transition: color 0.3s ease-out;
-		transition: color 0.3s ease-out;
+    .ob-link {
+        color: inherit;
+        -webkit-transition: color 0.3s ease-out;
+        transition: color 0.3s ease-out;
 
-		&:hover,
-		&:focus {
-			color: var(--content-accent);
-		}
+        &:hover,
+        &:focus {
+            color: var(--content-accent);
+        }
 
-		&.isFromHeader  {
-			&:hover,
-			&:focus,
-			&:active {
-				outline: 1px dotted var(--content-accent);
-				color: var(--content-accent);
-			}
-		}
-	}
+        &.isFromHeader  {
+            &:hover,
+            &:focus,
+            &:active {
+                outline: 1px dotted var(--content-accent);
+                color: var(--content-accent);
+            }
+        }
+    }
 
-	.ob-button {
-		@include button(false, var(--content-accent), black, black, solid);
-		margin: 0;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-family: font-map(title);
-		font-size: 110% !important;
-		font-weight: 700;
-		line-height: 1.5rem;
+    .ob-button {
+        @include button(false, var(--content-accent), black, black, solid);
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: font-map(title);
+        font-size: 110% !important;
+        font-weight: 700;
+        line-height: 1.5rem;
 
-		&:hover,
-		&:focus,
-		&:active {
-			color: var(--content-txt);
-			background-color: var(--content-bg2);
-		}
-	}
+        &:hover,
+        &:focus,
+        &:active {
+            color: var(--content-txt);
+            background-color: var(--content-bg2);
+        }
+    }
 
-	/* SPECIAL PARAMETERS */
+    /* SPECIAL PARAMETERS */
 
-	.isContainer {
-		@include xy-grid-container();
-		max-width: 71.25rem;
-		height: 100%;
+    .isContainer {
+        @include xy-grid-container();
+        max-width: 71.25rem;
+        height: 100%;
 
-		@include breakpoint(medium only) {
-			max-width: 42.5rem;
-		}
-	}
+        @include breakpoint(medium only) {
+            max-width: 42.5rem;
+        }
+    }
 
-	/* CUSTOM SECTIONS */
+    /* CUSTOM SECTIONS */
 
-	.isWrapper {
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
-	}
+    .isWrapper {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }

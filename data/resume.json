@@ -30,8 +30,8 @@
 			"company": "<COMPANY>",
 			"position": "<POSITION>",
 			"website": "<WEBSITE>",
-			"startDate": "<START>",
-			"endDate": "<END>",
+			"startDate": "01/1990",
+			"endDate": "01/2000",
 			"projects": [
 				{
 					"summary": "<SUMMARY>",

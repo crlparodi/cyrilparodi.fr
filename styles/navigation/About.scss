@@ -1,66 +1,66 @@
 .About {
-	/* OVERRIDE */
-	&.isWrapper {
-		padding-top: 3rem;
-	}
+    /* OVERRIDE */
+    &.isWrapper {
+        padding-top: 3rem;
+    }
 
-	&-content {
-		margin-top: 1.5rem;
-		font-size: 110%;
+    &-content {
+        margin-top: 1.5rem;
+        font-size: 110%;
 
-		@include breakpoint(xlarge) {
-			@include xy-grid(horizontal, false);
-		}
-		@include breakpoint(large down) {
-			@include xy-grid(vertical, false);
-		}
+        @include breakpoint(xlarge) {
+            @include xy-grid(horizontal, false);
+        }
+        @include breakpoint(large down) {
+            @include xy-grid(vertical, false);
+        }
 
-		.Photo {
-			max-height: 150px;
-			width: auto;
-			height: auto;
-			border-radius: 50%;
+        .Photo {
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
 
-			@include breakpoint(large down) {
-				margin-bottom: 1rem;
-				max-width: 150px;
-				align-self: center;
-			}
+            @include breakpoint(large down) {
+                margin-bottom: 1rem;
+                max-width: 150px;
+                align-self: center;
+            }
 
-			@include xy-cell(shrink);
-		}
+            @include xy-cell(shrink);
+        }
 
-		.Self {
-			margin: 0 0 0 1.25rem !important;
+        .Self {
+            margin: 0 0 0 1.25rem !important;
 
-			@include breakpoint(large down) {
-				margin: 0 !important;
-			}
+            @include breakpoint(large down) {
+                margin: 0 !important;
+            }
 
-			@include xy-grid(vertical, false);
+            @include xy-grid(vertical, false);
 
-			&-list {
-				@include xy-cell(auto);
+            &-list {
+                @include xy-cell(auto);
 
-				list-style: none;
-				margin: 0.5rem 0;
-				font-family: "Overpass Mono", sans-serif;
-				font-size: 1rem;
+                list-style: none;
+                margin: 0.5rem 0;
+                font-family: "Overpass Mono", sans-serif;
+                font-size: 1rem;
 
-				&-element {
-					margin-bottom: 10px;
+                &-element {
+                    margin-bottom: 10px;
 
-					.Entry {
-						text-transform: uppercase;
-						font-weight: 700;
-					}
+                    .Entry {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
 
-					/* Override */
-					.ob-link {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
+                    /* Override */
+                    .ob-link {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }

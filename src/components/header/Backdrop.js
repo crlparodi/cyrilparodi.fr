@@ -1,21 +1,21 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 class Backdrop extends React.Component {
 	constructor() {
-		super()
+		super();
 		this.state = {
 			backdropClasses: "",
-		}
+		};
 	}
 	UNSAFE_componentWillReceiveProps(props) {
-		this.backdropState(props.show)
+		this.backdropState(props.show);
 	}
 	backdropState(prop) {
-		if (prop == true) {
-			this.setState({ backdropClasses: " isOpen" })
+		if (prop === true) {
+			this.setState({ backdropClasses: " isOpen" });
 		} else {
-			this.setState({ backdropClasses: "" })
+			this.setState({ backdropClasses: "" });
 		}
 	}
 	render() {
@@ -24,13 +24,13 @@ class Backdrop extends React.Component {
 				className={"HeaderBackDrop" + this.state.backdropClasses}
 				onClick={this.props.clickHandler}
 			/>
-		)
+		);
 	}
 }
 
 Backdrop.propTypes = {
 	show: PropTypes.bool,
 	clickHandler: PropTypes.func,
-}
+};
 
-export default Backdrop
+export default Backdrop;

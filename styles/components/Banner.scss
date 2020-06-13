@@ -1,146 +1,146 @@
 .Banner {
-	color: var(--generic-txt);
-	background-size: cover;
-	background-position-y: 100%;
+    color: var(--generic-txt);
+    background-size: cover;
+    background-position-y: 100%;
 
-	@include breakpoint(small only) {
-		background-position-x: 50%;
-	}
+    @include breakpoint(small only) {
+        background-position-x: 50%;
+    }
 
-	/* OVERRIDE */
-	&.isWrapper {
-		padding-top: 0;
-		padding-bottom: 0;
-		background-size: cover;
-		background-position-x: center;
-		background-position-y: bottom;
-		background-attachment: fixed;
+    /* OVERRIDE */
+    &.isWrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-attachment: fixed;
 
-		@include breakpoint(large down) {
-			background-position-x: right;
-		}
-	}
+        @include breakpoint(large down) {
+            background-position-x: right;
+        }
+    }
 
-	&-backgroundCover {
-		width: 100%;
-		height: 100%;
-		background-color: rgba(17, 17, 17, 0.6);
-	}
+    &-backgroundCover {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(17, 17, 17, 0.6);
+    }
 
-	&-container {
-		position: relative;
+    &-container {
+        position: relative;
 
-		height: 100%;
-		padding-top: 95px;
+        height: 100%;
+        padding-top: 95px;
 
-		text-align: center;
+        text-align: center;
 
-		@include breakpoint(medium down) {
-			@include xy-grid(vertical, false);
-			justify-content: center;
+        @include breakpoint(medium down) {
+            @include xy-grid(vertical, false);
+            justify-content: center;
 
-			@include breakpoint(small only) {
-				text-align: center;
-			}
-		}
+            @include breakpoint(small only) {
+                text-align: center;
+            }
+        }
 
-		.Content {
-			position: absolute;
-			transform: translate(-50%, -50%);
-			top: 50%;
-			left: 50%;
+        .Content {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
 
-			/* Override */
-			.ob-title {
-				padding-bottom: 20px;
-				margin-bottom: 20px;
-				border-bottom: 2px solid var(--generic-txt);
-				font-family: font-map(title), sans-serif;
-				font-weight: 700;
-				font-size: 4rem;
+            /* Override */
+            .ob-title {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 2px solid var(--generic-txt);
+                font-family: font-map(title), sans-serif;
+                font-weight: 700;
+                font-size: 4rem;
 
-				letter-spacing: 10px;
+                letter-spacing: 10px;
 
-				@include breakpoint(small only) {
-					padding: 20px 15px 15px;
-					font-size: 3rem;
-				}
-			}
+                @include breakpoint(small only) {
+                    padding: 20px 15px 15px;
+                    font-size: 3rem;
+                }
+            }
 
-			/* Override */
-			.ob-subtitle {
-				font-size: 300%;
-			}
+            /* Override */
+            .ob-subtitle {
+                font-size: 300%;
+            }
 
-			.Contacts {
-				margin: 6rem 0 2rem 0;
+            .Contacts {
+                margin: 6rem 0 2rem 0;
 
-				svg {
-					border: 1px solid var(--generic-txt);
-					border-radius: 50%;
-					padding: 10px;
-					margin: 0 10px;
-					width: 3.5rem;
-					font-size: 3.5rem;
-					-webkit-transition: border 0.5s ease-out;
-					-moz-transition: border 0.5s ease-out;
-					transition: border 0.5s ease-out;
+                svg {
+                    border: 1px solid var(--generic-txt);
+                    border-radius: 50%;
+                    padding: 10px;
+                    margin: 0 10px;
+                    width: 3.5rem;
+                    font-size: 3.5rem;
+                    -webkit-transition: border 0.5s ease-out;
+                    -moz-transition: border 0.5s ease-out;
+                    transition: border 0.5s ease-out;
 
-					&:hover,
-					&:focus,
-					&:active {
-						border-color: var(--content-acc);
-					}
-				}
-			}
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        border-color: var(--content-acc);
+                    }
+                }
+            }
 
-			/* Override */
-			.ob-button {
-				svg {
-					margin-right: 20px;
-					font-size: 1.2rem;
-				}
-			}
-		}
+            /* Override */
+            .ob-button {
+                svg {
+                    margin-right: 20px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
 
-		.Credits {
-			position: absolute;
-			transform: translate(-50%, -50%);
-			bottom: 5%;
-			left: 50%;
+        .Credits {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            bottom: 5%;
+            left: 50%;
 
-			.UnsplashCredit {
-				background-color: var(--generic-bg2);
-				color: var(--generic-txt);
-				text-decoration: none;
-				padding: 4px 6px;
-				font-family: font-map(title);
-				font-size: 12px;
-				font-weight: bold;
-				line-height: 1.2;
-				display: inline-block;
-				border-radius: 3px;
+            .UnsplashCredit {
+                background-color: var(--generic-bg2);
+                color: var(--generic-txt);
+                text-decoration: none;
+                padding: 4px 6px;
+                font-family: font-map(title);
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1.2;
+                display: inline-block;
+                border-radius: 3px;
 
-				span  {
-					display: inline-block;
-					padding: 2px 3px;
-				}
+                span  {
+                    display: inline-block;
+                    padding: 2px 3px;
+                }
 
-				svg {
-					margin: 0 3px;
-					height: 12px;
-					width: auto;
-					position: relative;
-					vertical-align: middle;
-					top: -2px;
-					fill: white;
-				}
+                svg {
+                    margin: 0 3px;
+                    height: 12px;
+                    width: auto;
+                    position: relative;
+                    vertical-align: middle;
+                    top: -2px;
+                    fill: white;
+                }
 
-				.Author {
-					display: inline-block;
-					padding: 2px 3px;
-				}
-			}
-		}
-	}
+                .Author {
+                    display: inline-block;
+                    padding: 2px 3px;
+                }
+            }
+        }
+    }
 }

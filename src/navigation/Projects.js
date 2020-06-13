@@ -24,9 +24,9 @@ class Projects extends React.Component {
 				<div className="Projects isContainer">
 					<h2 className="ob-title isMono">{"projets"}</h2>
 					<div className="Projects-content">
-						{this.projects.map((project, project_index) => {
+						{this.projects.map((project, projectIndex) => {
 							return (
-								<div className="Entry" key={project_index}>
+								<div className="Entry" key={projectIndex}>
 									<a className="ob-link" target="_blank" href={project.url}>
 										<FontAwesomeIcon icon={faCode} />
 										<div className="Info">

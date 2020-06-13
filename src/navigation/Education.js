@@ -16,7 +16,7 @@ class Education extends React.Component {
 	}
 
 	description(descArray) {
-		if (descArray.length != 0) {
+		if (descArray.length !== 0) {
 			return descArray.map((description, index) => {
 				return <p key={index}>{description}</p>;
 			});
@@ -24,7 +24,7 @@ class Education extends React.Component {
 	}
 
 	links(linkArray) {
-		if (linkArray.length != 0) {
+		if (linkArray.length !== 0) {
 			return (
 				<>
 					<div className="Links">
@@ -65,7 +65,6 @@ class Education extends React.Component {
 										<p className="Year">
 											{education.startDate + " - " + education.endDate}
 										</p>
-
 									</div>
 									<div className="Entry-R">
 										<p className="Grade ob-subtitle">

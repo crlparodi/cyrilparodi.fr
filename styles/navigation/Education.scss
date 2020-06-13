@@ -1,123 +1,123 @@
 .Education {
-	&-content {
-		margin-top: 1.5rem;
-		margin-bottom: 0;
-		@include breakpoint(medium down) {
-			margin-left: 0;
-			list-style-type: none;
-		}
-		.Entry {
-			&-L,
-			&-R {
-				.ob-subtitle {
-					font-size: 1.2rem;
-				}
-			}
+    &-content {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        @include breakpoint(medium down) {
+            margin-left: 0;
+            list-style-type: none;
+        }
+        .Entry {
+            &-L,
+            &-R {
+                .ob-subtitle {
+                    font-size: 1.2rem;
+                }
+            }
 
-			@include breakpoint(large) {
-				@include xy-grid(horizontal, false);
-				&-L {
-					@include xy-cell(3);
-					padding-left: 5px;
+            @include breakpoint(large) {
+                @include xy-grid(horizontal, false);
+                &-L {
+                    @include xy-cell(3);
+                    padding-left: 5px;
 
-					.Year {
-						font-size: 1.2rem;
-					}
-				}
-				&-R {
-					margin-bottom: 2rem;
-					@include xy-cell(auto);
+                    .Year {
+                        font-size: 1.2rem;
+                    }
+                }
+                &-R {
+                    margin-bottom: 2rem;
+                    @include xy-cell(auto);
 
-					&-Bottom {
-						@include xy-grid(horizontal, false);
+                    &-Bottom {
+                        @include xy-grid(horizontal, false);
 
-						svg {
-							position: relative;
-							// top: 5px;
-							// margin-right: 10px;
-							color: var(--content-accent);
-						}
-						.Locations {
-							font-weight: 700;
-							color: var(--content-accent);
-							padding-right: 10px;
-						}
-						.Links {
-							/* Override */
-							.ob-link {
-								text-decoration: underline;
-								// margin-right: 5px;
-							}
-						}
-					}
-				}
-			}
-			@include breakpoint(medium down) {
-				padding: 0;
-				margin-bottom: 1rem;
-				border-bottom: 1px solid var(--content-txt);
-				&-R {
-					.Description,
-					.Links {
-						display: none;
-					}
+                        svg {
+                            position: relative;
+                            // top: 5px;
+                            // margin-right: 10px;
+                            color: var(--content-accent);
+                        }
+                        .Locations {
+                            font-weight: 700;
+                            color: var(--content-accent);
+                            padding-right: 10px;
+                        }
+                        .Links {
+                            /* Override */
+                            .ob-link {
+                                text-decoration: underline;
+                                // margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            @include breakpoint(medium down) {
+                padding: 0;
+                margin-bottom: 1rem;
+                border-bottom: 1px solid var(--content-txt);
+                &-R {
+                    .Description,
+                    .Links {
+                        display: none;
+                    }
 
-					&-Bottom {
-						@include xy-grid(horizontal, false);
-						svg {
-							position: relative;
-							top: 5px;
-							margin-right: 5px;
-							color: var(--content-accent);
-						}
-						.Locations {
-							font-weight: 700;
-							color: var(--content-accent);
-						}
-					}
-				}
+                    &-Bottom {
+                        @include xy-grid(horizontal, false);
+                        svg {
+                            position: relative;
+                            top: 5px;
+                            margin-right: 5px;
+                            color: var(--content-accent);
+                        }
+                        .Locations {
+                            font-weight: 700;
+                            color: var(--content-accent);
+                        }
+                    }
+                }
 
-				&:after {
-					display: none;
-				}
+                &:after {
+                    display: none;
+                }
 
-				&:last-child {
-					border-bottom: none;
-				}
-			}
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
 
-			&::before {
-				position: relative;
-				content: "";
-				width: 5px;
-				background: var(--content-accent);
-				top: 25px;
-			}
+            &::before {
+                position: relative;
+                content: "";
+                width: 5px;
+                background: var(--content-accent);
+                top: 25px;
+            }
 
-			&::after {
-				position: relative;
-				content: "";
-				width: 20px;
-				height: 20px;
-				border: 5px solid var(--content-accent);
-				border-radius: 50%;
-				background: var(--content-bg);
-				left: calc(-100% + 12.5px);
-				top: 5px;
-			}
+            &::after {
+                position: relative;
+                content: "";
+                width: 20px;
+                height: 20px;
+                border: 5px solid var(--content-accent);
+                border-radius: 50%;
+                background: var(--content-bg);
+                left: calc(-100% + 12.5px);
+                top: 5px;
+            }
 
-			&:last-child {
-				padding-bottom: 0;
-				&:before {
-					color: var(--content-bg);
-					width: 5px;
-					background: unset;
-				}
+            &:last-child {
+                padding-bottom: 0;
+                &:before {
+                    color: var(--content-bg);
+                    width: 5px;
+                    background: unset;
+                }
 
-				.Entry-R {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
+                .Entry-R {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }

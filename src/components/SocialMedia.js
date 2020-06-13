@@ -8,14 +8,12 @@ import { FontAwesomeIcon } from "modules/@fortawesome/react-fontawesome";
 import { faEnvelope, faTimesCircle } from "modules/@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const switchIcon = profileName => {
+const switchIcon = (profileName) => {
 	switch (profileName.toLowerCase()) {
 		case "linkedin":
 			return faLinkedin;
-			break;
 		case "github":
 			return faGithub;
-			break;
 		default:
 			return faTimesCircle;
 	}
@@ -56,11 +54,11 @@ SocialMedia.defaultProps = {
 	profiles: [
 		{
 			network: "Network_1",
-			url: "www.testeroni.org",
+			url: "www.networkeroni.org",
 		},
 		{
 			network: "Network_2",
-			url: "www.testeroni.org",
+			url: "www.networkeroni.org",
 		},
 	],
 };

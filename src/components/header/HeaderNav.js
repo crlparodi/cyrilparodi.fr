@@ -33,7 +33,7 @@ class HeaderNav extends React.Component {
 							/* ...because it acts directly on the header component before he gets */
 							/* ...the acknowledge of the refs to reach */
 							this.props.navHandler("about");
-							if (this.mobileClickHandler != null) this.mobileClickHandler();
+							if (this.mobileClickHandler !== null) this.mobileClickHandler();
 						}}>
 						<FontAwesomeIcon icon={faUser} />à propos
 					</a>

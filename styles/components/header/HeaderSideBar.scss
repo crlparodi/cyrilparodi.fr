@@ -1,48 +1,48 @@
 .SideBar {
-	position: fixed;
-	z-index: 20;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: var(--generic-bg);
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--generic-bg);
 
-	transform: translateY(-120%);
-	transition: transform 0.3s ease-out;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease-out;
 
-	@include breakpoint(large) {
-		display: none;
-	}
+    @include breakpoint(large) {
+        display: none;
+    }
 
-	&.isOpen {
-		transform: translateY(0);
-	}
+    &.isOpen {
+        transform: translateY(0);
+    }
 
-	.Nav {
-		height: auto;
-		padding: 95px 64px 32px 64px;
-		display: flex;
-		flex-direction: column;
+    .Nav {
+        height: auto;
+        padding: 95px 64px 32px 64px;
+        display: flex;
+        flex-direction: column;
 
-		@include breakpoint(small only) {
-			padding: 95px 32px 32px 32px;
-		}
+        @include breakpoint(small only) {
+            padding: 95px 32px 32px 32px;
+        }
 
-		.ob-link {
-			/* Override */
-			max-width: 20rem;
-			border-bottom: 1px solid var(--generic-txt);
-			font-family: font-map(title), sans-serif;
-			font-weight: 700;
-			text-transform: uppercase;
-			margin-bottom: 15px;
-			@include breakpoint(small only) {
-				width: 100%;
-				text-align: center;
-			}
+        .ob-link {
+            /* Override */
+            max-width: 20rem;
+            border-bottom: 1px solid var(--generic-txt);
+            font-family: font-map(title), sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            @include breakpoint(small only) {
+                width: 100%;
+                text-align: center;
+            }
 
-			svg {
-				display: none;
-			}
-		}
-	}
+            svg {
+                display: none;
+            }
+        }
+    }
 }

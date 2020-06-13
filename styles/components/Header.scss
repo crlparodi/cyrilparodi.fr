@@ -1,78 +1,78 @@
 .Header {
-	position: fixed;
-	z-index: 10;
-	width: 100%;
-	height: 95px;
-	padding: 10px 0;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 95px;
+    padding: 10px 0;
 
-	color: var(--generic-txt);
+    color: var(--generic-txt);
 
-	&.isOnTop {
-		transition: background-color 0.5s ease-out;
-	}
+    &.isOnTop {
+        transition: background-color 0.5s ease-out;
+    }
 
-	&.isOnCover {
-		background-color: rgba($color: #000000, $alpha: 0.8);
-		-webkit-transition: background-color 0.5s ease-out;
-		-moz-transition: background-color 0.5s ease-out;
-		transition: background-color 0.5s ease-out;
-	}
+    &.isOnCover {
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        -webkit-transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
+    }
 
-	.Content-logo {
-		display: flex;
+    .Content-logo {
+        display: flex;
 
-		@include breakpoint(large only) {
-			margin: 0 0 0 10px;
-		}
+        @include breakpoint(large only) {
+            margin: 0 0 0 10px;
+        }
 
-		@include breakpoint(medium down) {
-			justify-content: flex-end;
-			margin: 0 10px 0 0;
-		}
+        @include breakpoint(medium down) {
+            justify-content: flex-end;
+            margin: 0 10px 0 0;
+        }
 
-		.Logo {
-			vertical-align: middle;
-			margin: auto 0;
+        .Logo {
+            vertical-align: middle;
+            margin: auto 0;
 
-			.ob-link {
-				height: min-content;
-				font-family: font-map(mono), monospace;
-				font-size: 1.2rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 5px;
-				padding: 7px 10px 5px;
-				border: 1px solid var(--generic-txt);
-				-webkit-transition: all 0.5s ease-out;
-				-moz-transition: all 0.5s ease-out;
-				transition: all 0.5s ease-out;
-				display: flex;
-				align-items: center;
+            .ob-link {
+                height: min-content;
+                font-family: font-map(mono), monospace;
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                padding: 7px 10px 5px;
+                border: 1px solid var(--generic-txt);
+                -webkit-transition: all 0.5s ease-out;
+                -moz-transition: all 0.5s ease-out;
+                transition: all 0.5s ease-out;
+                display: flex;
+                align-items: center;
 
-				&:hover,
-				&:focus,
-				&:active {
-					color: var(--content-accent);
-					border-color: var(--content-accent);
-				}
-			}
-		}
-	}
+                &:hover,
+                &:focus,
+                &:active {
+                    color: var(--content-accent);
+                    border-color: var(--content-accent);
+                }
+            }
+        }
+    }
 
-	.Content {
-		position: relative;
-		z-index: 30;
+    .Content {
+        position: relative;
+        z-index: 30;
 
-		.Nav > .ob-link,
-		.HeaderToggle > .Toggle {
-			-webkit-transition: color 0.5s ease-out;
-			transition: color 0.5s ease-out;
+        .Nav > .ob-link,
+        .HeaderToggle > .Toggle {
+            -webkit-transition: color 0.5s ease-out;
+            transition: color 0.5s ease-out;
 
-			&:hover,
-			&:focus,
-			&:active {
-				color: var(--generic-accent);
-			}
-		}
-	}
+            &:hover,
+            &:focus,
+            &:active {
+                color: var(--generic-accent);
+            }
+        }
+    }
 }

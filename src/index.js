@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/* SERVICES */
-import registerServiceWorker from "./registerServiceWorker";
-
 /* COMPONENTS */
 import Root from "./navigation/Root";
 
@@ -20,5 +17,3 @@ const switchTheme = (darkToggle) => {
 
 document.documentElement.setAttribute("theme", "theme-light");
 ReactDOM.render(<Root switchTheme={switchTheme.bind(this)} />, document.getElementById("root"));
-
-registerServiceWorker();

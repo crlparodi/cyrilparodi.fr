@@ -1,61 +1,61 @@
 .Footer {
-	color: var(--generic-txt);
-	background-color: var(--generic-bg2);
-	padding-bottom: 40px;
+    color: var(--generic-txt);
+    background-color: var(--generic-bg2);
+    padding-bottom: 40px;
 
-	&-content {
-		margin-top: 1.5rem;
-		@include breakpoint(large) {
-			@include xy-grid(horizontal, false);
-		}
-		@include breakpoint(medium down) {
-			@include xy-grid(vertical, false);
-		}
-		.Contacts {
-			margin-bottom: 1.5rem;
-			text-align: center;
+    &-content {
+        margin-top: 1.5rem;
+        @include breakpoint(large) {
+            @include xy-grid(horizontal, false);
+        }
+        @include breakpoint(medium down) {
+            @include xy-grid(vertical, false);
+        }
+        .Contacts {
+            margin-bottom: 1.5rem;
+            text-align: center;
 
-			@include breakpoint(large) {
-				@include xy-cell(6);
-				align-self: center;
-			}
-			@include breakpoint(medium down) {
-				@include xy-cell(12);
-			}
+            @include breakpoint(large) {
+                @include xy-cell(6);
+                align-self: center;
+            }
+            @include breakpoint(medium down) {
+                @include xy-cell(12);
+            }
 
-			/* Override */
-			.ob-title {
-				margin-bottom: 1.5rem;
-			}
+            /* Override */
+            .ob-title {
+                margin-bottom: 1.5rem;
+            }
 
-			svg {
-				border: 1px solid var(--generic-txt);
-				border-radius: 50%;
-				padding: 10px;
-				margin: 0 10px;
-				width: 3.5rem !important;
-				font-size: 3.5rem;
-				-webkit-transition: border 0.5s ease-out;
-				-moz-transition: border 0.5s ease-out;
-				transition: border 0.5s ease-out;
+            svg {
+                border: 1px solid var(--generic-txt);
+                border-radius: 50%;
+                padding: 10px;
+                margin: 0 10px;
+                width: 3.5rem !important;
+                font-size: 3.5rem;
+                -webkit-transition: border 0.5s ease-out;
+                -moz-transition: border 0.5s ease-out;
+                transition: border 0.5s ease-out;
 
-				&:hover,
-				&:focus,
-				&:active {
-					border-color: var(--content-accent);
-				}
-			}
-		}
+                &:hover,
+                &:focus,
+                &:active {
+                    border-color: var(--content-accent);
+                }
+            }
+        }
 
-		.Misc {
-			@include breakpoint(large) {
-				align-self: center;
-				@include xy-cell(6);
-			}
-			@include breakpoint(medium down) {
-				text-align: center;
-				@include xy-cell(12);
-			}
-		}
-	}
+        .Misc {
+            @include breakpoint(large) {
+                align-self: center;
+                @include xy-cell(6);
+            }
+            @include breakpoint(medium down) {
+                text-align: center;
+                @include xy-cell(12);
+            }
+        }
+    }
 }
